@@ -10,7 +10,7 @@ class Menu
             __( 'WP Ninja Recipe', 'ninja_recipe' ),
             static::managePermission(),
             'wp-ninja-recipe.php',
-            array( static::class, 'renderMortgage'),
+            array( static::class, 'renderRecipe'),
             '',
             6
         );
@@ -22,9 +22,9 @@ class Menu
 	}
 
 
-	public static function renderMortgage()
+	public static function renderRecipe()
 	{
-		wp_enqueue_script('wp_ninja_recipe_js', NINJA_RECIPE_PUBLIC_DIR_URL.'/js/wp_ninja_recipe.js', array('jquery'), NINJA_RECIPE_PLUGIN_DIR_VERSION, true);
+		wp_enqueue_script('wp_ninja_recipe_js', NINJA_RECIPE_PUBLIC_DIR_URL.'js/wp_ninja_recipe.js', array('jquery'), NINJA_RECIPE_PLUGIN_DIR_VERSION, true);
 		include	NINJA_RECIPE_PLUGIN_DIR_PATH.'views/admin_view.php';
 	}
 
