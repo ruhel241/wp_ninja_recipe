@@ -1,7 +1,6 @@
 <?php
 
 defined('ABSPATH') or die;
-
 /*
 Plugin Name: WP Ninja Recipe
 Description: The Best WP Ninja Recipe Plugin for WordPress
@@ -42,6 +41,7 @@ class WPNinjaRecipe
 	public function adminHooks()
 	{
 		add_action('admin_menu', array('NinjaRecipe\Classes\Menu','addAdminMenuPages'));
+		add_action('wp_ajax_ninja_recipe_ajax_actions', array('NinjaRecipe\Classes\RecipeHandler','handleAjaxCalls'));
 	}
 
 
