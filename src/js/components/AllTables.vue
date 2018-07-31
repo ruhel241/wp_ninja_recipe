@@ -12,9 +12,7 @@
 
         <hr>
 
-
-
-        <!-- Dialog -->
+         <!-- Dialog -->
         <el-dialog
             title="Add New Mortgage Table"
             :visible.sync="addTableModal"

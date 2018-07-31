@@ -6,9 +6,9 @@ class RecipeHandler
 	
 	public static function handleAjaxCalls()
 	{
-		$route = sanitize_text_field( $_REQUEST['route'] );
+		$route = sanitize_text_field($_REQUEST['route'] );
 
-		if($route == 'add_table'){
+		if( $route == 'add_table' ){
 			$tableTitle = sanitize_text_field($_REQUEST['post_title']);
 			$recipeType = sanitize_text_field($_REQUEST['recipe_type']);
 			static::addTable($tableTitle, $recipeType);
@@ -17,15 +17,16 @@ class RecipeHandler
 	}
 
 
-	public static function addTable()
-	{
-		if( !$tableTitle ){
+	public static function addTable($tableTitle, $recipeType)
+	{	
+		
+		if( ! $tableTitle ){
 			wp_send_json_error(array(
 				'message' => __("Please Provide Table Title", "ninja_recipe")
 			), 423);
 		}
 
-		if( !$recipeType ){
+		if( ! $recipeType ){
 			wp_send_json_error(array(
 				'message' => __("Please Select Recipe Type", 'ninja_recipe')
 			), 423);
@@ -48,14 +49,12 @@ class RecipeHandler
 			), 423);
 		}
 
-		wp_send_json_success(array(
+		 wp_send_json_success(array(
             'message'  => __('Table Successfully created','ninja_recipe'),
-            // 'table_id' => $tableId
+            'table_id' => $tableId
         ), 200);
+
 	}
-
-
-
 
 
 
