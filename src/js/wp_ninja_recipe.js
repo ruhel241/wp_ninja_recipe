@@ -11,6 +11,7 @@ locale.use(lang);
 import {
     Row,
     Col,
+    Icon,
     Table,
     Input, 
     Button,
@@ -19,6 +20,7 @@ import {
     Option,
     Message,
     Loading,
+    Popover,
     TableColumn,
     Notification
 } from 'element-ui'
@@ -26,12 +28,14 @@ import {
 // making the required components global
 Vue.use(Row)
 Vue.use(Col)
+Vue.use(Icon)
 Vue.use(Table)
 Vue.use(Input)
 Vue.use(Button)
 Vue.use(Dialog)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Popover)
 Vue.use(VueRouter)
 Vue.use(TableColumn)
 
@@ -41,6 +45,7 @@ Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;
 
 // importing css of required components
+import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/col.css';
 import 'element-ui/lib/theme-chalk/row.css';
 import 'element-ui/lib/theme-chalk/input.css';
@@ -50,8 +55,10 @@ import 'element-ui/lib/theme-chalk/button.css';
 import 'element-ui/lib/theme-chalk/dialog.css';
 import 'element-ui/lib/theme-chalk/select.css';
 import 'element-ui/lib/theme-chalk/loading.css';
+import 'element-ui/lib/theme-chalk/popover.css';
 import 'element-ui/lib/theme-chalk/notification.css';
 import 'element-ui/lib/theme-chalk/table-column.css';
+
 
 // importing the root component
 import App from './AdminApp';

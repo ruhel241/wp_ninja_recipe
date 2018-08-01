@@ -31,7 +31,7 @@
                     <router-link 
                         :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
                         {{ scope.row.post_title }}
-                    </router-link>    
+                    </router-link>
                 </template>
 
             </el-table-column>  
@@ -40,10 +40,10 @@
                 label="Recipe Type">
 
                 <template slot-scope="scope">
-                    <span v-if="scope.row.RecipeType=='normal'">
+                    <span v-if="scope.row.recipe_type=='normal'">
                         Normal
                     </span>
-                    <span v-if="scope.row.RecipeType=='advance'">
+                    <span v-if="scope.row.recipe_type=='advance'">
                         Advance
                     </span>
                 </template> 
@@ -51,7 +51,30 @@
             </el-table-column> 
 
             <el-table-column
-                label="ShortCode"></el-table-column> 
+                label="ShortCode">
+
+                <template slot-scope="scope">
+                    <code class="copy" :data-clipboard-text='`[ninja_recipe id="${scope.row.ID}"]`' style="cursor: pointer;">
+                        [ninja_recipe id="{{ scope.row.ID }}"]
+                    </code>
+                </template>
+
+            </el-table-column> 
+
+            <el-table-column
+                label="Actions" width="190">
+                
+                <template slot-scope="scope">
+                    <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }">
+                        <span>Edit</span>
+                    </router-link>
+                    <a :href="scope.row.demo_url"  target="_blank" class="el-button el-button--info el-button--mini">
+                        <i class="el-icon-view"></i>
+                    </a>
+                    <app-delete-table @delete="deleteTable(scope.row.ID)"></app-delete-table>
+                </template>
+
+            </el-table-column>
 
         </el-table>
 
@@ -71,7 +94,7 @@
                 </el-select>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="addTableModal=false">Cancel</el-button>
-                    <el-button type="primary" @click="addNewTable">Add New</el-button>
+                    <el-button type="primary" @click="addNewTable" v-loading="addingTableAjax">Add New</el-button>
                 </span>
         </el-dialog>
 
@@ -79,29 +102,63 @@
 </template>
 
 <script>
+import Clipboard from 'clipboard'
+import DeleteTable from './actions/DeleteTable.vue'
+
 export default {
     name: 'AllTables',
+    components: {
+        'app-delete-table': DeleteTable
+    },
     data() {
         return {
+            per_page: 10,
             tableData: [],
             table_name: '',
+            page_number: 1,
             tableLoading: false,
             recipe_types: [
                 { value: 'normal', label: 'Normal' },
                 { value: 'advance', label: 'Advance' }
             ],
             addTableModal: false,
-            selectedRecipe: ''
+            selectedRecipe: '',
+            addingTableAjax: false
         }
     },
     created() {
         this.fetchTables(); // fetching the table data when application loads
+        this.clipboardRender();
     },
     methods: {
         fetchTables() {
-
+            this.tableLoading = true
+            jQuery.get(ajaxurl, {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'get_tables',
+                per_page: this.per_page,
+                page_number: this.page_number
+            })
+            .then(
+                (response) => {
+                    console.log(response)
+                    this.tableData = response.data.tables;
+                    this.total = response.data.total;
+                }
+            )
+            .fail(
+                (error) => {
+                    console.error(error)
+                }
+            )
+            .always(
+                () => {
+                    this.tableLoading = false
+                }
+            )
         },
         addNewTable() {
+            this.addingTableAjax = true
             jQuery.post(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'add_table',
@@ -115,6 +172,12 @@ export default {
                         title: 'Success',
                         message: response.data.message
                     });
+                    this.$router.push({
+                        name: 'edit_table',
+                        params: {
+                            table_id: response.data.table_id
+                        }
+                    })
                 }
             )
             .fail(
@@ -128,8 +191,50 @@ export default {
             .always(
                 () => {
                     this.addTableModal = false;
+                    this.addingTableAjax = false;
                 }
             )
+        },
+        deleteTable(tableId) {
+            jQuery.post(ajaxurl, {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'delete_table',
+                table_id: tableId
+            })
+            .then(
+                (response) => {
+                    this.$notify.success({
+                        title: 'Deleted',
+                        message: response.data.message
+                    })
+                    this.total = this.total - 1;
+                    if(this.total == this.per_page) {
+                        this.page_number = 1;
+                    } 
+                   else  if( (this.total % 2 != 0) && (this.total % this.per_page) == 0 ) {
+                        var res = parseInt(this.total / 2);
+                        if( this.total - ((res * 2) + 1) == 0 && this.total != this.per_page) {
+                            this.page_number = this.page_number - 1;
+                        }    
+                    }
+                    else if(this.total % 2 == 0 && (this.total % this.per_page) == 0) {
+                        var res = parseInt(this.total / 2);
+                        if( this.total - ((res * 2)) == 0 && this.total != this.per_page ) {
+                            this.page_number = this.page_number - 1;
+                        } 
+                    }                 
+                    this.fetchTables();
+                }
+            )
+        },
+        clipboardRender() {
+            var clipboard = new Clipboard('.copy');
+            clipboard.on('success', (e) => {
+                this.$message({
+                    message: 'Copied to Clipboard!',
+                    type: 'success'
+                });
+            });
         }
     }
 }
