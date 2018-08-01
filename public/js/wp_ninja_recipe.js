@@ -18720,7 +18720,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.section-action {\n    float: right;\n    margin-top: -32px;\n}\n.el-select .el-input__inner {\n    background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.section-action {\n    float: right;\n    margin-top: -32px;\n}\n.el-select .el-input__inner {\n    background: #fff;\n}\n.select_recipe_type {\n    float: right;\n    margin-top: -22px;\n    margin-bottom: 5px;\n}\n", ""]);
 
 // exports
 
@@ -18996,6 +18996,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_clipboard__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__);
 //
 //
 //
@@ -19099,6 +19101,82 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -19106,7 +19184,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'AllTables',
     components: {
-        'app-delete-table': __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default.a
+        'app-delete-table': __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default.a,
+        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default.a
     },
     data: function data() {
         return {
@@ -19118,7 +19197,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
             addTableModal: false,
             selectedRecipe: '',
-            addingTableAjax: false
+            addingTableAjax: false,
+            mealType: '',
+            cusineType: '',
+            preferenceType: '',
+            meal_types: [{ value: 'breakfast', label: 'Breakfast' }, { value: 'lunch', label: 'Lunch' }, { value: 'dinner', label: 'Dinner' }],
+            cusine_types: [{ value: 'indian', label: 'Indian' }, { value: 'chinese', label: 'Chinese' }, { value: 'maxican', label: 'Maxican' }],
+            preference_types: [{ value: 'veg', label: 'Vegetable' }, { value: 'non-veg', label: 'Non-vegetable' }]
         };
     },
     created: function created() {
@@ -19150,11 +19235,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this2 = this;
 
             this.addingTableAjax = true;
+            var allRecipeTypes = {
+                meal_types: this.mealType,
+                cusine_types: this.cusineType,
+                preferenceTypes: this.preferenceType
+            };
             jQuery.post(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'add_table',
                 post_title: this.table_name,
-                recipe_type: this.selectedRecipe
+                recipe_type: this.selectedRecipe,
+                allRecipeTypes: allRecipeTypes
             }).then(function (response) {
                 console.log(response);
                 _this2.$notify.success({
@@ -19270,7 +19361,7 @@ var render = function() {
             }
           ],
           staticStyle: { width: "100%", "margin-top": "10px" },
-          attrs: { data: _vm.tableData }
+          attrs: { data: _vm.tableData, border: "" }
         },
         [
           _c("el-table-column", {
@@ -19296,9 +19387,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                        " +
+                          "\n                    " +
                             _vm._s(scope.row.post_title) +
-                            "\n                    "
+                            "\n                "
                         )
                       ]
                     )
@@ -19318,7 +19409,7 @@ var render = function() {
                     scope.row.recipe_type == "normal"
                       ? _c("span", [
                           _vm._v(
-                            "\n                        Normal\n                    "
+                            "\n                    Normal\n                "
                           )
                         ])
                       : _vm._e(),
@@ -19326,11 +19417,47 @@ var render = function() {
                     scope.row.recipe_type == "advance"
                       ? _c("span", [
                           _vm._v(
-                            "\n                        Advance\n                    "
+                            "\n                    Advance\n                "
                           )
                         ])
                       : _vm._e()
                   ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Meal Type" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return undefined
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Cusine Type" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return undefined
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Preference" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return undefined
                 }
               }
             ])
@@ -19355,9 +19482,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          '\n                        [ninja_recipe id="' +
+                          '\n                    [ninja_recipe id="' +
                             _vm._s(scope.row.ID) +
-                            '"]\n                    '
+                            '"]\n                '
                         )
                       ]
                     )
@@ -19418,7 +19545,7 @@ var render = function() {
         "el-dialog",
         {
           attrs: {
-            title: "Add New Mortgage Table",
+            title: "Add New Recipe Table",
             visible: _vm.addTableModal,
             width: "60%"
           },
@@ -19429,45 +19556,150 @@ var render = function() {
           }
         },
         [
-          _c("label", { attrs: { for: "new_table_name" } }, [
-            _vm._v("Table Name")
-          ]),
-          _vm._v(" "),
-          _c("el-input", {
-            attrs: {
-              id: "new_table_name",
-              type: "text",
-              placeholder: "Your Table Name"
-            },
-            model: {
-              value: _vm.table_name,
-              callback: function($$v) {
-                _vm.table_name = $$v
+          _c("div", { staticClass: "table_form_fields" }, [
+            _c(
+              "div",
+              { staticClass: "select_recipe_type" },
+              [
+                _c("app-input-dropdown", {
+                  attrs: {
+                    pcHolder: "Select Recipe Type",
+                    recipeTypes: _vm.recipe_types
+                  },
+                  model: {
+                    value: _vm.selectedRecipe,
+                    callback: function($$v) {
+                      _vm.selectedRecipe = $$v
+                    },
+                    expression: "selectedRecipe"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "recipe_table_name" },
+              [
+                _c("label", { attrs: { for: "new_table_name" } }, [
+                  _vm._v("Table Name")
+                ]),
+                _vm._v(" "),
+                _c("el-input", {
+                  attrs: {
+                    id: "new_table_name",
+                    type: "text",
+                    placeholder: "Your Table Name"
+                  },
+                  model: {
+                    value: _vm.table_name,
+                    callback: function($$v) {
+                      _vm.table_name = $$v
+                    },
+                    expression: "table_name"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "recipe_categories",
+                staticStyle: { "margin-top": "10px" }
               },
-              expression: "table_name"
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "el-select",
-            {
-              staticStyle: { "margin-top": "10px" },
-              attrs: { placeholder: "Select Recipe Type" },
-              model: {
-                value: _vm.selectedRecipe,
-                callback: function($$v) {
-                  _vm.selectedRecipe = $$v
-                },
-                expression: "selectedRecipe"
-              }
-            },
-            _vm._l(_vm.recipe_types, function(type, i) {
-              return _c("el-option", {
-                key: i,
-                attrs: { label: type.label, value: type.value }
-              })
-            })
-          ),
+              [
+                _c(
+                  "el-row",
+                  [
+                    _c(
+                      "el-col",
+                      { attrs: { span: 5 } },
+                      [
+                        _c("label", [_vm._v("Meal Type")]),
+                        _vm._v(" "),
+                        _c(
+                          "el-select",
+                          {
+                            staticStyle: { top: "5px" },
+                            attrs: {
+                              multiple: "",
+                              filterable: "",
+                              "allow-create": "",
+                              "default-first-option": "",
+                              placeholder: "Choose tags for your article"
+                            },
+                            model: {
+                              value: _vm.mealType,
+                              callback: function($$v) {
+                                _vm.mealType = $$v
+                              },
+                              expression: "mealType"
+                            }
+                          },
+                          _vm._l(_vm.meal_types, function(item) {
+                            return _c("el-option", {
+                              key: item.value,
+                              attrs: { label: item.label, value: item.value }
+                            })
+                          })
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "el-col",
+                      { attrs: { span: 5 } },
+                      [
+                        _c("app-input-dropdown", {
+                          attrs: {
+                            label: "Cusine Type",
+                            pcHolder: "Select Cusine Type",
+                            recipeTypes: _vm.cusine_types
+                          },
+                          model: {
+                            value: _vm.cusineType,
+                            callback: function($$v) {
+                              _vm.cusineType = $$v
+                            },
+                            expression: "cusineType"
+                          }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "el-col",
+                      { attrs: { span: 5 } },
+                      [
+                        _c("app-input-dropdown", {
+                          attrs: {
+                            label: "Preference",
+                            pcHolder: "Select Preference",
+                            recipeTypes: _vm.preference_types
+                          },
+                          model: {
+                            value: _vm.preferenceType,
+                            callback: function($$v) {
+                              _vm.preferenceType = $$v
+                            },
+                            expression: "preferenceType"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ]),
           _vm._v(" "),
           _c(
             "span",
@@ -19508,8 +19740,7 @@ var render = function() {
             ],
             1
           )
-        ],
-        1
+        ]
       )
     ],
     1
@@ -64911,7 +65142,7 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(220)
+  __webpack_require__(224)
 }
 var normalizeComponent = __webpack_require__(47)
 /* script */
@@ -64956,51 +65187,28 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 220 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(221);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(79)("f485055e", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bf487270\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bf487270\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 221 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 220 */,
+/* 221 */,
 /* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -65041,7 +65249,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(response);
                 _this.post_title = response.data.table.post_title;
             });
-        }
+        },
+        updateTableConfig: function updateTableConfig() {}
     }
 });
 
@@ -65066,8 +65275,64 @@ var render = function() {
             { attrs: { span: 24 } },
             [
               _c("el-col", { attrs: { span: 20 } }, [
-                _c("h1", [_vm._v(_vm._s(_vm.post_title))])
-              ])
+                _c("h1", [
+                  _vm._v(_vm._s(_vm.post_title) + "\n                    "),
+                  _c("span", [
+                    _c(
+                      "code",
+                      {
+                        staticClass: "copy_shortcode",
+                        attrs: {
+                          "data-clipboard-text":
+                            '[ninja_mortgage_cal id="' + _vm.table_id + '"]'
+                        }
+                      },
+                      [
+                        _vm._v(
+                          '\n                            [ninja_recipe id="' +
+                            _vm._s(_vm.table_id) +
+                            '"]\n                        '
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "el-col",
+                { staticClass: "table_action_btn", attrs: { span: 4 } },
+                [
+                  _c(
+                    "el-button",
+                    {
+                      staticClass: "common_btn",
+                      attrs: { type: "success" },
+                      on: { click: _vm.updateTableConfig }
+                    },
+                    [_vm._v("\n                    Update\n                ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticStyle: { color: "#fff", "text-decoration": "none" }
+                    },
+                    [
+                      _c(
+                        "el-button",
+                        {
+                          staticClass: "common_btn",
+                          attrs: { type: "primary" }
+                        },
+                        [_vm._v("Preview")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           )
@@ -65087,6 +65352,229 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-bf487270", module.exports)
   }
 }
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(225);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(79)("47ae44ea", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bf487270\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bf487270\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(238)
+}
+var normalizeComponent = __webpack_require__(47)
+/* script */
+var __vue_script__ = __webpack_require__(229)
+/* template */
+var __vue_template__ = __webpack_require__(233)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-7835d397"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/core/InputDropdown.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7835d397", Component.options)
+  } else {
+    hotAPI.reload("data-v-7835d397", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 227 */,
+/* 228 */,
+/* 229 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'InputDropdown',
+    props: ['value', 'pcHolder', 'recipeTypes', 'label'],
+    computed: {
+        model: {
+            get: function get() {
+                return this.value;
+            },
+            set: function set(newValue) {
+                this.$emit('input', newValue);
+            }
+        }
+    }
+});
+
+/***/ }),
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "ninjaRecipeInputDropdown" },
+    [
+      _c("label", [_vm._v(_vm._s(_vm.label))]),
+      _vm._v(" "),
+      _c(
+        "el-select",
+        {
+          staticClass: "model_select",
+          attrs: { placeholder: _vm.pcHolder },
+          model: {
+            value: _vm.model,
+            callback: function($$v) {
+              _vm.model = $$v
+            },
+            expression: "model"
+          }
+        },
+        _vm._l(_vm.recipeTypes, function(type, i) {
+          return _c("el-option", {
+            key: i,
+            attrs: { label: type.label, value: type.value }
+          })
+        })
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7835d397", module.exports)
+  }
+}
+
+/***/ }),
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(239);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(79)("2cad2b84", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7835d397\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7835d397\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ninjaRecipeInputDropdown .model_select[data-v-7835d397] {\n  top: 5px;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

@@ -17,12 +17,14 @@
         <el-table 
             :data="tableData"
             style="width: 100%; margin-top: 10px;"
-            v-loading="tableLoading">
+            v-loading="tableLoading"
+            border>
 
             <el-table-column
                 prop="ID"
                 label="ID"
-                width="60"></el-table-column>
+                width="60">
+            </el-table-column>
 
             <el-table-column label="Name">
 
@@ -36,8 +38,7 @@
 
             </el-table-column>  
 
-            <el-table-column
-                label="Recipe Type">
+            <el-table-column label="Recipe Type">
 
                 <template slot-scope="scope">
                     <span v-if="scope.row.recipe_type=='normal'">
@@ -50,8 +51,31 @@
 
             </el-table-column> 
 
-            <el-table-column
-                label="ShortCode">
+            <el-table-column label="Meal Type">
+                
+                <template slot-scope="scope">
+
+                </template>
+
+            </el-table-column>
+
+            <el-table-column label="Cusine Type">
+                
+                <template slot-scope="scope">
+                    
+                </template>
+
+            </el-table-column>
+
+            <el-table-column label="Preference">
+                
+                <template slot-scope="scope">
+                    
+                </template>
+
+            </el-table-column>
+
+            <el-table-column label="ShortCode">
 
                 <template slot-scope="scope">
                     <code class="copy" :data-clipboard-text='`[ninja_recipe id="${scope.row.ID}"]`' style="cursor: pointer;">
@@ -61,8 +85,7 @@
 
             </el-table-column> 
 
-            <el-table-column
-                label="Actions" width="190">
+            <el-table-column label="Actions" width="190">
                 
                 <template slot-scope="scope">
                     <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }">
@@ -80,18 +103,70 @@
 
          <!-- Dialog for Adding Table -->
         <el-dialog
-            title="Add New Mortgage Table"
+            title="Add New Recipe Table"
             :visible.sync="addTableModal"
             width="60%">
-                <label for="new_table_name">Table Name</label>
-                <el-input id="new_table_name" type="text" placeholder="Your Table Name" v-model="table_name"></el-input>
-                <el-select v-model="selectedRecipe" placeholder="Select Recipe Type" style="margin-top: 10px">
-                    <el-option v-for="(type, i) in recipe_types"
-							:key="i"
-							:label="type.label"
-							:value="type.value" >
-                    </el-option>
-                </el-select>
+                <div class="table_form_fields">
+
+                    <div class="select_recipe_type">
+                        <app-input-dropdown 
+                            pcHolder="Select Recipe Type"
+                            v-model="selectedRecipe"
+                            :recipeTypes="recipe_types">
+                        </app-input-dropdown>
+                    </div>
+
+                    <div class="recipe_table_name">
+                        <label for="new_table_name">Table Name</label>
+                        <el-input id="new_table_name" type="text" placeholder="Your Table Name" v-model="table_name"></el-input>
+                    </div>
+
+                    <div class="recipe_categories" style="margin-top: 10px">
+                        <el-row>
+                            <el-col :span="5">
+                                <!-- <app-input-dropdown 
+                                    label="Meal Type"
+                                    pcHolder="Select Meal Type"
+                                    v-model="mealType"
+                                    :recipeTypes="meal_types">
+                                </app-input-dropdown> -->
+                                <label>Meal Type</label>
+                                <el-select
+                                    v-model="mealType"
+                                    multiple
+                                    filterable
+                                    allow-create
+                                    default-first-option
+                                    placeholder="Choose tags for your article"
+                                    style="top: 5px;">
+                                        <el-option
+                                        v-for="item in meal_types"
+                                        :key="item.value"
+                                        :label="item.label"
+                                        :value="item.value">
+                                        </el-option>
+                                </el-select>
+                            </el-col>
+                            <el-col :span="5">
+                                <app-input-dropdown 
+                                    label="Cusine Type"
+                                    pcHolder="Select Cusine Type"
+                                    v-model="cusineType"
+                                    :recipeTypes="cusine_types">
+                                </app-input-dropdown>
+                            </el-col>
+                            <el-col :span="5">
+                                <app-input-dropdown 
+                                    label="Preference"
+                                    pcHolder="Select Preference"
+                                    v-model="preferenceType"
+                                    :recipeTypes="preference_types">
+                                </app-input-dropdown>
+                            </el-col>
+                        </el-row>
+                    </div>
+                    
+                </div>
                 <span slot="footer" class="dialog-footer">
                     <el-button @click="addTableModal=false">Cancel</el-button>
                     <el-button type="primary" @click="addNewTable" v-loading="addingTableAjax">Add New</el-button>
@@ -104,11 +179,13 @@
 <script>
 import Clipboard from 'clipboard'
 import DeleteTable from './actions/DeleteTable.vue'
+import InputDropdown from './core/InputDropdown.vue'
 
 export default {
     name: 'AllTables',
     components: {
-        'app-delete-table': DeleteTable
+        'app-delete-table': DeleteTable,
+        'app-input-dropdown': InputDropdown
     },
     data() {
         return {
@@ -123,7 +200,24 @@ export default {
             ],
             addTableModal: false,
             selectedRecipe: '',
-            addingTableAjax: false
+            addingTableAjax: false,
+            mealType: '',
+            cusineType: '',
+            preferenceType: '',
+            meal_types: [
+                { value: 'breakfast', label: 'Breakfast' },
+                { value: 'lunch', label: 'Lunch' }, 
+                { value: 'dinner', label: 'Dinner' }
+            ],
+            cusine_types: [
+                { value: 'indian', label: 'Indian' },
+                { value: 'chinese', label: 'Chinese' }, 
+                { value: 'maxican', label: 'Maxican' }
+            ],
+            preference_types: [
+                { value: 'veg', label: 'Vegetable' },
+                { value: 'non-veg', label: 'Non-vegetable' }
+            ]
         }
     },
     created() {
@@ -159,11 +253,17 @@ export default {
         },
         addNewTable() {
             this.addingTableAjax = true
+            let allRecipeTypes = {
+                meal_types: this.mealType,
+                cusine_types: this.cusineType,
+                preferenceTypes: this.preferenceType
+            }
             jQuery.post(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'add_table',
                 post_title: this.table_name,
-                recipe_type: this.selectedRecipe
+                recipe_type: this.selectedRecipe,
+                allRecipeTypes: allRecipeTypes
             })
             .then(
                 (response) => {
@@ -211,7 +311,7 @@ export default {
                     if(this.total == this.per_page) {
                         this.page_number = 1;
                     } 
-                   else  if( (this.total % 2 != 0) && (this.total % this.per_page) == 0 ) {
+                    else  if( (this.total % 2 != 0) && (this.total % this.per_page) == 0 ) {
                         var res = parseInt(this.total / 2);
                         if( this.total - ((res * 2) + 1) == 0 && this.total != this.per_page) {
                             this.page_number = this.page_number - 1;
@@ -248,5 +348,11 @@ export default {
 
     .el-select .el-input__inner {
         background: #fff;
+    }
+
+    .select_recipe_type {
+        float: right;
+        margin-top: -22px;
+        margin-bottom: 5px;
     }
 </style>
