@@ -253,7 +253,7 @@ export default {
         },
         addNewTable() {
             this.addingTableAjax = true
-            let allRecipeTypes = {
+            let allRecipeCatgoryTypes = {
                 meal_types: this.mealType,
                 cusine_types: this.cusineType,
                 preferenceTypes: this.preferenceType
@@ -263,7 +263,7 @@ export default {
                 route: 'add_table',
                 post_title: this.table_name,
                 recipe_type: this.selectedRecipe,
-                allRecipeTypes: allRecipeTypes
+                allRecipeCatgoryTypes: allRecipeCatgoryTypes 
             })
             .then(
                 (response) => {
