@@ -27,11 +27,21 @@ class RecipeHandler
 		}
 
  
-		if ( $route == 'delete_table' ) {
+	
+        if ($route == 'update_table_config') {
+            $tableId = intval($_REQUEST['table_id']);
+            $table_con = wp_unslash($_REQUEST['table_config']);
+			$table_config = json_decode(trim(stripslashes($table_con)), true);
+
+			$recipeType = sanitize_text_field($_REQUEST['recipe_type']); 
+			static::updateTableConfig($tableId, $table_config, $recipeType);
+        }
+
+
+        if ( $route == 'delete_table' ) {
             $tableId = intval($_REQUEST['table_id']);
             static::deleteTable($tableId);
         }
-
 
 	
 	}
@@ -117,8 +127,8 @@ class RecipeHandler
 		$tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
 		 wp_send_json_success(array(
             'table'        => $formattedTable,
-            'table_config' => $tableConfig,
-            // 'RecipeConfig' => static::getRecipeConfig(),
+            'tableConfig'  => $tableConfig,
+            'RecipeConfig' => static::getRecipeConfig(),
             'demo_url' => home_url().'?ninja_recipe_preview='.$tableId.'#ninja_recipe_demo'
         ), 200);
 	}
@@ -136,13 +146,56 @@ class RecipeHandler
 
 
 
-
-
-	public static function getRecipeConfig()
+	public function updateTableConfig($tableId, $table_config, $recipeType)
 	{
 		
+		$UpdateNinjaRecipe = array(
+	      'ID'           => $tableId,
+	      'post_content' => $recipeType
+		);
+		wp_update_post( $UpdateNinjaRecipe );
+		update_post_meta($tableId, '_ninija_recipe_table_config', $table_config);
+
+		do_action('ninija_recipe_table_config_updated', $tableId, $table_config);
+		// $tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
+		wp_send_json_success(array(
+            'message' => __('Table Content has been updated', 'ninja_recipe'),
+            // 'tableConfig' => $tableConfig,
+        ), 200);
+
+
 	}
 
+
+
+
+	public static function populateDemoData($tableId) //add meta label etc
+    {
+        update_post_meta($tableId, '_ninija_recipe_table_config', static::getRecipeConfig());
+    }
+
+
+
+    public static function getRecipeConfig()
+	{
+		return array(
+				'selectedLabel' => array(
+	                'loanAmount' 	     => 'Loan Amount',
+	                'downPament'	     => 'Down Payment',
+	                'mortgageTerm'	     => 'Mortgage Term',
+	                'annualInterestRate' => 'Annual Interest Rate',
+	            ),
+
+				'selectedDefault' => array(
+					'loanAmountDefVal' 		  => 120000,
+					'downPamentDefVal'		  => 20000,
+					'mortgageTermDefVal'	  => 30,
+					'annualInterestRateDefVal'=> 12
+				),
+					
+				'settings' => false
+			);
+	}
 
 
 
