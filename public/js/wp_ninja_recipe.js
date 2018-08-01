@@ -19238,7 +19238,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this2 = this;
 
             this.addingTableAjax = true;
-            var allRecipeTypes = {
+            var allRecipeCatgoryTypes = {
                 meal_types: this.mealType,
                 cusine_types: this.cusineType,
                 preferenceTypes: this.preferenceType
@@ -19248,7 +19248,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 route: 'add_table',
                 post_title: this.table_name,
                 recipe_type: this.selectedRecipe,
-                allRecipeTypes: allRecipeTypes
+                allRecipeCatgoryTypes: allRecipeCatgoryTypes
             }).then(function (response) {
                 console.log(response);
                 _this2.$notify.success({

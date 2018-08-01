@@ -11,7 +11,8 @@ class RecipeHandler
 		if( $route == 'add_table' ){
 			$tableTitle = sanitize_text_field($_REQUEST['post_title']);
 			$recipeType = sanitize_text_field($_REQUEST['recipe_type']);
-			static::addTable($tableTitle, $recipeType);
+			$allRecipeCatgoryTypes = maybe_serialize($_REQUEST['allRecipeCatgoryTypes']);
+			static::addTable($tableTitle, $recipeType, $allRecipeCatgoryTypes);
 		}
 
 		if ($route == 'get_table') {
@@ -26,8 +27,6 @@ class RecipeHandler
 			static::getTables($pageNumber, $perPage);
 		}
 
- 
-	
         if ($route == 'update_table_config') {
             $tableId = intval($_REQUEST['table_id']);
             $table_con = wp_unslash($_REQUEST['table_config']);
@@ -47,8 +46,9 @@ class RecipeHandler
 	}
 
 
-	public static function addTable($tableTitle, $recipeType)
+	public static function addTable($tableTitle, $recipeType, $allRecipeCatgoryTypes)
 	{	
+		
 		
 		if( ! $tableTitle ){
 			wp_send_json_error(array(
@@ -62,9 +62,28 @@ class RecipeHandler
 			), 423);
 		}
 
+		if( ! $allRecipeCatgoryTypes['meal_types'] ){
+			wp_send_json_error(array(
+				'message' => __("Please Select Recipe Meal Type", 'ninja_recipe')
+			), 423);
+		}
+
+		if( ! $allRecipeCatgoryTypes['cusine_types'] ){
+			wp_send_json_error(array(
+				'message' => __("Please Select Cusine Type", 'ninja_recipe')
+			), 423);
+		}
+
+		if( ! $allRecipeCatgoryTypes['preferenceTypes'] ){
+			wp_send_json_error(array(
+				'message' => __("Please Select Preference Type", 'ninja_recipe')
+			), 423);
+		}
+
 		$tableData = array(
 			'post_title'   => $tableTitle,
 			'post_content' => $recipeType,
+			'post_excerpt' => $allRecipeCatgoryTypes,
 			'post_type'	   => CPT::$CPTName,
 			'post_status'  => 'publish'
 		);
@@ -101,9 +120,10 @@ class RecipeHandler
 		$formattedTables = array();
 		foreach ($tables as $table) {
 			$formattedTables[] = array(
-                'ID'         	=> $table->ID,
-                'post_title' 	=> $table->post_title,
-                'recipe_type'	=> $table->post_content,
+                'ID'         	   => $table->ID,
+                'post_title' 	   => $table->post_title,
+                'recipe_type'	   => $table->post_content,
+                'recipe_catgories' => $table->post_excerpt,
                 'demo_url'	    => home_url().'?ninja_recipe_preview='.$table->ID.'#ninja_recipe_demo'
             );
 		}
@@ -120,9 +140,10 @@ class RecipeHandler
 		$table = get_post($tableId);
 
 		$formattedTable = (object)array(
-			'ID' 		 => $table->ID,
-			'post_title' => $table->post_title,
-			'recipe_type'=> $table->post_content
+			'ID' 		 	   => $table->ID,
+			'post_title' 	   => $table->post_title,
+			'recipe_type'	   => $table->post_content,
+			'recipe_catgories' => $table->post_excerpt
 		);
 		$tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
 		 wp_send_json_success(array(
@@ -151,7 +172,8 @@ class RecipeHandler
 		
 		$UpdateNinjaRecipe = array(
 	      'ID'           => $tableId,
-	      'post_content' => $recipeType
+	      'post_content' => $recipeType,
+	      // 'post_thumbnail' => "image upload"
 		);
 		wp_update_post( $UpdateNinjaRecipe );
 		update_post_meta($tableId, '_ninija_recipe_table_config', $table_config);
@@ -173,8 +195,6 @@ class RecipeHandler
     {
         update_post_meta($tableId, '_ninija_recipe_table_config', static::getRecipeConfig());
     }
-
-
 
     public static function getRecipeConfig()
 	{
