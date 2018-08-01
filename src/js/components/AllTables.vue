@@ -1,6 +1,7 @@
 <template>
     <div class="wp-ninja-recipe">
 
+        <!-- Header -->
         <div class="editor-header">
             <div class="section-header">
                 <h1>All Recipe Tables</h1>
@@ -12,7 +13,49 @@
 
         <hr>
 
-         <!-- Dialog -->
+        <!-- Table -->
+        <el-table 
+            :data="tableData"
+            style="width: 100%; margin-top: 10px;"
+            v-loading="tableLoading">
+
+            <el-table-column
+                prop="ID"
+                label="ID"
+                width="60"></el-table-column>
+
+            <el-table-column label="Name">
+
+                <template
+                    slot-scope="scope">
+                    <router-link 
+                        :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
+                        {{ scope.row.post_title }}
+                    </router-link>    
+                </template>
+
+            </el-table-column>  
+
+            <el-table-column
+                label="Recipe Type">
+
+                <template slot-scope="scope">
+                    <span v-if="scope.row.RecipeType=='normal'">
+                        Normal
+                    </span>
+                    <span v-if="scope.row.RecipeType=='advance'">
+                        Advance
+                    </span>
+                </template> 
+
+            </el-table-column> 
+
+            <el-table-column
+                label="ShortCode"></el-table-column> 
+
+        </el-table>
+
+         <!-- Dialog for Adding Table -->
         <el-dialog
             title="Add New Mortgage Table"
             :visible.sync="addTableModal"
@@ -40,7 +83,9 @@ export default {
     name: 'AllTables',
     data() {
         return {
+            tableData: [],
             table_name: '',
+            tableLoading: false,
             recipe_types: [
                 { value: 'normal', label: 'Normal' },
                 { value: 'advance', label: 'Advance' }
@@ -49,7 +94,13 @@ export default {
             selectedRecipe: ''
         }
     },
+    created() {
+        this.fetchTables(); // fetching the table data when application loads
+    },
     methods: {
+        fetchTables() {
+
+        },
         addNewTable() {
             jQuery.post(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
