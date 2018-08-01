@@ -7,11 +7,47 @@
                 <h1>All Recipe Tables</h1>
             </div>
             <div class="section-action">
-                <el-button size="mini" type="primary" @click="addTableModal=true">Add Table</el-button>
+                <label class="form_group">
+                    <input type="text" class="form_control search_action" placeholder="Search" v-model="search" @keyup.enter="submit">
+                </label>
+                <el-button size="mini" type="success" @click="showFilterSection = !showFilterSection">Filter</el-button>
+                <el-button size="mini" type="primary" @click="addTableModal=true" class="addTable">Add Table</el-button>
             </div>
         </div>
 
         <hr>
+
+        <div class="filtered_area" v-if="showFilterSection">
+            <el-row>
+                <el-col :span="4">
+                    <app-input-dropdown 
+                        label="Meal Type"
+                        pcHolder="Select Meal Type"
+                        v-model="findMealType"
+                        :recipeTypes="meal_types">
+                    </app-input-dropdown>
+                </el-col>
+                <el-col :span="4">
+                    <app-input-dropdown 
+                        label="Cusine Type"
+                        pcHolder="Select Cusine Type"
+                        v-model="findCusineType"
+                        :recipeTypes="cusine_types">
+                    </app-input-dropdown>
+                </el-col>
+                <el-col :span="5" class="preference_type">
+                    <app-input-dropdown 
+                        label="Preference Type"
+                        pcHolder="Select Preference Type"
+                        v-model="findPreferenceType"
+                        :recipeTypes="preference_types">
+                    </app-input-dropdown>
+                </el-col>
+                <el-col class="closeFilter">
+                    <span @click="showFilterSection=false">X</span>
+                </el-col>
+            </el-row>
+        </div>
 
         <!-- Table -->
         <el-table 
@@ -189,11 +225,13 @@ export default {
     },
     data() {
         return {
+            search: '',
             per_page: 10,
             tableData: [],
             table_name: '',
             page_number: 1,
             tableLoading: false,
+            showFilterSection: false,
             recipe_types: [
                 { value: 'normal', label: 'Normal' },
                 { value: 'advance', label: 'Advance' }
@@ -204,6 +242,9 @@ export default {
             mealType: '',
             cusineType: '',
             preferenceType: '',
+            findMealType: '',
+            findCusineType: '',
+            findPreferenceType: '',
             meal_types: [
                 { value: 'breakfast', label: 'Breakfast' },
                 { value: 'lunch', label: 'Lunch' }, 
@@ -335,24 +376,71 @@ export default {
                     type: 'success'
                 });
             });
+        },
+        submit() {
+            console.log(this.search)
+            var val = this.search;
+            return this.tableData.filter(function(s){
+                return s.post_title.toLowerCase().indexOf(val.toLowerCase()) >= 0;
+            });
         }
     }
 }
 </script>
 
-<style>
-    .section-action {
-        float: right;
-        margin-top: -32px;
+<style lang="scss">
+.wp-ninja-recipe {
+
+    .editor-header {
+        .section-action {
+            float: right;
+            margin-top: -32px;
+            .addTable {
+                margin-left: 0px;
+            }
+            .form_group {
+                padding-top: 0;
+                margin-bottom: 0;
+                input {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .table_form_fields {
+        .select_recipe_type {
+            float: right;
+            margin-top: -22px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .filtered_area {
+        background: #fff;
+        height: 52px;
+        padding: 10px;
+        .preference_type {
+            margin-left: 12px;
+        }
+        .closeFilter {
+            width: 1.333%;
+            float: right;
+            margin-top: 15px;
+            span {
+                color: rgb(185, 19, 19); 
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+        }
     }
 
     .el-select .el-input__inner {
         background: #fff;
     }
 
-    .select_recipe_type {
-        float: right;
-        margin-top: -22px;
-        margin-bottom: 5px;
-    }
+}
+    
 </style>

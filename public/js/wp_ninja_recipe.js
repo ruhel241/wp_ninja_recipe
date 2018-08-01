@@ -18641,7 +18641,7 @@ if (inBrowser && window.Vue) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(77)
+  __webpack_require__(240)
 }
 var normalizeComponent = __webpack_require__(47)
 /* script */
@@ -18686,46 +18686,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(78);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(79)("3cc99706", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e89494a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e89494a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 78 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.section-action {\n    float: right;\n    margin-top: -32px;\n}\n.el-select .el-input__inner {\n    background: #fff;\n}\n.select_recipe_type {\n    float: right;\n    margin-top: -22px;\n    margin-bottom: 5px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 77 */,
+/* 78 */,
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19176,6 +19138,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -19189,11 +19187,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
+            search: '',
             per_page: 10,
             tableData: [],
             table_name: '',
             page_number: 1,
             tableLoading: false,
+            showFilterSection: false,
             recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
             addTableModal: false,
             selectedRecipe: '',
@@ -19201,6 +19201,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             mealType: '',
             cusineType: '',
             preferenceType: '',
+            findMealType: '',
+            findCusineType: '',
+            findPreferenceType: '',
             meal_types: [{ value: 'breakfast', label: 'Breakfast' }, { value: 'lunch', label: 'Lunch' }, { value: 'dinner', label: 'Dinner' }],
             cusine_types: [{ value: 'indian', label: 'Indian' }, { value: 'chinese', label: 'Chinese' }, { value: 'maxican', label: 'Maxican' }],
             preference_types: [{ value: 'veg', label: 'Vegetable' }, { value: 'non-veg', label: 'Non-vegetable' }]
@@ -19307,6 +19310,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     type: 'success'
                 });
             });
+        },
+        submit: function submit() {
+            console.log(this.search);
+            var val = this.search;
+            return this.tableData.filter(function (s) {
+                return s.post_title.toLowerCase().indexOf(val.toLowerCase()) >= 0;
+            });
         }
     }
 });
@@ -19330,9 +19340,56 @@ var render = function() {
           "div",
           { staticClass: "section-action" },
           [
+            _c("label", { staticClass: "form_group" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.search,
+                    expression: "search"
+                  }
+                ],
+                staticClass: "form_control search_action",
+                attrs: { type: "text", placeholder: "Search" },
+                domProps: { value: _vm.search },
+                on: {
+                  keyup: function($event) {
+                    if (
+                      !("button" in $event) &&
+                      _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                    ) {
+                      return null
+                    }
+                    return _vm.submit($event)
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.search = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
             _c(
               "el-button",
               {
+                attrs: { size: "mini", type: "success" },
+                on: {
+                  click: function($event) {
+                    _vm.showFilterSection = !_vm.showFilterSection
+                  }
+                }
+              },
+              [_vm._v("Filter")]
+            ),
+            _vm._v(" "),
+            _c(
+              "el-button",
+              {
+                staticClass: "addTable",
                 attrs: { size: "mini", type: "primary" },
                 on: {
                   click: function($event) {
@@ -19348,6 +19405,101 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("hr"),
+      _vm._v(" "),
+      _vm.showFilterSection
+        ? _c(
+            "div",
+            { staticClass: "filtered_area" },
+            [
+              _c(
+                "el-row",
+                [
+                  _c(
+                    "el-col",
+                    { attrs: { span: 4 } },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Meal Type",
+                          pcHolder: "Select Meal Type",
+                          recipeTypes: _vm.meal_types
+                        },
+                        model: {
+                          value: _vm.findMealType,
+                          callback: function($$v) {
+                            _vm.findMealType = $$v
+                          },
+                          expression: "findMealType"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-col",
+                    { attrs: { span: 4 } },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Cusine Type",
+                          pcHolder: "Select Cusine Type",
+                          recipeTypes: _vm.cusine_types
+                        },
+                        model: {
+                          value: _vm.findCusineType,
+                          callback: function($$v) {
+                            _vm.findCusineType = $$v
+                          },
+                          expression: "findCusineType"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-col",
+                    { staticClass: "preference_type", attrs: { span: 5 } },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Preference Type",
+                          pcHolder: "Select Preference Type",
+                          recipeTypes: _vm.preference_types
+                        },
+                        model: {
+                          value: _vm.findPreferenceType,
+                          callback: function($$v) {
+                            _vm.findPreferenceType = $$v
+                          },
+                          expression: "findPreferenceType"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("el-col", { staticClass: "closeFilter" }, [
+                    _c(
+                      "span",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.showFilterSection = false
+                          }
+                        }
+                      },
+                      [_vm._v("X")]
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e(),
       _vm._v(" "),
       _c(
         "el-table",
@@ -65572,6 +65724,46 @@ exports = module.exports = __webpack_require__(2)(false);
 
 // module
 exports.push([module.i, "\n.ninjaRecipeInputDropdown .model_select[data-v-7835d397] {\n  top: 5px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(241);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(79)("0361a4b7", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e89494a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e89494a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.wp-ninja-recipe .editor-header .section-action {\n  float: right;\n  margin-top: -32px;\n}\n.wp-ninja-recipe .editor-header .section-action .addTable {\n    margin-left: 0px;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group {\n    padding-top: 0;\n    margin-bottom: 0;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group input {\n      padding: 5px;\n}\n.wp-ninja-recipe .table_form_fields .select_recipe_type {\n  float: right;\n  margin-top: -22px;\n  margin-bottom: 5px;\n}\n.wp-ninja-recipe .filtered_area {\n  background: #fff;\n  height: 52px;\n  padding: 10px;\n}\n.wp-ninja-recipe .filtered_area .preference_type {\n    margin-left: 12px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter {\n    width: 1.333%;\n    float: right;\n    margin-top: 15px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter span {\n      color: #b91313;\n      display: inline-block;\n      width: 25px;\n      height: 25px;\n      cursor: pointer;\n}\n.wp-ninja-recipe .el-select .el-input__inner {\n  background: #fff;\n}\n", ""]);
 
 // exports
 
