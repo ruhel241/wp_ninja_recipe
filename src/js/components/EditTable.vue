@@ -175,7 +175,6 @@ export default {
 
         },
         updateTableConfig() {
-
             let tableConfig = {
                 ingredient: this.post_ingredient,
                 description: this.post_description,
@@ -189,7 +188,7 @@ export default {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'update_table',
                 table_id: this.table_id,
-                table_config: tableConfig,
+                table_config: JSON.stringify(tableConfig),
                 recipe_type: this.recipe_type
             })
             .then(
