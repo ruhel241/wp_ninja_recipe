@@ -1,6 +1,11 @@
 <template>
-    <div class="wp_vue_editor_wrapper">
-        <template>
+    <div class="wp_vue_editor_wrapper" :class="'editor_wrapper_'+ninja_editor_id">
+
+        <template v-if="hasWpEditor">
+            <textarea class="wp_vue_editor" :id="ninja_editor_id" v-model="plain_content"></textarea>
+        </template>
+
+        <template v-else>
             <textarea
                 class="wp_vue_editor wp_vue_editor_plain"
                 v-model="plain_content"></textarea>
@@ -47,12 +52,13 @@ export default {
         initEditor() {
             if(this.hasWpEditor) {
                 wp.editor.remove(this.ninja_editor_id)
+                const that = this;
                 wp.editor.initialize(this.ninja_editor_id, {
                         mode : "none",
                         tinymce: {
                             toolbar1: 'bold,italic,bullist,numlist,link,blockquote,alignleft,aligncenter,alignright,strikethrough,forecolor,codeformat,undo,redo',
                             setup(ed) {
-                                ed.on('change', function (ed, l) {
+                                ed.on('change', (ed, l) => {
                                     that.changeContentEvent();
                                 });
                             }
@@ -80,13 +86,23 @@ export default {
         changeContentEvent() {
             let content = wp.editor.getContent(this.ninja_editor_id);
             this.$emit('input', content)
+        },
+        okSave() {
+            console.log(this.plain_content)
         }
     },
-    mounted() {
+    created() {
         this.initEditor();
         jQuery('.editor_wrapper' + this.ninja_editor_id + '.ninja_demo_media_button').on('click', function(e) {
             e.preventDefault();
         })
+    },
+    watch: {
+        value() {
+            if(!this.value) {
+                this.reloadEditor();
+            }
+        }
     }
 }
 </script>

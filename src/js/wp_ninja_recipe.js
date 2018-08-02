@@ -19,6 +19,7 @@ import {
     Dialog,
     Select,
     Option,
+    Upload,
     TabPane,
     Message,
     Loading,
@@ -38,6 +39,7 @@ Vue.use(Button)
 Vue.use(Dialog)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Upload)
 Vue.use(TabPane)
 Vue.use(Popover)
 Vue.use(VueRouter)
@@ -59,6 +61,7 @@ import 'element-ui/lib/theme-chalk/option.css';
 import 'element-ui/lib/theme-chalk/button.css';
 import 'element-ui/lib/theme-chalk/dialog.css';
 import 'element-ui/lib/theme-chalk/select.css';
+import 'element-ui/lib/theme-chalk/upload.css';
 import 'element-ui/lib/theme-chalk/loading.css';
 import 'element-ui/lib/theme-chalk/popover.css';
 import 'element-ui/lib/theme-chalk/notification.css';

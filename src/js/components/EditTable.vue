@@ -48,13 +48,22 @@
                             <app-wp-editor v-model="post_ingredient"></app-wp-editor>
                         </el-tab-pane>
                         <el-tab-pane label="Description">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aperiam, asperiores consequuntur aliquam odit ut id molestiae blanditiis enim sunt nulla impedit eligendi labore saepe suscipit ipsa repellendus? Adipisci, fuga.</p>
+                            <app-wp-editor v-model="post_description"></app-wp-editor>
                         </el-tab-pane>
                         <el-tab-pane label="Nutrition">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae natus ipsum veniam optio, saepe, odit commodi porro alias quaerat, ut assumenda reiciendis impedit quod. Natus, totam. Vel animi voluptas numquam?</p>
+                            <app-wp-editor v-model="post_nutrition"></app-wp-editor>
                         </el-tab-pane>
                         <el-tab-pane label="Image">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci earum laudantium fugit corporis magnam! Repellendus rerum, voluptatum inventore aperiam nostrum obcaecati, quisquam asperiores minima quaerat voluptas sed adipisci exercitationem perferendis?</p>
+                            <el-upload
+                                class="upload-demo"
+                                drag
+                                action="https://jsonplaceholder.typicode.com/posts/"
+                                multiple
+                                style="text-align: center">
+                                <i class="el-icon-upload"></i>
+                                <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+                                <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
+                            </el-upload>
                         </el-tab-pane>
 
                     </el-tabs>
@@ -87,7 +96,9 @@ export default {
                 { value: 'advance', label: 'Advance' }
             ],
             stretch: true,
-            post_ingredient: ''
+            post_ingredient: '',
+            post_description: '',
+            post_nutrition: ''
         }
     },
     created() {
@@ -95,6 +106,7 @@ export default {
     },
     methods: {
         fetchTable() {
+
             jQuery.get(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_table',
@@ -107,8 +119,33 @@ export default {
                     this.recipe_type = response.data.table.recipe_type;
                 }
             )
+
         },
-        updateTableConfig() {}
+        updateTableConfig() {
+
+            let tableConfig = {
+                ingredient: this.post_ingredient,
+                description: this.post_description,
+                nutrition: this.post_nutrition
+            };
+
+            jQuery.post(ajaxurl, {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'update_table',
+                table_id: this.table_id,
+                table_config: tableConfig,
+                recipe_type: this.recipe_type
+            })
+            .then(
+                (response) => {
+                    this.$notify.success({
+                        title: 'Updated',
+                        message: response.data.message
+					});
+                }
+            )
+
+        },
     }
 }
 </script>
