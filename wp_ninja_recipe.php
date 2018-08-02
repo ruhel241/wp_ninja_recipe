@@ -44,6 +44,8 @@ class WPNinjaRecipe
 		add_action('wp_ajax_ninja_recipe_ajax_actions', array('NinjaRecipe\Classes\RecipeHandler','handleAjaxCalls'));
 		add_action('admin_enqueue_scripts', array($this, 'adminEnqueueScripts'));
 
+		add_action('ninja_recipe_added_new_table', array('NinjaRecipe\Classes\RecipeHandler','populateDemoData') );
+
 	}
 
 

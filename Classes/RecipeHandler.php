@@ -26,7 +26,7 @@ class RecipeHandler
 			static::getTables($pageNumber, $perPage);
 		}
 
-        if ($route == 'update_table_config') {
+        if ($route == 'update_table') {
             $tableId = intval($_REQUEST['table_id']);
             $table_con = wp_unslash($_REQUEST['table_config']);
 			$table_config = json_decode(trim(stripslashes($table_con)), true);
@@ -103,7 +103,7 @@ class RecipeHandler
                 'ID'         	   => $table->ID,
                 'post_title' 	   => $table->post_title,
                 'recipe_type'	   => $table->post_content,
-                'recipe_catgories' => $table->post_excerpt,
+                'tableConfig' 	   => get_post_meta($table->ID,'_ninija_recipe_table_config', true),
                 'demo_url'	    => home_url().'?ninja_recipe_preview='.$table->ID.'#ninja_recipe_demo'
             );
 		}
@@ -117,19 +117,20 @@ class RecipeHandler
 
 	public  static function getTable($tableId, $returnType = 'ajax')
 	{
+			
 		$table = get_post($tableId);
+		$tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
 
 		$formattedTable = (object)array(
 			'ID' 		 	   => $table->ID,
 			'post_title' 	   => $table->post_title,
 			'recipe_type'	   => $table->post_content
-			//'recipe_catgories' => $table->post_excerpt
 		);
-		$tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
-		 wp_send_json_success(array(
+		
+		wp_send_json_success(array(
             'table'        => $formattedTable,
             'tableConfig'  => $tableConfig,
-            'RecipeConfig' => static::getRecipeConfig(),
+            'demoRecipeConfig' => static::getRecipeConfig(),
             'demo_url' => home_url().'?ninja_recipe_preview='.$tableId.'#ninja_recipe_demo'
         ), 200);
 	}
@@ -153,22 +154,20 @@ class RecipeHandler
 		$UpdateNinjaRecipe = array(
 	      'ID'           => $tableId,
 	      'post_content' => $recipeType,
-	      // 'post_thumbnail' => "image upload"
-		);
-		wp_update_post( $UpdateNinjaRecipe );
+	    );
+		wp_update_post($UpdateNinjaRecipe);
+
 		update_post_meta($tableId, '_ninija_recipe_table_config', $table_config);
 
 		do_action('ninija_recipe_table_config_updated', $tableId, $table_config);
-		// $tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
+		$tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
 		wp_send_json_success(array(
             'message' => __('Table Content has been updated', 'ninja_recipe'),
-            // 'tableConfig' => $tableConfig,
+            'tableConfig' => $tableConfig,
         ), 200);
 
 
 	}
-
-
 
 
 	public static function populateDemoData($tableId) //add meta label etc
@@ -179,21 +178,11 @@ class RecipeHandler
     public static function getRecipeConfig()
 	{
 		return array(
-				'selectedLabel' => array(
-	                'loanAmount' 	     => 'Loan Amount',
-	                'downPament'	     => 'Down Payment',
-	                'mortgageTerm'	     => 'Mortgage Term',
-	                'annualInterestRate' => 'Annual Interest Rate',
-	            ),
-
-				'selectedDefault' => array(
-					'loanAmountDefVal' 		  => 120000,
-					'downPamentDefVal'		  => 20000,
-					'mortgageTermDefVal'	  => 30,
-					'annualInterestRateDefVal'=> 12
-				),
-					
-				'settings' => false
+			
+            'ingredient'  => 'ami bala asi',
+            'description' => 'tmi vala aso ni',
+            'nutrition'	  => 'oy vala asi'
+	           
 			);
 	}
 
