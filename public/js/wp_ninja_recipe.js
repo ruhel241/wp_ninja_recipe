@@ -20609,6 +20609,7 @@ var render = function() {
     { staticClass: "ninjaRecipeInputDropdown" },
     [
       _c("label", [_vm._v(_vm._s(_vm.label))]),
+      _c("br"),
       _vm._v(" "),
       _c(
         "el-select",
@@ -21246,7 +21247,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .fields {\n  background: #fff;\n  margin-top: 15px;\n  margin-right: 20px;\n  padding: 20px;\n}\n.ninja_recipe_table .fields h2 {\n  margin-top: 0;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .all_fields {\n  margin-top: 30px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .fields {\n  width: 68%;\n  background: #fff;\n  margin-top: 15px;\n  margin-right: 20px;\n  padding: 20px;\n}\n.ninja_recipe_table .fields h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview {\n  width: 29.6%;\n  background: #fff;\n  margin-top: 15px;\n  margin-right: 20px;\n  padding: 20px;\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .all_fields {\n  margin-top: 30px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n", ""]);
 
 // exports
 
@@ -21259,6 +21260,8 @@ exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__);
 //
 //
 //
@@ -21339,13 +21342,49 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'EditTable',
     components: {
-        'app-wp-editor': __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default.a
+        'app-wp-editor': __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default.a,
+        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default.a
     },
     data: function data() {
         return {
@@ -21353,10 +21392,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             post_title: '',
             recipe_type: '',
             recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
+            meal_types: [{ value: 'breakfast', label: 'Breakfast' }, { value: 'lunch', label: 'Lunch' }, { value: 'dinner', label: 'Dinner' }],
+            cusine_types: [{ value: 'indian', label: 'Indian' }, { value: 'thai', label: 'Thai' }, { value: 'chinese', label: 'Chinese' }],
+            preference_types: [{ value: 'veg', label: 'Vegetable' }, { value: 'non-vegetable', label: 'Non-vegetable' }],
             stretch: true,
             post_ingredient: '',
             post_description: '',
-            post_nutrition: ''
+            post_nutrition: '',
+            selectedMealType: '',
+            selectedCusineType: '',
+            selectedPreferenceType: ''
         };
     },
     created: function created() {
@@ -21383,7 +21428,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var tableConfig = {
                 ingredient: this.post_ingredient,
                 description: this.post_description,
-                nutrition: this.post_nutrition
+                nutrition: this.post_nutrition,
+                mealType: this.selectedMealType,
+                cusineType: this.selectedCusineType,
+                preferenceType: this.selectedPreferenceType
             };
 
             jQuery.post(ajaxurl, {
@@ -21491,7 +21539,7 @@ var render = function() {
       _c(
         "el-row",
         [
-          _c("el-col", { staticClass: "fields", attrs: { span: 15 } }, [
+          _c("el-col", { staticClass: "fields" }, [
             _vm.recipe_type === "normal"
               ? _c("h2", [_vm._v("Normal Recipe")])
               : _vm._e(),
@@ -21636,7 +21684,99 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("el-col", { staticClass: "show_preview", attrs: { span: 8 } })
+          _c(
+            "el-col",
+            { staticClass: "show_preview" },
+            [
+              _c("h2", [_vm._v("Optional Fields")]),
+              _vm._v(" "),
+              _c(
+                "el-row",
+                [
+                  _c(
+                    "el-col",
+                    { attrs: { span: 12 } },
+                    [
+                      _c("label", [_vm._v("Select Meal Type")]),
+                      _vm._v(" "),
+                      _c(
+                        "el-select",
+                        {
+                          attrs: {
+                            multiple: "",
+                            filterable: "",
+                            "allow-create": "",
+                            "default-first-option": "",
+                            placeholder: "Choose Meal Type"
+                          },
+                          model: {
+                            value: _vm.selectedMealType,
+                            callback: function($$v) {
+                              _vm.selectedMealType = $$v
+                            },
+                            expression: "selectedMealType"
+                          }
+                        },
+                        _vm._l(_vm.meal_types, function(item) {
+                          return _c("el-option", {
+                            key: item.value,
+                            attrs: { label: item.label, value: item.value }
+                          })
+                        })
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-col",
+                    { attrs: { span: 12 } },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Select Cusine Type",
+                          pcHolder: "Select Cusine Type",
+                          recipeTypes: _vm.cusine_types
+                        },
+                        model: {
+                          value: _vm.selectedCusineType,
+                          callback: function($$v) {
+                            _vm.selectedCusineType = $$v
+                          },
+                          expression: "selectedCusineType"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-col",
+                    { attrs: { span: 12 } },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Select Preference Type",
+                          pcHolder: "Select Preference Type",
+                          recipeTypes: _vm.preference_types
+                        },
+                        model: {
+                          value: _vm.selectedPreferenceType,
+                          callback: function($$v) {
+                            _vm.selectedPreferenceType = $$v
+                          },
+                          expression: "selectedPreferenceType"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )

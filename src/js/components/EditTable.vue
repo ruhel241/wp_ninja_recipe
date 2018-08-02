@@ -27,7 +27,7 @@
         <!-- Body -->
         <el-row>
             
-            <el-col :span="15" class="fields">
+            <el-col class="fields">
                 <h2 v-if="recipe_type==='normal'">Normal Recipe</h2>
                 <h2 v-if="recipe_type==='advance'">Advance Recipe</h2>
 
@@ -71,8 +71,42 @@
 
             </el-col>
 
-            <el-col :span="8" class="show_preview">
-                <!-- Tabs Component -->
+            <el-col class="show_preview">
+                <h2>Optional Fields</h2>
+                
+                <el-row>
+                    <el-col :span="12">
+                        <label>Select Meal Type</label>
+                        <el-select
+                            v-model="selectedMealType"
+                            multiple
+                            filterable
+                            allow-create
+                            default-first-option
+                            placeholder="Choose Meal Type">
+                            <el-option
+                            v-for="item in meal_types"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-col>
+                    <el-col :span="12">
+                        <app-input-dropdown
+                            v-model="selectedCusineType"
+                            label="Select Cusine Type"
+                            pcHolder="Select Cusine Type"
+                            :recipeTypes="cusine_types"></app-input-dropdown>
+                    </el-col>
+                    <el-col :span="12">
+                        <app-input-dropdown
+                            v-model="selectedPreferenceType"
+                            label="Select Preference Type"
+                            pcHolder="Select Preference Type"
+                            :recipeTypes="preference_types"></app-input-dropdown>
+                    </el-col>
+                </el-row>
             </el-col>
         </el-row>
     </div>
@@ -80,11 +114,13 @@
 
 <script>
 import wp_editor from './common/_wp_editor.vue'
+import InputDropdown from './core/InputDropdown.vue'
 
 export default {
     name: 'EditTable',
     components: {
-        'app-wp-editor': wp_editor
+        'app-wp-editor': wp_editor,
+        'app-input-dropdown': InputDropdown
     },
     data() {
         return {
@@ -95,10 +131,27 @@ export default {
                 { value: 'normal', label: 'Normal' },
                 { value: 'advance', label: 'Advance' }
             ],
+            meal_types: [
+                { value: 'breakfast', label: 'Breakfast' },
+                { value: 'lunch', label: 'Lunch' },
+                { value: 'dinner', label: 'Dinner' }
+            ],
+            cusine_types: [
+                { value: 'indian', label: 'Indian' },
+                { value: 'thai', label: 'Thai' },
+                { value: 'chinese', label: 'Chinese' }
+            ],
+            preference_types: [
+                { value: 'veg', label: 'Vegetable' },
+                { value: 'non-vegetable', label: 'Non-vegetable' }
+            ],
             stretch: true,
             post_ingredient: '',
             post_description: '',
-            post_nutrition: ''
+            post_nutrition: '',
+            selectedMealType: '',
+            selectedCusineType: '',
+            selectedPreferenceType: ''
         }
     },
     created() {
@@ -126,7 +179,10 @@ export default {
             let tableConfig = {
                 ingredient: this.post_ingredient,
                 description: this.post_description,
-                nutrition: this.post_nutrition
+                nutrition: this.post_nutrition,
+                mealType: this.selectedMealType,
+                cusineType: this.selectedCusineType,
+                preferenceType: this.selectedPreferenceType
             };
 
             jQuery.post(ajaxurl, {
@@ -145,7 +201,7 @@ export default {
                 }
             )
 
-        },
+        }
     }
 }
 </script>
@@ -169,15 +225,26 @@ export default {
     }
 
     .fields {
+        width: 68%;
 		background: #fff;
 		margin-top: 15px;
 		margin-right: 20px;
 		padding: 20px;
+        h2 {
+            margin-top: 0;
+        }
 	}
 
-	.fields h2{
-		margin-top: 0;
-	}
+    .show_preview {
+        width: 29.6%;
+        background: #fff;
+		margin-top: 15px;
+		margin-right: 20px;
+		padding: 20px;
+        h2 {
+            margin-top: 0;
+        }
+    }
 
     .change_type {
 		float: right;

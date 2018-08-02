@@ -1,6 +1,6 @@
 <template>
     <div class="ninjaRecipeInputDropdown">
-        <label>{{ label }}</label>
+        <label>{{ label }}</label><br>
         <el-select v-model="model" :placeholder="pcHolder" class="model_select">
             <el-option 
                 v-for="(type, i) in recipeTypes"
