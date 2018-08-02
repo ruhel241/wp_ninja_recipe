@@ -81,7 +81,7 @@ export default {
         return {
             table_id: this.$route.params.table_id,
             post_title: '',
-            recipe_type: 'normal',
+            recipe_type: '',
             recipe_types: [
                 { value: 'normal', label: 'Normal' },
                 { value: 'advance', label: 'Advance' }
@@ -104,6 +104,7 @@ export default {
                 (response) => {
                     console.log(response)
                     this.post_title = response.data.table.post_title;
+                    this.recipe_type = response.data.table.recipe_type;
                 }
             )
         },
