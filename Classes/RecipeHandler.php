@@ -47,7 +47,6 @@ class RecipeHandler
 
 	public static function addTable($tableTitle, $recipeType)
 	{	
-		// return var_dump($allRecipeCatgoryTypes);	
 		
 		if( ! $tableTitle ){
 			wp_send_json_error(array(
@@ -65,15 +64,11 @@ class RecipeHandler
 		$tableData = array(
 			'post_title'   => $tableTitle,
 			'post_content' => $recipeType,
-			// 'post_excerpt' => $allRecipeCatgoryTypes,
 			'post_type'	   => CPT::$CPTName,
 			'post_status'  => 'publish'
 		);
 
 		$tableId = wp_insert_post($tableData);
-
-		// meta add
-		// update_post_meta($tableId, '_ninija_recipe_table_config', $allRecipeCatgoryTypes);
 
 		do_action('ninja_recipe_added_new_table', $tableId); 
 

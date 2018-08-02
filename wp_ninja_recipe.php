@@ -42,6 +42,8 @@ class WPNinjaRecipe
 	{
 		add_action('admin_menu', array('NinjaRecipe\Classes\Menu','addAdminMenuPages'));
 		add_action('wp_ajax_ninja_recipe_ajax_actions', array('NinjaRecipe\Classes\RecipeHandler','handleAjaxCalls'));
+		add_action('admin_enqueue_scripts', array($this, 'adminEnqueueScripts'));
+
 	}
 
 
@@ -54,7 +56,19 @@ class WPNinjaRecipe
 	public function enqueueScripts()
 	{
 		
+
 	}
+
+
+	public function adminEnqueueScripts()
+	{
+		if ( function_exists( 'wp_enqueue_editor' ) ) {
+			wp_enqueue_editor();
+			wp_enqueue_media();
+		}
+	}
+
+
 
 
 	public function loadTextDomain()
