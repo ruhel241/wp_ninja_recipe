@@ -21338,7 +21338,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             table_id: this.$route.params.table_id,
             post_title: '',
-            recipe_type: 'normal',
+            recipe_type: '',
             recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
             stretch: true,
             post_ingredient: ''
@@ -21359,6 +21359,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).then(function (response) {
                 console.log(response);
                 _this.post_title = response.data.table.post_title;
+                _this.recipe_type = response.data.table.recipe_type;
             });
         },
         updateTableConfig: function updateTableConfig() {}
