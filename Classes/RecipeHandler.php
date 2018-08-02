@@ -130,7 +130,7 @@ class RecipeHandler
 		wp_send_json_success(array(
             'table'        => $formattedTable,
             'tableConfig'  => $tableConfig,
-            'demoRecipeConfig' => static::getRecipeConfig(),
+            //'demoRecipeConfig' => static::getRecipeConfig(),
             'demo_url' => home_url().'?ninja_recipe_preview='.$tableId.'#ninja_recipe_demo'
         ), 200);
 	}
@@ -172,7 +172,7 @@ class RecipeHandler
 
 	public static function populateDemoData($tableId) //add meta label etc
     {
-        update_post_meta($tableId, '_ninija_recipe_table_config', static::getRecipeConfig());
+        //update_post_meta($tableId, '_ninija_recipe_table_config', static::getRecipeConfig());
     }
 
     public static function getRecipeConfig()

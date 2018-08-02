@@ -89,24 +89,26 @@
 
             <el-table-column label="Meal Type">
                 
-                <template slot-scope="scope">
-
+                <template slot-scope="scope" v-if="scope.row.tableConfig">
+                    <span v-for="(mealType, mealType_index) in scope.row.tableConfig.mealType" :key="mealType_index">
+                        {{mealType}}
+                    </span>    
                 </template>
 
             </el-table-column>
 
             <el-table-column label="Cusine Type">
                 
-                <template slot-scope="scope">
-                    
+                <template slot-scope="scope" v-if="scope.row.tableConfig">
+                    {{ scope.row.tableConfig.cusineType }}
                 </template>
 
             </el-table-column>
 
             <el-table-column label="Preference">
                 
-                <template slot-scope="scope">
-                    
+                <template slot-scope="scope" v-if="scope.row.tableConfig">
+                    {{ scope.row.tableConfig.preferenceType }}
                 </template>
 
             </el-table-column>
@@ -235,7 +237,7 @@ export default {
             })
             .then(
                 (response) => {
-                    console.log(response)
+                
                     this.tableData = response.data.tables;
                     this.total = response.data.total;
                 }

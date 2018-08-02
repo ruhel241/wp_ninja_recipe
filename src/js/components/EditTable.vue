@@ -170,6 +170,12 @@ export default {
                     console.log(response)
                     this.post_title = response.data.table.post_title;
                     this.recipe_type = response.data.table.recipe_type;
+                    this.post_nutrition = response.data.tableConfig.ingredient;
+                    this.post_description = response.data.tableConfig.description;
+                    this.post_ingredient = response.data.tableConfig.ingredient;
+                    this.selectedMealType = response.data.tableConfig.mealType;
+                    this.selectedCusineType = response.data.tableConfig.cusineType;
+                    this.selectedPreferenceType = response.data.tableConfig.preferenceType;
                 }
             )
 
