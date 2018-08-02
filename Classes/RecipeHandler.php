@@ -11,8 +11,7 @@ class RecipeHandler
 		if( $route == 'add_table' ){
 			$tableTitle = sanitize_text_field($_REQUEST['post_title']);
 			$recipeType = sanitize_text_field($_REQUEST['recipe_type']);
-			$allRecipeCatgoryTypes = wp_unslash($_REQUEST['allRecipeCatgoryTypes']);
-			static::addTable($tableTitle, $recipeType, $allRecipeCatgoryTypes);
+			static::addTable($tableTitle, $recipeType);
 		}
 
 		if ($route == 'get_table') {
@@ -46,7 +45,7 @@ class RecipeHandler
 	}
 
 
-	public static function addTable($tableTitle, $recipeType, $allRecipeCatgoryTypes)
+	public static function addTable($tableTitle, $recipeType)
 	{	
 		// return var_dump($allRecipeCatgoryTypes);	
 		
@@ -62,23 +61,6 @@ class RecipeHandler
 			), 423);
 		}
 
-		if( ! $allRecipeCatgoryTypes['meal_types'] ){
-			wp_send_json_error(array(
-				'message' => __("Please Select Recipe Meal Type", 'ninja_recipe')
-			), 423);
-		}
-
-		if( ! $allRecipeCatgoryTypes['cusine_types'] ){
-			wp_send_json_error(array(
-				'message' => __("Please Select Cusine Type", 'ninja_recipe')
-			), 423);
-		}
-
-		if( ! $allRecipeCatgoryTypes['preferenceTypes'] ){
-			wp_send_json_error(array(
-				'message' => __("Please Select Preference Type", 'ninja_recipe')
-			), 423);
-		}
 
 		$tableData = array(
 			'post_title'   => $tableTitle,
@@ -91,7 +73,7 @@ class RecipeHandler
 		$tableId = wp_insert_post($tableData);
 
 		// meta add
-		update_post_meta($tableId, '_ninija_recipe_table_config', $allRecipeCatgoryTypes);
+		// update_post_meta($tableId, '_ninija_recipe_table_config', $allRecipeCatgoryTypes);
 
 		do_action('ninja_recipe_added_new_table', $tableId); 
 
@@ -145,8 +127,8 @@ class RecipeHandler
 		$formattedTable = (object)array(
 			'ID' 		 	   => $table->ID,
 			'post_title' 	   => $table->post_title,
-			'recipe_type'	   => $table->post_content,
-			'recipe_catgories' => $table->post_excerpt
+			'recipe_type'	   => $table->post_content
+			//'recipe_catgories' => $table->post_excerpt
 		);
 		$tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
 		 wp_send_json_success(array(

@@ -144,14 +144,6 @@
             width="60%">
                 <div class="table_form_fields">
 
-                    <div class="select_recipe_type">
-                        <app-input-dropdown 
-                            pcHolder="Select Recipe Type"
-                            v-model="selectedRecipe"
-                            :recipeTypes="recipe_types">
-                        </app-input-dropdown>
-                    </div>
-
                     <div class="recipe_table_name">
                         <label for="new_table_name">Table Name</label>
                         <el-input id="new_table_name" type="text" placeholder="Your Table Name" v-model="table_name"></el-input>
@@ -159,44 +151,11 @@
 
                     <div class="recipe_categories" style="margin-top: 10px">
                         <el-row>
-                            <el-col :span="5">
-                                <!-- <app-input-dropdown 
-                                    label="Meal Type"
-                                    pcHolder="Select Meal Type"
-                                    v-model="mealType"
-                                    :recipeTypes="meal_types">
-                                </app-input-dropdown> -->
-                                <label>Meal Type</label>
-                                <el-select
-                                    v-model="mealType"
-                                    multiple
-                                    filterable
-                                    allow-create
-                                    default-first-option
-                                    placeholder="Choose tags for your article"
-                                    style="top: 5px;">
-                                        <el-option
-                                        v-for="item in meal_types"
-                                        :key="item.value"
-                                        :label="item.label"
-                                        :value="item.value">
-                                        </el-option>
-                                </el-select>
-                            </el-col>
-                            <el-col :span="5">
+                            <el-col :span="12">
                                 <app-input-dropdown 
-                                    label="Cusine Type"
-                                    pcHolder="Select Cusine Type"
-                                    v-model="cusineType"
-                                    :recipeTypes="cusine_types">
-                                </app-input-dropdown>
-                            </el-col>
-                            <el-col :span="5">
-                                <app-input-dropdown 
-                                    label="Preference"
-                                    pcHolder="Select Preference"
-                                    v-model="preferenceType"
-                                    :recipeTypes="preference_types">
+                                    pcHolder="Select Recipe Type"
+                                    v-model="selectedRecipe"
+                                    :recipeTypes="recipe_types">
                                 </app-input-dropdown>
                             </el-col>
                         </el-row>
@@ -294,17 +253,11 @@ export default {
         },
         addNewTable() {
             this.addingTableAjax = true
-            let allRecipeCatgoryTypes = {
-                meal_types: this.mealType,
-                cusine_types: this.cusineType,
-                preferenceTypes: this.preferenceType
-            }
             jQuery.post(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'add_table',
                 post_title: this.table_name,
-                recipe_type: this.selectedRecipe,
-                allRecipeCatgoryTypes: allRecipeCatgoryTypes 
+                recipe_type: this.selectedRecipe 
             })
             .then(
                 (response) => {

@@ -11,6 +11,7 @@ locale.use(lang);
 import {
     Row,
     Col,
+    Tabs,
     Icon,
     Table,
     Input, 
@@ -18,6 +19,7 @@ import {
     Dialog,
     Select,
     Option,
+    TabPane,
     Message,
     Loading,
     Popover,
@@ -28,6 +30,7 @@ import {
 // making the required components global
 Vue.use(Row)
 Vue.use(Col)
+Vue.use(Tabs)
 Vue.use(Icon)
 Vue.use(Table)
 Vue.use(Input)
@@ -35,6 +38,7 @@ Vue.use(Button)
 Vue.use(Dialog)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(TabPane)
 Vue.use(Popover)
 Vue.use(VueRouter)
 Vue.use(TableColumn)
@@ -48,6 +52,7 @@ Vue.prototype.$message = Message;
 import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/col.css';
 import 'element-ui/lib/theme-chalk/row.css';
+import 'element-ui/lib/theme-chalk/tabs.css';
 import 'element-ui/lib/theme-chalk/input.css';
 import 'element-ui/lib/theme-chalk/table.css';
 import 'element-ui/lib/theme-chalk/option.css';
