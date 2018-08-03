@@ -91,7 +91,7 @@
                 
                 <template slot-scope="scope" v-if="scope.row.tableConfig">
                     <span v-for="(mealType, mealType_index) in scope.row.tableConfig.mealType" :key="mealType_index">
-                        {{mealType}}
+                        {{mealType}}<span v-if="mealType_index < scope.row.tableConfig.mealType.length-1">, </span>
                     </span>    
                 </template>
 

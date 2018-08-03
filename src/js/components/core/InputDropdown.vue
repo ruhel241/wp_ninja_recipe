@@ -1,7 +1,7 @@
 <template>
-    <div class="ninjaRecipeInputDropdown">
+    <div class="ninjaRecipeInputDropdown" :style="styleObj">
         <label>{{ label }}</label><br>
-        <el-select v-model="model" :placeholder="pcHolder" class="model_select">
+        <el-select v-model="model" :placeholder="pcHolder" class="model_select" style="width: 100%;">
             <el-option 
                 v-for="(type, i) in recipeTypes"
                 :key="i"
@@ -14,7 +14,23 @@
 <script>
 export default {
     name: 'InputDropdown',
-    props: ['value', 'pcHolder', 'recipeTypes', 'label'],
+    props: {
+        value: {
+            default: ''
+        },
+        pcHolder: {
+            default: '',
+        },
+        recipeTypes: {
+            default: ''
+        },
+        label: {
+            default: ''
+        },
+        styleObj: {
+            default: ''
+        }
+    },
     computed: {
         model: {
             get() {

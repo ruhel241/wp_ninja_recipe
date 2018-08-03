@@ -54,16 +54,12 @@
                             <app-wp-editor v-model="post_nutrition"></app-wp-editor>
                         </el-tab-pane>
                         <el-tab-pane label="Image">
-                            <el-upload
-                                class="upload-demo"
-                                drag
-                                action="https://jsonplaceholder.typicode.com/posts/"
-                                multiple
-                                style="text-align: center">
-                                <i class="el-icon-upload"></i>
-                                <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
-                                <div class="el-upload__tip" slot="tip">jpg/png files with a size less than 500kb</div>
-                            </el-upload>
+                            <img :src=featImage alt="" style="width: 60%;"><br>
+                            <div>
+                                <el-button @click="upload_image" v-if="!featImage">Upload Image</el-button>
+                                <el-button @click="upload_image" v-if="featImage">Change Image</el-button>
+                                <el-button @click="featImage = '';" v-if="featImage">Remove</el-button>
+                            </div>
                         </el-tab-pane>
 
                     </el-tabs>
@@ -75,7 +71,7 @@
                 <h2>Optional Fields</h2>
                 
                 <el-row>
-                    <el-col :span="12">
+                    <el-col :span="24">
                         <label>Select Meal Type</label>
                         <el-select
                             v-model="selectedMealType"
@@ -83,13 +79,13 @@
                             filterable
                             allow-create
                             default-first-option
-                            placeholder="Choose Meal Type">
+                            placeholder="Choose Meal Type"
+                            style="width: 100%;">
                             <el-option
-                            v-for="item in meal_types"
-                            :key="item.value"
-                            :label="item.label"
-                            :value="item.value">
-                            </el-option>
+                                v-for="(item, i) in meal_types"
+                                :key="i"
+                                :label="item.label"
+                                :value="item.value"></el-option>
                         </el-select>
                     </el-col>
                     <el-col :span="12">
@@ -97,14 +93,16 @@
                             v-model="selectedCusineType"
                             label="Select Cusine Type"
                             pcHolder="Select Cusine Type"
-                            :recipeTypes="cusine_types"></app-input-dropdown>
+                            :recipeTypes="cusine_types"
+                            styleObj="padding-right: 2px; width: 100%;"></app-input-dropdown>
                     </el-col>
                     <el-col :span="12">
                         <app-input-dropdown
                             v-model="selectedPreferenceType"
                             label="Select Preference Type"
                             pcHolder="Select Preference Type"
-                            :recipeTypes="preference_types"></app-input-dropdown>
+                            :recipeTypes="preference_types"
+                            styleObj="padding-left: 2px; width: 100%;"></app-input-dropdown>
                     </el-col>
                 </el-row>
             </el-col>
@@ -146,12 +144,14 @@ export default {
                 { value: 'non-vegetable', label: 'Non-vegetable' }
             ],
             stretch: true,
+            upload_img: '',
             post_ingredient: '',
             post_description: '',
             post_nutrition: '',
-            selectedMealType: '',
+            selectedMealType: [],
             selectedCusineType: '',
-            selectedPreferenceType: ''
+            selectedPreferenceType: '',
+            featImage: ''
         }
     },
     created() {
@@ -170,12 +170,15 @@ export default {
                     console.log(response)
                     this.post_title = response.data.table.post_title;
                     this.recipe_type = response.data.table.recipe_type;
-                    this.post_nutrition = response.data.tableConfig.ingredient;
-                    this.post_description = response.data.tableConfig.description;
-                    this.post_ingredient = response.data.tableConfig.ingredient;
-                    this.selectedMealType = response.data.tableConfig.mealType;
-                    this.selectedCusineType = response.data.tableConfig.cusineType;
-                    this.selectedPreferenceType = response.data.tableConfig.preferenceType;
+                    if( response.data.tableConfig ) {
+                        this.post_nutrition = response.data.tableConfig.ingredient;
+                        this.post_description = response.data.tableConfig.description;
+                        this.post_ingredient = response.data.tableConfig.ingredient;
+                        this.selectedMealType = response.data.tableConfig.mealType;
+                        this.selectedCusineType = response.data.tableConfig.cusineType;
+                        this.selectedPreferenceType = response.data.tableConfig.preferenceType;
+                        this.featImage = response.data.tableConfig.featuredImage;
+                    }
                 }
             )
 
@@ -187,7 +190,8 @@ export default {
                 nutrition: this.post_nutrition,
                 mealType: this.selectedMealType,
                 cusineType: this.selectedCusineType,
-                preferenceType: this.selectedPreferenceType
+                preferenceType: this.selectedPreferenceType,
+                featuredImage: this.featImage
             };
 
             jQuery.post(ajaxurl, {
@@ -205,7 +209,33 @@ export default {
 					});
                 }
             )
+        },
 
+        upload_image() {
+            var button = $(this);
+            var custom_uploader = wp.media({
+
+                title: 'Insert Recipe Image',
+                library : {
+                    type : 'image'
+                },
+                button: {
+                    text: 'Use this image' 
+                },
+                multiple: false
+
+            }).on('select', () => { // using the arrow function cause there is a callback(.on) inside function 
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
+                this.featImage = attachment.url;
+                console.log('Featured Image is: ' + this.featImage)
+            })
+            .open();
+        }
+    },
+    watch: {
+        upload_img() {
+            console.log(this.upload_img)
         }
     }
 }
@@ -258,6 +288,20 @@ export default {
 
     .all_fields {
         margin-top: 30px;
+        // .el-tabs {
+        //     .is-top {
+        //         background: #46A0FC;
+        //         border-color: #fff;
+        //         .el-tabs__nav {
+        //             .is-top {
+        //             }
+        //         }
+        //         .is-active {
+        //             background: #fff;
+        //             color: #909399;
+        //         }
+        //     }
+        // }
     }
 
     .el-message--success {
