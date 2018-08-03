@@ -24,6 +24,7 @@ import {
     Message,
     Loading,
     Popover,
+    InputNumber,
     TableColumn,
     Notification
 } from 'element-ui'
@@ -43,6 +44,7 @@ Vue.use(Upload)
 Vue.use(TabPane)
 Vue.use(Popover)
 Vue.use(VueRouter)
+Vue.use(InputNumber)
 Vue.use(TableColumn)
 
 Vue.use(Loading.directive);
@@ -66,6 +68,7 @@ import 'element-ui/lib/theme-chalk/loading.css';
 import 'element-ui/lib/theme-chalk/popover.css';
 import 'element-ui/lib/theme-chalk/notification.css';
 import 'element-ui/lib/theme-chalk/table-column.css';
+import 'element-ui/lib/theme-chalk/input-number.css';
 
 
 // importing the root component

@@ -56,11 +56,6 @@
             v-loading="tableLoading"
             border>
 
-            <el-table-column
-                prop="ID"
-                label="ID"
-                width="60">
-            </el-table-column>
 
             <el-table-column label="Name">
 
@@ -68,7 +63,10 @@
                     slot-scope="scope">
                     <router-link 
                         :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
-                        {{ scope.row.post_title }}
+                        <div>
+                            <span><img :src=scope.row.tableConfig.featuredImage style="width: 20%;" v-if="scope.row.tableConfig"></span>
+                            <span>{{ scope.row.post_title }}</span>
+                        </div>
                     </router-link>
                 </template>
 
@@ -151,14 +149,14 @@
                         <el-input id="new_table_name" type="text" placeholder="Your Table Name" v-model="table_name"></el-input>
                     </div>
 
-                    <div class="recipe_categories" style="margin-top: 10px">
+                    <div class="recipe_categories">
                         <el-row>
                             <el-col :span="12">
                                 <app-input-dropdown 
                                     pcHolder="Select Recipe Type"
                                     v-model="selectedRecipe"
-                                    :recipeTypes="recipe_types">
-                                </app-input-dropdown>
+                                    :recipeTypes="recipe_types"
+                                    label="Recipe Type"></app-input-dropdown>
                             </el-col>
                         </el-row>
                     </div>

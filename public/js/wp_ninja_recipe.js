@@ -15756,8 +15756,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_element_ui_lib_theme_chalk_notification_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_element_ui_lib_theme_chalk_notification_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_element_ui_lib_theme_chalk_table_column_css__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_element_ui_lib_theme_chalk_table_column_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_element_ui_lib_theme_chalk_table_column_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__AdminApp__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__AdminApp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21__AdminApp__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_element_ui_lib_theme_chalk_input_number_css__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_element_ui_lib_theme_chalk_input_number_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_element_ui_lib_theme_chalk_input_number_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__AdminApp__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__AdminApp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22__AdminApp__);
 
 
 
@@ -15785,6 +15787,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_elem
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_element_ui__["TabPane"]);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_element_ui__["Popover"]);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_element_ui__["InputNumber"]);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_element_ui__["TableColumn"]);
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_element_ui__["Loading"].directive);
@@ -15793,6 +15796,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$notify = __WEBPACK_IMPORT
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$message = __WEBPACK_IMPORTED_MODULE_5_element_ui__["Message"];
 
 // importing css of required components
+
 
 
 
@@ -15820,7 +15824,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     el: "#wp_ninja_recipe",
     router: router,
     render: function render(h) {
-        return h(__WEBPACK_IMPORTED_MODULE_21__AdminApp___default.a);
+        return h(__WEBPACK_IMPORTED_MODULE_22__AdminApp___default.a);
     }
 });
 
@@ -19231,8 +19235,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -20860,10 +20862,6 @@ var render = function() {
         },
         [
           _c("el-table-column", {
-            attrs: { prop: "ID", label: "ID", width: "60" }
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
             attrs: { label: "Name" },
             scopedSlots: _vm._u([
               {
@@ -20881,11 +20879,20 @@ var render = function() {
                         }
                       },
                       [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(scope.row.post_title) +
-                            "\n                "
-                        )
+                        _c("div", [
+                          _c("span", [
+                            scope.row.tableConfig
+                              ? _c("img", {
+                                  staticStyle: { width: "20%" },
+                                  attrs: {
+                                    src: scope.row.tableConfig.featuredImage
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v(_vm._s(scope.row.post_title))])
+                        ])
                       ]
                     )
                   ]
@@ -21109,10 +21116,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              {
-                staticClass: "recipe_categories",
-                staticStyle: { "margin-top": "10px" }
-              },
+              { staticClass: "recipe_categories" },
               [
                 _c(
                   "el-row",
@@ -21124,7 +21128,8 @@ var render = function() {
                         _c("app-input-dropdown", {
                           attrs: {
                             pcHolder: "Select Recipe Type",
-                            recipeTypes: _vm.recipe_types
+                            recipeTypes: _vm.recipe_types,
+                            label: "Recipe Type"
                           },
                           model: {
                             value: _vm.selectedRecipe,
@@ -21295,7 +21300,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .fields {\n  width: 68%;\n  background: #fff;\n  margin-top: 15px;\n  margin-right: 20px;\n  padding: 20px;\n}\n.ninja_recipe_table .fields h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview {\n  width: 29.6%;\n  background: #fff;\n  margin-top: 15px;\n  margin-right: 20px;\n  padding: 20px;\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .all_fields {\n  margin-top: 30px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .fields {\n  width: 68%;\n  background: #fff;\n  margin-top: 15px;\n  margin-right: 20px;\n  padding: 20px;\n}\n.ninja_recipe_table .fields h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .fields .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .fields .all_fields .ing_amnt_field {\n      width: 100%;\n      padding: 19px;\n      border-radius: 4px;\n}\n.ninja_recipe_table .show_preview {\n  width: 29.6%;\n  background: #fff;\n  margin-top: 15px;\n  margin-right: 20px;\n  padding: 20px;\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n", ""]);
 
 // exports
 
@@ -21310,6 +21315,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NutritionAdv_vue__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NutritionAdv_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__NutritionAdv_vue__);
 //
 //
 //
@@ -21422,6 +21429,93 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -21430,7 +21524,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     name: 'EditTable',
     components: {
         'app-wp-editor': __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default.a,
-        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default.a
+        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default.a,
+        'app-nutrition-adv': __WEBPACK_IMPORTED_MODULE_2__NutritionAdv_vue___default.a
     },
     data: function data() {
         return {
@@ -21438,18 +21533,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             post_title: '',
             recipe_type: '',
             recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
-            meal_types: [{ value: 'breakfast', label: 'Breakfast' }, { value: 'lunch', label: 'Lunch' }, { value: 'dinner', label: 'Dinner' }],
-            cusine_types: [{ value: 'indian', label: 'Indian' }, { value: 'thai', label: 'Thai' }, { value: 'chinese', label: 'Chinese' }],
-            preference_types: [{ value: 'veg', label: 'Vegetable' }, { value: 'non-vegetable', label: 'Non-vegetable' }],
+            meal_types: [{ value: 'Breakfast', label: 'Breakfast' }, { value: 'Lunch', label: 'Lunch' }, { value: 'Dinner', label: 'Dinner' }],
+            cusine_types: [{ value: 'Indian', label: 'Indian' }, { value: 'Thai', label: 'Thai' }, { value: 'Chinese', label: 'Chinese' }],
+            preference_types: [{ value: 'Vegetable', label: 'Vegetable' }, { value: 'Non-vegetable', label: 'Non-vegetable' }],
+            ingredients_data: [{ ingredient: '', amount: '', unit: '' }],
+            ingredients_unit: [{ value: 'TSP', label: 'TSP' }, { value: 'Tbs', label: 'Tbs' }, { value: 'Cup', label: 'Cup' }, { value: 'Kg', label: 'Kg' }, { value: 'Liter', label: 'Liter' }],
+            descriptions_adv: [{ desc_text: '', desc_img: '' }],
+            nutrition_adv: [{ label: 'Calories', disabled: false, value: 0 }, { label: 'Calories From Fat', disabled: false, value: 0 }, { label: 'Total Fat', disabled: false, value: 0 }, { label: 'Saturated Fat', disabled: false, value: 0 }, { label: 'Trans Fat', disabled: false, value: 0 }, { label: 'Cholesterol', disabled: false, value: 0 }, { label: 'Sodium', disabled: false, value: 0 }, { label: 'Potassium', disabled: false, value: 0 }, { label: 'TotalCarbohydrate', disabled: false, value: 0 }, { label: 'DietaryFiber', disabled: false, value: 0 }, { label: 'Sugars', disabled: false, value: 0 }, { label: 'Protein', disabled: false, value: 0 }, { label: 'VitaminA', disabled: false, value: 0 }, { label: 'VitaminC', disabled: false, value: 0 }, { label: 'VitaminD', disabled: false, value: 0 }, { label: 'VitaminE', disabled: false, value: 0 }, { label: 'VitaminK', disabled: false, value: 0 }, { label: 'VitaminB6', disabled: false, value: 0 }, { label: 'VitaminB12', disabled: false, value: 0 }, { label: 'Calcium', disabled: false, value: 0 }, { label: 'Iron', disabled: false, value: 0 }, { label: 'Thiamin', disabled: false, value: 0 }, { label: 'Riboflavin', disabled: false, value: 0 }, { label: 'niacin', disabled: false, value: 0 }, { label: 'Folate', disabled: false, value: 0 }, { label: 'Biotin', disabled: false, value: 0 }, { label: 'Pantothenic Acid', disabled: false, value: 0 }, { label: 'Phosphorus', disabled: false, value: 0 }, { label: 'Iodine', disabled: false, value: 0 }, { label: 'Magnesium', disabled: false, value: 0 }, { label: 'Zinc', disabled: false, value: 0 }, { label: 'Selenium', disabled: false, value: 0 }, { label: 'Copper', disabled: false, value: 0 }, { label: 'Manganese', disabled: false, value: 0 }, { label: 'Chromium', disabled: false, value: 0 }, { label: 'Molybdenum', disabled: false, value: 0 }, { label: 'Chloride', disabled: false, value: 0 }],
             stretch: true,
             upload_img: '',
             post_ingredient: '',
             post_description: '',
+            post_introduction: '',
             post_nutrition: '',
+            post_description_adv: '',
+            post_nutrition_adv: '',
             selectedMealType: [],
             selectedCusineType: '',
             selectedPreferenceType: '',
-            featImage: ''
+            featImage: '',
+            featImageAdv: ''
         };
     },
     created: function created() {
@@ -21469,6 +21572,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.post_title = response.data.table.post_title;
                 _this.recipe_type = response.data.table.recipe_type;
                 if (response.data.tableConfig) {
+                    _this.post_introduction = response.data.tableConfig.introduction;
+                    _this.ingredients_data = response.data.tableConfig.ingredient;
+                    _this.descriptions_adv = response.data.tableConfig.description;
+                    _this.nutrition_adv = response.data.tableConfig.nutrition;
+                    _this.featImageAdv = response.data.tableConfig.featuredImage;
+
                     _this.post_nutrition = response.data.tableConfig.ingredient;
                     _this.post_description = response.data.tableConfig.description;
                     _this.post_ingredient = response.data.tableConfig.ingredient;
@@ -21482,15 +21591,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         updateTableConfig: function updateTableConfig() {
             var _this2 = this;
 
+            if (this.recipe_type === 'advance') {
+                var introduction = this.post_introduction;
+                var ingredient = this.ingredients_data;
+                var description = this.descriptions_adv;
+                var nutrition = this.nutrition_adv;
+                var featImage = this.featImageAdv;
+            }
+
             var tableConfig = {
-                ingredient: this.post_ingredient,
-                description: this.post_description,
-                nutrition: this.post_nutrition,
+                introduction: introduction,
+                ingredient: ingredient,
+                description: description,
+                nutrition: nutrition,
                 mealType: this.selectedMealType,
                 cusineType: this.selectedCusineType,
                 preferenceType: this.selectedPreferenceType,
-                featuredImage: this.featImage
+                featuredImage: featImage
             };
+
+            console.log(tableConfig);
 
             jQuery.post(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
@@ -21526,6 +21646,69 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
                 _this3.featImage = attachment.url;
                 console.log('Featured Image is: ' + _this3.featImage);
+            }).open();
+        },
+        upload_img_adv_desc: function upload_img_adv_desc(i) {
+            var _this4 = this;
+
+            var button = $(this);
+            var custom_uploader = wp.media({
+
+                title: 'Insert Description Image',
+                library: {
+                    type: 'image'
+                },
+                button: {
+                    text: 'Use this image'
+                },
+                multiple: false
+
+            }).on('select', function () {
+                // using the arrow function cause there is a callback(.on) inside function 
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
+                _this4.descriptions_adv[i].desc_img = attachment.url;
+            }).open();
+        },
+        addMoreIngField: function addMoreIngField() {
+            this.ingredients_data.push({
+                ingredient: '',
+                amount: '',
+                unit: ''
+            });
+        },
+        deleteIngField: function deleteIngField(index) {
+            this.ingredients_data.splice(index, 1);
+        },
+        addDescField: function addDescField() {
+            this.descriptions_adv.push({
+                desc_text: '',
+                desc_img: ''
+            });
+        },
+        removeDescAdv: function removeDescAdv(index) {
+            this.descriptions_adv.splice(index, 1);
+        },
+        upload_image_adv_feat: function upload_image_adv_feat() {
+            var _this5 = this;
+
+            var button = $(this);
+            var custom_uploader = wp.media({
+
+                title: 'Insert Recipe Image',
+                library: {
+                    type: 'image'
+                },
+                button: {
+                    text: 'Use this image'
+                },
+                multiple: false
+
+            }).on('select', function () {
+                // using the arrow function cause there is a callback(.on) inside function 
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
+                _this5.featImageAdv = attachment.url;
             }).open();
         }
     },
@@ -21942,114 +22125,527 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "all_fields" },
-              [
-                _c(
-                  "el-tabs",
-                  { attrs: { type: "border-card", stretch: _vm.stretch } },
+            _vm.recipe_type === "normal"
+              ? _c(
+                  "div",
+                  { staticClass: "all_fields" },
                   [
                     _c(
-                      "el-tab-pane",
-                      { attrs: { label: "Ingredients" } },
+                      "el-tabs",
+                      { attrs: { type: "border-card", stretch: _vm.stretch } },
                       [
-                        _c("app-wp-editor", {
-                          model: {
-                            value: _vm.post_ingredient,
-                            callback: function($$v) {
-                              _vm.post_ingredient = $$v
-                            },
-                            expression: "post_ingredient"
-                          }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "el-tab-pane",
-                      { attrs: { label: "Description" } },
-                      [
-                        _c("app-wp-editor", {
-                          model: {
-                            value: _vm.post_description,
-                            callback: function($$v) {
-                              _vm.post_description = $$v
-                            },
-                            expression: "post_description"
-                          }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "el-tab-pane",
-                      { attrs: { label: "Nutrition" } },
-                      [
-                        _c("app-wp-editor", {
-                          model: {
-                            value: _vm.post_nutrition,
-                            callback: function($$v) {
-                              _vm.post_nutrition = $$v
-                            },
-                            expression: "post_nutrition"
-                          }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("el-tab-pane", { attrs: { label: "Image" } }, [
-                      _c("img", {
-                        staticStyle: { width: "60%" },
-                        attrs: { src: _vm.featImage, alt: "" }
-                      }),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        [
-                          !_vm.featImage
-                            ? _c(
-                                "el-button",
-                                { on: { click: _vm.upload_image } },
-                                [_vm._v("Upload Image")]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.featImage
-                            ? _c(
-                                "el-button",
-                                { on: { click: _vm.upload_image } },
-                                [_vm._v("Change Image")]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.featImage
-                            ? _c(
-                                "el-button",
-                                {
-                                  on: {
-                                    click: function($event) {
-                                      _vm.featImage = ""
-                                    }
-                                  }
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Ingredients" } },
+                          [
+                            _c("app-wp-editor", {
+                              model: {
+                                value: _vm.post_ingredient,
+                                callback: function($$v) {
+                                  _vm.post_ingredient = $$v
                                 },
-                                [_vm._v("Remove")]
-                              )
-                            : _vm._e()
-                        ],
-                        1
-                      )
-                    ])
+                                expression: "post_ingredient"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Description" } },
+                          [
+                            _c("app-wp-editor", {
+                              model: {
+                                value: _vm.post_description,
+                                callback: function($$v) {
+                                  _vm.post_description = $$v
+                                },
+                                expression: "post_description"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Nutrition" } },
+                          [
+                            _c("app-wp-editor", {
+                              model: {
+                                value: _vm.post_nutrition,
+                                callback: function($$v) {
+                                  _vm.post_nutrition = $$v
+                                },
+                                expression: "post_nutrition"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Featured Image" } },
+                          [
+                            _c("img", {
+                              staticStyle: { width: "60%" },
+                              attrs: { src: _vm.featImage, alt: "" }
+                            }),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              [
+                                !_vm.featImage
+                                  ? _c(
+                                      "el-button",
+                                      { on: { click: _vm.upload_image } },
+                                      [_vm._v("Upload Image")]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.featImage
+                                  ? _c(
+                                      "el-button",
+                                      { on: { click: _vm.upload_image } },
+                                      [_vm._v("Change Image")]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.featImage
+                                  ? _c(
+                                      "el-button",
+                                      {
+                                        on: {
+                                          click: function($event) {
+                                            _vm.featImage = ""
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Remove")]
+                                    )
+                                  : _vm._e()
+                              ],
+                              1
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
                   ],
                   1
                 )
-              ],
-              1
-            )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.recipe_type === "advance"
+              ? _c(
+                  "div",
+                  { staticClass: "all_fields" },
+                  [
+                    _c(
+                      "el-tabs",
+                      { attrs: { type: "border-card", stretch: _vm.stretch } },
+                      [
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Introduction" } },
+                          [
+                            _c("app-wp-editor", {
+                              model: {
+                                value: _vm.post_introduction,
+                                callback: function($$v) {
+                                  _vm.post_introduction = $$v
+                                },
+                                expression: "post_introduction"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Ingredients" } },
+                          [
+                            _c(
+                              "el-row",
+                              { attrs: { gutter: 10 } },
+                              [
+                                _c("el-col", { attrs: { span: 8 } }, [
+                                  _c("label", [_vm._v("Ingredient")])
+                                ]),
+                                _vm._v(" "),
+                                _c("el-col", { attrs: { span: 8 } }, [
+                                  _c("label", [_vm._v("Amount")])
+                                ]),
+                                _vm._v(" "),
+                                _c("el-col", { attrs: { span: 8 } }, [
+                                  _c("label", [_vm._v("Unit")])
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _vm._l(_vm.ingredients_data, function(
+                              ingredient_data,
+                              i
+                            ) {
+                              return _c(
+                                "el-row",
+                                { key: i, attrs: { gutter: 10 } },
+                                [
+                                  _c("el-col", { attrs: { span: 8 } }, [
+                                    _c(
+                                      "div",
+                                      [
+                                        _c("el-input", {
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Ingredients"
+                                          },
+                                          model: {
+                                            value: ingredient_data.ingredient,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                ingredient_data,
+                                                "ingredient",
+                                                $$v
+                                              )
+                                            },
+                                            expression:
+                                              "ingredient_data.ingredient"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("el-col", { attrs: { span: 8 } }, [
+                                    _c("div", [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: ingredient_data.amount,
+                                            expression: "ingredient_data.amount"
+                                          }
+                                        ],
+                                        staticClass: "ing_amnt_field",
+                                        attrs: {
+                                          type: "number",
+                                          placeholder: "Amount"
+                                        },
+                                        domProps: {
+                                          value: ingredient_data.amount
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              ingredient_data,
+                                              "amount",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("el-col", { attrs: { span: 7 } }, [
+                                    _c(
+                                      "div",
+                                      [
+                                        _c(
+                                          "el-select",
+                                          {
+                                            staticStyle: { width: "100%" },
+                                            attrs: { placeholder: "Unit" },
+                                            model: {
+                                              value: ingredient_data.unit,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  ingredient_data,
+                                                  "unit",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "ingredient_data.unit"
+                                            }
+                                          },
+                                          _vm._l(_vm.ingredients_unit, function(
+                                            unit,
+                                            i
+                                          ) {
+                                            return _c("el-option", {
+                                              key: i,
+                                              attrs: {
+                                                label: unit.label,
+                                                value: unit.value
+                                              }
+                                            })
+                                          })
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("el-col", { attrs: { span: 1 } }, [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticStyle: { cursor: "pointer" },
+                                        on: {
+                                          click: function($event) {
+                                            _vm.deleteIngField(i)
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("X")]
+                                    )
+                                  ])
+                                ],
+                                1
+                              )
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "el-button",
+                              {
+                                staticStyle: { "text-align": "center" },
+                                attrs: {
+                                  type: "success",
+                                  round: "",
+                                  size: "medium"
+                                },
+                                on: { click: _vm.addMoreIngField }
+                              },
+                              [_vm._v("+")]
+                            )
+                          ],
+                          2
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Description" } },
+                          [
+                            _vm._l(_vm.descriptions_adv, function(
+                              description_adv,
+                              i
+                            ) {
+                              return _c(
+                                "el-row",
+                                { key: i, attrs: { gutter: 15 } },
+                                [
+                                  _c(
+                                    "el-col",
+                                    { attrs: { span: 16 } },
+                                    [
+                                      _c("app-wp-editor", {
+                                        model: {
+                                          value: description_adv.desc_text,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              description_adv,
+                                              "desc_text",
+                                              $$v
+                                            )
+                                          },
+                                          expression:
+                                            "description_adv.desc_text"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("el-col", { attrs: { span: 6 } }, [
+                                    _c("img", {
+                                      staticStyle: { width: "50%" },
+                                      attrs: {
+                                        src: description_adv.desc_img,
+                                        alt: ""
+                                      }
+                                    }),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      [
+                                        !description_adv.desc_img
+                                          ? _c(
+                                              "el-button",
+                                              {
+                                                on: {
+                                                  click: function($event) {
+                                                    _vm.upload_img_adv_desc(i)
+                                                  }
+                                                }
+                                              },
+                                              [_vm._v("Upload Image")]
+                                            )
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        description_adv.desc_img
+                                          ? _c(
+                                              "el-button",
+                                              {
+                                                on: {
+                                                  click: function($event) {
+                                                    _vm.upload_img_adv_desc(i)
+                                                  }
+                                                }
+                                              },
+                                              [_vm._v("Change Image")]
+                                            )
+                                          : _vm._e(),
+                                        _vm._v(" "),
+                                        description_adv.desc_img
+                                          ? _c(
+                                              "el-button",
+                                              {
+                                                on: {
+                                                  click: function($event) {
+                                                    description_adv.desc_img =
+                                                      ""
+                                                  }
+                                                }
+                                              },
+                                              [_vm._v("Remove")]
+                                            )
+                                          : _vm._e()
+                                      ],
+                                      1
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("el-col", { attrs: { span: 1 } }, [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticStyle: {
+                                          cursor: "pointer",
+                                          color: "red"
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            _vm.removeDescAdv(i)
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("X")]
+                                    )
+                                  ])
+                                ],
+                                1
+                              )
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "el-row",
+                              [
+                                _c(
+                                  "el-col",
+                                  [
+                                    _c(
+                                      "el-button",
+                                      {
+                                        attrs: { type: "success" },
+                                        on: { click: _vm.addDescField }
+                                      },
+                                      [_vm._v("+")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          2
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Nutrition" } },
+                          _vm._l(_vm.nutrition_adv, function(field, i) {
+                            return _c("app-nutrition-adv", {
+                              key: i,
+                              attrs: { field: field }
+                            })
+                          })
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "el-tab-pane",
+                          { attrs: { label: "Featured Image" } },
+                          [
+                            _c("img", {
+                              staticStyle: { width: "60%" },
+                              attrs: { src: _vm.featImageAdv, alt: "" }
+                            }),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              [
+                                !_vm.featImageAdv
+                                  ? _c(
+                                      "el-button",
+                                      {
+                                        attrs: { type: "success" },
+                                        on: { click: _vm.upload_image_adv_feat }
+                                      },
+                                      [_vm._v("Upload Image")]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.featImageAdv
+                                  ? _c(
+                                      "el-button",
+                                      {
+                                        attrs: { type: "primary" },
+                                        on: { click: _vm.upload_image_adv_feat }
+                                      },
+                                      [_vm._v("Change Image")]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.featImageAdv
+                                  ? _c(
+                                      "el-button",
+                                      {
+                                        attrs: { type: "danger" },
+                                        on: {
+                                          click: function($event) {
+                                            _vm.featImageAdv = ""
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Remove")]
+                                    )
+                                  : _vm._e()
+                              ],
+                              1
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              : _vm._e()
           ]),
           _vm._v(" "),
           _c(
@@ -66458,6 +67054,189 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-bf37c1a2", module.exports)
+  }
+}
+
+/***/ }),
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(227);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../css-loader/index.js!./input-number.css", function() {
+			var newContent = require("!!../../../css-loader/index.js!./input-number.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".el-textarea{display:inline-block;width:100%;vertical-align:bottom;font-size:14px}.el-textarea__inner{display:block;resize:vertical;padding:5px 15px;line-height:1.5;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;font-size:inherit;color:#606266;background-color:#fff;background-image:none;border:1px solid #dcdfe6;border-radius:4px;-webkit-transition:border-color .2s cubic-bezier(.645,.045,.355,1);transition:border-color .2s cubic-bezier(.645,.045,.355,1)}.el-textarea__inner::-webkit-input-placeholder{color:#c0c4cc}.el-textarea__inner:-ms-input-placeholder{color:#c0c4cc}.el-textarea__inner::placeholder{color:#c0c4cc}.el-textarea__inner:hover{border-color:#c0c4cc}.el-textarea__inner:focus{outline:0;border-color:#409EFF}.el-textarea.is-disabled .el-textarea__inner{background-color:#f5f7fa;border-color:#e4e7ed;color:#c0c4cc;cursor:not-allowed}.el-textarea.is-disabled .el-textarea__inner::-webkit-input-placeholder{color:#c0c4cc}.el-textarea.is-disabled .el-textarea__inner:-ms-input-placeholder{color:#c0c4cc}.el-textarea.is-disabled .el-textarea__inner::placeholder{color:#c0c4cc}.el-input{position:relative;font-size:14px;display:inline-block;width:100%}.el-input::-webkit-scrollbar{z-index:11;width:6px}.el-input::-webkit-scrollbar:horizontal{height:6px}.el-input::-webkit-scrollbar-thumb{border-radius:5px;width:6px;background:#b4bccc}.el-input::-webkit-scrollbar-corner{background:#fff}.el-input::-webkit-scrollbar-track{background:#fff}.el-input::-webkit-scrollbar-track-piece{background:#fff;width:6px}.el-input .el-input__clear{color:#c0c4cc;font-size:14px;line-height:16px;cursor:pointer;-webkit-transition:color .2s cubic-bezier(.645,.045,.355,1);transition:color .2s cubic-bezier(.645,.045,.355,1)}.el-input .el-input__clear:hover{color:#909399}.el-input__inner{-webkit-appearance:none;background-color:#fff;background-image:none;border-radius:4px;border:1px solid #dcdfe6;-webkit-box-sizing:border-box;box-sizing:border-box;color:#606266;display:inline-block;font-size:inherit;height:40px;line-height:40px;outline:0;padding:0 15px;-webkit-transition:border-color .2s cubic-bezier(.645,.045,.355,1);transition:border-color .2s cubic-bezier(.645,.045,.355,1);width:100%}.el-input__prefix,.el-input__suffix{position:absolute;top:0;-webkit-transition:all .3s;height:100%;color:#c0c4cc;text-align:center}.el-input__inner::-webkit-input-placeholder{color:#c0c4cc}.el-input__inner:-ms-input-placeholder{color:#c0c4cc}.el-input__inner::placeholder{color:#c0c4cc}.el-input__inner:hover{border-color:#c0c4cc}.el-input.is-active .el-input__inner,.el-input__inner:focus{border-color:#409EFF;outline:0}.el-input__suffix{right:5px;transition:all .3s;pointer-events:none}.el-input__suffix-inner{pointer-events:all}.el-input__prefix{left:5px;transition:all .3s}.el-input__icon{height:100%;width:25px;text-align:center;-webkit-transition:all .3s;transition:all .3s;line-height:40px}.el-input__icon:after{content:'';height:100%;width:0;display:inline-block;vertical-align:middle}.el-input__validateIcon{pointer-events:none}.el-input.is-disabled .el-input__inner{background-color:#f5f7fa;border-color:#e4e7ed;color:#c0c4cc;cursor:not-allowed}.el-input.is-disabled .el-input__inner::-webkit-input-placeholder{color:#c0c4cc}.el-input.is-disabled .el-input__inner:-ms-input-placeholder{color:#c0c4cc}.el-input.is-disabled .el-input__inner::placeholder{color:#c0c4cc}.el-input.is-disabled .el-input__icon{cursor:not-allowed}.el-input--suffix .el-input__inner{padding-right:30px}.el-input--prefix .el-input__inner{padding-left:30px}.el-input--medium{font-size:14px}.el-input--medium .el-input__inner{height:36px;line-height:36px}.el-input--medium .el-input__icon{line-height:36px}.el-input--small{font-size:13px}.el-input--small .el-input__inner{height:32px;line-height:32px}.el-input--small .el-input__icon{line-height:32px}.el-input--mini{font-size:12px}.el-input--mini .el-input__inner{height:28px;line-height:28px}.el-input--mini .el-input__icon{line-height:28px}.el-input-group{line-height:normal;display:inline-table;width:100%;border-collapse:separate;border-spacing:0}.el-input-group>.el-input__inner{vertical-align:middle;display:table-cell}.el-input-group__append,.el-input-group__prepend{background-color:#f5f7fa;color:#909399;vertical-align:middle;display:table-cell;position:relative;border:1px solid #dcdfe6;border-radius:4px;padding:0 20px;width:1px;white-space:nowrap}.el-input-group--prepend .el-input__inner,.el-input-group__append{border-top-left-radius:0;border-bottom-left-radius:0}.el-input-group--append .el-input__inner,.el-input-group__prepend{border-top-right-radius:0;border-bottom-right-radius:0}.el-input-group__append:focus,.el-input-group__prepend:focus{outline:0}.el-input-group__append .el-button,.el-input-group__append .el-select,.el-input-group__prepend .el-button,.el-input-group__prepend .el-select{display:inline-block;margin:-10px -20px}.el-input-group__append button.el-button,.el-input-group__append div.el-select .el-input__inner,.el-input-group__append div.el-select:hover .el-input__inner,.el-input-group__prepend button.el-button,.el-input-group__prepend div.el-select .el-input__inner,.el-input-group__prepend div.el-select:hover .el-input__inner{border-color:transparent;background-color:transparent;color:inherit;border-top:0;border-bottom:0}.el-input-group__append .el-button,.el-input-group__append .el-input,.el-input-group__prepend .el-button,.el-input-group__prepend .el-input{font-size:inherit}.el-input-group__prepend{border-right:0}.el-input-group__append{border-left:0}.el-input-group--append .el-select .el-input.is-focus .el-input__inner,.el-input-group--prepend .el-select .el-input.is-focus .el-input__inner{border-color:transparent}.el-input__inner::-ms-clear{display:none;width:0;height:0}.el-input-number{position:relative;display:inline-block;width:180px;line-height:38px}.el-input-number .el-input{display:block}.el-input-number .el-input__inner{-webkit-appearance:none;padding-left:50px;padding-right:50px;text-align:center}.el-input-number__decrease,.el-input-number__increase{position:absolute;z-index:1;top:1px;width:40px;height:auto;text-align:center;background:#f5f7fa;color:#606266;cursor:pointer;font-size:13px}.el-input-number__decrease:hover,.el-input-number__increase:hover{color:#409EFF}.el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled),.el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled){border-color:#409EFF}.el-input-number__decrease.is-disabled,.el-input-number__increase.is-disabled{color:#c0c4cc;cursor:not-allowed}.el-input-number__increase{right:1px;border-radius:0 4px 4px 0;border-left:1px solid #dcdfe6}.el-input-number__decrease{left:1px;border-radius:4px 0 0 4px;border-right:1px solid #dcdfe6}.el-input-number.is-disabled .el-input-number__decrease,.el-input-number.is-disabled .el-input-number__increase{border-color:#e4e7ed;color:#e4e7ed}.el-input-number.is-disabled .el-input-number__decrease:hover,.el-input-number.is-disabled .el-input-number__increase:hover{color:#e4e7ed;cursor:not-allowed}.el-input-number--medium{width:200px;line-height:34px}.el-input-number--medium .el-input-number__decrease,.el-input-number--medium .el-input-number__increase{width:36px;font-size:14px}.el-input-number--medium .el-input__inner{padding-left:43px;padding-right:43px}.el-input-number--small{width:130px;line-height:30px}.el-input-number--small .el-input-number__decrease,.el-input-number--small .el-input-number__increase{width:32px;font-size:13px}.el-input-number--small .el-input-number__decrease [class*=el-icon],.el-input-number--small .el-input-number__increase [class*=el-icon]{-webkit-transform:scale(.9);transform:scale(.9)}.el-input-number--small .el-input__inner{padding-left:39px;padding-right:39px}.el-input-number--mini{width:130px;line-height:26px}.el-input-number--mini .el-input-number__decrease,.el-input-number--mini .el-input-number__increase{width:28px;font-size:12px}.el-input-number--mini .el-input-number__decrease [class*=el-icon],.el-input-number--mini .el-input-number__increase [class*=el-icon]{-webkit-transform:scale(.8);transform:scale(.8)}.el-input-number--mini .el-input__inner{padding-left:35px;padding-right:35px}.el-input-number.is-without-controls .el-input__inner{padding-left:15px;padding-right:15px}.el-input-number.is-controls-right .el-input__inner{padding-left:15px;padding-right:50px}.el-input-number.is-controls-right .el-input-number__decrease,.el-input-number.is-controls-right .el-input-number__increase{height:auto;line-height:19px}.el-input-number.is-controls-right .el-input-number__decrease [class*=el-icon],.el-input-number.is-controls-right .el-input-number__increase [class*=el-icon]{-webkit-transform:scale(.8);transform:scale(.8)}.el-input-number.is-controls-right .el-input-number__increase{border-radius:0 4px 0 0;border-bottom:1px solid #dcdfe6}.el-input-number.is-controls-right .el-input-number__decrease{right:1px;bottom:1px;top:auto;left:auto;border-right:none;border-left:1px solid #dcdfe6;border-radius:0 0 4px}.el-input-number.is-controls-right[class*=medium] [class*=decrease],.el-input-number.is-controls-right[class*=medium] [class*=increase]{line-height:17px}.el-input-number.is-controls-right[class*=small] [class*=decrease],.el-input-number.is-controls-right[class*=small] [class*=increase]{line-height:15px}.el-input-number.is-controls-right[class*=mini] [class*=decrease],.el-input-number.is-controls-right[class*=mini] [class*=increase]{line-height:13px}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(9)
+/* script */
+var __vue_script__ = __webpack_require__(229)
+/* template */
+var __vue_template__ = __webpack_require__(230)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/NutritionAdv.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-63f1b547", Component.options)
+  } else {
+    hotAPI.reload("data-v-63f1b547", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 229 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'NutritionAdv',
+    props: ['field'],
+    watch: {
+        field: {
+            handler: function handler(newValue) {
+                this.$emit('input', newValue);
+            },
+
+            deep: true
+        }
+    }
+});
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "el-row",
+        [
+          _c("el-col", { attrs: { span: 12 } }, [
+            _c("label", [_vm._v(_vm._s(_vm.field.label))]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field.value,
+                  expression: "field.value"
+                }
+              ],
+              attrs: { type: "number", placeholder: _vm.field.label },
+              domProps: { value: _vm.field.value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field, "value", $event.target.value)
+                }
+              }
+            })
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-63f1b547", module.exports)
   }
 }
 
