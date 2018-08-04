@@ -17,7 +17,7 @@ include "load.php";
 define("NINJA_RECIPE_PLUGIN_DIR_URL", plugin_dir_url(__FILE__));
 define("NINJA_RECIPE_PUBLIC_DIR_URL", NINJA_RECIPE_PLUGIN_DIR_URL.'public/');
 define("NINJA_RECIPE_PLUGIN_DIR_PATH", plugin_dir_path(__FILE__));
-define("NINJA_RECIPE_PLUGIN_DIR_VERSION", plugin_dir_url(__FILE__));
+define("NINJA_RECIPE_PLUGIN_DIR_VERSION", 1.00);
 
 
 class WPNinjaRecipe
@@ -35,6 +35,7 @@ class WPNinjaRecipe
 	{	
 		add_action('init', array('NinjaRecipe\Classes\CPT','register'));
 		add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
+		add_shortcode('ninja_recipe', array('NinjaRecipe\Classes\RecipeHandler','handleShortCode') );
 	}
 
 
@@ -43,14 +44,13 @@ class WPNinjaRecipe
 		add_action('admin_menu', array('NinjaRecipe\Classes\Menu','addAdminMenuPages'));
 		add_action('wp_ajax_ninja_recipe_ajax_actions', array('NinjaRecipe\Classes\RecipeHandler','handleAjaxCalls'));
 		add_action('admin_enqueue_scripts', array($this, 'adminEnqueueScripts'));
-
 		add_action('ninja_recipe_added_new_table', array('NinjaRecipe\Classes\RecipeHandler','populateDemoData') );
-
 	}
 
 
 	public function publicHooks()
 	{
+		add_action('init', array('NinjaRecipe\Classes\ProcessDemoPage','demoPageDisplay') );
 		
 	}
 
