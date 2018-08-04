@@ -15,6 +15,7 @@ import {
     Icon,
     Table,
     Input, 
+    Switch,
     Button,
     Dialog,
     Select,
@@ -36,6 +37,7 @@ Vue.use(Tabs)
 Vue.use(Icon)
 Vue.use(Table)
 Vue.use(Input)
+Vue.use(Switch)
 Vue.use(Button)
 Vue.use(Dialog)
 Vue.use(Select)
@@ -63,6 +65,7 @@ import 'element-ui/lib/theme-chalk/option.css';
 import 'element-ui/lib/theme-chalk/button.css';
 import 'element-ui/lib/theme-chalk/dialog.css';
 import 'element-ui/lib/theme-chalk/select.css';
+import 'element-ui/lib/theme-chalk/switch.css';
 import 'element-ui/lib/theme-chalk/upload.css';
 import 'element-ui/lib/theme-chalk/loading.css';
 import 'element-ui/lib/theme-chalk/popover.css';

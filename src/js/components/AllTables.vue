@@ -8,7 +8,7 @@
             </div>
             <div class="section-action">
                 <label class="form_group">
-                    <input type="text" class="form_control search_action" placeholder="Search" v-model="search" @keyup.enter="submit">
+                    <input type="text" class="form_control search_action" placeholder="Search" v-model="search" @keyup.enter="search_recipe">
                 </label>
                 <el-button size="mini" type="success" @click="showFilterSection = !showFilterSection">Filter</el-button>
                 <el-button size="mini" type="primary" @click="addTableModal=true" class="addTable">Add Table</el-button>
@@ -56,6 +56,19 @@
             v-loading="tableLoading"
             border>
 
+            <el-table-column label="Image" width="90">
+
+                <template
+                    slot-scope="scope">
+                    <router-link
+                        :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
+                        <span><img v-if="scope.row.tableConfig && scope.row.tableConfig.featuredImage" :src=scope.row.tableConfig.featuredImage style="width: 100%;"></span>
+                        <span><img v-if="!scope.row.tableConfig && !scope.row.tableConfig.featuredImage" src="http://www.adbazar.pk/frontend/images/default-image.jpg" style="width: 100%;"></span>
+                    </router-link>
+                </template>
+
+            </el-table-column>
+
 
             <el-table-column label="Name">
 
@@ -64,7 +77,6 @@
                     <router-link 
                         :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
                         <div>
-                            <span><img :src=scope.row.tableConfig.featuredImage style="width: 20%;" v-if="scope.row.tableConfig"></span>
                             <span>{{ scope.row.post_title }}</span>
                         </div>
                     </router-link>
@@ -235,7 +247,7 @@ export default {
             })
             .then(
                 (response) => {
-                
+                    console.log(response)
                     this.tableData = response.data.tables;
                     this.total = response.data.total;
                 }
@@ -330,12 +342,20 @@ export default {
                 });
             });
         },
-        submit() {
-            console.log(this.search)
+        search_recipe() {
+            console.log(this.tableData)
             var val = this.search;
-            return this.tableData.filter(function(s){
-                return s.post_title.toLowerCase().indexOf(val.toLowerCase()) >= 0;
-            });
+            if(val == '') {
+                this.fetchTables();
+            } else {
+                var res = this.tableData.find(item => item.post_title === val);
+                console.log(res)
+                if(res) {
+                    this.tableData = res; 
+                } else {
+                    this.tableData = []
+                }
+            }         
         }
     }
 }
