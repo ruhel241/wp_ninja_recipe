@@ -40,8 +40,25 @@ class RecipeHandler
             $tableId = intval($_REQUEST['table_id']);
             static::deleteTable($tableId);
         }
+	}
 
-	
+
+
+	public static function handleShortCode($atts)
+	{
+		$defaults = apply_filters('ninja_recipe_shortcode_default', array(
+			'id' => null
+		));
+		$attributes = shortcode_atts($defaults, $atts);
+		$tableId    = $attributes['id'];
+		$post 	    = get_post($tableId);
+		$recipeMetaData = get_post_meta($tableId, '_ninija_recipe_table_config', true);
+		wp_enqueue_script('ninja_recipe_user_view', NINJA_RECIPE_PUBLIC_DIR_URL.'js/ninja_recipe_user_view.js', array('jquery'), NINJA_RECIPE_PLUGIN_DIR_VERSION, true);
+		wp_localize_script('ninja_recipe_user_view','recipeMetaDataVars', array(
+			'post' 			=> $post,
+			'recipeMetaData'=> $recipeMetaData
+		));
+		return "<div id='wp_ninja_recipe'></div>";
 	}
 
 
@@ -104,7 +121,8 @@ class RecipeHandler
                 'post_title' 	   => $table->post_title,
                 'recipe_type'	   => $table->post_content,
                 'tableConfig' 	   => get_post_meta($table->ID,'_ninija_recipe_table_config', true),
-                'demo_url'	    => home_url().'?ninja_recipe_preview='.$table->ID.'#ninja_recipe_demo'
+                'demo_url'	   	   => home_url().'?ninja_recipe_preview='.$table->ID.'#ninja_recipe_demo',
+                'defaultImage'	   => NINJA_RECIPE_PUBLIC_DIR_URL.'img/default-image.jpg'
             );
 		}
 		wp_send_json_success(array(
