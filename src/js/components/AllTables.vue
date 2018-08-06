@@ -8,7 +8,7 @@
             </div>
             <div class="section-action">
                 <label class="form_group">
-                    <input type="text" class="form_control search_action" placeholder="Search" v-model="search" @keyup.enter="search_recipe">
+                    <input type="text" class="form_control search_action" placeholder="Search" v-model="search">
                 </label>
                 <el-button size="mini" type="success" @click="showFilterSection = !showFilterSection">Filter</el-button>
                 <el-button size="mini" type="primary" @click="addTableModal=true" class="addTable">Add Table</el-button>
@@ -263,7 +263,8 @@ export default {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_tables',
                 per_page: this.paginate.per_page,
-                page_number: this.paginate.current_page
+                page_number: this.paginate.current_page,
+                search: this.search
             })
             .then(
                 (response) => {
@@ -274,7 +275,10 @@ export default {
             )
             .fail(
                 (error) => {
-                    console.error(error)
+                    this.$notify.error({
+                        title: 'Error',
+                        message: 'This is an error message'
+                    });
                 }
             )
             .always(
@@ -362,9 +366,6 @@ export default {
                 });
             });
         },
-        search_recipe() {
-            this.searchAction++;       
-        },
         goToPage(value) {
             this.paginate.current_page = value;
             this.fetchTables();
@@ -373,6 +374,12 @@ export default {
             this.paginate.per_page = val;
             this.fetchTables();
         },
+    },
+    watch: {
+        search() {
+            this.paginate.current_page = 1;
+            this.fetchTables();
+        }
     }
 }
 </script>

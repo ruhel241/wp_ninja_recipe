@@ -20268,13 +20268,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_tables',
                 per_page: this.paginate.per_page,
-                page_number: this.paginate.current_page
+                page_number: this.paginate.current_page,
+                search: this.search
             }).then(function (response) {
                 console.log(response);
                 _this.tableData = response.data.tables;
                 _this.paginate.total = response.data.total;
             }).fail(function (error) {
-                console.error(error);
+                _this.$notify.error({
+                    title: 'Error',
+                    message: 'This is an error message'
+                });
             }).always(function () {
                 _this.tableLoading = false;
             });
@@ -20350,15 +20354,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 });
             });
         },
-        search_recipe: function search_recipe() {
-            this.searchAction++;
-        },
         goToPage: function goToPage(value) {
             this.paginate.current_page = value;
             this.fetchTables();
         },
         handleSizeChange: function handleSizeChange(val) {
             this.paginate.per_page = val;
+            this.fetchTables();
+        }
+    },
+    watch: {
+        search: function search() {
+            this.paginate.current_page = 1;
             this.fetchTables();
         }
     }
@@ -20743,15 +20750,6 @@ var render = function() {
                 attrs: { type: "text", placeholder: "Search" },
                 domProps: { value: _vm.search },
                 on: {
-                  keyup: function($event) {
-                    if (
-                      !("button" in $event) &&
-                      _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                    ) {
-                      return null
-                    }
-                    return _vm.search_recipe($event)
-                  },
                   input: function($event) {
                     if ($event.target.composing) {
                       return
