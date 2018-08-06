@@ -25,6 +25,7 @@ import {
     Message,
     Loading,
     Popover,
+    Pagination,
     InputNumber,
     TableColumn,
     Notification
@@ -45,6 +46,7 @@ Vue.use(Option)
 Vue.use(Upload)
 Vue.use(TabPane)
 Vue.use(Popover)
+Vue.use(Pagination)
 Vue.use(VueRouter)
 Vue.use(InputNumber)
 Vue.use(TableColumn)
@@ -69,6 +71,7 @@ import 'element-ui/lib/theme-chalk/switch.css';
 import 'element-ui/lib/theme-chalk/upload.css';
 import 'element-ui/lib/theme-chalk/loading.css';
 import 'element-ui/lib/theme-chalk/popover.css';
+import 'element-ui/lib/theme-chalk/pagination.css';
 import 'element-ui/lib/theme-chalk/notification.css';
 import 'element-ui/lib/theme-chalk/table-column.css';
 import 'element-ui/lib/theme-chalk/input-number.css';

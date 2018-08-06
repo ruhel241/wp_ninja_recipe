@@ -63,7 +63,7 @@
                     <router-link
                         :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
                         <span><img v-if="scope.row.tableConfig && scope.row.tableConfig.featuredImage" :src=scope.row.tableConfig.featuredImage style="width: 100%;"></span>
-                        <span><img v-if="!scope.row.tableConfig && !scope.row.tableConfig.featuredImage" src="http://www.adbazar.pk/frontend/images/default-image.jpg" style="width: 100%;"></span>
+                        <span><img v-if="!scope.row.tableConfig.featuredImage" :src=scope.row.defaultImage style="width: 100%;"></span>
                     </router-link>
                 </template>
 
@@ -149,6 +149,19 @@
 
         </el-table>
 
+        <!-- Pagination -->
+        <div class="pull-right">
+            <el-pagination
+                    @size-change="handleSizeChange"
+                    @current-change="goToPage"
+                    :current-page.sync="paginate.current_page"
+                    :page-sizes="[10, 20, 50, 100]"
+                    :page-size="paginate.per_page"
+                    layout="total, sizes, prev, pager, next, jumper"
+                    :total="paginate.total">
+            </el-pagination>
+        </div>
+
          <!-- Dialog for Adding Table -->
         <el-dialog
             title="Add New Recipe Table"
@@ -229,7 +242,14 @@ export default {
             preference_types: [
                 { value: 'veg', label: 'Vegetable' },
                 { value: 'non-veg', label: 'Non-vegetable' }
-            ]
+            ],
+            paginate: {
+                total: 0, 
+                current_page: 1,
+                last_page: 1,
+                per_page: 10
+            },
+            searchAction: 0
         }
     },
     created() {
@@ -242,14 +262,14 @@ export default {
             jQuery.get(ajaxurl, {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_tables',
-                per_page: this.per_page,
-                page_number: this.page_number
+                per_page: this.paginate.per_page,
+                page_number: this.paginate.current_page
             })
             .then(
                 (response) => {
                     console.log(response)
                     this.tableData = response.data.tables;
-                    this.total = response.data.total;
+                    this.paginate.total = response.data.total;
                 }
             )
             .fail(
@@ -343,20 +363,16 @@ export default {
             });
         },
         search_recipe() {
-            console.log(this.tableData)
-            var val = this.search;
-            if(val == '') {
-                this.fetchTables();
-            } else {
-                var res = this.tableData.find(item => item.post_title === val);
-                console.log(res)
-                if(res) {
-                    this.tableData = res; 
-                } else {
-                    this.tableData = []
-                }
-            }         
-        }
+            this.searchAction++;       
+        },
+        goToPage(value) {
+            this.paginate.current_page = value;
+            this.fetchTables();
+        },
+        handleSizeChange(val) {
+            this.paginate.per_page = val;
+            this.fetchTables();
+        },
     }
 }
 </script>
