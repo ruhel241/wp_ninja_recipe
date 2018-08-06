@@ -20287,9 +20287,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             findMealType: '',
             findCusineType: '',
             findPreferenceType: '',
-            meal_types: [{ value: 'breakfast', label: 'Breakfast' }, { value: 'lunch', label: 'Lunch' }, { value: 'dinner', label: 'Dinner' }],
-            cusine_types: [{ value: 'indian', label: 'Indian' }, { value: 'chinese', label: 'Chinese' }, { value: 'maxican', label: 'Maxican' }],
-            preference_types: [{ value: 'veg', label: 'Vegetable' }, { value: 'non-veg', label: 'Non-vegetable' }],
+            meal_types: [{ value: 'Breakfast', label: 'Breakfast' }, { value: 'Lunch', label: 'Lunch' }, { value: 'Dinner', label: 'Dinner' }],
+            cusine_types: [{ value: 'Indian', label: 'Indian' }, { value: 'Chinese', label: 'Chinese' }, { value: 'Maxican', label: 'Maxican' }],
+            preference_types: [{ value: 'Vegetable', label: 'Vegetable' }, { value: 'Non-vegetable', label: 'Non-vegetable' }],
             paginate: {
                 total: 0,
                 current_page: 1,
@@ -20414,6 +20414,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     watch: {
         search: function search() {
             this.paginate.current_page = 1;
+            this.fetchTables();
+        },
+        findMealType: function findMealType() {
+            this.fetchTables();
+        },
+        findCusineType: function findCusineType() {
+            this.fetchTables();
+        },
+        findPreferenceType: function findPreferenceType() {
             this.fetchTables();
         }
     }

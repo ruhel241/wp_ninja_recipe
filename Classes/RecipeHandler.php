@@ -23,7 +23,26 @@ class RecipeHandler
 		if( $route == 'get_tables'){
 			$pageNumber = intval($_REQUEST['page_number']);
 			$perPage 	= intval($_REQUEST['per_page']);
-			static::getTables($pageNumber, $perPage);
+
+
+			if ( isset( $_REQUEST['search'] ) && $_REQUEST['search'] ) {
+				$search = sanitize_text_field( $_REQUEST['search'] );
+			}
+
+			if( isset($_REQUEST['meal_type']) && $_REQUEST['meal_type'] ){
+				$meal_type = serialize( strval($_REQUEST['meal_type']) );
+			}
+
+			if( isset($_REQUEST['cusine_type']) && $_REQUEST['cusine_type'] ){
+				$cusine_type = serialize( strval($_REQUEST['cusine_type']) );
+			}
+
+			if( isset($_REQUEST['preference_type']) && $_REQUEST['preference_type'] ){
+				$preference_type = serialize( strval($_REQUEST['preference_type']) );
+			}
+
+
+			static::getTables($pageNumber, $perPage, $search, $meal_type, $cusine_type, $preference_type);
 		}
 
         if ($route == 'update_table') {
@@ -104,18 +123,41 @@ class RecipeHandler
 
 
 
-	public static function getTables($pageNumber = 1, $perPage = 10)
+	public static function getTables($pageNumber = 1, $perPage = 10, $search, $meal_type, $cusine_type, $preference_type)
 	{
 
 		$offset = ($pageNumber - 1 ) * $perPage;
 		$args = array(
 			'post_type' 	 => CPT::$CPTName,
 			'offset' 		 => $offset,
-			'posts_per_page' => $perPage
+			'posts_per_page' => $perPage,
+			's'				 => $search,
+			'meta_query'	 => array(
+				'relation' => 'AND',
+				array(
+					'key'	 => '_ninija_recipe_table_config',
+					'value'  =>  $meal_type,
+					'compare' => 'LIKE'
+				),
+				array(
+					'key'	 => '_ninija_recipe_table_config',
+					'value'  =>  $cusine_type,
+					'compare' => 'LIKE'
+					
+				),
+				array(
+					'key'	 => '_ninija_recipe_table_config',
+					'value'  =>  $preference_type,
+					'compare' => 'LIKE'
+					
+				)
+
+			)
 		);
-		if ( isset( $_REQUEST['search'] ) && $_REQUEST['search'] ) {
-			$args['s'] = sanitize_text_field( $_REQUEST['search'] );
-		}
+
+		
+		
+
 		$tables = get_posts( $args );
 		$totalCount = wp_count_posts(CPT::$CPTName);
 		$formattedTables = array();
