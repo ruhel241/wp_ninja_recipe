@@ -28,6 +28,8 @@
         <el-row>
             
             <el-col class="field" :span="16">
+                <h2>Recipe Title:</h2>
+                <el-input placeholder="Title" v-model="post_title" class="recipe_title"></el-input>
                 <h2 v-if="recipe_type==='normal'">Normal Recipe</h2>
                 <h2 v-if="recipe_type==='advance'">Advance Recipe</h2>
 
@@ -57,23 +59,18 @@
                         </el-tab-pane>
 
                         <el-tab-pane label="Nutrition">
-                            <app-nutrition
-                                v-for="(field, i) of nutritions" :key="i" :field="field"></app-nutrition>
-                        </el-tab-pane>
 
-                        <el-tab-pane label="Featured Image">
-                            <div class="featured_image_section">
-                                <img :src=featImage alt="" class="feat_img"><br>
-                                <div class="feat_img_btn">
-                                    <span class="upld_btn">
-                                        <el-button @click="upload_image" v-if="!featImage">Upload Image</el-button>
-                                    </span>
-                                    <span class="img_custom_btn">
-                                        <el-button @click="upload_image" v-if="featImage">Change Image</el-button>
-                                        <el-button @click="featImage = '';" v-if="featImage">Remove</el-button>
-                                    </span>
-                                </div>
-                            </div>
+                            <span>Nutrition(as text):</span><el-switch v-model="showNutritionText" inactive-color="green" active-color="#9098B8"></el-switch><br />
+                            <app-wp-editor
+                                v-model="nutrition_text"
+                                v-if="showNutritionText"></app-wp-editor>
+
+                            <span>Nutrition(as fields):</span><el-switch v-model="showNutritionFields" inactive-color="red" active-color="#9098B8"></el-switch>
+                            <app-nutrition
+                                v-for="(field, i) of nutritions" 
+                                :key="i" 
+                                :field="field"
+                                v-if="showNutritionFields"></app-nutrition>
                         </el-tab-pane>
 
                     </el-tabs>
@@ -134,6 +131,7 @@
                                     <el-col :span="1">
                                         <span style="cursor: pointer" @click="deleteIngField(i)">X</span>
                                     </el-col>
+
                                 </el-row>
                             </draggable>
                             <el-button type="success" round size="medium" style="text-align: center" @click="addMoreIngField">+</el-button>
@@ -169,23 +167,15 @@
                         </el-tab-pane>
 
                         <el-tab-pane label="Nutrition">
+                            <span>Nutrition(as text):</span><el-switch v-model="showNutritionText" inactive-color="green" active-color="#9098B8"></el-switch><br />
+                            <app-wp-editor
+                                v-model="nutrition_text"
+                                v-if="showNutritionText"></app-wp-editor>
+
+                            <span>Nutrition(as fields):</span><el-switch v-model="showNutritionFields" inactive-color="red" active-color="#9098B8"></el-switch>
                             <app-nutrition
-                                v-for="(field, i) in nutritions" :key="i" :field="field"></app-nutrition>
-                        </el-tab-pane>
-                        
-                        <el-tab-pane label="Featured Image">
-                            <div class="featured_image_section">
-                                <img :src=featImage alt="" class="feat_img"><br>
-                                <div class="feat_img_btn">
-                                    <span class="upld_btn">
-                                        <el-button @click="upload_image" v-if="!featImage">Upload Image</el-button>
-                                    </span>
-                                    <span class="img_custom_btn">
-                                        <el-button @click="upload_image" v-if="featImage">Change Image</el-button>
-                                        <el-button @click="featImage = '';" v-if="featImage">Remove</el-button>
-                                    </span>
-                                </div>
-                            </div>
+                                v-for="(field, i) in nutritions" :key="i" :field="field"
+                                v-if="showNutritionFields"></app-nutrition>
                         </el-tab-pane>
 
                     </el-tabs>
@@ -194,49 +184,80 @@
             </el-col>
 
             <el-col class="show_preview" :span="8">
-                <h2>Optional Fields</h2>
-                
-                <el-row>
-                    <el-col :span="24">
-                        <label>Select Meal Type</label>
-                        <el-select
-                            v-model="selectedMealType"
-                            multiple
-                            filterable
-                            allow-create
-                            default-first-option
-                            placeholder="Choose Meal Type"
-                            style="width: 100%;">
-                            <el-option
-                                v-for="(item, i) in meal_types"
-                                :key="i"
-                                :label="item.label"
-                                :value="item.value"></el-option>
-                        </el-select>
-                    </el-col>
-                    <el-col :span="12">
-                        <app-input-dropdown
-                            v-model="selectedCusineType"
-                            label="Select Cusine Type"
-                            pcHolder="Select Cusine Type"
-                            :recipeTypes="cusine_types"
-                            styleObj="padding-right: 2px; width: 100%;"></app-input-dropdown>
-                    </el-col>
-                    <el-col :span="12">
-                        <app-input-dropdown
-                            v-model="selectedPreferenceType"
-                            label="Select Preference Type"
-                            pcHolder="Select Preference Type"
-                            :recipeTypes="preference_types"
-                            styleObj="padding-left: 2px; width: 100%;"></app-input-dropdown>
-                    </el-col>
-                    <el-col :span="24">
-                        <app-input-number
-                            v-model="totalPeople"
-                            pcHolder="How many people serve?"
-                            label="How many people serve?"></app-input-number>
-                    </el-col>
-                </el-row>
+                <el-collapse v-model="active_optional_field">
+                    <el-collapse-item title="Optional Fields" name="optional_fields">
+                        <el-row>
+                            <el-col :span="24">
+                                <label>Select Meal Type</label>
+                                <el-select
+                                    v-model="selectedMealType"
+                                    multiple
+                                    filterable
+                                    allow-create
+                                    default-first-option
+                                    placeholder="Choose Meal Type"
+                                    style="width: 100%;">
+                                    <el-option
+                                        v-for="(item, i) in meal_types"
+                                        :key="i"
+                                        :label="item.label"
+                                        :value="item.value"></el-option>
+                                </el-select>
+                            </el-col>
+                            <el-col :span="12">
+                                <app-input-dropdown
+                                    v-model="selectedCusineType"
+                                    label="Select Cusine Type"
+                                    pcHolder="Select Cusine Type"
+                                    :recipeTypes="cusine_types"
+                                    styleObj="padding-right: 2px; width: 100%;"></app-input-dropdown>
+                            </el-col>
+                            <el-col :span="12">
+                                <app-input-dropdown
+                                    v-model="selectedPreferenceType"
+                                    label="Select Preference Type"
+                                    pcHolder="Select Preference Type"
+                                    :recipeTypes="preference_types"
+                                    styleObj="padding-left: 2px; width: 100%;"></app-input-dropdown>
+                            </el-col>
+                            <el-col :span="24">
+                                <app-input-number
+                                    v-model="totalPeople"
+                                    pcHolder="How many people serve?"
+                                    label="How many people serve?"></app-input-number>
+                            </el-col>
+                            <el-col :span="24">
+                                <app-input-number
+                                    v-model="makingTime"
+                                    pcHolder="Total making time"
+                                    label="Total making time"></app-input-number>
+                            </el-col>
+                        </el-row>
+                    </el-collapse-item>
+                </el-collapse>
+            </el-col>
+            <el-col class="show_featured_image" :span="8">
+                <el-collapse v-model="active_featured_image" @change="handleChange">
+                    <el-collapse-item title="Featured Image" name="featured_image">
+                        <hr>
+                        <el-row>
+                            <el-col :span="24">
+                                <div class="featured_image_section">
+                                    <img :src=featImage alt="" class="feat_img"><br>
+                                    <div class="feat_img_btn">
+                                        <span class="upld_btn">
+                                            <el-button @click="upload_image" v-if="!featImage">Upload Image</el-button>
+                                        </span>
+                                        <span class="img_custom_btn">
+                                            <el-button @click="upload_image" v-if="featImage">Change Image</el-button>
+                                            <el-button @click="featImage = '';" v-if="featImage">Remove</el-button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </el-col>
+                        </el-row>
+                    </el-collapse-item>
+                </el-collapse>
             </el-col>
         </el-row>
     </div>
@@ -347,6 +368,7 @@ export default {
             ],
             stretch: true,
             upload_img: '',
+            nutrition_text: '',
             post_ingredient: '',
             post_description: '',
             post_introduction: '',
@@ -357,7 +379,12 @@ export default {
             selectedPreferenceType: '',
             featImage: '',
             totalPeople: '',
-            demo_url: ''
+            makingTime: '',
+            demo_url: '',
+            active_featured_image: ['featured_image'],
+            active_optional_field: ['optional_fields'],
+            showNutritionFields: false,
+            showNutritionText: true
         }
     },
     created() {
@@ -403,6 +430,10 @@ export default {
                         this.selectedPreferenceType = response.data.tableConfig.preferenceType;
                         this.totalPeople = response.data.tableConfig.totalPeople;
                         this.featImage = response.data.tableConfig.featuredImage;
+                        this.nutrition_text = response.data.tableConfig.nutrition.nutrition_text;
+                        this.nutritions = response.data.tableConfig.nutrition.nutrition_fields;
+                        this.showNutritionFields = response.data.tableConfig.nutrition.showNutritionFields;
+                        this.makingTime = response.data.tableConfig.makingTime;
                     }
                 }
             )
@@ -414,18 +445,21 @@ export default {
                 var introduction = this.post_introduction;
                 var ingredient = this.post_ingredient;
                 var description = this.post_description;
-                var nutrition = this.nutritions;
             }
 
             else if( this.recipe_type === 'advance' ) {
                 var introduction = this.post_introduction;
                 var ingredient = this.ingredients_data;
                 var description = this.descriptions_adv;
-                var nutrition = this.nutritions;
             }
 
             var featImage = this.featImage;
 
+            let nutrition = {
+                nutrition_text: this.nutrition_text,
+                nutrition_fields: this.nutritions,
+                showNutritionFields: this.showNutritionFields
+            };
             let tableConfig = {
                 introduction: introduction,
                 ingredient: ingredient,
@@ -435,7 +469,8 @@ export default {
                 cusineType: this.selectedCusineType,
                 preferenceType: this.selectedPreferenceType,
                 totalPeople: this.totalPeople,
-                featuredImage: featImage
+                featuredImage: featImage,
+                makingTime: this.makingTime
             };
 
             console.log(tableConfig)
@@ -533,6 +568,9 @@ export default {
             });
         },
 
+        handleChange(val) {
+            console.log(val)
+        }
     },
     watch: {
         upload_img() {
@@ -566,6 +604,9 @@ export default {
         h2 {
             margin-top: 0;
         }
+        .recipe_title {
+            margin-bottom: 13px;
+        }
         .all_fields {
             margin-top: 30px;
             .featured_image_section {
@@ -597,8 +638,53 @@ export default {
         background: #fff;
 		padding: 20px;
         margin-top: 19px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
         h2 {
             margin-top: 0;
+        }
+        .el-collapse-item__header {
+            font-size: 17px;
+        }
+        .el-collapse-item__wrap {
+            border-bottom: 0;
+        }
+        .el-collapse-item__header {
+            border-bottom: 1px solid #ebeef5 !important;
+        }
+    }
+
+    .show_featured_image {
+        background: #fff;
+		padding: 20px;
+        margin-top: 19px;
+        float: right;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+        h2 {
+            margin-top: 0;
+        }
+        .featured_image_section {
+            .feat_img {
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .feat_img_btn {
+                .upld_btn {
+                    display: block;
+                    text-align: center;
+                }
+                .img_custom_btn {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+        .el-collapse-item__header {
+            font-size: 17px;
+        }
+        .el-collapse-item__wrap {
+            border-bottom: 0;
         }
     }
 

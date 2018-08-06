@@ -38,6 +38,7 @@
 
 
 <script>
+
 export default {
     name: 'NutritionFields',
     props: [
@@ -50,7 +51,6 @@ export default {
             },
             deep: true
         }
-        
     }
 }
 </script>

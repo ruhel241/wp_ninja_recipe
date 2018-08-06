@@ -25,6 +25,8 @@ import {
     Message,
     Loading,
     Popover,
+    Collapse,
+    CollapseItem,
     Pagination,
     InputNumber,
     TableColumn,
@@ -44,6 +46,8 @@ Vue.use(Dialog)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Upload)
+Vue.use(Collapse)
+Vue.use(CollapseItem)
 Vue.use(TabPane)
 Vue.use(Popover)
 Vue.use(Pagination)
@@ -72,6 +76,8 @@ import 'element-ui/lib/theme-chalk/switch.css';
 import 'element-ui/lib/theme-chalk/upload.css';
 import 'element-ui/lib/theme-chalk/loading.css';
 import 'element-ui/lib/theme-chalk/popover.css';
+import 'element-ui/lib/theme-chalk/collapse.css';
+import 'element-ui/lib/theme-chalk/collapse-item.css';
 import 'element-ui/lib/theme-chalk/pagination.css';
 import 'element-ui/lib/theme-chalk/notification.css';
 import 'element-ui/lib/theme-chalk/table-column.css';
