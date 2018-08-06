@@ -106,12 +106,17 @@ class RecipeHandler
 
 	public static function getTables($pageNumber = 1, $perPage = 10)
 	{
+
 		$offset = ($pageNumber - 1 ) * $perPage;
 		$tables = get_posts(array(
 			'post_type' 	 => CPT::$CPTName,
 			'offset' 		 => $offset,
 			'posts_per_page' => $perPage
 		));
+
+		if ( isset( $_REQUEST['search'] ) && $_REQUEST['search'] ) {
+			$tables['s'] = sanitize_text_field( $_REQUEST['search'] );
+		}
 
 		$totalCount = wp_count_posts(CPT::$CPTName);
 		$formattedTables = array();

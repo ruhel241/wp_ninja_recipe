@@ -26,9 +26,11 @@ class WPNinjaRecipe
 	public function boot()
 	{
 		$this->commonHooks();
-		$this->adminHooks();
 		$this->publicHooks();
 		$this->loadTextDomain();
+		if( is_admin() ){
+			$this->adminHooks();
+		}
 	}
 
 	public function commonHooks()

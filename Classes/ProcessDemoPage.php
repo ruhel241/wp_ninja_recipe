@@ -48,7 +48,7 @@ class ProcessDemoPage
 					if( in_the_loop() ){
 						$custom_content = __( $RecipeType .' '.'Demo Preview( ID:', 'ninja_recipe' );
 						$content = '<div id="ninja_recipe_demo" style="text-align:center" class="recie_demo"><h3>'.$custom_content.$table->ID.')</h3></div><hr/>';
-						$content .= '[ninja_recipe id=]' . $table->ID .']'; 
+						$content .= '[ninja_recipe id=' . $table->ID .']'; 
 					}
 					return $content;
 				});
