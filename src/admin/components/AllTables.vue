@@ -264,7 +264,10 @@ export default {
                 route: 'get_tables',
                 per_page: this.paginate.per_page,
                 page_number: this.paginate.current_page,
-                search: this.search
+                search: this.search,
+                meal_type: this.findMealType,
+                cusine_type: this.findCusineType,
+                preference_type: this.findPreferenceType
             })
             .then(
                 (response) => {
@@ -385,6 +388,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .wp-ninja-recipe {
 
     .editor-header {

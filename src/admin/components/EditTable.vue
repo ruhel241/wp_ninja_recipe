@@ -27,7 +27,7 @@
         <!-- Body -->
         <el-row>
             
-            <el-col class="fields">
+            <el-col class="field" :span="16">
                 <h2 v-if="recipe_type==='normal'">Normal Recipe</h2>
                 <h2 v-if="recipe_type==='advance'">Advance Recipe</h2>
 
@@ -193,7 +193,7 @@
 
             </el-col>
 
-            <el-col class="show_preview">
+            <el-col class="show_preview" :span="8">
                 <h2>Optional Fields</h2>
                 
                 <el-row>
@@ -560,12 +560,9 @@ export default {
         padding-left: 93px;
     }
 
-    .fields {
-        width: 68%;
-		background: #fff;
-		margin-top: 15px;
-		margin-right: 20px;
-		padding: 20px;
+    .field {
+        margin-top: 18px;
+		padding-right: 15px; 
         h2 {
             margin-top: 0;
         }
@@ -597,11 +594,9 @@ export default {
 	}
 
     .show_preview {
-        width: 29.6%;
         background: #fff;
-		margin-top: 15px;
-		margin-right: 20px;
 		padding: 20px;
+        margin-top: 19px;
         h2 {
             margin-top: 0;
         }

@@ -61,6 +61,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/col.css';
 import 'element-ui/lib/theme-chalk/row.css';
 import 'element-ui/lib/theme-chalk/tabs.css';
+import 'element-ui/lib/theme-chalk/icon.css';
 import 'element-ui/lib/theme-chalk/input.css';
 import 'element-ui/lib/theme-chalk/table.css';
 import 'element-ui/lib/theme-chalk/option.css';
