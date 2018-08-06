@@ -230,18 +230,18 @@ export default {
             findCusineType: '',
             findPreferenceType: '',
             meal_types: [
-                { value: 'breakfast', label: 'Breakfast' },
-                { value: 'lunch', label: 'Lunch' }, 
-                { value: 'dinner', label: 'Dinner' }
+                { value: 'Breakfast', label: 'Breakfast' },
+                { value: 'Lunch', label: 'Lunch' }, 
+                { value: 'Dinner', label: 'Dinner' }
             ],
             cusine_types: [
-                { value: 'indian', label: 'Indian' },
-                { value: 'chinese', label: 'Chinese' }, 
-                { value: 'maxican', label: 'Maxican' }
+                { value: 'Indian', label: 'Indian' },
+                { value: 'Chinese', label: 'Chinese' }, 
+                { value: 'Maxican', label: 'Maxican' }
             ],
             preference_types: [
-                { value: 'veg', label: 'Vegetable' },
-                { value: 'non-veg', label: 'Non-vegetable' }
+                { value: 'Vegetable', label: 'Vegetable' },
+                { value: 'Non-vegetable', label: 'Non-vegetable' }
             ],
             paginate: {
                 total: 0, 
@@ -382,7 +382,17 @@ export default {
         search() {
             this.paginate.current_page = 1;
             this.fetchTables();
+        },
+        findMealType() {
+            this.fetchTables();
+        },
+        findCusineType() {
+            this.fetchTables();
+        },
+        findPreferenceType() {
+            this.fetchTables();
         }
+
     }
 }
 </script>
