@@ -14992,7 +14992,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-002a4dfb"
+var __vue_scopeId__ = "data-v-b14062fe"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -15003,7 +15003,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/components/core/InputDropdown.vue"
+Component.options.__file = "src\\admin\\components\\core\\InputDropdown.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -15012,9 +15012,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-002a4dfb", Component.options)
+    hotAPI.createRecord("data-v-b14062fe", Component.options)
   } else {
-    hotAPI.reload("data-v-002a4dfb", Component.options)
+    hotAPI.reload("data-v-b14062fe", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -19954,7 +19954,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/components/AllTables.vue"
+Component.options.__file = "src\\admin\\components\\AllTables.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -19963,9 +19963,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e2fa6334", Component.options)
+    hotAPI.createRecord("data-v-2be7fbf3", Component.options)
   } else {
-    hotAPI.reload("data-v-e2fa6334", Component.options)
+    hotAPI.reload("data-v-2be7fbf3", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -19986,13 +19986,13 @@ var content = __webpack_require__(84);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("156a0f37", content, false, {});
+var update = __webpack_require__(8)("0e615a1f", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e2fa6334\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e2fa6334\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2be7fbf3\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2be7fbf3\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -20310,7 +20310,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             this.tableLoading = true;
-            jQuery.get(ajaxurl, {
+
+            var fetchTablesAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_tables',
                 per_page: this.paginate.per_page,
@@ -20319,7 +20320,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 meal_type: this.findMealType,
                 cusine_type: this.findCusineType,
                 preference_type: this.findPreferenceType
-            }).then(function (response) {
+            };
+
+            jQuery.get(ajaxurl, fetchTablesAjaxData).then(function (response) {
                 console.log(response);
                 _this.tableData = response.data.tables;
                 _this.paginate.total = response.data.total;
@@ -20336,12 +20339,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this2 = this;
 
             this.addingTableAjax = true;
-            jQuery.post(ajaxurl, {
+
+            var addTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'add_table',
                 post_title: this.table_name,
                 recipe_type: this.selectedRecipe
-            }).then(function (response) {
+            };
+
+            jQuery.post(ajaxurl, addTableAjaxData).then(function (response) {
                 console.log(response);
                 _this2.$notify.success({
                     title: 'Success',
@@ -20366,11 +20372,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         deleteTable: function deleteTable(tableId) {
             var _this3 = this;
 
-            jQuery.post(ajaxurl, {
+            var deleteAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'delete_table',
                 table_id: tableId
-            }).then(function (response) {
+            };
+
+            jQuery.post(ajaxurl, deleteAjaxData).then(function (response) {
                 _this3.$notify.success({
                     title: 'Deleted',
                     message: response.data.message
@@ -20459,7 +20467,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/components/actions/DeleteTable.vue"
+Component.options.__file = "src\\admin\\components\\actions\\DeleteTable.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -20468,9 +20476,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e8233b5e", Component.options)
+    hotAPI.createRecord("data-v-4b19c3d1", Component.options)
   } else {
-    hotAPI.reload("data-v-e8233b5e", Component.options)
+    hotAPI.reload("data-v-4b19c3d1", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -20491,13 +20499,13 @@ var content = __webpack_require__(89);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("9546d742", content, false, {});
+var update = __webpack_require__(8)("cafaf002", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e8233b5e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e8233b5e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b19c3d1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b19c3d1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -20630,7 +20638,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-e8233b5e", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-4b19c3d1", module.exports)
   }
 }
 
@@ -20645,13 +20653,13 @@ var content = __webpack_require__(93);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("600c6aae", content, false, {});
+var update = __webpack_require__(8)("7f21f278", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-002a4dfb\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-002a4dfb\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b14062fe\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b14062fe\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -20669,7 +20677,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninjaRecipeInputDropdown .model_select[data-v-002a4dfb] {\n  top: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.ninjaRecipeInputDropdown .model_select[data-v-b14062fe] {\n  top: 5px;\n}\n", ""]);
 
 // exports
 
@@ -20771,7 +20779,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-002a4dfb", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-b14062fe", module.exports)
   }
 }
 
@@ -21369,7 +21377,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-e2fa6334", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-2be7fbf3", module.exports)
   }
 }
 
@@ -21403,7 +21411,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/components/EditTable.vue"
+Component.options.__file = "src\\admin\\components\\EditTable.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -21412,9 +21420,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3f556838", Component.options)
+    hotAPI.createRecord("data-v-7dba7971", Component.options)
   } else {
-    hotAPI.reload("data-v-3f556838", Component.options)
+    hotAPI.reload("data-v-7dba7971", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -21435,13 +21443,13 @@ var content = __webpack_require__(99);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("4c86ceba", content, false, {});
+var update = __webpack_require__(8)("5968a2a2", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f556838\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f556838\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7dba7971\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7dba7971\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -21459,7 +21467,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 7px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n", ""]);
 
 // exports
 
@@ -21482,6 +21490,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vuedraggable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_clipboard__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_clipboard__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -21807,11 +21831,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchTable: function fetchTable() {
             var _this = this;
 
-            jQuery.get(ajaxurl, {
+            var fetchTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_table',
                 table_id: this.table_id
-            }).then(function (response) {
+            };
+
+            jQuery.get(ajaxurl, fetchTableAjaxData).then(function (response) {
                 console.log(response);
                 _this.post_title = response.data.table.post_title;
                 _this.recipe_type = response.data.table.recipe_type;
@@ -21879,14 +21905,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             console.log(tableConfig);
 
-            jQuery.post(ajaxurl, {
+            var updateTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'update_table',
                 table_id: this.table_id,
                 table_config: JSON.stringify(tableConfig),
                 post_title: this.post_title,
                 recipe_type: this.recipe_type
-            }).then(function (response) {
+            };
+
+            jQuery.post(ajaxurl, updateTableAjaxData).then(function (response) {
                 _this2.$notify.success({
                     title: 'Updated',
                     message: response.data.message
@@ -22009,7 +22037,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/components/common/_wp_editor.vue"
+Component.options.__file = "src\\admin\\components\\common\\_wp_editor.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -22018,9 +22046,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e076be50", Component.options)
+    hotAPI.createRecord("data-v-74ef9ed2", Component.options)
   } else {
-    hotAPI.reload("data-v-e076be50", Component.options)
+    hotAPI.reload("data-v-74ef9ed2", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -22041,13 +22069,13 @@ var content = __webpack_require__(103);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("28b5e7ba", content, false, {});
+var update = __webpack_require__(8)("04f181a6", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e076be50\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e076be50\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-74ef9ed2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-74ef9ed2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -22256,7 +22284,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-e076be50", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-74ef9ed2", module.exports)
   }
 }
 
@@ -22279,7 +22307,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-2f0955b3"
+var __vue_scopeId__ = "data-v-18913fb9"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -22290,7 +22318,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/components/core/InputNumber.vue"
+Component.options.__file = "src\\admin\\components\\core\\InputNumber.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -22299,9 +22327,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2f0955b3", Component.options)
+    hotAPI.createRecord("data-v-18913fb9", Component.options)
   } else {
-    hotAPI.reload("data-v-2f0955b3", Component.options)
+    hotAPI.reload("data-v-18913fb9", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -22322,13 +22350,13 @@ var content = __webpack_require__(108);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("0ee82377", content, false, {});
+var update = __webpack_require__(8)("2709e898", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2f0955b3\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2f0955b3\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-18913fb9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-18913fb9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -22346,7 +22374,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ing_amnt_field[data-v-2f0955b3] {\n    width: 100%;\n    padding: 19px;\n    border-radius: 4px;\n}\n", ""]);
+exports.push([module.i, "\n.ing_amnt_field[data-v-18913fb9] {\r\n    width: 100%;\r\n    padding: 19px;\r\n    border-radius: 4px;\n}\r\n", ""]);
 
 // exports
 
@@ -22428,7 +22456,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2f0955b3", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-18913fb9", module.exports)
   }
 }
 
@@ -22439,13 +22467,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(251)
+  __webpack_require__(112)
 }
 var normalizeComponent = __webpack_require__(6)
 /* script */
 var __vue_script__ = __webpack_require__(114)
 /* template */
-var __vue_template__ = __webpack_require__(253)
+var __vue_template__ = __webpack_require__(115)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -22462,7 +22490,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/components/NutritionFields.vue"
+Component.options.__file = "src\\admin\\components\\NutritionFields.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -22471,9 +22499,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-19afcff1", Component.options)
+    hotAPI.createRecord("data-v-1ae44084", Component.options)
   } else {
-    hotAPI.reload("data-v-19afcff1", Component.options)
+    hotAPI.reload("data-v-1ae44084", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -22484,8 +22512,46 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 112 */,
-/* 113 */,
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(113);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(8)("5bd8a073", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1ae44084\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1ae44084\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.nutritions div {\n    width: 23%;\n    padding-right: 14px;\n}\n.nutritions div input {\n      width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
 /* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -22557,7 +22623,543 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 115 */,
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "nutritions" }, [
+      _c("br"),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[0].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[0].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[0], "disabled", $$v)
+                  },
+                  expression: "field[0].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[0].value,
+              expression: "field[0].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[0].label,
+            disabled: !_vm.field[0].disabled
+          },
+          domProps: { value: _vm.field[0].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[0], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[1].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[1].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[1], "disabled", $$v)
+                  },
+                  expression: "field[1].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[1].value,
+              expression: "field[1].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[1].label,
+            disabled: !_vm.field[1].disabled
+          },
+          domProps: { value: _vm.field[1].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[1], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[2].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[2].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[2], "disabled", $$v)
+                  },
+                  expression: "field[2].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[2].value,
+              expression: "field[2].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[2].label,
+            disabled: !_vm.field[2].disabled
+          },
+          domProps: { value: _vm.field[2].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[2], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[3].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[3].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[3], "disabled", $$v)
+                  },
+                  expression: "field[3].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[3].value,
+              expression: "field[3].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[3].label,
+            disabled: !_vm.field[3].disabled
+          },
+          domProps: { value: _vm.field[3].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[3], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[4].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[4].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[4], "disabled", $$v)
+                  },
+                  expression: "field[4].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[4].value,
+              expression: "field[4].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[4].label,
+            disabled: !_vm.field[4].disabled
+          },
+          domProps: { value: _vm.field[4].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[4], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[5].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[5].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[5], "disabled", $$v)
+                  },
+                  expression: "field[5].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[5].value,
+              expression: "field[5].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[5].label,
+            disabled: !_vm.field[5].disabled
+          },
+          domProps: { value: _vm.field[5].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[5], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[6].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[6].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[6], "disabled", $$v)
+                  },
+                  expression: "field[6].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[6].value,
+              expression: "field[6].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[6].label,
+            disabled: !_vm.field[6].disabled
+          },
+          domProps: { value: _vm.field[6].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[6], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[7].label != ""
+          ? _c("label", [
+              _vm._v(_vm._s(_vm.field[7].label) + " "),
+              _c(
+                "span",
+                [
+                  _c("el-switch", {
+                    attrs: {
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
+                    },
+                    model: {
+                      value: _vm.field[7].disabled,
+                      callback: function($$v) {
+                        _vm.$set(_vm.field[7], "disabled", $$v)
+                      },
+                      expression: "field[7].disabled"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[7].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[7].value,
+                  expression: "field[7].value"
+                }
+              ],
+              attrs: {
+                type: "number",
+                placeholder: _vm.field[7].label,
+                disabled: !_vm.field[7].disabled
+              },
+              domProps: { value: _vm.field[7].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[7], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[8].label != ""
+          ? _c("label", [
+              _vm._v(_vm._s(_vm.field[8].label) + " "),
+              _c(
+                "span",
+                [
+                  _c("el-switch", {
+                    attrs: {
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
+                    },
+                    model: {
+                      value: _vm.field[8].disabled,
+                      callback: function($$v) {
+                        _vm.$set(_vm.field[8], "disabled", $$v)
+                      },
+                      expression: "field[8].disabled"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[8].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[8].value,
+                  expression: "field[8].value"
+                }
+              ],
+              attrs: {
+                type: "number",
+                placeholder: _vm.field[8].label,
+                disabled: !_vm.field[8].disabled
+              },
+              domProps: { value: _vm.field[8].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[8], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[9].label != ""
+          ? _c("label", [
+              _vm._v(_vm._s(_vm.field[9].label) + " "),
+              _c(
+                "span",
+                [
+                  _c("el-switch", {
+                    attrs: {
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
+                    },
+                    model: {
+                      value: _vm.field[9].disabled,
+                      callback: function($$v) {
+                        _vm.$set(_vm.field[9], "disabled", $$v)
+                      },
+                      expression: "field[9].disabled"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[9].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[9].value,
+                  expression: "field[9].value"
+                }
+              ],
+              attrs: {
+                type: "number",
+                placeholder: _vm.field[9].label,
+                disabled: !_vm.field[9].disabled
+              },
+              domProps: { value: _vm.field[9].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[9], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ])
+    ]),
+    _vm._v(" "),
+    _c("hr")
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1ae44084", module.exports)
+  }
+}
+
+/***/ }),
 /* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24532,81 +25134,77 @@ var render = function() {
     "div",
     { staticClass: "ninja_recipe_table" },
     [
-      _c(
-        "el-row",
-        { staticClass: "header" },
-        [
-          _c(
-            "el-col",
-            { attrs: { span: 24 } },
-            [
-              _c("el-col", { attrs: { span: 20 } }, [
-                _c("h1", [
-                  _vm._v(_vm._s(_vm.post_title) + "\n                    "),
-                  _c("span", [
-                    _c(
-                      "code",
-                      {
-                        staticClass: "copy",
-                        staticStyle: { cursor: "pointer" },
-                        attrs: {
-                          "data-clipboard-text":
-                            '[ninja_recipe id="' + _vm.table_id + '"]'
-                        }
-                      },
-                      [
-                        _vm._v(
-                          '\n                            [ninja_recipe id="' +
-                            _vm._s(_vm.table_id) +
-                            '"]\n                        '
-                        )
-                      ]
-                    )
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "el-col",
-                { staticClass: "table_action_btn", attrs: { span: 4 } },
-                [
+      _c("div", { staticClass: "header" }, [
+        _c(
+          "div",
+          {
+            staticStyle: { display: "flex", "justify-content": "space-between" }
+          },
+          [
+            _c("div", { staticStyle: { flex: "1" } }, [
+              _c("h1", [
+                _vm._v(_vm._s(_vm.post_title) + "\n                    "),
+                _c("span", [
                   _c(
-                    "el-button",
+                    "code",
                     {
-                      staticClass: "common_btn",
-                      attrs: { type: "success", size: "mini" },
-                      on: { click: _vm.updateTableConfig }
-                    },
-                    [_vm._v("\n                    Update\n                ")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticStyle: { color: "#fff", "text-decoration": "none" },
-                      attrs: { href: _vm.demo_url, target: "_blank" }
+                      staticClass: "copy",
+                      staticStyle: { cursor: "pointer" },
+                      attrs: {
+                        "data-clipboard-text":
+                          '[ninja_recipe id="' + _vm.table_id + '"]'
+                      }
                     },
                     [
-                      _c(
-                        "el-button",
-                        {
-                          staticClass: "common_btn",
-                          attrs: { type: "primary", size: "mini" }
-                        },
-                        [_vm._v("Preview")]
+                      _vm._v(
+                        '\n                            [ninja_recipe id="' +
+                          _vm._s(_vm.table_id) +
+                          '"]\n                        '
                       )
-                    ],
-                    1
+                    ]
                   )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "table_action_btn" },
+              [
+                _c(
+                  "el-button",
+                  {
+                    staticClass: "common_btn",
+                    attrs: { type: "success", size: "mini" },
+                    on: { click: _vm.updateTableConfig }
+                  },
+                  [_vm._v("\n                    Update\n                ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticStyle: { color: "#fff", "text-decoration": "none" },
+                    attrs: { href: _vm.demo_url, target: "_blank" }
+                  },
+                  [
+                    _c(
+                      "el-button",
+                      {
+                        staticClass: "common_btn",
+                        attrs: { type: "primary", size: "mini" }
+                      },
+                      [_vm._v("Preview")]
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ]
+        )
+      ]),
       _vm._v(" "),
       _c(
         "el-row",
@@ -24726,53 +25324,74 @@ var render = function() {
                             1
                           ),
                           _vm._v(" "),
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Nutrition" } },
-                            [
-                              _c("span", [_vm._v("Nutrition(as text):")]),
-                              _c("el-switch", {
-                                attrs: {
-                                  "inactive-color": "green",
-                                  "active-color": "#9098B8"
-                                },
-                                model: {
-                                  value: _vm.showNutritionText,
-                                  callback: function($$v) {
-                                    _vm.showNutritionText = $$v
+                          _c("el-tab-pane", { attrs: { label: "Nutrition" } }, [
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_label" },
+                              [
+                                _c("span", [_vm._v("Nutrition(as text):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
                                   },
-                                  expression: "showNutritionText"
-                                }
-                              }),
-                              _c("br"),
-                              _vm._v(" "),
-                              _vm.showNutritionText
-                                ? _c("app-wp-editor", {
-                                    model: {
-                                      value: _vm.nutrition_text,
-                                      callback: function($$v) {
-                                        _vm.nutrition_text = $$v
-                                      },
-                                      expression: "nutrition_text"
-                                    }
-                                  })
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Nutrition(as fields):")]),
-                              _c("el-switch", {
-                                attrs: {
-                                  "inactive-color": "red",
-                                  "active-color": "#9098B8"
-                                },
-                                model: {
-                                  value: _vm.showNutritionFields,
-                                  callback: function($$v) {
-                                    _vm.showNutritionFields = $$v
+                                  model: {
+                                    value: _vm.showNutritionText,
+                                    callback: function($$v) {
+                                      _vm.showNutritionText = $$v
+                                    },
+                                    expression: "showNutritionText"
+                                  }
+                                }),
+                                _c("br")
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_editor" },
+                              [
+                                _vm.showNutritionText
+                                  ? _c("app-wp-editor", {
+                                      model: {
+                                        value: _vm.nutrition_text,
+                                        callback: function($$v) {
+                                          _vm.nutrition_text = $$v
+                                        },
+                                        expression: "nutrition_text"
+                                      }
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_fields_label" },
+                              [
+                                _c("span", [_vm._v("Nutrition(as fields):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
                                   },
-                                  expression: "showNutritionFields"
-                                }
-                              }),
-                              _vm._v(" "),
+                                  model: {
+                                    value: _vm.showNutritionFields,
+                                    callback: function($$v) {
+                                      _vm.showNutritionFields = $$v
+                                    },
+                                    expression: "showNutritionFields"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutritions_fields" },
                               _vm._l(_vm.nutritions, function(field, i) {
                                 return _vm.showNutritionFields
                                   ? _c("app-nutrition", {
@@ -24781,9 +25400,8 @@ var render = function() {
                                     })
                                   : _vm._e()
                               })
-                            ],
-                            2
-                          )
+                            )
+                          ])
                         ],
                         1
                       )
@@ -25194,53 +25812,74 @@ var render = function() {
                             1
                           ),
                           _vm._v(" "),
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Nutrition" } },
-                            [
-                              _c("span", [_vm._v("Nutrition(as text):")]),
-                              _c("el-switch", {
-                                attrs: {
-                                  "inactive-color": "green",
-                                  "active-color": "#9098B8"
-                                },
-                                model: {
-                                  value: _vm.showNutritionText,
-                                  callback: function($$v) {
-                                    _vm.showNutritionText = $$v
+                          _c("el-tab-pane", { attrs: { label: "Nutrition" } }, [
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_label" },
+                              [
+                                _c("span", [_vm._v("Nutrition(as text):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
                                   },
-                                  expression: "showNutritionText"
-                                }
-                              }),
-                              _c("br"),
-                              _vm._v(" "),
-                              _vm.showNutritionText
-                                ? _c("app-wp-editor", {
-                                    model: {
-                                      value: _vm.nutrition_text,
-                                      callback: function($$v) {
-                                        _vm.nutrition_text = $$v
-                                      },
-                                      expression: "nutrition_text"
-                                    }
-                                  })
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Nutrition(as fields):")]),
-                              _c("el-switch", {
-                                attrs: {
-                                  "inactive-color": "red",
-                                  "active-color": "#9098B8"
-                                },
-                                model: {
-                                  value: _vm.showNutritionFields,
-                                  callback: function($$v) {
-                                    _vm.showNutritionFields = $$v
+                                  model: {
+                                    value: _vm.showNutritionText,
+                                    callback: function($$v) {
+                                      _vm.showNutritionText = $$v
+                                    },
+                                    expression: "showNutritionText"
+                                  }
+                                }),
+                                _c("br")
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_editor" },
+                              [
+                                _vm.showNutritionText
+                                  ? _c("app-wp-editor", {
+                                      model: {
+                                        value: _vm.nutrition_text,
+                                        callback: function($$v) {
+                                          _vm.nutrition_text = $$v
+                                        },
+                                        expression: "nutrition_text"
+                                      }
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_fields_label" },
+                              [
+                                _c("span", [_vm._v("Nutrition(as fields):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
                                   },
-                                  expression: "showNutritionFields"
-                                }
-                              }),
-                              _vm._v(" "),
+                                  model: {
+                                    value: _vm.showNutritionFields,
+                                    callback: function($$v) {
+                                      _vm.showNutritionFields = $$v
+                                    },
+                                    expression: "showNutritionFields"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutritions_fields" },
                               _vm._l(_vm.nutritions, function(field, i) {
                                 return _vm.showNutritionFields
                                   ? _c("app-nutrition", {
@@ -25249,9 +25888,8 @@ var render = function() {
                                     })
                                   : _vm._e()
                               })
-                            ],
-                            2
-                          )
+                            )
+                          ])
                         ],
                         1
                       )
@@ -25542,7 +26180,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-3f556838", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-7dba7971", module.exports)
   }
 }
 
@@ -70021,7 +70659,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/admin/AdminApp.vue"
+Component.options.__file = "src\\admin\\AdminApp.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -70030,9 +70668,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-10f1236a", Component.options)
+    hotAPI.createRecord("data-v-0b82c1e5", Component.options)
   } else {
-    hotAPI.reload("data-v-10f1236a", Component.options)
+    hotAPI.reload("data-v-0b82c1e5", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -70075,7 +70713,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-10f1236a", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-0b82c1e5", module.exports)
   }
 }
 
@@ -70084,586 +70722,6 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(252);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(8)("3ca2b702", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 252 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.nutritions div {\n    width: 24%;\n    padding-right: 10px;\n}\n.nutritions div input {\n      width: 100%;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 253 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "nutritions" }, [
-      _c("br"),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[0].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[0].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[0], "disabled", $$v)
-                  },
-                  expression: "field[0].disabled"
-                }
-              })
-            ],
-            1
-          )
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[0].value,
-              expression: "field[0].value"
-            }
-          ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[0].label,
-            disabled: !_vm.field[0].disabled
-          },
-          domProps: { value: _vm.field[0].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[0], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[1].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[1].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[1], "disabled", $$v)
-                  },
-                  expression: "field[1].disabled"
-                }
-              })
-            ],
-            1
-          )
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[1].value,
-              expression: "field[1].value"
-            }
-          ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[1].label,
-            disabled: !_vm.field[1].disabled
-          },
-          domProps: { value: _vm.field[1].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[1], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[2].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[2].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[2], "disabled", $$v)
-                  },
-                  expression: "field[2].disabled"
-                }
-              })
-            ],
-            1
-          )
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[2].value,
-              expression: "field[2].value"
-            }
-          ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[2].label,
-            disabled: !_vm.field[2].disabled
-          },
-          domProps: { value: _vm.field[2].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[2], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[3].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[3].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[3], "disabled", $$v)
-                  },
-                  expression: "field[3].disabled"
-                }
-              })
-            ],
-            1
-          )
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[3].value,
-              expression: "field[3].value"
-            }
-          ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[3].label,
-            disabled: !_vm.field[3].disabled
-          },
-          domProps: { value: _vm.field[3].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[3], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[4].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[4].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[4], "disabled", $$v)
-                  },
-                  expression: "field[4].disabled"
-                }
-              })
-            ],
-            1
-          )
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[4].value,
-              expression: "field[4].value"
-            }
-          ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[4].label,
-            disabled: !_vm.field[4].disabled
-          },
-          domProps: { value: _vm.field[4].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[4], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[5].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[5].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[5], "disabled", $$v)
-                  },
-                  expression: "field[5].disabled"
-                }
-              })
-            ],
-            1
-          )
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[5].value,
-              expression: "field[5].value"
-            }
-          ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[5].label,
-            disabled: !_vm.field[5].disabled
-          },
-          domProps: { value: _vm.field[5].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[5], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[6].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[6].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[6], "disabled", $$v)
-                  },
-                  expression: "field[6].disabled"
-                }
-              })
-            ],
-            1
-          )
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[6].value,
-              expression: "field[6].value"
-            }
-          ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[6].label,
-            disabled: !_vm.field[6].disabled
-          },
-          domProps: { value: _vm.field[6].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[6], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[7].label != ""
-          ? _c("label", [
-              _vm._v(_vm._s(_vm.field[7].label) + " "),
-              _c(
-                "span",
-                [
-                  _c("el-switch", {
-                    attrs: {
-                      "inactive-color": "#9098B8",
-                      "active-color": "green"
-                    },
-                    model: {
-                      value: _vm.field[7].disabled,
-                      callback: function($$v) {
-                        _vm.$set(_vm.field[7], "disabled", $$v)
-                      },
-                      expression: "field[7].disabled"
-                    }
-                  })
-                ],
-                1
-              )
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[7].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[7].value,
-                  expression: "field[7].value"
-                }
-              ],
-              attrs: {
-                type: "number",
-                placeholder: _vm.field[7].label,
-                disabled: !_vm.field[7].disabled
-              },
-              domProps: { value: _vm.field[7].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[7], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[8].label != ""
-          ? _c("label", [
-              _vm._v(_vm._s(_vm.field[8].label) + " "),
-              _c(
-                "span",
-                [
-                  _c("el-switch", {
-                    attrs: {
-                      "inactive-color": "#9098B8",
-                      "active-color": "green"
-                    },
-                    model: {
-                      value: _vm.field[8].disabled,
-                      callback: function($$v) {
-                        _vm.$set(_vm.field[8], "disabled", $$v)
-                      },
-                      expression: "field[8].disabled"
-                    }
-                  })
-                ],
-                1
-              )
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[8].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[8].value,
-                  expression: "field[8].value"
-                }
-              ],
-              attrs: {
-                type: "number",
-                placeholder: _vm.field[8].label,
-                disabled: !_vm.field[8].disabled
-              },
-              domProps: { value: _vm.field[8].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[8], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[9].label != ""
-          ? _c("label", [
-              _vm._v(_vm._s(_vm.field[9].label) + " "),
-              _c(
-                "span",
-                [
-                  _c("el-switch", {
-                    attrs: {
-                      "inactive-color": "#9098B8",
-                      "active-color": "green"
-                    },
-                    model: {
-                      value: _vm.field[9].disabled,
-                      callback: function($$v) {
-                        _vm.$set(_vm.field[9], "disabled", $$v)
-                      },
-                      expression: "field[9].disabled"
-                    }
-                  })
-                ],
-                1
-              )
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[9].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[9].value,
-                  expression: "field[9].value"
-                }
-              ],
-              attrs: {
-                type: "number",
-                placeholder: _vm.field[9].label,
-                disabled: !_vm.field[9].disabled
-              },
-              domProps: { value: _vm.field[9].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[9], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ])
-    ]),
-    _vm._v(" "),
-    _c("hr")
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-19afcff1", module.exports)
-  }
-}
 
 /***/ })
 /******/ ]);

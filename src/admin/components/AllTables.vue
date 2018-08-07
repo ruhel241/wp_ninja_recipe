@@ -259,7 +259,8 @@ export default {
     methods: {
         fetchTables() {
             this.tableLoading = true
-            jQuery.get(ajaxurl, {
+
+            let fetchTablesAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_tables',
                 per_page: this.paginate.per_page,
@@ -268,36 +269,41 @@ export default {
                 meal_type: this.findMealType,
                 cusine_type: this.findCusineType,
                 preference_type: this.findPreferenceType
-            })
-            .then(
-                (response) => {
-                    console.log(response)
-                    this.tableData = response.data.tables;
-                    this.paginate.total = response.data.total;
-                }
-            )
-            .fail(
-                (error) => {
-                    this.$notify.error({
-                        title: 'Error',
-                        message: 'This is an error message'
-                    });
-                }
-            )
-            .always(
-                () => {
-                    this.tableLoading = false
-                }
-            )
+            };
+
+            jQuery.get(ajaxurl, fetchTablesAjaxData)
+                .then(
+                    (response) => {
+                        console.log(response)
+                        this.tableData = response.data.tables;
+                        this.paginate.total = response.data.total;
+                    }
+                )
+                .fail(
+                    (error) => {
+                        this.$notify.error({
+                            title: 'Error',
+                            message: 'This is an error message'
+                        });
+                    }
+                )
+                .always(
+                    () => {
+                        this.tableLoading = false
+                    }
+                )
         },
         addNewTable() {
             this.addingTableAjax = true
-            jQuery.post(ajaxurl, {
+
+            let addTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'add_table',
                 post_title: this.table_name,
                 recipe_type: this.selectedRecipe 
-            })
+            }
+
+            jQuery.post(ajaxurl, addTableAjaxData)
             .then(
                 (response) => {
                     console.log(response)
@@ -329,11 +335,13 @@ export default {
             )
         },
         deleteTable(tableId) {
-            jQuery.post(ajaxurl, {
+            let deleteAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'delete_table',
                 table_id: tableId
-            })
+            }
+
+            jQuery.post(ajaxurl, deleteAjaxData)
             .then(
                 (response) => {
                     this.$notify.success({

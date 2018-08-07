@@ -70,8 +70,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     div {
-        width: 24%;
-        padding-right: 10px;
+        width: 23%;
+        padding-right: 14px;
         input {
             width: 100%;
         }

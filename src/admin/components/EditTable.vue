@@ -2,9 +2,9 @@
     <div class="ninja_recipe_table">
         
         <!-- Header -->
-        <el-row class="header">
-            <el-col :span="24">
-                <el-col :span="20">
+        <div class="header">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="flex: 1">
                     <h1>{{ post_title }}
                         <span>
                             <code class="copy" :data-clipboard-text='`[ninja_recipe id="${table_id}"]`' style="cursor: pointer;">
@@ -12,17 +12,17 @@
                             </code>
                         </span>
                     </h1>
-                </el-col>
-                <el-col :span="4" class="table_action_btn">
+                </div>
+                <div class="table_action_btn">
                     <el-button class="common_btn" @click="updateTableConfig" type="success" size="mini">
                         Update
                     </el-button>
                     <a :href="demo_url" target="_blank" style="color: #fff; text-decoration: none;">
                         <el-button class="common_btn" type="primary" size="mini">Preview</el-button>
                     </a>
-                </el-col>
-            </el-col>
-        </el-row>
+                </div>
+            </div>
+        </div>
 
         <!-- Body -->
         <el-row>
@@ -60,17 +60,24 @@
 
                         <el-tab-pane label="Nutrition">
 
-                            <span>Nutrition(as text):</span><el-switch v-model="showNutritionText" inactive-color="green" active-color="#9098B8"></el-switch><br />
+                            <div class="nutrition_text_label">
+                                <span>Nutrition(as text):</span><el-switch v-model="showNutritionText" inactive-color="#9098B8" active-color="green"></el-switch><br />
+                            </div>
+                            <div class="nutrition_text_editor">
                             <app-wp-editor
                                 v-model="nutrition_text"
                                 v-if="showNutritionText"></app-wp-editor>
-
-                            <span>Nutrition(as fields):</span><el-switch v-model="showNutritionFields" inactive-color="red" active-color="#9098B8"></el-switch>
-                            <app-nutrition
-                                v-for="(field, i) of nutritions" 
-                                :key="i" 
-                                :field="field"
-                                v-if="showNutritionFields"></app-nutrition>
+                            </div>
+                            <div class="nutrition_fields_label">
+                                <span>Nutrition(as fields):</span><el-switch v-model="showNutritionFields" inactive-color="#9098B8" active-color="green"></el-switch>
+                            </div>
+                            <div class="nutritions_fields">
+                                <app-nutrition
+                                    v-for="(field, i) of nutritions" 
+                                    :key="i" 
+                                    :field="field"
+                                    v-if="showNutritionFields"></app-nutrition>
+                            </div>
                         </el-tab-pane>
 
                     </el-tabs>
@@ -167,15 +174,24 @@
                         </el-tab-pane>
 
                         <el-tab-pane label="Nutrition">
-                            <span>Nutrition(as text):</span><el-switch v-model="showNutritionText" inactive-color="green" active-color="#9098B8"></el-switch><br />
+                            <div class="nutrition_text_label">
+                                <span>Nutrition(as text):</span><el-switch v-model="showNutritionText" inactive-color="#9098B8" active-color="green"></el-switch><br />
+                            </div>
+                            <div class="nutrition_text_editor">
                             <app-wp-editor
                                 v-model="nutrition_text"
                                 v-if="showNutritionText"></app-wp-editor>
-
-                            <span>Nutrition(as fields):</span><el-switch v-model="showNutritionFields" inactive-color="red" active-color="#9098B8"></el-switch>
-                            <app-nutrition
-                                v-for="(field, i) in nutritions" :key="i" :field="field"
-                                v-if="showNutritionFields"></app-nutrition>
+                            </div>
+                            <div class="nutrition_fields_label">
+                                <span>Nutrition(as fields):</span><el-switch v-model="showNutritionFields" inactive-color="#9098B8" active-color="green"></el-switch>
+                            </div>
+                            <div class="nutritions_fields">
+                                <app-nutrition
+                                    v-for="(field, i) of nutritions" 
+                                    :key="i" 
+                                    :field="field"
+                                    v-if="showNutritionFields"></app-nutrition>
+                            </div>
                         </el-tab-pane>
 
                     </el-tabs>
@@ -394,11 +410,13 @@ export default {
     methods: {
         fetchTable() {
 
-            jQuery.get(ajaxurl, {
+            let fetchTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_table',
                 table_id: this.table_id
-            })
+            };
+
+            jQuery.get(ajaxurl, fetchTableAjaxData)
             .then(
                 (response) => {
                     console.log(response)
@@ -475,14 +493,16 @@ export default {
 
             console.log(tableConfig)
 
-            jQuery.post(ajaxurl, {
+            let updateTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'update_table',
                 table_id: this.table_id,
                 table_config: JSON.stringify(tableConfig),
                 post_title: this.post_title,
                 recipe_type: this.recipe_type
-            })
+            };
+
+            jQuery.post(ajaxurl, updateTableAjaxData)
             .then(
                 (response) => {
                     this.$notify.success({
@@ -618,6 +638,13 @@ export default {
         }
         .all_fields {
             margin-top: 30px;
+            .nutrition_text_label {
+                margin-bottom: 7px;
+            }
+            .nutrition_fields_label {
+                margin-bottom: 7px;
+                margin-top: 7px;
+            }
             .featured_image_section {
                 .feat_img {
                     width: 50%;
