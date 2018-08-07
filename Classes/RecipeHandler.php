@@ -156,7 +156,6 @@ class RecipeHandler
 		);
 
 		
-		
 
 		$tables = get_posts( $args );
 		$totalCount = wp_count_posts(CPT::$CPTName);
@@ -236,19 +235,9 @@ class RecipeHandler
 
 	public static function populateDemoData($tableId) //add meta label etc
     {
-        //update_post_meta($tableId, '_ninija_recipe_table_config', static::getRecipeConfig());
+        update_post_meta($tableId, '_ninija_recipe_table_config', false);
     }
 
-    public static function getRecipeConfig()
-	{
-		return array(
-			
-            'ingredient'  => 'ami bala asi',
-            'description' => 'tmi vala aso ni',
-            'nutrition'	  => 'oy vala asi'
-	           
-			);
-	}
 
 
 
