@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 defined('ABSPATH') or die;
 /*
@@ -83,7 +83,6 @@ class WPNinjaRecipe
 }
 
 add_action('plugins_loaded', function() {
-	$wpNinjaRecipe = new WPNinjaRecipe();
-	$wpNinjaRecipe->boot();
+	(new WPNinjaRecipe)->boot();
 });
 

@@ -480,6 +480,7 @@ export default {
                 route: 'update_table',
                 table_id: this.table_id,
                 table_config: JSON.stringify(tableConfig),
+                post_title: this.post_title,
                 recipe_type: this.recipe_type
             })
             .then(

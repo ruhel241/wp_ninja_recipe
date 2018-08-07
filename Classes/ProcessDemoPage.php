@@ -1,4 +1,6 @@
-<?php namespace NinjaRecipe\Classes;
+<?php 
+
+	namespace NinjaRecipe\Classes;
 
 class ProcessDemoPage 
 {

@@ -1,4 +1,6 @@
-<?php namespace NinjaRecipe\Classes;
+<?php 
+
+	namespace NinjaRecipe\Classes;
 
 
 class RecipeHandler
@@ -16,7 +18,7 @@ class RecipeHandler
 
 		if ($route == 'get_table') {
             $tableId = intval($_REQUEST['table_id']);
-            static::getTable($tableId, 'ajax');
+            static::getTable($tableId);
         }
 
 
@@ -50,8 +52,9 @@ class RecipeHandler
             $table_con = wp_unslash($_REQUEST['table_config']);
 			$table_config = json_decode(trim(stripslashes($table_con)), true);
 
+			$post_title = sanitize_text_field($_REQUEST['post_title']);
 			$recipeType = sanitize_text_field($_REQUEST['recipe_type']); 
-			static::updateTableConfig($tableId, $table_config, $recipeType);
+			static::updateTableConfig($tableId, $table_config, $post_title, $recipeType);
         }
 
 
@@ -72,12 +75,25 @@ class RecipeHandler
 		$tableId    = $attributes['id'];
 		$post 	    = get_post($tableId);
 		$recipeMetaData = get_post_meta($tableId, '_ninija_recipe_table_config', true);
+
+  		
+  		$nutrition_fields = $recipeMetaData['nutrition']['nutrition_fields']; 
+
+
+
 		wp_enqueue_script('ninja_recipe_user_view', NINJA_RECIPE_PUBLIC_DIR_URL.'js/ninja_recipe_user_view.js', array('jquery'), NINJA_RECIPE_PLUGIN_DIR_VERSION, true);
 		wp_localize_script('ninja_recipe_user_view','recipeMetaDataVars', array(
 			'post' 			=> $post,
 			'recipeMetaData'=> $recipeMetaData
 		));
-		return "<div id='wp_ninja_recipe'></div>";
+		
+
+		$recipeTypeDisplay = $post->post_content; 
+
+		if( $recipeTypeDisplay ){
+			include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/'.$recipeTypeDisplay.'.php');
+		} 
+
 	}
 
 
@@ -178,7 +194,7 @@ class RecipeHandler
 	}
 
 
-	public  static function getTable($tableId, $returnType = 'ajax')
+	public  static function getTable($tableId)
 	{
 			
 		$table = get_post($tableId);
@@ -211,11 +227,12 @@ class RecipeHandler
 
 
 
-	public function updateTableConfig($tableId, $table_config, $recipeType)
+	public function updateTableConfig($tableId, $table_config, $post_title, $recipeType)
 	{
 		
 		$UpdateNinjaRecipe = array(
 	      'ID'           => $tableId,
+	      'post_title' 	 => $post_title,
 	      'post_content' => $recipeType,
 	    );
 		wp_update_post($UpdateNinjaRecipe);
