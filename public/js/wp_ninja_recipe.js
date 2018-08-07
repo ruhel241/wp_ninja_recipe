@@ -21459,7 +21459,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n", ""]);
 
 // exports
 
@@ -21776,7 +21776,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             ingredients_data: [{ ingredient: '', amount: '', unit: '' }],
             ingredients_unit: [{ value: 'TSP', label: 'TSP' }, { value: 'Tbs', label: 'Tbs' }, { value: 'Cup', label: 'Cup' }, { value: 'Kg', label: 'Kg' }, { value: 'Liter', label: 'Liter' }],
             descriptions_adv: [{ desc_text: '', desc_img: '' }],
-            nutritions: [[{ serial: 0, label: 'Calories', disabled: false, value: 0 }, { serial: 1, label: 'Calories From Fat', disabled: false, value: 0 }, { serial: 2, label: 'Total Fat', disabled: false, value: 0 }, { serial: 3, label: 'Saturated Fat', disabled: false, value: 0 }, { serial: 4, label: 'Trans Fat', disabled: false, value: 0 }, { serial: 5, label: 'Cholesterol', disabled: false, value: 0 }, { serial: 6, label: 'Sodium', disabled: false, value: 0 }, { serial: 7, label: 'Potassium', disabled: false, value: 0 }, { serial: 8, label: 'Total Carbohydrate', disabled: false, value: 0 }, { serial: 9, label: 'Dietary Fiber', disabled: false, value: 0 }], [{ serial: 10, label: 'Sugars', disabled: false, value: 0 }, { serial: 11, label: 'Protein', disabled: false, value: 0 }, { serial: 12, label: 'VitaminA', disabled: false, value: 0 }, { serial: 13, label: 'VitaminC', disabled: false, value: 0 }, { serial: 14, label: 'VitaminD', disabled: false, value: 0 }, { serial: 15, label: 'VitaminE', disabled: false, value: 0 }, { serial: 16, label: 'VitaminK', disabled: false, value: 0 }, { serial: 17, label: 'VitaminB6', disabled: false, value: 0 }, { serial: 18, label: 'VitaminB12', disabled: false, value: 0 }, { serial: 19, label: 'Calcium', disabled: false, value: 0 }], [{ serial: 20, label: 'Iron', disabled: false, value: 0 }, { serial: 21, label: 'Thiamin', disabled: false, value: 0 }, { serial: 22, label: 'Riboflavin', disabled: false, value: 0 }, { serial: 23, label: 'Niacin', disabled: false, value: 0 }, { serial: 24, label: 'Folate', disabled: false, value: 0 }, { serial: 25, label: 'Biotin', disabled: false, value: 0 }, { serial: 26, label: 'Pantothenic Acid', disabled: false, value: 0 }, { serial: 27, label: 'Phosphorus', disabled: false, value: 0 }, { serial: 28, label: 'Iodine', disabled: false, value: 0 }, { serial: 29, label: 'Magnesium', disabled: false, value: 0 }], [{ serial: 30, label: 'Zinc', disabled: false, value: 0 }, { serial: 31, label: 'Selenium', disabled: false, value: 0 }, { serial: 32, label: 'Copper', disabled: false, value: 0 }, { serial: 33, label: 'Manganese', disabled: false, value: 0 }, { serial: 34, label: 'Chromium', disabled: false, value: 0 }, { serial: 35, label: 'Molybdenum', disabled: false, value: 0 }, { serial: 36, label: 'Chloride', disabled: false, value: 0 }, { serial: 37, label: '', disabled: false, value: 0 }, { serial: 38, label: '', disabled: false, value: 0 }, { serial: 39, label: '', disabled: false, value: 0 }]],
+            nutritions: [[{ serial: 0, label: 'Calories', disabled: false, value: 0 }, { serial: 1, label: 'Calories From Fat', disabled: true, value: 0 }, { serial: 2, label: 'Total Fat', disabled: true, value: 0 }, { serial: 3, label: 'Saturated Fat', disabled: true, value: 0 }, { serial: 4, label: 'Trans Fat', disabled: true, value: 0 }, { serial: 5, label: 'Cholesterol', disabled: true, value: 0 }, { serial: 6, label: 'Sodium', disabled: true, value: 0 }, { serial: 7, label: 'Potassium', disabled: true, value: 0 }, { serial: 8, label: 'Total Carbohydrate', disabled: true, value: 0 }, { serial: 9, label: 'Dietary Fiber', disabled: true, value: 0 }], [{ serial: 10, label: 'Sugars', disabled: true, value: 0 }, { serial: 11, label: 'Protein', disabled: true, value: 0 }, { serial: 12, label: 'VitaminA', disabled: true, value: 0 }, { serial: 13, label: 'VitaminC', disabled: true, value: 0 }, { serial: 14, label: 'VitaminD', disabled: true, value: 0 }, { serial: 15, label: 'VitaminE', disabled: true, value: 0 }, { serial: 16, label: 'VitaminK', disabled: true, value: 0 }, { serial: 17, label: 'VitaminB6', disabled: true, value: 0 }, { serial: 18, label: 'VitaminB12', disabled: true, value: 0 }, { serial: 19, label: 'Calcium', disabled: true, value: 0 }], [{ serial: 20, label: 'Iron', disabled: true, value: 0 }, { serial: 21, label: 'Thiamin', disabled: true, value: 0 }, { serial: 22, label: 'Riboflavin', disabled: true, value: 0 }, { serial: 23, label: 'Niacin', disabled: true, value: 0 }, { serial: 24, label: 'Folate', disabled: true, value: 0 }, { serial: 25, label: 'Biotin', disabled: true, value: 0 }, { serial: 26, label: 'Pantothenic Acid', disabled: true, value: 0 }, { serial: 27, label: 'Phosphorus', disabled: true, value: 0 }, { serial: 28, label: 'Iodine', disabled: true, value: 0 }, { serial: 29, label: 'Magnesium', disabled: true, value: 0 }], [{ serial: 30, label: 'Zinc', disabled: true, value: 0 }, { serial: 31, label: 'Selenium', disabled: true, value: 0 }, { serial: 32, label: 'Copper', disabled: true, value: 0 }, { serial: 33, label: 'Manganese', disabled: true, value: 0 }, { serial: 34, label: 'Chromium', disabled: true, value: 0 }, { serial: 35, label: 'Molybdenum', disabled: true, value: 0 }, { serial: 36, label: 'Chloride', disabled: true, value: 0 }, { serial: 37, label: '', disabled: true, value: 0 }, { serial: 38, label: '', disabled: true, value: 0 }, { serial: 39, label: '', disabled: true, value: 0 }]],
             stretch: true,
             upload_img: '',
             nutrition_text: '',
@@ -22439,19 +22439,19 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(112)
+  __webpack_require__(251)
 }
 var normalizeComponent = __webpack_require__(6)
 /* script */
 var __vue_script__ = __webpack_require__(114)
 /* template */
-var __vue_template__ = __webpack_require__(115)
+var __vue_template__ = __webpack_require__(253)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-19afcff1"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -22484,51 +22484,23 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 112 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(113);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(8)("76159cf3", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 113 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.nutrition_fields[data-v-19afcff1] {\n    width: 100%;\n    padding: 18px;\n    border-radius: 4px;\n    margin-top: 7px;\n    margin-bottom: 7px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 112 */,
+/* 113 */,
 /* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -22585,572 +22557,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 115 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "el-row",
-        { staticStyle: { float: "left" } },
-        [
-          _c(
-            "el-col",
-            {
-              staticStyle: { width: "100%", "padding-right": "4px" },
-              attrs: { span: 10 }
-            },
-            [
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(_vm._s(_vm.field[0].label) + " "),
-                _c(
-                  "span",
-                  [
-                    _c("el-switch", {
-                      attrs: {
-                        "inactive-color": "green",
-                        "active-color": "#9098B8"
-                      },
-                      model: {
-                        value: _vm.field[0].disabled,
-                        callback: function($$v) {
-                          _vm.$set(_vm.field[0], "disabled", $$v)
-                        },
-                        expression: "field[0].disabled"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.field[0].value,
-                    expression: "field[0].value"
-                  }
-                ],
-                staticClass: "nutrition_fields",
-                attrs: {
-                  type: "number",
-                  placeholder: _vm.field[0].label,
-                  disabled: _vm.field[0].disabled
-                },
-                domProps: { value: _vm.field[0].value },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.field[0], "value", $event.target.value)
-                  }
-                }
-              }),
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(_vm._s(_vm.field[1].label) + " "),
-                _c(
-                  "span",
-                  [
-                    _c("el-switch", {
-                      attrs: {
-                        "inactive-color": "green",
-                        "active-color": "#9098B8"
-                      },
-                      model: {
-                        value: _vm.field[1].disabled,
-                        callback: function($$v) {
-                          _vm.$set(_vm.field[1], "disabled", $$v)
-                        },
-                        expression: "field[1].disabled"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.field[1].value,
-                    expression: "field[1].value"
-                  }
-                ],
-                staticClass: "nutrition_fields",
-                attrs: {
-                  type: "number",
-                  placeholder: _vm.field[1].label,
-                  disabled: _vm.field[1].disabled
-                },
-                domProps: { value: _vm.field[1].value },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.field[1], "value", $event.target.value)
-                  }
-                }
-              }),
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(_vm._s(_vm.field[2].label) + " "),
-                _c(
-                  "span",
-                  [
-                    _c("el-switch", {
-                      attrs: {
-                        "inactive-color": "green",
-                        "active-color": "#9098B8"
-                      },
-                      model: {
-                        value: _vm.field[2].disabled,
-                        callback: function($$v) {
-                          _vm.$set(_vm.field[2], "disabled", $$v)
-                        },
-                        expression: "field[2].disabled"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.field[2].value,
-                    expression: "field[2].value"
-                  }
-                ],
-                staticClass: "nutrition_fields",
-                attrs: {
-                  type: "number",
-                  placeholder: _vm.field[2].label,
-                  disabled: _vm.field[2].disabled
-                },
-                domProps: { value: _vm.field[2].value },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.field[2], "value", $event.target.value)
-                  }
-                }
-              }),
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(_vm._s(_vm.field[3].label) + " "),
-                _c(
-                  "span",
-                  [
-                    _c("el-switch", {
-                      attrs: {
-                        "inactive-color": "green",
-                        "active-color": "#9098B8"
-                      },
-                      model: {
-                        value: _vm.field[3].disabled,
-                        callback: function($$v) {
-                          _vm.$set(_vm.field[3], "disabled", $$v)
-                        },
-                        expression: "field[3].disabled"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.field[3].value,
-                    expression: "field[3].value"
-                  }
-                ],
-                staticClass: "nutrition_fields",
-                attrs: {
-                  type: "number",
-                  placeholder: _vm.field[3].label,
-                  disabled: _vm.field[3].disabled
-                },
-                domProps: { value: _vm.field[3].value },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.field[3], "value", $event.target.value)
-                  }
-                }
-              }),
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(_vm._s(_vm.field[4].label) + " "),
-                _c(
-                  "span",
-                  [
-                    _c("el-switch", {
-                      attrs: {
-                        "inactive-color": "green",
-                        "active-color": "#9098B8"
-                      },
-                      model: {
-                        value: _vm.field[4].disabled,
-                        callback: function($$v) {
-                          _vm.$set(_vm.field[4], "disabled", $$v)
-                        },
-                        expression: "field[4].disabled"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.field[4].value,
-                    expression: "field[4].value"
-                  }
-                ],
-                staticClass: "nutrition_fields",
-                attrs: {
-                  type: "number",
-                  placeholder: _vm.field[4].label,
-                  disabled: _vm.field[4].disabled
-                },
-                domProps: { value: _vm.field[4].value },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.field[4], "value", $event.target.value)
-                  }
-                }
-              }),
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(_vm._s(_vm.field[5].label) + " "),
-                _c(
-                  "span",
-                  [
-                    _c("el-switch", {
-                      attrs: {
-                        "inactive-color": "green",
-                        "active-color": "#9098B8"
-                      },
-                      model: {
-                        value: _vm.field[5].disabled,
-                        callback: function($$v) {
-                          _vm.$set(_vm.field[5], "disabled", $$v)
-                        },
-                        expression: "field[5].disabled"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.field[5].value,
-                    expression: "field[5].value"
-                  }
-                ],
-                staticClass: "nutrition_fields",
-                attrs: {
-                  type: "number",
-                  placeholder: _vm.field[5].label,
-                  disabled: _vm.field[5].disabled
-                },
-                domProps: { value: _vm.field[5].value },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.field[5], "value", $event.target.value)
-                  }
-                }
-              }),
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [
-                _vm._v(_vm._s(_vm.field[6].label) + " "),
-                _c(
-                  "span",
-                  [
-                    _c("el-switch", {
-                      attrs: {
-                        "inactive-color": "green",
-                        "active-color": "#9098B8"
-                      },
-                      model: {
-                        value: _vm.field[6].disabled,
-                        callback: function($$v) {
-                          _vm.$set(_vm.field[6], "disabled", $$v)
-                        },
-                        expression: "field[6].disabled"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.field[6].value,
-                    expression: "field[6].value"
-                  }
-                ],
-                staticClass: "nutrition_fields",
-                attrs: {
-                  type: "number",
-                  placeholder: _vm.field[6].label,
-                  disabled: _vm.field[6].disabled
-                },
-                domProps: { value: _vm.field[6].value },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.field[6], "value", $event.target.value)
-                  }
-                }
-              }),
-              _c("br"),
-              _vm._v(" "),
-              _vm.field[7].label != ""
-                ? _c("label", [
-                    _vm._v(_vm._s(_vm.field[7].label) + " "),
-                    _c(
-                      "span",
-                      [
-                        _c("el-switch", {
-                          attrs: {
-                            "inactive-color": "green",
-                            "active-color": "#9098B8"
-                          },
-                          model: {
-                            value: _vm.field[7].disabled,
-                            callback: function($$v) {
-                              _vm.$set(_vm.field[7], "disabled", $$v)
-                            },
-                            expression: "field[7].disabled"
-                          }
-                        })
-                      ],
-                      1
-                    )
-                  ])
-                : _vm._e(),
-              _c("br"),
-              _vm._v(" "),
-              _vm.field[7].label != ""
-                ? _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.field[7].value,
-                        expression: "field[7].value"
-                      }
-                    ],
-                    staticClass: "nutrition_fields",
-                    staticStyle: { width: "100%" },
-                    attrs: {
-                      type: "number",
-                      placeholder: _vm.field[7].label,
-                      disabled: _vm.field[7].disabled
-                    },
-                    domProps: { value: _vm.field[7].value },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.field[7], "value", $event.target.value)
-                      }
-                    }
-                  })
-                : _vm._e(),
-              _c("br"),
-              _vm._v(" "),
-              _vm.field[8].label != ""
-                ? _c("label", [
-                    _vm._v(_vm._s(_vm.field[8].label) + " "),
-                    _c(
-                      "span",
-                      [
-                        _c("el-switch", {
-                          attrs: {
-                            "inactive-color": "green",
-                            "active-color": "#9098B8"
-                          },
-                          model: {
-                            value: _vm.field[8].disabled,
-                            callback: function($$v) {
-                              _vm.$set(_vm.field[8], "disabled", $$v)
-                            },
-                            expression: "field[8].disabled"
-                          }
-                        })
-                      ],
-                      1
-                    )
-                  ])
-                : _vm._e(),
-              _c("br"),
-              _vm._v(" "),
-              _vm.field[8].label != ""
-                ? _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.field[8].value,
-                        expression: "field[8].value"
-                      }
-                    ],
-                    staticClass: "nutrition_fields",
-                    staticStyle: { width: "100%" },
-                    attrs: {
-                      type: "number",
-                      placeholder: _vm.field[8].label,
-                      disabled: _vm.field[8].disabled
-                    },
-                    domProps: { value: _vm.field[8].value },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.field[8], "value", $event.target.value)
-                      }
-                    }
-                  })
-                : _vm._e(),
-              _c("br"),
-              _vm._v(" "),
-              _vm.field[9].label != ""
-                ? _c("label", [
-                    _vm._v(_vm._s(_vm.field[9].label) + " "),
-                    _c(
-                      "span",
-                      [
-                        _c("el-switch", {
-                          attrs: {
-                            "inactive-color": "green",
-                            "active-color": "#9098B8"
-                          },
-                          model: {
-                            value: _vm.field[9].disabled,
-                            callback: function($$v) {
-                              _vm.$set(_vm.field[9], "disabled", $$v)
-                            },
-                            expression: "field[9].disabled"
-                          }
-                        })
-                      ],
-                      1
-                    )
-                  ])
-                : _vm._e(),
-              _c("br"),
-              _vm._v(" "),
-              _vm.field[9].label != ""
-                ? _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.field[9].value,
-                        expression: "field[9].value"
-                      }
-                    ],
-                    staticClass: "nutrition_fields",
-                    staticStyle: { width: "100%" },
-                    attrs: {
-                      type: "number",
-                      placeholder: _vm.field[9].label,
-                      disabled: _vm.field[9].disabled
-                    },
-                    domProps: { value: _vm.field[9].value },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.field[9], "value", $event.target.value)
-                      }
-                    }
-                  })
-                : _vm._e(),
-              _c("br")
-            ]
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-19afcff1", module.exports)
-  }
-}
-
-/***/ }),
+/* 115 */,
 /* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25167,7 +24574,7 @@ var render = function() {
                     "el-button",
                     {
                       staticClass: "common_btn",
-                      attrs: { type: "success" },
+                      attrs: { type: "success", size: "mini" },
                       on: { click: _vm.updateTableConfig }
                     },
                     [_vm._v("\n                    Update\n                ")]
@@ -25184,7 +24591,7 @@ var render = function() {
                         "el-button",
                         {
                           staticClass: "common_btn",
-                          attrs: { type: "primary" }
+                          attrs: { type: "primary", size: "mini" }
                         },
                         [_vm._v("Preview")]
                       )
@@ -70677,6 +70084,586 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(252);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(8)("3ca2b702", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 252 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.nutritions div {\n    width: 24%;\n    padding-right: 10px;\n}\n.nutritions div input {\n      width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 253 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "nutritions" }, [
+      _c("br"),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[0].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[0].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[0], "disabled", $$v)
+                  },
+                  expression: "field[0].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[0].value,
+              expression: "field[0].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[0].label,
+            disabled: !_vm.field[0].disabled
+          },
+          domProps: { value: _vm.field[0].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[0], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[1].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[1].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[1], "disabled", $$v)
+                  },
+                  expression: "field[1].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[1].value,
+              expression: "field[1].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[1].label,
+            disabled: !_vm.field[1].disabled
+          },
+          domProps: { value: _vm.field[1].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[1], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[2].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[2].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[2], "disabled", $$v)
+                  },
+                  expression: "field[2].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[2].value,
+              expression: "field[2].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[2].label,
+            disabled: !_vm.field[2].disabled
+          },
+          domProps: { value: _vm.field[2].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[2], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[3].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[3].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[3], "disabled", $$v)
+                  },
+                  expression: "field[3].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[3].value,
+              expression: "field[3].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[3].label,
+            disabled: !_vm.field[3].disabled
+          },
+          domProps: { value: _vm.field[3].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[3], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[4].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[4].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[4], "disabled", $$v)
+                  },
+                  expression: "field[4].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[4].value,
+              expression: "field[4].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[4].label,
+            disabled: !_vm.field[4].disabled
+          },
+          domProps: { value: _vm.field[4].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[4], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[5].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[5].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[5], "disabled", $$v)
+                  },
+                  expression: "field[5].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[5].value,
+              expression: "field[5].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[5].label,
+            disabled: !_vm.field[5].disabled
+          },
+          domProps: { value: _vm.field[5].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[5], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", [
+          _vm._v(_vm._s(_vm.field[6].label) + " "),
+          _c(
+            "span",
+            [
+              _c("el-switch", {
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
+                model: {
+                  value: _vm.field[6].disabled,
+                  callback: function($$v) {
+                    _vm.$set(_vm.field[6], "disabled", $$v)
+                  },
+                  expression: "field[6].disabled"
+                }
+              })
+            ],
+            1
+          )
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[6].value,
+              expression: "field[6].value"
+            }
+          ],
+          attrs: {
+            type: "number",
+            placeholder: _vm.field[6].label,
+            disabled: !_vm.field[6].disabled
+          },
+          domProps: { value: _vm.field[6].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[6], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[7].label != ""
+          ? _c("label", [
+              _vm._v(_vm._s(_vm.field[7].label) + " "),
+              _c(
+                "span",
+                [
+                  _c("el-switch", {
+                    attrs: {
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
+                    },
+                    model: {
+                      value: _vm.field[7].disabled,
+                      callback: function($$v) {
+                        _vm.$set(_vm.field[7], "disabled", $$v)
+                      },
+                      expression: "field[7].disabled"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[7].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[7].value,
+                  expression: "field[7].value"
+                }
+              ],
+              attrs: {
+                type: "number",
+                placeholder: _vm.field[7].label,
+                disabled: !_vm.field[7].disabled
+              },
+              domProps: { value: _vm.field[7].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[7], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[8].label != ""
+          ? _c("label", [
+              _vm._v(_vm._s(_vm.field[8].label) + " "),
+              _c(
+                "span",
+                [
+                  _c("el-switch", {
+                    attrs: {
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
+                    },
+                    model: {
+                      value: _vm.field[8].disabled,
+                      callback: function($$v) {
+                        _vm.$set(_vm.field[8], "disabled", $$v)
+                      },
+                      expression: "field[8].disabled"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[8].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[8].value,
+                  expression: "field[8].value"
+                }
+              ],
+              attrs: {
+                type: "number",
+                placeholder: _vm.field[8].label,
+                disabled: !_vm.field[8].disabled
+              },
+              domProps: { value: _vm.field[8].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[8], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[9].label != ""
+          ? _c("label", [
+              _vm._v(_vm._s(_vm.field[9].label) + " "),
+              _c(
+                "span",
+                [
+                  _c("el-switch", {
+                    attrs: {
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
+                    },
+                    model: {
+                      value: _vm.field[9].disabled,
+                      callback: function($$v) {
+                        _vm.$set(_vm.field[9], "disabled", $$v)
+                      },
+                      expression: "field[9].disabled"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[9].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[9].value,
+                  expression: "field[9].value"
+                }
+              ],
+              attrs: {
+                type: "number",
+                placeholder: _vm.field[9].label,
+                disabled: !_vm.field[9].disabled
+              },
+              domProps: { value: _vm.field[9].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[9], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ])
+    ]),
+    _vm._v(" "),
+    _c("hr")
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-19afcff1", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
