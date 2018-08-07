@@ -21458,7 +21458,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n", ""]);
 
 // exports
 
@@ -21775,7 +21775,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             ingredients_data: [{ ingredient: '', amount: '', unit: '' }],
             ingredients_unit: [{ value: 'TSP', label: 'TSP' }, { value: 'Tbs', label: 'Tbs' }, { value: 'Cup', label: 'Cup' }, { value: 'Kg', label: 'Kg' }, { value: 'Liter', label: 'Liter' }],
             descriptions_adv: [{ desc_text: '', desc_img: '' }],
-            nutritions: [[{ serial: 0, label: 'Calories', disabled: false, value: 0 }, { serial: 1, label: 'Calories From Fat', disabled: false, value: 0 }, { serial: 2, label: 'Total Fat', disabled: false, value: 0 }, { serial: 3, label: 'Saturated Fat', disabled: false, value: 0 }, { serial: 4, label: 'Trans Fat', disabled: false, value: 0 }, { serial: 5, label: 'Cholesterol', disabled: false, value: 0 }, { serial: 6, label: 'Sodium', disabled: false, value: 0 }, { serial: 7, label: 'Potassium', disabled: false, value: 0 }, { serial: 8, label: 'Total Carbohydrate', disabled: false, value: 0 }, { serial: 9, label: 'Dietary Fiber', disabled: false, value: 0 }], [{ serial: 10, label: 'Sugars', disabled: false, value: 0 }, { serial: 11, label: 'Protein', disabled: false, value: 0 }, { serial: 12, label: 'VitaminA', disabled: false, value: 0 }, { serial: 13, label: 'VitaminC', disabled: false, value: 0 }, { serial: 14, label: 'VitaminD', disabled: false, value: 0 }, { serial: 15, label: 'VitaminE', disabled: false, value: 0 }, { serial: 16, label: 'VitaminK', disabled: false, value: 0 }, { serial: 17, label: 'VitaminB6', disabled: false, value: 0 }, { serial: 18, label: 'VitaminB12', disabled: false, value: 0 }, { serial: 19, label: 'Calcium', disabled: false, value: 0 }], [{ serial: 20, label: 'Iron', disabled: false, value: 0 }, { serial: 21, label: 'Thiamin', disabled: false, value: 0 }, { serial: 22, label: 'Riboflavin', disabled: false, value: 0 }, { serial: 23, label: 'Niacin', disabled: false, value: 0 }, { serial: 24, label: 'Folate', disabled: false, value: 0 }, { serial: 25, label: 'Biotin', disabled: false, value: 0 }, { serial: 26, label: 'Pantothenic Acid', disabled: false, value: 0 }, { serial: 27, label: 'Phosphorus', disabled: false, value: 0 }, { serial: 28, label: 'Iodine', disabled: false, value: 0 }, { serial: 29, label: 'Magnesium', disabled: false, value: 0 }], [{ serial: 30, label: 'Zinc', disabled: false, value: 0 }, { serial: 31, label: 'Selenium', disabled: false, value: 0 }, { serial: 32, label: 'Copper', disabled: false, value: 0 }, { serial: 33, label: 'Manganese', disabled: false, value: 0 }, { serial: 34, label: 'Chromium', disabled: false, value: 0 }, { serial: 35, label: 'Molybdenum', disabled: false, value: 0 }, { serial: 36, label: 'Chloride', disabled: false, value: 0 }, { serial: 37, label: '', disabled: false, value: 0 }, { serial: 38, label: '', disabled: false, value: 0 }, { serial: 39, label: '', disabled: false, value: 0 }]],
+            nutritions: [[{ serial: 0, label: 'Calories', disabled: false, value: 0 }, { serial: 1, label: 'Calories From Fat', disabled: true, value: 0 }, { serial: 2, label: 'Total Fat', disabled: true, value: 0 }, { serial: 3, label: 'Saturated Fat', disabled: true, value: 0 }, { serial: 4, label: 'Trans Fat', disabled: true, value: 0 }, { serial: 5, label: 'Cholesterol', disabled: true, value: 0 }, { serial: 6, label: 'Sodium', disabled: true, value: 0 }, { serial: 7, label: 'Potassium', disabled: true, value: 0 }, { serial: 8, label: 'Total Carbohydrate', disabled: true, value: 0 }, { serial: 9, label: 'Dietary Fiber', disabled: true, value: 0 }], [{ serial: 10, label: 'Sugars', disabled: true, value: 0 }, { serial: 11, label: 'Protein', disabled: true, value: 0 }, { serial: 12, label: 'VitaminA', disabled: true, value: 0 }, { serial: 13, label: 'VitaminC', disabled: true, value: 0 }, { serial: 14, label: 'VitaminD', disabled: true, value: 0 }, { serial: 15, label: 'VitaminE', disabled: true, value: 0 }, { serial: 16, label: 'VitaminK', disabled: true, value: 0 }, { serial: 17, label: 'VitaminB6', disabled: true, value: 0 }, { serial: 18, label: 'VitaminB12', disabled: true, value: 0 }, { serial: 19, label: 'Calcium', disabled: true, value: 0 }], [{ serial: 20, label: 'Iron', disabled: true, value: 0 }, { serial: 21, label: 'Thiamin', disabled: true, value: 0 }, { serial: 22, label: 'Riboflavin', disabled: true, value: 0 }, { serial: 23, label: 'Niacin', disabled: true, value: 0 }, { serial: 24, label: 'Folate', disabled: true, value: 0 }, { serial: 25, label: 'Biotin', disabled: true, value: 0 }, { serial: 26, label: 'Pantothenic Acid', disabled: true, value: 0 }, { serial: 27, label: 'Phosphorus', disabled: true, value: 0 }, { serial: 28, label: 'Iodine', disabled: true, value: 0 }, { serial: 29, label: 'Magnesium', disabled: true, value: 0 }], [{ serial: 30, label: 'Zinc', disabled: true, value: 0 }, { serial: 31, label: 'Selenium', disabled: true, value: 0 }, { serial: 32, label: 'Copper', disabled: true, value: 0 }, { serial: 33, label: 'Manganese', disabled: true, value: 0 }, { serial: 34, label: 'Chromium', disabled: true, value: 0 }, { serial: 35, label: 'Molybdenum', disabled: true, value: 0 }, { serial: 36, label: 'Chloride', disabled: true, value: 0 }, { serial: 37, label: '', disabled: true, value: 0 }, { serial: 38, label: '', disabled: true, value: 0 }, { serial: 39, label: '', disabled: true, value: 0 }]],
             stretch: true,
             upload_img: '',
             nutrition_text: '',
@@ -70138,7 +70138,7 @@ var render = function() {
             "span",
             [
               _c("el-switch", {
-                attrs: { "inactive-color": "green", "active-color": "#9098B8" },
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
                 model: {
                   value: _vm.field[0].disabled,
                   callback: function($$v) {
@@ -70165,7 +70165,7 @@ var render = function() {
           attrs: {
             type: "number",
             placeholder: _vm.field[0].label,
-            disabled: _vm.field[0].disabled
+            disabled: !_vm.field[0].disabled
           },
           domProps: { value: _vm.field[0].value },
           on: {
@@ -70187,7 +70187,7 @@ var render = function() {
             "span",
             [
               _c("el-switch", {
-                attrs: { "inactive-color": "green", "active-color": "#9098B8" },
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
                 model: {
                   value: _vm.field[1].disabled,
                   callback: function($$v) {
@@ -70214,7 +70214,7 @@ var render = function() {
           attrs: {
             type: "number",
             placeholder: _vm.field[1].label,
-            disabled: _vm.field[1].disabled
+            disabled: !_vm.field[1].disabled
           },
           domProps: { value: _vm.field[1].value },
           on: {
@@ -70236,7 +70236,7 @@ var render = function() {
             "span",
             [
               _c("el-switch", {
-                attrs: { "inactive-color": "green", "active-color": "#9098B8" },
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
                 model: {
                   value: _vm.field[2].disabled,
                   callback: function($$v) {
@@ -70263,7 +70263,7 @@ var render = function() {
           attrs: {
             type: "number",
             placeholder: _vm.field[2].label,
-            disabled: _vm.field[2].disabled
+            disabled: !_vm.field[2].disabled
           },
           domProps: { value: _vm.field[2].value },
           on: {
@@ -70285,7 +70285,7 @@ var render = function() {
             "span",
             [
               _c("el-switch", {
-                attrs: { "inactive-color": "green", "active-color": "#9098B8" },
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
                 model: {
                   value: _vm.field[3].disabled,
                   callback: function($$v) {
@@ -70312,7 +70312,7 @@ var render = function() {
           attrs: {
             type: "number",
             placeholder: _vm.field[3].label,
-            disabled: _vm.field[3].disabled
+            disabled: !_vm.field[3].disabled
           },
           domProps: { value: _vm.field[3].value },
           on: {
@@ -70334,7 +70334,7 @@ var render = function() {
             "span",
             [
               _c("el-switch", {
-                attrs: { "inactive-color": "green", "active-color": "#9098B8" },
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
                 model: {
                   value: _vm.field[4].disabled,
                   callback: function($$v) {
@@ -70361,7 +70361,7 @@ var render = function() {
           attrs: {
             type: "number",
             placeholder: _vm.field[4].label,
-            disabled: _vm.field[4].disabled
+            disabled: !_vm.field[4].disabled
           },
           domProps: { value: _vm.field[4].value },
           on: {
@@ -70383,7 +70383,7 @@ var render = function() {
             "span",
             [
               _c("el-switch", {
-                attrs: { "inactive-color": "green", "active-color": "#9098B8" },
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
                 model: {
                   value: _vm.field[5].disabled,
                   callback: function($$v) {
@@ -70410,7 +70410,7 @@ var render = function() {
           attrs: {
             type: "number",
             placeholder: _vm.field[5].label,
-            disabled: _vm.field[5].disabled
+            disabled: !_vm.field[5].disabled
           },
           domProps: { value: _vm.field[5].value },
           on: {
@@ -70432,7 +70432,7 @@ var render = function() {
             "span",
             [
               _c("el-switch", {
-                attrs: { "inactive-color": "green", "active-color": "#9098B8" },
+                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
                 model: {
                   value: _vm.field[6].disabled,
                   callback: function($$v) {
@@ -70459,7 +70459,7 @@ var render = function() {
           attrs: {
             type: "number",
             placeholder: _vm.field[6].label,
-            disabled: _vm.field[6].disabled
+            disabled: !_vm.field[6].disabled
           },
           domProps: { value: _vm.field[6].value },
           on: {
@@ -70483,8 +70483,8 @@ var render = function() {
                 [
                   _c("el-switch", {
                     attrs: {
-                      "inactive-color": "green",
-                      "active-color": "#9098B8"
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
                     },
                     model: {
                       value: _vm.field[7].disabled,
@@ -70514,7 +70514,7 @@ var render = function() {
               attrs: {
                 type: "number",
                 placeholder: _vm.field[7].label,
-                disabled: _vm.field[7].disabled
+                disabled: !_vm.field[7].disabled
               },
               domProps: { value: _vm.field[7].value },
               on: {
@@ -70539,8 +70539,8 @@ var render = function() {
                 [
                   _c("el-switch", {
                     attrs: {
-                      "inactive-color": "green",
-                      "active-color": "#9098B8"
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
                     },
                     model: {
                       value: _vm.field[8].disabled,
@@ -70570,7 +70570,7 @@ var render = function() {
               attrs: {
                 type: "number",
                 placeholder: _vm.field[8].label,
-                disabled: _vm.field[8].disabled
+                disabled: !_vm.field[8].disabled
               },
               domProps: { value: _vm.field[8].value },
               on: {
@@ -70595,8 +70595,8 @@ var render = function() {
                 [
                   _c("el-switch", {
                     attrs: {
-                      "inactive-color": "green",
-                      "active-color": "#9098B8"
+                      "inactive-color": "#9098B8",
+                      "active-color": "green"
                     },
                     model: {
                       value: _vm.field[9].disabled,
@@ -70626,7 +70626,7 @@ var render = function() {
               attrs: {
                 type: "number",
                 placeholder: _vm.field[9].label,
-                disabled: _vm.field[9].disabled
+                disabled: !_vm.field[9].disabled
               },
               domProps: { value: _vm.field[9].value },
               on: {

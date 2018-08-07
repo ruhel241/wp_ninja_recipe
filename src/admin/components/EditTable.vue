@@ -319,51 +319,51 @@ export default {
             nutritions: [
                 [
                     { serial: 0, label: 'Calories', disabled: false, value: 0 },
-                    { serial: 1, label: 'Calories From Fat', disabled: false, value: 0 },
-                    { serial: 2, label: 'Total Fat', disabled: false, value: 0 },
-                    { serial: 3, label: 'Saturated Fat', disabled: false, value: 0 },
-                    { serial: 4, label: 'Trans Fat', disabled: false, value: 0 },
-                    { serial: 5, label: 'Cholesterol', disabled: false, value: 0 },
-                    { serial: 6, label: 'Sodium', disabled: false, value: 0 },
-                    { serial: 7, label: 'Potassium', disabled: false, value: 0 },
-                    { serial: 8, label: 'Total Carbohydrate', disabled: false, value: 0 },
-                    { serial: 9, label: 'Dietary Fiber', disabled: false, value: 0 }
+                    { serial: 1, label: 'Calories From Fat', disabled: true, value: 0 },
+                    { serial: 2, label: 'Total Fat', disabled: true, value: 0 },
+                    { serial: 3, label: 'Saturated Fat', disabled: true, value: 0 },
+                    { serial: 4, label: 'Trans Fat', disabled: true, value: 0 },
+                    { serial: 5, label: 'Cholesterol', disabled: true, value: 0 },
+                    { serial: 6, label: 'Sodium', disabled: true, value: 0 },
+                    { serial: 7, label: 'Potassium', disabled: true, value: 0 },
+                    { serial: 8, label: 'Total Carbohydrate', disabled: true, value: 0 },
+                    { serial: 9, label: 'Dietary Fiber', disabled: true, value: 0 }
                 ],
                 [
-                    { serial: 10, label: 'Sugars', disabled: false, value: 0 },
-                    { serial: 11, label: 'Protein', disabled: false, value: 0 },
-                    { serial: 12, label: 'VitaminA', disabled: false, value: 0 },
-                    { serial: 13, label: 'VitaminC', disabled: false, value: 0 },
-                    { serial: 14, label: 'VitaminD', disabled: false, value: 0 },
-                    { serial: 15, label: 'VitaminE', disabled: false, value: 0 },
-                    { serial: 16, label: 'VitaminK', disabled: false, value: 0 },
-                    { serial: 17, label: 'VitaminB6', disabled: false, value: 0 },
-                    { serial: 18, label: 'VitaminB12', disabled: false, value: 0 },
-                    { serial: 19, label: 'Calcium', disabled: false, value: 0 }
+                    { serial: 10, label: 'Sugars', disabled: true, value: 0 },
+                    { serial: 11, label: 'Protein', disabled: true, value: 0 },
+                    { serial: 12, label: 'VitaminA', disabled: true, value: 0 },
+                    { serial: 13, label: 'VitaminC', disabled: true, value: 0 },
+                    { serial: 14, label: 'VitaminD', disabled: true, value: 0 },
+                    { serial: 15, label: 'VitaminE', disabled: true, value: 0 },
+                    { serial: 16, label: 'VitaminK', disabled: true, value: 0 },
+                    { serial: 17, label: 'VitaminB6', disabled: true, value: 0 },
+                    { serial: 18, label: 'VitaminB12', disabled: true, value: 0 },
+                    { serial: 19, label: 'Calcium', disabled: true, value: 0 }
                 ],
                 [
-                    { serial: 20, label: 'Iron', disabled: false, value: 0 },
-                    { serial: 21, label: 'Thiamin', disabled: false, value: 0 },
-                    { serial: 22, label: 'Riboflavin', disabled: false, value: 0 },
-                    { serial: 23, label: 'Niacin', disabled: false, value: 0 },
-                    { serial: 24, label: 'Folate', disabled: false, value: 0 },
-                    { serial: 25, label: 'Biotin', disabled: false, value: 0 },
-                    { serial: 26, label: 'Pantothenic Acid', disabled: false, value: 0 },
-                    { serial: 27, label: 'Phosphorus', disabled: false, value: 0 },
-                    { serial: 28, label: 'Iodine', disabled: false, value: 0 },
-                    { serial: 29, label: 'Magnesium', disabled: false, value: 0 }
+                    { serial: 20, label: 'Iron', disabled: true, value: 0 },
+                    { serial: 21, label: 'Thiamin', disabled: true, value: 0 },
+                    { serial: 22, label: 'Riboflavin', disabled: true, value: 0 },
+                    { serial: 23, label: 'Niacin', disabled: true, value: 0 },
+                    { serial: 24, label: 'Folate', disabled: true, value: 0 },
+                    { serial: 25, label: 'Biotin', disabled: true, value: 0 },
+                    { serial: 26, label: 'Pantothenic Acid', disabled: true, value: 0 },
+                    { serial: 27, label: 'Phosphorus', disabled: true, value: 0 },
+                    { serial: 28, label: 'Iodine', disabled: true, value: 0 },
+                    { serial: 29, label: 'Magnesium', disabled: true, value: 0 }
                 ],
                 [
-                    { serial: 30, label: 'Zinc', disabled: false, value: 0 },
-                    { serial: 31, label: 'Selenium', disabled: false, value: 0 },
-                    { serial: 32, label: 'Copper', disabled: false, value: 0 },
-                    { serial: 33, label: 'Manganese', disabled: false, value: 0 },
-                    { serial: 34, label: 'Chromium', disabled: false, value: 0 },
-                    { serial: 35, label: 'Molybdenum', disabled: false, value: 0 },
-                    { serial: 36, label: 'Chloride', disabled: false, value: 0 },
-                    { serial: 37, label: '', disabled: false, value: 0},
-                    { serial: 38, label: '', disabled: false, value: 0},
-                    { serial: 39, label: '', disabled: false, value: 0}
+                    { serial: 30, label: 'Zinc', disabled: true, value: 0 },
+                    { serial: 31, label: 'Selenium', disabled: true, value: 0 },
+                    { serial: 32, label: 'Copper', disabled: true, value: 0 },
+                    { serial: 33, label: 'Manganese', disabled: true, value: 0 },
+                    { serial: 34, label: 'Chromium', disabled: true, value: 0 },
+                    { serial: 35, label: 'Molybdenum', disabled: true, value: 0 },
+                    { serial: 36, label: 'Chloride', disabled: true, value: 0 },
+                    { serial: 37, label: '', disabled: true, value: 0},
+                    { serial: 38, label: '', disabled: true, value: 0},
+                    { serial: 39, label: '', disabled: true, value: 0}
                 ]
             ],
             stretch: true,
@@ -659,6 +659,9 @@ export default {
         .el-collapse-item__header {
             border-bottom: 1px solid #ebeef5 !important;
         }
+        .el-collapse {
+            border-top: 0px;
+        }
     }
 
     .show_featured_image {
@@ -693,6 +696,9 @@ export default {
         }
         .el-collapse-item__wrap {
             border-bottom: 0;
+        }
+        .el-collapse {
+            border-top: 0px;
         }
     }
 
