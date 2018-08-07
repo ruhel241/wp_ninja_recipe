@@ -14,11 +14,11 @@
                     </h1>
                 </el-col>
                 <el-col :span="4" class="table_action_btn">
-                    <el-button class="common_btn" @click="updateTableConfig" type="success">
+                    <el-button class="common_btn" @click="updateTableConfig" type="success" size="mini">
                         Update
                     </el-button>
                     <a :href="demo_url" target="_blank" style="color: #fff; text-decoration: none;">
-                        <el-button class="common_btn" type="primary">Preview</el-button>
+                        <el-button class="common_btn" type="primary" size="mini">Preview</el-button>
                     </a>
                 </el-col>
             </el-col>
@@ -592,6 +592,14 @@ export default {
 	    margin-right: -20px;
 	    margin-left: -20px;
 	    padding-left: 24px;
+
+        .table_action_btn {
+            padding-left: 93px;
+            padding-top: 13px;
+            .el-button--mini, .el-button--mini.is-round {
+                padding: 7px 15px; 
+            }
+        }
     }
 
     .table_action_btn {
