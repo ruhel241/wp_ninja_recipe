@@ -70667,13 +70667,21 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
+<<<<<<< HEAD
   __webpack_require__(252)
+=======
+  __webpack_require__(256)
+>>>>>>> 4dc92cf9332b6388e04007eab951715efaa3988b
 }
 var normalizeComponent = __webpack_require__(6)
 /* script */
 var __vue_script__ = __webpack_require__(254)
 /* template */
+<<<<<<< HEAD
 var __vue_template__ = __webpack_require__(255)
+=======
+var __vue_template__ = __webpack_require__(258)
+>>>>>>> 4dc92cf9332b6388e04007eab951715efaa3988b
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -70712,6 +70720,7 @@ module.exports = Component.exports
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70752,6 +70761,10 @@ exports.push([module.i, "\n.ing_text_field[data-v-42741a17] {\n    width: 99%;\n
 
 
 /***/ }),
+=======
+/* 252 */,
+/* 253 */,
+>>>>>>> 4dc92cf9332b6388e04007eab951715efaa3988b
 /* 254 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70789,7 +70802,52 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+<<<<<<< HEAD
 /* 255 */
+=======
+/* 255 */,
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(257);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(8)("3626d7e2", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-42741a17\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputText.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-42741a17\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputText.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ing_text_field[data-v-42741a17] {\n    width: 99%;\n    padding: 12px;\n    border-radius: 4px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 258 */
+>>>>>>> 4dc92cf9332b6388e04007eab951715efaa3988b
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
