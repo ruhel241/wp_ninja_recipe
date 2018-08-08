@@ -1,7 +1,7 @@
 <template>
     <div class="ninjaRecipeInputDropdown" :style="styleObj">
         <label>{{ label }}</label><br>
-        <el-select v-model="model" :placeholder="pcHolder" class="model_select" style="width: 100%;">
+        <el-select v-model="model" :placeholder="pcHolder" class="model_select" style="width: 100%;" :clearable="clearable">
             <el-option 
                 v-for="(type, i) in recipeTypes"
                 :key="i"
@@ -28,6 +28,9 @@ export default {
             default: ''
         },
         styleObj: {
+            default: ''
+        },
+        clearable: {
             default: ''
         }
     },

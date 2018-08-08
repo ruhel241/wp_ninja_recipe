@@ -183,7 +183,7 @@
                                 v-if="showNutritionText"></app-wp-editor>
                             </div>
                             <div class="nutrition_fields_label">
-                                <span>Nutrition(as fields):</span><el-switch v-model="showNutritionFields" inactive-color="#9098B8" active-color="green"></el-switch>
+                                <span>Nutritions(as field):</span><el-switch v-model="showNutritionFields" inactive-color="#9098B8" active-color="green"></el-switch>
                             </div>
                             <div class="nutritions_fields">
                                 <app-nutrition
@@ -212,7 +212,7 @@
                                     allow-create
                                     default-first-option
                                     placeholder="Choose Meal Type"
-                                    style="width: 100%;">
+                                    style="width: 99%;">
                                     <el-option
                                         v-for="(item, i) in meal_types"
                                         :key="i"
@@ -226,7 +226,7 @@
                                     label="Select Cusine Type"
                                     pcHolder="Select Cusine Type"
                                     :recipeTypes="cusine_types"
-                                    styleObj="padding-right: 2px; width: 100%;"></app-input-dropdown>
+                                    styleObj="padding-right: 2px; width: 97%;"></app-input-dropdown>
                             </el-col>
                             <el-col :span="12">
                                 <app-input-dropdown
@@ -234,7 +234,7 @@
                                     label="Select Preference Type"
                                     pcHolder="Select Preference Type"
                                     :recipeTypes="preference_types"
-                                    styleObj="padding-left: 2px; width: 100%;"></app-input-dropdown>
+                                    styleObj="padding-left: 2px; width: 97%;"></app-input-dropdown>
                             </el-col>
                             <el-col :span="24">
                                 <app-input-number
@@ -243,10 +243,10 @@
                                     label="How many people serve?"></app-input-number>
                             </el-col>
                             <el-col :span="24">
-                                <app-input-number
+                                <app-input-text
                                     v-model="makingTime"
                                     pcHolder="Total making time"
-                                    label="Total making time"></app-input-number>
+                                    label="Total making time"></app-input-text>
                             </el-col>
                         </el-row>
                     </el-collapse-item>
@@ -282,6 +282,7 @@
 <script>
 import wp_editor from './common/_wp_editor.vue'
 import InputDropdown from './core/InputDropdown.vue'
+import InputText from './core/InputText.vue'
 import InputNumber from './core/InputNumber.vue'
 import NutritionFields from './NutritionFields.vue'
 import draggable from 'vuedraggable'
@@ -292,6 +293,7 @@ export default {
     components: {
         'app-wp-editor': wp_editor,
         'app-input-dropdown': InputDropdown,
+        'app-input-text': InputText,
         'app-input-number': InputNumber,
         'app-nutrition': NutritionFields,
         draggable
@@ -334,52 +336,49 @@ export default {
             ],
             nutritions: [
                 [
-                    { serial: 0, label: 'Calories', disabled: false, value: 0 },
-                    { serial: 1, label: 'Calories From Fat', disabled: true, value: 0 },
-                    { serial: 2, label: 'Total Fat', disabled: true, value: 0 },
-                    { serial: 3, label: 'Saturated Fat', disabled: true, value: 0 },
-                    { serial: 4, label: 'Trans Fat', disabled: true, value: 0 },
-                    { serial: 5, label: 'Cholesterol', disabled: true, value: 0 },
-                    { serial: 6, label: 'Sodium', disabled: true, value: 0 },
-                    { serial: 7, label: 'Potassium', disabled: true, value: 0 },
-                    { serial: 8, label: 'Total Carbohydrate', disabled: true, value: 0 },
-                    { serial: 9, label: 'Dietary Fiber', disabled: true, value: 0 }
+                    { serial: 0, label: 'Fat', value: '' },
+                    { serial: 1, label: 'Saturated Fat', value: '' },
+                    { serial: 2, label: 'Trans Fat', value: '' },
+                    { serial: 3, label: 'Cholesterol', value: '' },
+                    { serial: 4, label: 'Sodium', value: '' },
+                    { serial: 5, label: 'Carbohydrate', value: '' },
+                    { serial: 6, label: 'Fibre', value: '' },
+                    { serial: 7, label: 'Sugars', value: '' },
+                    { serial: 8, label: 'Protein', value: '' },
+                    { serial: 9, label: 'Vitamin A', value: '' },
+                    { serial: 10, label: 'Vitamin C', value: '' },
+                    { serial: 11, label: 'Calcium', value: '' },
+                    { serial: 12, label: 'Iron', value: '' }
                 ],
                 [
-                    { serial: 10, label: 'Sugars', disabled: true, value: 0 },
-                    { serial: 11, label: 'Protein', disabled: true, value: 0 },
-                    { serial: 12, label: 'VitaminA', disabled: true, value: 0 },
-                    { serial: 13, label: 'VitaminC', disabled: true, value: 0 },
-                    { serial: 14, label: 'VitaminD', disabled: true, value: 0 },
-                    { serial: 15, label: 'VitaminE', disabled: true, value: 0 },
-                    { serial: 16, label: 'VitaminK', disabled: true, value: 0 },
-                    { serial: 17, label: 'VitaminB6', disabled: true, value: 0 },
-                    { serial: 18, label: 'VitaminB12', disabled: true, value: 0 },
-                    { serial: 19, label: 'Calcium', disabled: true, value: 0 }
+                    { serial: 13, label: 'Chloride', value: '' },
+                    { serial: 14, label: 'Vitamin D', value: '' },
+                    { serial: 15, label: 'Vitamin E', value: '' },
+                    { serial: 16, label: 'Vitamin K', value: '' },
+                    { serial: 17, label: 'Vitamin B6', value: '' },
+                    { serial: 18, label: 'Vitamin B12', value: '' },
+                    { serial: 21, label: 'Thiamin', value: '' },
+                    { serial: 22, label: 'Riboflavin', value: '' },
+                    { serial: 23, label: 'Niacin', value: '' },
+                    { serial: 24, label: 'Folate', value: '' },
+                    { serial: 25, label: 'Biotin', value: '' },
+                    { serial: 26, label: 'Pantothenic Acid', value: '' },
+                    { serial: 27, label: 'Phosphorus', value: '' }
                 ],
                 [
-                    { serial: 20, label: 'Iron', disabled: true, value: 0 },
-                    { serial: 21, label: 'Thiamin', disabled: true, value: 0 },
-                    { serial: 22, label: 'Riboflavin', disabled: true, value: 0 },
-                    { serial: 23, label: 'Niacin', disabled: true, value: 0 },
-                    { serial: 24, label: 'Folate', disabled: true, value: 0 },
-                    { serial: 25, label: 'Biotin', disabled: true, value: 0 },
-                    { serial: 26, label: 'Pantothenic Acid', disabled: true, value: 0 },
-                    { serial: 27, label: 'Phosphorus', disabled: true, value: 0 },
-                    { serial: 28, label: 'Iodine', disabled: true, value: 0 },
-                    { serial: 29, label: 'Magnesium', disabled: true, value: 0 }
-                ],
-                [
-                    { serial: 30, label: 'Zinc', disabled: true, value: 0 },
-                    { serial: 31, label: 'Selenium', disabled: true, value: 0 },
-                    { serial: 32, label: 'Copper', disabled: true, value: 0 },
-                    { serial: 33, label: 'Manganese', disabled: true, value: 0 },
-                    { serial: 34, label: 'Chromium', disabled: true, value: 0 },
-                    { serial: 35, label: 'Molybdenum', disabled: true, value: 0 },
-                    { serial: 36, label: 'Chloride', disabled: true, value: 0 },
-                    { serial: 37, label: '', disabled: true, value: 0},
-                    { serial: 38, label: '', disabled: true, value: 0},
-                    { serial: 39, label: '', disabled: true, value: 0}
+                    { serial: 28, label: 'Iodine', value: '' },
+                    { serial: 29, label: 'Magnesium', value: '' },
+                    { serial: 30, label: 'Zinc', value: '' },
+                    { serial: 31, label: 'Selenium', value: '' },
+                    { serial: 32, label: 'Copper', value: '' },
+                    { serial: 33, label: 'Manganese', value: '' },
+                    { serial: 34, label: 'Chromium', value: '' },
+                    { serial: 35, label: 'Molybdenum', value: '' },
+                    { serial: 36, label: '', value: '' },
+                    { serial: 37, label: '', value: '' },
+                    { serial: 38, label: '', value: '' },
+                    { serial: 39, label: '', value: '' },
+                    { serial: 40, label: '', value: '' }
                 ]
             ],
             stretch: true,
@@ -643,7 +642,7 @@ export default {
             }
             .nutrition_fields_label {
                 margin-bottom: 7px;
-                margin-top: 7px;
+                margin-top: 10px;
             }
             .featured_image_section {
                 .feat_img {
@@ -743,5 +742,65 @@ export default {
     .el-input__inner {
         background: #fff;
     }
+}
+
+@media (max-width: 600px) {
+
+        .ninja_recipe_table {
+            .field {
+                width: 100%;
+                .all_fields {
+                    width: 100%;
+                }
+            }
+            .show_preview {
+                width: 96%;
+            }
+            .show_featured_image {
+                width: 96%;
+                float: left;
+            }
+        }
+
+    }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .ninja_recipe_table {
+        .field {
+            width: 100%;
+            .all_fields {
+                width: 100%;
+            }
+        }
+        .show_preview {
+            width: 98%;
+        }
+        .show_featured_image {
+            width: 98%;
+            float: left;
+        }
+    }
+  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .ninja_recipe_table {
+    .field {
+        width: 100%;
+        .all_fields {
+            width: 100%;
+        }
+    }
+    .show_preview {
+        width: 98%;
+    }
+    .show_featured_image {
+        width: 98%;
+        float: left;
+    }
+}
+  
 }
 </style>

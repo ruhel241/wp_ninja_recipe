@@ -14992,7 +14992,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-b14062fe"
+var __vue_scopeId__ = "data-v-002a4dfb"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -15003,7 +15003,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\components\\core\\InputDropdown.vue"
+Component.options.__file = "src/admin/components/core/InputDropdown.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -15012,9 +15012,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b14062fe", Component.options)
+    hotAPI.createRecord("data-v-002a4dfb", Component.options)
   } else {
-    hotAPI.reload("data-v-b14062fe", Component.options)
+    hotAPI.reload("data-v-002a4dfb", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -19954,7 +19954,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\components\\AllTables.vue"
+Component.options.__file = "src/admin/components/AllTables.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -19963,9 +19963,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2be7fbf3", Component.options)
+    hotAPI.createRecord("data-v-e2fa6334", Component.options)
   } else {
-    hotAPI.reload("data-v-2be7fbf3", Component.options)
+    hotAPI.reload("data-v-e2fa6334", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -19986,13 +19986,13 @@ var content = __webpack_require__(84);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("0e615a1f", content, false, {});
+var update = __webpack_require__(8)("156a0f37", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2be7fbf3\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2be7fbf3\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e2fa6334\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e2fa6334\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -20010,7 +20010,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.wp-ninja-recipe .editor-header .section-action {\n  float: right;\n  margin-top: -32px;\n}\n.wp-ninja-recipe .editor-header .section-action .addTable {\n    margin-left: 0px;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group {\n    padding-top: 0;\n    margin-bottom: 0;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group input {\n      padding: 5px;\n}\n.wp-ninja-recipe .table_form_fields .select_recipe_type {\n  float: right;\n  margin-top: -22px;\n  margin-bottom: 5px;\n}\n.wp-ninja-recipe .filtered_area {\n  background: #fff;\n  height: 52px;\n  padding: 10px;\n}\n.wp-ninja-recipe .filtered_area .preference_type {\n    margin-left: 12px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter {\n    width: 1.333%;\n    float: right;\n    margin-top: 15px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter span {\n      color: #b91313;\n      display: inline-block;\n      width: 25px;\n      height: 25px;\n      cursor: pointer;\n}\n.wp-ninja-recipe .el-select .el-input__inner {\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.wp-ninja-recipe .editor-header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.wp-ninja-recipe .editor-header .section-action {\n    padding-top: 6px;\n}\n.wp-ninja-recipe .editor-header .section-action .addTable {\n      margin-left: 0px;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group {\n      padding-top: 0;\n      margin-bottom: 0;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group input {\n        padding: 5px;\n}\n.wp-ninja-recipe .pull-right {\n  float: right;\n}\n.wp-ninja-recipe .table_form_fields .select_recipe_type {\n  float: right;\n  margin-top: -22px;\n  margin-bottom: 5px;\n}\n.wp-ninja-recipe .filtered_area {\n  background: #fff;\n  height: 70px;\n  padding: 10px;\n}\n.wp-ninja-recipe .filtered_area .preference_type {\n    margin-left: 12px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter {\n    width: 1.333%;\n    float: right;\n    margin-top: 15px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter span {\n      color: #b91313;\n      display: inline-block;\n      width: 25px;\n      height: 25px;\n      cursor: pointer;\n}\n.wp-ninja-recipe .el-select .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 640px) {\n.wp-ninja-recipe .filtered_area .el-col-4 {\n    width: 30%;\n}\n}\n", ""]);
 
 // exports
 
@@ -20060,6 +20060,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__);
+//
+//
+//
 //
 //
 //
@@ -20467,7 +20470,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\components\\actions\\DeleteTable.vue"
+Component.options.__file = "src/admin/components/actions/DeleteTable.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -20476,9 +20479,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4b19c3d1", Component.options)
+    hotAPI.createRecord("data-v-e8233b5e", Component.options)
   } else {
-    hotAPI.reload("data-v-4b19c3d1", Component.options)
+    hotAPI.reload("data-v-e8233b5e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -20499,13 +20502,13 @@ var content = __webpack_require__(89);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("cafaf002", content, false, {});
+var update = __webpack_require__(8)("9546d742", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b19c3d1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4b19c3d1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e8233b5e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e8233b5e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./DeleteTable.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -20638,7 +20641,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4b19c3d1", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-e8233b5e", module.exports)
   }
 }
 
@@ -20653,13 +20656,13 @@ var content = __webpack_require__(93);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("7f21f278", content, false, {});
+var update = __webpack_require__(8)("600c6aae", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b14062fe\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b14062fe\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-002a4dfb\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-002a4dfb\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputDropdown.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -20677,7 +20680,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninjaRecipeInputDropdown .model_select[data-v-b14062fe] {\n  top: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.ninjaRecipeInputDropdown .model_select[data-v-002a4dfb] {\n  top: 5px;\n}\n", ""]);
 
 // exports
 
@@ -20719,6 +20722,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         styleObj: {
             default: ''
+        },
+        clearable: {
+            default: ''
         }
     },
     computed: {
@@ -20753,7 +20759,7 @@ var render = function() {
         {
           staticClass: "model_select",
           staticStyle: { width: "100%" },
-          attrs: { placeholder: _vm.pcHolder },
+          attrs: { placeholder: _vm.pcHolder, clearable: _vm.clearable },
           model: {
             value: _vm.model,
             callback: function($$v) {
@@ -20779,7 +20785,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-b14062fe", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-002a4dfb", module.exports)
   }
 }
 
@@ -20869,13 +20875,17 @@ var render = function() {
                 [
                   _c(
                     "el-col",
-                    { attrs: { span: 4 } },
+                    {
+                      staticStyle: { "margin-right": "10px" },
+                      attrs: { span: 4 }
+                    },
                     [
                       _c("app-input-dropdown", {
                         attrs: {
                           label: "Meal Type",
                           pcHolder: "Select Meal Type",
-                          recipeTypes: _vm.meal_types
+                          recipeTypes: _vm.meal_types,
+                          clearable: true
                         },
                         model: {
                           value: _vm.findMealType,
@@ -20891,13 +20901,17 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "el-col",
-                    { attrs: { span: 4 } },
+                    {
+                      staticStyle: { "margin-right": "10px" },
+                      attrs: { span: 4 }
+                    },
                     [
                       _c("app-input-dropdown", {
                         attrs: {
                           label: "Cusine Type",
                           pcHolder: "Select Cusine Type",
-                          recipeTypes: _vm.cusine_types
+                          recipeTypes: _vm.cusine_types,
+                          clearable: true
                         },
                         model: {
                           value: _vm.findCusineType,
@@ -20913,13 +20927,14 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "el-col",
-                    { staticClass: "preference_type", attrs: { span: 5 } },
+                    { attrs: { span: 4 } },
                     [
                       _c("app-input-dropdown", {
                         attrs: {
                           label: "Preference Type",
                           pcHolder: "Select Preference Type",
-                          recipeTypes: _vm.preference_types
+                          recipeTypes: _vm.preference_types,
+                          clearable: true
                         },
                         model: {
                           value: _vm.findPreferenceType,
@@ -21169,7 +21184,7 @@ var render = function() {
           }),
           _vm._v(" "),
           _c("el-table-column", {
-            attrs: { label: "Actions", width: "190" },
+            attrs: { label: "Actions", width: "180" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -21377,7 +21392,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2be7fbf3", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-e2fa6334", module.exports)
   }
 }
 
@@ -21411,7 +21426,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\components\\EditTable.vue"
+Component.options.__file = "src/admin/components/EditTable.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -21420,9 +21435,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7dba7971", Component.options)
+    hotAPI.createRecord("data-v-3f556838", Component.options)
   } else {
-    hotAPI.reload("data-v-7dba7971", Component.options)
+    hotAPI.reload("data-v-3f556838", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -21443,13 +21458,13 @@ var content = __webpack_require__(99);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("5968a2a2", content, false, {});
+var update = __webpack_require__(8)("4c86ceba", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7dba7971\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7dba7971\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f556838\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f556838\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -21467,7 +21482,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 7px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
 
 // exports
 
@@ -21482,14 +21497,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputNumber_vue__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputNumber_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputNumber_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NutritionFields_vue__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__NutritionFields_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__NutritionFields_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuedraggable__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vuedraggable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_clipboard__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_clipboard__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputText_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vuedraggable__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vuedraggable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_clipboard__);
 //
 //
 //
@@ -21771,6 +21788,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
@@ -21784,9 +21802,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         'app-wp-editor': __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default.a,
         'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default.a,
-        'app-input-number': __WEBPACK_IMPORTED_MODULE_2__core_InputNumber_vue___default.a,
-        'app-nutrition': __WEBPACK_IMPORTED_MODULE_3__NutritionFields_vue___default.a,
-        draggable: __WEBPACK_IMPORTED_MODULE_4_vuedraggable___default.a
+        'app-input-text': __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue___default.a,
+        'app-input-number': __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue___default.a,
+        'app-nutrition': __WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue___default.a,
+        draggable: __WEBPACK_IMPORTED_MODULE_5_vuedraggable___default.a
     },
     data: function data() {
         return {
@@ -21800,7 +21819,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             ingredients_data: [{ ingredient: '', amount: '', unit: '' }],
             ingredients_unit: [{ value: 'TSP', label: 'TSP' }, { value: 'Tbs', label: 'Tbs' }, { value: 'Cup', label: 'Cup' }, { value: 'Kg', label: 'Kg' }, { value: 'Liter', label: 'Liter' }],
             descriptions_adv: [{ desc_text: '', desc_img: '' }],
-            nutritions: [[{ serial: 0, label: 'Calories', disabled: false, value: 0 }, { serial: 1, label: 'Calories From Fat', disabled: true, value: 0 }, { serial: 2, label: 'Total Fat', disabled: true, value: 0 }, { serial: 3, label: 'Saturated Fat', disabled: true, value: 0 }, { serial: 4, label: 'Trans Fat', disabled: true, value: 0 }, { serial: 5, label: 'Cholesterol', disabled: true, value: 0 }, { serial: 6, label: 'Sodium', disabled: true, value: 0 }, { serial: 7, label: 'Potassium', disabled: true, value: 0 }, { serial: 8, label: 'Total Carbohydrate', disabled: true, value: 0 }, { serial: 9, label: 'Dietary Fiber', disabled: true, value: 0 }], [{ serial: 10, label: 'Sugars', disabled: true, value: 0 }, { serial: 11, label: 'Protein', disabled: true, value: 0 }, { serial: 12, label: 'VitaminA', disabled: true, value: 0 }, { serial: 13, label: 'VitaminC', disabled: true, value: 0 }, { serial: 14, label: 'VitaminD', disabled: true, value: 0 }, { serial: 15, label: 'VitaminE', disabled: true, value: 0 }, { serial: 16, label: 'VitaminK', disabled: true, value: 0 }, { serial: 17, label: 'VitaminB6', disabled: true, value: 0 }, { serial: 18, label: 'VitaminB12', disabled: true, value: 0 }, { serial: 19, label: 'Calcium', disabled: true, value: 0 }], [{ serial: 20, label: 'Iron', disabled: true, value: 0 }, { serial: 21, label: 'Thiamin', disabled: true, value: 0 }, { serial: 22, label: 'Riboflavin', disabled: true, value: 0 }, { serial: 23, label: 'Niacin', disabled: true, value: 0 }, { serial: 24, label: 'Folate', disabled: true, value: 0 }, { serial: 25, label: 'Biotin', disabled: true, value: 0 }, { serial: 26, label: 'Pantothenic Acid', disabled: true, value: 0 }, { serial: 27, label: 'Phosphorus', disabled: true, value: 0 }, { serial: 28, label: 'Iodine', disabled: true, value: 0 }, { serial: 29, label: 'Magnesium', disabled: true, value: 0 }], [{ serial: 30, label: 'Zinc', disabled: true, value: 0 }, { serial: 31, label: 'Selenium', disabled: true, value: 0 }, { serial: 32, label: 'Copper', disabled: true, value: 0 }, { serial: 33, label: 'Manganese', disabled: true, value: 0 }, { serial: 34, label: 'Chromium', disabled: true, value: 0 }, { serial: 35, label: 'Molybdenum', disabled: true, value: 0 }, { serial: 36, label: 'Chloride', disabled: true, value: 0 }, { serial: 37, label: '', disabled: true, value: 0 }, { serial: 38, label: '', disabled: true, value: 0 }, { serial: 39, label: '', disabled: true, value: 0 }]],
+            nutritions: [[{ serial: 0, label: 'Fat', value: '' }, { serial: 1, label: 'Saturated Fat', value: '' }, { serial: 2, label: 'Trans Fat', value: '' }, { serial: 3, label: 'Cholesterol', value: '' }, { serial: 4, label: 'Sodium', value: '' }, { serial: 5, label: 'Carbohydrate', value: '' }, { serial: 6, label: 'Fibre', value: '' }, { serial: 7, label: 'Sugars', value: '' }, { serial: 8, label: 'Protein', value: '' }, { serial: 9, label: 'Vitamin A', value: '' }, { serial: 10, label: 'Vitamin C', value: '' }, { serial: 11, label: 'Calcium', value: '' }, { serial: 12, label: 'Iron', value: '' }], [{ serial: 13, label: 'Chloride', value: '' }, { serial: 14, label: 'Vitamin D', value: '' }, { serial: 15, label: 'Vitamin E', value: '' }, { serial: 16, label: 'Vitamin K', value: '' }, { serial: 17, label: 'Vitamin B6', value: '' }, { serial: 18, label: 'Vitamin B12', value: '' }, { serial: 21, label: 'Thiamin', value: '' }, { serial: 22, label: 'Riboflavin', value: '' }, { serial: 23, label: 'Niacin', value: '' }, { serial: 24, label: 'Folate', value: '' }, { serial: 25, label: 'Biotin', value: '' }, { serial: 26, label: 'Pantothenic Acid', value: '' }, { serial: 27, label: 'Phosphorus', value: '' }], [{ serial: 28, label: 'Iodine', value: '' }, { serial: 29, label: 'Magnesium', value: '' }, { serial: 30, label: 'Zinc', value: '' }, { serial: 31, label: 'Selenium', value: '' }, { serial: 32, label: 'Copper', value: '' }, { serial: 33, label: 'Manganese', value: '' }, { serial: 34, label: 'Chromium', value: '' }, { serial: 35, label: 'Molybdenum', value: '' }, { serial: 36, label: '', value: '' }, { serial: 37, label: '', value: '' }, { serial: 38, label: '', value: '' }, { serial: 39, label: '', value: '' }, { serial: 40, label: '', value: '' }]],
             stretch: true,
             upload_img: '',
             nutrition_text: '',
@@ -21988,7 +22007,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         clipboardRender: function clipboardRender() {
             var _this5 = this;
 
-            var clipboard = new __WEBPACK_IMPORTED_MODULE_5_clipboard___default.a('.copy');
+            var clipboard = new __WEBPACK_IMPORTED_MODULE_6_clipboard___default.a('.copy');
             clipboard.on('success', function (e) {
                 _this5.$message({
                     message: 'Copied to Clipboard!',
@@ -22037,7 +22056,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\components\\common\\_wp_editor.vue"
+Component.options.__file = "src/admin/components/common/_wp_editor.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -22046,9 +22065,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-74ef9ed2", Component.options)
+    hotAPI.createRecord("data-v-e076be50", Component.options)
   } else {
-    hotAPI.reload("data-v-74ef9ed2", Component.options)
+    hotAPI.reload("data-v-e076be50", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -22069,13 +22088,13 @@ var content = __webpack_require__(103);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("04f181a6", content, false, {});
+var update = __webpack_require__(8)("28b5e7ba", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-74ef9ed2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-74ef9ed2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e076be50\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e076be50\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_wp_editor.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -22284,7 +22303,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-74ef9ed2", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-e076be50", module.exports)
   }
 }
 
@@ -22307,7 +22326,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-18913fb9"
+var __vue_scopeId__ = "data-v-2f0955b3"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -22318,7 +22337,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\components\\core\\InputNumber.vue"
+Component.options.__file = "src/admin/components/core/InputNumber.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -22327,9 +22346,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-18913fb9", Component.options)
+    hotAPI.createRecord("data-v-2f0955b3", Component.options)
   } else {
-    hotAPI.reload("data-v-18913fb9", Component.options)
+    hotAPI.reload("data-v-2f0955b3", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -22350,13 +22369,13 @@ var content = __webpack_require__(108);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("2709e898", content, false, {});
+var update = __webpack_require__(8)("0ee82377", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-18913fb9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-18913fb9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2f0955b3\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2f0955b3\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputNumber.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -22374,7 +22393,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ing_amnt_field[data-v-18913fb9] {\r\n    width: 100%;\r\n    padding: 19px;\r\n    border-radius: 4px;\n}\r\n", ""]);
+exports.push([module.i, "\n.ing_amnt_field[data-v-2f0955b3] {\n    width: 99%;\n    padding: 19px;\n    border-radius: 4px;\n}\n", ""]);
 
 // exports
 
@@ -22456,7 +22475,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-18913fb9", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-2f0955b3", module.exports)
   }
 }
 
@@ -22490,7 +22509,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\components\\NutritionFields.vue"
+Component.options.__file = "src/admin/components/NutritionFields.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -22499,9 +22518,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1ae44084", Component.options)
+    hotAPI.createRecord("data-v-19afcff1", Component.options)
   } else {
-    hotAPI.reload("data-v-1ae44084", Component.options)
+    hotAPI.reload("data-v-19afcff1", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -22522,13 +22541,13 @@ var content = __webpack_require__(113);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(8)("5bd8a073", content, false, {});
+var update = __webpack_require__(8)("3ca2b702", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1ae44084\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1ae44084\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -22546,7 +22565,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.nutritions div {\n    width: 23%;\n    padding-right: 14px;\n}\n.nutritions div input {\n      width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  margin-bottom: 20px;\n  margin-top: 20px;\n}\n.nutritions div {\n    width: 23%;\n    padding-right: 14px;\n}\n.nutritions div .nutrition_fields_label {\n      display: inline-block;\n      margin-bottom: 7px;\n}\n.nutritions div .nutrition_fields {\n      width: 100%;\n      padding: 5px;\n      border-radius: 3px;\n}\n", ""]);
 
 // exports
 
@@ -22557,6 +22576,18 @@ exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -m
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -22635,24 +22666,8 @@ var render = function() {
       _c("br"),
       _vm._v(" "),
       _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[0].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[0].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[0], "disabled", $$v)
-                  },
-                  expression: "field[0].disabled"
-                }
-              })
-            ],
-            1
-          )
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[0].label))])
         ]),
         _c("br"),
         _vm._v(" "),
@@ -22665,11 +22680,8 @@ var render = function() {
               expression: "field[0].value"
             }
           ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[0].label,
-            disabled: !_vm.field[0].disabled
-          },
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[0].label },
           domProps: { value: _vm.field[0].value },
           on: {
             input: function($event) {
@@ -22684,24 +22696,8 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[1].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[1].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[1], "disabled", $$v)
-                  },
-                  expression: "field[1].disabled"
-                }
-              })
-            ],
-            1
-          )
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[1].label))])
         ]),
         _c("br"),
         _vm._v(" "),
@@ -22714,11 +22710,8 @@ var render = function() {
               expression: "field[1].value"
             }
           ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[1].label,
-            disabled: !_vm.field[1].disabled
-          },
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[1].label },
           domProps: { value: _vm.field[1].value },
           on: {
             input: function($event) {
@@ -22733,24 +22726,8 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[2].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[2].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[2], "disabled", $$v)
-                  },
-                  expression: "field[2].disabled"
-                }
-              })
-            ],
-            1
-          )
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[2].label))])
         ]),
         _c("br"),
         _vm._v(" "),
@@ -22763,11 +22740,8 @@ var render = function() {
               expression: "field[2].value"
             }
           ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[2].label,
-            disabled: !_vm.field[2].disabled
-          },
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[2].label },
           domProps: { value: _vm.field[2].value },
           on: {
             input: function($event) {
@@ -22782,24 +22756,8 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[3].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[3].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[3], "disabled", $$v)
-                  },
-                  expression: "field[3].disabled"
-                }
-              })
-            ],
-            1
-          )
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[3].label))])
         ]),
         _c("br"),
         _vm._v(" "),
@@ -22812,11 +22770,8 @@ var render = function() {
               expression: "field[3].value"
             }
           ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[3].label,
-            disabled: !_vm.field[3].disabled
-          },
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[3].label },
           domProps: { value: _vm.field[3].value },
           on: {
             input: function($event) {
@@ -22831,24 +22786,8 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[4].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[4].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[4], "disabled", $$v)
-                  },
-                  expression: "field[4].disabled"
-                }
-              })
-            ],
-            1
-          )
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[4].label))])
         ]),
         _c("br"),
         _vm._v(" "),
@@ -22861,11 +22800,8 @@ var render = function() {
               expression: "field[4].value"
             }
           ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[4].label,
-            disabled: !_vm.field[4].disabled
-          },
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[4].label },
           domProps: { value: _vm.field[4].value },
           on: {
             input: function($event) {
@@ -22880,24 +22816,8 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[5].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[5].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[5], "disabled", $$v)
-                  },
-                  expression: "field[5].disabled"
-                }
-              })
-            ],
-            1
-          )
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[5].label))])
         ]),
         _c("br"),
         _vm._v(" "),
@@ -22910,11 +22830,8 @@ var render = function() {
               expression: "field[5].value"
             }
           ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[5].label,
-            disabled: !_vm.field[5].disabled
-          },
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[5].label },
           domProps: { value: _vm.field[5].value },
           on: {
             input: function($event) {
@@ -22929,24 +22846,8 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("label", [
-          _vm._v(_vm._s(_vm.field[6].label) + " "),
-          _c(
-            "span",
-            [
-              _c("el-switch", {
-                attrs: { "inactive-color": "#9098B8", "active-color": "green" },
-                model: {
-                  value: _vm.field[6].disabled,
-                  callback: function($$v) {
-                    _vm.$set(_vm.field[6], "disabled", $$v)
-                  },
-                  expression: "field[6].disabled"
-                }
-              })
-            ],
-            1
-          )
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[6].label))])
         ]),
         _c("br"),
         _vm._v(" "),
@@ -22959,11 +22860,8 @@ var render = function() {
               expression: "field[6].value"
             }
           ],
-          attrs: {
-            type: "number",
-            placeholder: _vm.field[6].label,
-            disabled: !_vm.field[6].disabled
-          },
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[6].label },
           domProps: { value: _vm.field[6].value },
           on: {
             input: function($event) {
@@ -22979,27 +22877,8 @@ var render = function() {
       _vm._v(" "),
       _c("div", [
         _vm.field[7].label != ""
-          ? _c("label", [
-              _vm._v(_vm._s(_vm.field[7].label) + " "),
-              _c(
-                "span",
-                [
-                  _c("el-switch", {
-                    attrs: {
-                      "inactive-color": "#9098B8",
-                      "active-color": "green"
-                    },
-                    model: {
-                      value: _vm.field[7].disabled,
-                      callback: function($$v) {
-                        _vm.$set(_vm.field[7], "disabled", $$v)
-                      },
-                      expression: "field[7].disabled"
-                    }
-                  })
-                ],
-                1
-              )
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[7].label))])
             ])
           : _vm._e(),
         _c("br"),
@@ -23014,11 +22893,8 @@ var render = function() {
                   expression: "field[7].value"
                 }
               ],
-              attrs: {
-                type: "number",
-                placeholder: _vm.field[7].label,
-                disabled: !_vm.field[7].disabled
-              },
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[7].label },
               domProps: { value: _vm.field[7].value },
               on: {
                 input: function($event) {
@@ -23035,27 +22911,8 @@ var render = function() {
       _vm._v(" "),
       _c("div", [
         _vm.field[8].label != ""
-          ? _c("label", [
-              _vm._v(_vm._s(_vm.field[8].label) + " "),
-              _c(
-                "span",
-                [
-                  _c("el-switch", {
-                    attrs: {
-                      "inactive-color": "#9098B8",
-                      "active-color": "green"
-                    },
-                    model: {
-                      value: _vm.field[8].disabled,
-                      callback: function($$v) {
-                        _vm.$set(_vm.field[8], "disabled", $$v)
-                      },
-                      expression: "field[8].disabled"
-                    }
-                  })
-                ],
-                1
-              )
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[8].label))])
             ])
           : _vm._e(),
         _c("br"),
@@ -23070,11 +22927,8 @@ var render = function() {
                   expression: "field[8].value"
                 }
               ],
-              attrs: {
-                type: "number",
-                placeholder: _vm.field[8].label,
-                disabled: !_vm.field[8].disabled
-              },
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[8].label },
               domProps: { value: _vm.field[8].value },
               on: {
                 input: function($event) {
@@ -23091,27 +22945,8 @@ var render = function() {
       _vm._v(" "),
       _c("div", [
         _vm.field[9].label != ""
-          ? _c("label", [
-              _vm._v(_vm._s(_vm.field[9].label) + " "),
-              _c(
-                "span",
-                [
-                  _c("el-switch", {
-                    attrs: {
-                      "inactive-color": "#9098B8",
-                      "active-color": "green"
-                    },
-                    model: {
-                      value: _vm.field[9].disabled,
-                      callback: function($$v) {
-                        _vm.$set(_vm.field[9], "disabled", $$v)
-                      },
-                      expression: "field[9].disabled"
-                    }
-                  })
-                ],
-                1
-              )
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[9].label))])
             ])
           : _vm._e(),
         _c("br"),
@@ -23126,11 +22961,8 @@ var render = function() {
                   expression: "field[9].value"
                 }
               ],
-              attrs: {
-                type: "number",
-                placeholder: _vm.field[9].label,
-                disabled: !_vm.field[9].disabled
-              },
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[9].label },
               domProps: { value: _vm.field[9].value },
               on: {
                 input: function($event) {
@@ -23138,6 +22970,108 @@ var render = function() {
                     return
                   }
                   _vm.$set(_vm.field[9], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[10].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[10].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[10].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[10].value,
+                  expression: "field[10].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[10].label },
+              domProps: { value: _vm.field[10].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[10], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[11].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[11].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[11].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[11].value,
+                  expression: "field[11].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[11].label },
+              domProps: { value: _vm.field[11].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[11], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[12].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[12].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[12].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[12].value,
+                  expression: "field[12].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[12].label },
+              domProps: { value: _vm.field[12].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[12], "value", $event.target.value)
                 }
               }
             })
@@ -23155,7 +23089,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-1ae44084", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-19afcff1", module.exports)
   }
 }
 
@@ -25859,7 +25793,7 @@ var render = function() {
                               "div",
                               { staticClass: "nutrition_fields_label" },
                               [
-                                _c("span", [_vm._v("Nutrition(as fields):")]),
+                                _c("span", [_vm._v("Nutritions(as field):")]),
                                 _c("el-switch", {
                                   attrs: {
                                     "inactive-color": "#9098B8",
@@ -25938,7 +25872,7 @@ var render = function() {
                               _c(
                                 "el-select",
                                 {
-                                  staticStyle: { width: "100%" },
+                                  staticStyle: { width: "99%" },
                                   attrs: {
                                     multiple: "",
                                     filterable: "",
@@ -25977,7 +25911,7 @@ var render = function() {
                                   label: "Select Cusine Type",
                                   pcHolder: "Select Cusine Type",
                                   recipeTypes: _vm.cusine_types,
-                                  styleObj: "padding-right: 2px; width: 100%;"
+                                  styleObj: "padding-right: 2px; width: 97%;"
                                 },
                                 model: {
                                   value: _vm.selectedCusineType,
@@ -26000,7 +25934,7 @@ var render = function() {
                                   label: "Select Preference Type",
                                   pcHolder: "Select Preference Type",
                                   recipeTypes: _vm.preference_types,
-                                  styleObj: "padding-left: 2px; width: 100%;"
+                                  styleObj: "padding-left: 2px; width: 97%;"
                                 },
                                 model: {
                                   value: _vm.selectedPreferenceType,
@@ -26039,7 +25973,7 @@ var render = function() {
                             "el-col",
                             { attrs: { span: 24 } },
                             [
-                              _c("app-input-number", {
+                              _c("app-input-text", {
                                 attrs: {
                                   pcHolder: "Total making time",
                                   label: "Total making time"
@@ -26180,7 +26114,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-7dba7971", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-3f556838", module.exports)
   }
 }
 
@@ -70659,7 +70593,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\admin\\AdminApp.vue"
+Component.options.__file = "src/admin/AdminApp.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -70668,9 +70602,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0b82c1e5", Component.options)
+    hotAPI.createRecord("data-v-10f1236a", Component.options)
   } else {
-    hotAPI.reload("data-v-0b82c1e5", Component.options)
+    hotAPI.reload("data-v-10f1236a", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -70713,7 +70647,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-0b82c1e5", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-10f1236a", module.exports)
   }
 }
 
@@ -70722,6 +70656,184 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(256)
+}
+var normalizeComponent = __webpack_require__(6)
+/* script */
+var __vue_script__ = __webpack_require__(254)
+/* template */
+var __vue_template__ = __webpack_require__(258)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-42741a17"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/admin/components/core/InputText.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-42741a17", Component.options)
+  } else {
+    hotAPI.reload("data-v-42741a17", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 252 */,
+/* 253 */,
+/* 254 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'InputText',
+    props: {
+        value: {
+            default: ''
+        },
+        pcHolder: '',
+        label: {
+            default: ''
+        }
+    },
+    computed: {
+        model: {
+            get: function get() {
+                return this.value;
+            },
+            set: function set(newValue) {
+                this.$emit('input', newValue);
+            }
+        }
+    }
+});
+
+/***/ }),
+/* 255 */,
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(257);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(8)("3626d7e2", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-42741a17\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputText.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-42741a17\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./InputText.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ing_text_field[data-v-42741a17] {\n    width: 99%;\n    padding: 12px;\n    border-radius: 4px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 258 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.label ? _c("label", [_vm._v(_vm._s(_vm.label))]) : _vm._e(),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.model,
+          expression: "model"
+        }
+      ],
+      staticClass: "ing_text_field",
+      attrs: { type: "text", placeholder: _vm.pcHolder },
+      domProps: { value: _vm.model },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.model = $event.target.value
+        }
+      }
+    })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-42741a17", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

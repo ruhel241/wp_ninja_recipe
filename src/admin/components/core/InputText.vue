@@ -1,13 +1,13 @@
 <template>
     <div>
         <label v-if="label">{{ label }}</label>
-        <input type="number" :placeholder="pcHolder" v-model="model" class="ing_amnt_field">
+        <input type="text" :placeholder="pcHolder" v-model="model" class="ing_text_field">
     </div>
 </template>
 
 <script>
 export default {
-    name: 'InputNumber',
+    name: 'InputText',
     props: {
         value: {
             default: ''
@@ -31,9 +31,9 @@ export default {
 </script>
 
 <style scoped>
-.ing_amnt_field {
+.ing_text_field {
     width: 99%;
-    padding: 19px;
+    padding: 12px;
     border-radius: 4px;
 }
 </style>
