@@ -43,7 +43,6 @@ class RecipeHandler
 				$preference_type = serialize( strval($_REQUEST['preference_type']) );
 			}
 
-
 			static::getTables($pageNumber, $perPage, $search, $meal_type, $cusine_type, $preference_type);
 		}
 
@@ -71,29 +70,26 @@ class RecipeHandler
 		$defaults = apply_filters('ninja_recipe_shortcode_default', array(
 			'id' => null
 		));
+		
 		$attributes = shortcode_atts($defaults, $atts);
+		
 		$tableId    = $attributes['id'];
 		$post 	    = get_post($tableId);
 		$recipeMetaData = get_post_meta($tableId, '_ninija_recipe_table_config', true);
-
-  		
-  		$nutrition_fields = $recipeMetaData['nutrition']['nutrition_fields']; 
-
-
-
-		wp_enqueue_script('ninja_recipe_user_view', NINJA_RECIPE_PUBLIC_DIR_URL.'js/ninja_recipe_user_view.js', array('jquery'), NINJA_RECIPE_PLUGIN_DIR_VERSION, true);
-		wp_localize_script('ninja_recipe_user_view','recipeMetaDataVars', array(
-			'post' 			=> $post,
-			'recipeMetaData'=> $recipeMetaData
-		));
 		
-
 		$recipeTypeDisplay = $post->post_content; 
+		$nutrition_fields = $recipeMetaData['nutrition']['nutrition_fields']; 
+  			
+  		if( !$attributes || !$tableId || !$post || !$recipeMetaData ){
 
-		if( $recipeTypeDisplay ){
-			include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/'.$recipeTypeDisplay.'.php');
-		} 
+  			return;
+  		}
 
+		ob_start();
+			if( isset($recipeTypeDisplay) ){
+				include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/'.$recipeTypeDisplay.'.php');
+			} 
+		return ob_get_clean();
 	}
 
 
@@ -170,12 +166,13 @@ class RecipeHandler
 
 			)
 		);
-
-		
+	
 
 		$tables = get_posts( $args );
 		$totalCount = wp_count_posts(CPT::$CPTName);
+
 		$formattedTables = array();
+		
 		foreach ($tables as $table) {
 			$formattedTables[] = array(
                 'ID'         	   => $table->ID,
@@ -186,6 +183,7 @@ class RecipeHandler
                 'defaultImage'	   => NINJA_RECIPE_PUBLIC_DIR_URL.'img/default-image.jpg'
             );
 		}
+		
 		wp_send_json_success(array(
 			'tables' => $formattedTables,
 			'total'  => intval($totalCount->publish)
@@ -194,7 +192,7 @@ class RecipeHandler
 	}
 
 
-	public  static function getTable($tableId)
+	public static function getTable($tableId)
 	{
 			
 		$table = get_post($tableId);
@@ -240,7 +238,9 @@ class RecipeHandler
 		update_post_meta($tableId, '_ninija_recipe_table_config', $table_config);
 
 		do_action('ninija_recipe_table_config_updated', $tableId, $table_config);
+		
 		$tableConfig = get_post_meta($tableId, '_ninija_recipe_table_config', true);
+		
 		wp_send_json_success(array(
             'message' => __('Table Content has been updated', 'ninja_recipe'),
             'tableConfig' => $tableConfig,

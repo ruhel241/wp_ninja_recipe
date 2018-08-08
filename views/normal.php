@@ -48,37 +48,130 @@
 
 
 
-		<div class="nutritions" style="border: 1px solid;">
-			
-			<h2>Nutrition Facts</h2>
-			<p>Serving Size 2 cups</p>
-			<p>Servings 6</p>
 
-			<hr class="recipe-nutrition-hr" style="border: none; border-top: 1rem solid #333; margin: 1rem 0 0; padding: 0">
-
-			<div>
-				<p class="cooked-heading">Amount per serving</p>
-				<hr>
-				<div class="cooked-clearfix">
-					<strong>Calories</strong>
-					<strong class="cooked-nut-label" font-weight="400">100</strong>
-				</div>
-				<div class="ninja-recipe-spacer" style="border: none; height: 0.5rem; padding: 0; background: #333;"></div>
-				<div class="ninja-recipe-nut">
-					<div>
-						<strong>Total Fat</strong>
-						<strong class="cooked-nut-label" font-weight="400">5</strong>
-						<strong style="float: right;">
-							<span>8%</span>
-						</strong>
-					</div>
-				</div>
+		<div class="nutritions_fact">
+				
+			<div class="cooked_nutrition">
+				<h2 class="title">Nutrition Facts</h2>
+				<p class="serving_size">Serving Size <span class="green">2</span> cups</p>
+				<p class="serving_people">Servings <span class="green">6</span></p>
 			</div>
 
+			<hr class="hr_fat">
+			
+			<section class="fact_section_1">
+				<p class="per_serving">Amount Per Serving</p>
+				<strong class="cooked_label">Calories</strong> 
+				<span class="cooked_value green">730</span>
+				<span class="cooked_right">Calories from Fat <span class="green">30</span> </span>
+			</section>
+
+			<section class="fact_section_2">
+				<p class="hr_thick" style="padding-bottom: 25px !important;">
+				 	<span class="daily_value green"> % Daily Value * </span>
+				</p>
+			
+
+				<p class="hr_thick">
+					<strong class="cooked_label">Total Fat</strong> 
+					<span class="cooked_value green">5g</span>
+					<span class="green cooked_right">8%</span> 
+				</p>
+				
+				<p class="hr_thick" style="margin-left:15px !important; ">
+					<strong class="cooked_label">Saturated Fat</strong> 
+					<span class="cooked_value green">2g</span>
+					<span class="green cooked_right">10%</span> 
+				</p>
+
+				<p class="hr_thick" style="padding-left:15px; ">
+					<strong class="cooked_label">Trans Fat</strong> 
+					<span class="cooked_value green">3g</span>
+					<span class="green cooked_right"></span> 
+				</p>
+
+				<p class="hr_thick">
+					<strong class="cooked_label">Cholesterol</strong> 
+					<span class="cooked_value green">135mg</span>
+					<span class="green cooked_right">45%</span> 
+				</p>
+
+				<p class="hr_thick">
+					<strong class="cooked_label">Sodium</strong> 
+					<span class="cooked_value green">50mg</span>
+					<span class="green cooked_right">2%</span> 
+				</p>
+
+				<p class="hr_thick">
+					<strong class="cooked_label">Potassium</strong> 
+					<span class="cooked_value green">12mg</span>
+					<span class="green cooked_right">0%</span> 
+				</p>
+
+				<p class="hr_thick">
+					<strong class="cooked_label">Total Carbohydrate</strong> 
+					<span class="cooked_value green">10g</span>
+					<span class="green cooked_right">3%</span> 
+				</p>
+
+				<p class="hr_thick" style="margin-left:15px !important;">
+					<strong class="cooked_label">Dietary Fiber</strong> 
+					<span class="cooked_value green">4g</span>
+					<span class="green cooked_right">16%</span> 
+				</p>
+
+				<p class="hr_thick" style="padding-left:15px;">
+					<strong class="cooked_label">Sugars</strong> 
+					<span class="cooked_value green">1g</span>
+					<span class="green cooked_right"></span> 
+				</p>
+
+				<p class="">
+					<strong class="cooked_label">Potein</strong> 
+					<span class="cooked_value green">10g</span>
+					<span class="green cooked_right">20%</span> 
+				</p>
+
+			</section>
+
+			<section class="fact_section_3">
+
+				<p class="hr_thick">
+					<span class="cooked_fact_fifty">
+						<span class="cooked_label">Vitamin A </span> 
+						<span class="cooked_value green">1%</span>
+					</span>
+					<span>
+						<span class="cooked_label">Vitamin C </span> 
+						<span class="cooked_value green">2%</span>
+					</span>
+				</p>
+
+				<p class="hr_thick">
+					<span class="cooked_fact_fifty">
+						<span class="cooked_label">Calcium</span> 
+						<span class="cooked_value green">3%</span>
+					</span>
+
+					<span>
+						<span class="cooked_label">Iron</span> 
+						<span class="cooked_value green">10%</span>
+					</span>
+				</p>
+
+				<p class="hr_thick">
+					<span class="cooked_fact_fifty">
+						<span class="cooked_label">Vitamin D </span> 
+						<span class="cooked_value green">1%</span>
+					</span>
+				</p>
+
+			</section>
+
+			<section class="fact_section_4">
+				<p>Percent Daily Values are based on a 2,000 calorie diet. Your daily value may be higher or lower depending on your calorie needs.</p>
+			</section>
 		</div>
-
-
-
 
 
 

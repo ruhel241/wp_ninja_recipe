@@ -19,28 +19,31 @@
 
         <div class="filtered_area" v-if="showFilterSection">
             <el-row>
-                <el-col :span="4">
+                <el-col :span="4" style="margin-right: 10px;">
                     <app-input-dropdown 
                         label="Meal Type"
                         pcHolder="Select Meal Type"
                         v-model="findMealType"
-                        :recipeTypes="meal_types">
+                        :recipeTypes="meal_types"
+                        :clearable=true>
                     </app-input-dropdown>
                 </el-col>
-                <el-col :span="4">
+                <el-col :span="4" style="margin-right: 10px;">
                     <app-input-dropdown 
                         label="Cusine Type"
                         pcHolder="Select Cusine Type"
                         v-model="findCusineType"
-                        :recipeTypes="cusine_types">
+                        :recipeTypes="cusine_types"
+                        :clearable=true>
                     </app-input-dropdown>
                 </el-col>
-                <el-col :span="5" class="preference_type">
+                <el-col :span="4">
                     <app-input-dropdown 
                         label="Preference Type"
                         pcHolder="Select Preference Type"
                         v-model="findPreferenceType"
-                        :recipeTypes="preference_types">
+                        :recipeTypes="preference_types"
+                        :clearable=true>
                     </app-input-dropdown>
                 </el-col>
                 <el-col class="closeFilter">
@@ -133,7 +136,7 @@
 
             </el-table-column> 
 
-            <el-table-column label="Actions" width="190">
+            <el-table-column label="Actions" width="180">
                 
                 <template slot-scope="scope">
                     <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }">
@@ -410,9 +413,10 @@ export default {
 .wp-ninja-recipe {
 
     .editor-header {
+        display: flex;
+        justify-content: space-between;
         .section-action {
-            float: right;
-            margin-top: -32px;
+            padding-top: 6px;
             .addTable {
                 margin-left: 0px;
             }
@@ -426,6 +430,10 @@ export default {
         }
     }
 
+    .pull-right {
+        float: right;
+    }
+
     .table_form_fields {
         .select_recipe_type {
             float: right;
@@ -436,7 +444,7 @@ export default {
 
     .filtered_area {
         background: #fff;
-        height: 52px;
+        height: 70px;
         padding: 10px;
         .preference_type {
             margin-left: 12px;
@@ -459,6 +467,16 @@ export default {
         background: #fff;
     }
 
+}
+
+@media (max-width: 640px) {
+    .wp-ninja-recipe {
+        .filtered_area {
+            .el-col-4 {
+                width: 30%;
+            }
+        }
+    }
 }
     
 </style>

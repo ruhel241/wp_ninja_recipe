@@ -1,4 +1,4 @@
-	<?php
+<?php
 
 defined('ABSPATH') or die;
 /*
@@ -59,8 +59,9 @@ class WPNinjaRecipe
 
 	public function enqueueScripts()
 	{
-		
-
+			
+		wp_register_style( 'ninja_recipe_style', NINJA_RECIPE_PUBLIC_DIR_URL.'css/style.css' , '', NINJA_RECIPE_PLUGIN_DIR_VERSION); 
+		wp_enqueue_style( 'ninja_recipe_style' );
 	}
 
 

@@ -21,13 +21,14 @@ class ProcessDemoPage
 			$table = get_post( $tableId );
 			
 			if($table){
+				
 				if($table->post_content == 'normal'){
 					$RecipeType  = 'Normal Recipe Type';
 				}
 				elseif ($table->post_content == 'advance') {
 					$RecipeType  = 'Advance Recipe Type';
 				}
-				
+
 				static::loadDefaultPageTemplate();
 				add_action('pre_get_posts', function($query){
 					self::pre_get_posts($query);
@@ -38,7 +39,7 @@ class ProcessDemoPage
 					return '';
 				});
 
-				add_filter('the_title', function( $title ) use( $table ) {
+				add_filter('the_title', function( $title ) use ( $table ) {
 					if(in_the_loop()){
 						return $table->post_title;
 					}
@@ -48,8 +49,8 @@ class ProcessDemoPage
 				add_filter('the_content', function($content) use ($table, $RecipeType) {
 
 					if( in_the_loop() ){
-						$custom_content = __( $RecipeType .' '.'Demo Preview( ID:', 'ninja_recipe' );
-						$content = '<div id="ninja_recipe_demo" style="text-align:center" class="recie_demo"><h3>'.$custom_content.$table->ID.')</h3></div><hr/>';
+						$custom_content = __( $RecipeType .', '.'Demo Preview( ID:', 'ninja_recipe' );
+						$content = '<div id="ninja_recipe_demo "style="text-align:center" class="recie_demo"><h3>'.$custom_content.$table->ID.' '.')</h3></div><hr/>';
 						$content .= '[ninja_recipe id=' . $table->ID .']'; 
 					}
 					return $content;

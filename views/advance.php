@@ -45,13 +45,19 @@
 
 		<p> <b>Nutrition Fields: </b> <br> 
 
+
+
 		<?php foreach ($nutrition_fields as $nutrition_field) : ?>
-				<?php foreach($nutrition_field as $nutrition ):?>
-					<p> <?php echo $nutrition['label'] .'=>'. $nutrition['value'];  ?></p>
+				<?php foreach($nutrition_field as $key => $nutrition ):?>
+					<p> <?php echo $key .'=>'. $nutrition['label']; ?></p>
+
 				<?php endforeach; ?>
 		<?php endforeach; ?>
 			
 		
+
+
+
 
 
 	</p> <br><br>
@@ -60,7 +66,7 @@
 
 
 
-	<?php  echo dd( $recipeMetaData ) ; ?>
+	
 
 
 	

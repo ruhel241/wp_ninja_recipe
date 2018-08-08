@@ -2,44 +2,56 @@
 <div>
     <div class="nutritions"><br>
         <div>
-            <label>{{ field[0].label }} <span><el-switch v-model="field[0].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input type="number" :placeholder="field[0].label" v-model="field[0].value"  :disabled="!field[0].disabled"><br>
+            <label class="nutrition_fields_label"><strong>{{ field[0].label }}</strong></label><br>
+            <input type="number" :placeholder="field[0].label" v-model="field[0].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label>{{ field[1].label }} <span><el-switch v-model="field[1].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input type="number" :placeholder="field[1].label" v-model="field[1].value"  :disabled="!field[1].disabled"><br>
+            <label class="nutrition_fields_label"><strong>{{ field[1].label }}</strong></label><br>
+            <input type="number" :placeholder="field[1].label" v-model="field[1].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label>{{ field[2].label }} <span><el-switch v-model="field[2].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input type="number" :placeholder="field[2].label" v-model="field[2].value"  :disabled="!field[2].disabled"><br>
+            <label class="nutrition_fields_label"><strong>{{ field[2].label }}</strong></label><br>
+            <input type="number" :placeholder="field[2].label" v-model="field[2].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label>{{ field[3].label }} <span><el-switch v-model="field[3].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input type="number" :placeholder="field[3].label" v-model="field[3].value"  :disabled="!field[3].disabled"><br>
+            <label class="nutrition_fields_label"><strong>{{ field[3].label }}</strong></label><br>
+            <input type="number" :placeholder="field[3].label" v-model="field[3].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label>{{ field[4].label }} <span><el-switch v-model="field[4].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input type="number" :placeholder="field[4].label" v-model="field[4].value"  :disabled="!field[4].disabled"><br>
+            <label class="nutrition_fields_label"><strong>{{ field[4].label }}</strong></label><br>
+            <input type="number" :placeholder="field[4].label" v-model="field[4].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label>{{ field[5].label }} <span><el-switch v-model="field[5].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input type="number" :placeholder="field[5].label" v-model="field[5].value"  :disabled="!field[5].disabled"><br>
+            <label class="nutrition_fields_label"><strong>{{ field[5].label }}</strong></label><br>
+            <input type="number" :placeholder="field[5].label" v-model="field[5].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label>{{ field[6].label }} <span><el-switch v-model="field[6].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input type="number" :placeholder="field[6].label" v-model="field[6].value"  :disabled="!field[6].disabled"><br>
+            <label class="nutrition_fields_label"><strong>{{ field[6].label }}</strong></label><br>
+            <input type="number" :placeholder="field[6].label" v-model="field[6].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label v-if="field[7].label!='' ">{{ field[7].label }} <span><el-switch v-model="field[7].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input v-if="field[7].label!='' " type="number" :placeholder="field[7].label" v-model="field[7].value" :disabled="!field[7].disabled"><br>
+            <label v-if="field[7].label!='' " class="nutrition_fields_label"><strong>{{ field[7].label }}</strong></label><br>
+            <input v-if="field[7].label!='' " type="number" :placeholder="field[7].label" v-model="field[7].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label v-if="field[8].label!='' ">{{ field[8].label }} <span><el-switch v-model="field[8].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input v-if="field[8].label != ''" type="number" :placeholder="field[8].label" v-model="field[8].value" :disabled="!field[8].disabled"><br>
+            <label v-if="field[8].label!='' " class="nutrition_fields_label"><strong>{{ field[8].label }}</strong></label><br>
+            <input v-if="field[8].label != ''" type="number" :placeholder="field[8].label" v-model="field[8].value" class="nutrition_fields"><br>
         </div>
         <div>
-            <label v-if="field[9].label != '' ">{{ field[9].label }} <span><el-switch v-model="field[9].disabled" inactive-color="#9098B8" active-color="green"></el-switch></span></label><br>
-            <input v-if="field[9].label != '' " type="number" :placeholder="field[9].label" v-model="field[9].value" :disabled="!field[9].disabled"><br>
+            <label v-if="field[9].label != '' " class="nutrition_fields_label"><strong>{{ field[9].label }}</strong></label><br>
+            <input v-if="field[9].label != '' " type="number" :placeholder="field[9].label" v-model="field[9].value" class="nutrition_fields"><br>
+        </div>
+        <div>
+            <label v-if="field[10].label != '' " class="nutrition_fields_label"><strong>{{ field[10].label }}</strong></label><br>
+            <input v-if="field[10].label != '' " type="number" :placeholder="field[10].label" v-model="field[10].value" class="nutrition_fields"><br>
+        </div>
+        <div>
+            <label v-if="field[11].label != '' " class="nutrition_fields_label"><strong>{{ field[11].label }}</strong></label><br>
+            <input v-if="field[11].label != '' " type="number" :placeholder="field[11].label" v-model="field[11].value" class="nutrition_fields"><br>
+        </div>
+        <div>
+            <label v-if="field[12].label != '' " class="nutrition_fields_label"><strong>{{ field[12].label }}</strong></label><br>
+            <input v-if="field[12].label != '' " type="number" :placeholder="field[12].label" v-model="field[12].value" class="nutrition_fields"><br>
         </div>
     </div>
     <hr>
@@ -69,11 +81,19 @@ export default {
 .nutritions {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
     div {
         width: 23%;
         padding-right: 14px;
-        input {
+        .nutrition_fields_label {
+            display: inline-block;
+            margin-bottom: 7px;
+        }
+        .nutrition_fields {
             width: 100%;
+            padding: 5px;
+            border-radius: 3px; 
         }
     }
 }
