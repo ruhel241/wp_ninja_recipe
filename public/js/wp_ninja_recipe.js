@@ -67609,11 +67609,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'NutritionFields',
-    props: ['field'],
+    props: ['field', 'childIndex'],
     watch: {
         field: {
             handler: function handler(newValue) {
@@ -67621,6 +67637,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             },
 
             deep: true
+        }
+    },
+    computed: {
+        index: {
+            get: function get() {
+                return this.childIndex;
+            },
+            set: function set(newValue) {}
         }
     }
 });
@@ -67666,6 +67690,42 @@ var render = function() {
         }),
         _c("br")
       ]),
+      _vm._v(" "),
+      _vm.field[0].hasOwnProperty("children")
+        ? _c(
+            "div",
+            _vm._l(_vm.field[0].children, function(ch, j) {
+              return _c("div", { key: j }, [
+                _c("label", { staticClass: "nutrition_fields_label" }, [
+                  _c("strong", [_vm._v(_vm._s(ch.label))])
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: ch.value,
+                      expression: "ch.value"
+                    }
+                  ],
+                  staticClass: "nutrition_fields",
+                  attrs: { type: "number", placeholder: ch.label },
+                  domProps: { value: ch.value },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(ch, "value", $event.target.value)
+                    }
+                  }
+                }),
+                _c("br")
+              ])
+            })
+          )
+        : _vm._e(),
       _vm._v(" "),
       _c("div", [
         _c("label", { staticClass: "nutrition_fields_label" }, [
@@ -67846,6 +67906,42 @@ var render = function() {
         }),
         _c("br")
       ]),
+      _vm._v(" "),
+      _vm.field[6].hasOwnProperty("children")
+        ? _c(
+            "span",
+            _vm._l(_vm.field[6].children, function(ch, j) {
+              return _c("div", { key: j }, [
+                _c("label", { staticClass: "nutrition_fields_label" }, [
+                  _c("strong", [_vm._v(_vm._s(ch.label))])
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: ch.value,
+                      expression: "ch.value"
+                    }
+                  ],
+                  staticClass: "nutrition_fields",
+                  attrs: { type: "number", placeholder: ch.label },
+                  domProps: { value: ch.value },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(ch, "value", $event.target.value)
+                    }
+                  }
+                }),
+                _c("br")
+              ])
+            })
+          )
+        : _vm._e(),
       _vm._v(" "),
       _c("div", [
         _vm.field[7].label != ""
@@ -68044,6 +68140,40 @@ var render = function() {
                     return
                   }
                   _vm.$set(_vm.field[12], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[13].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[13].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[13].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[13].value,
+                  expression: "field[13].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[13].label },
+              domProps: { value: _vm.field[13].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[13], "value", $event.target.value)
                 }
               }
             })
@@ -69547,6 +69677,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -69555,6 +69687,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+// function recursivePrint(data) {
+//     data.forEach(value => {
+//     if (value.hasOwnProperty('children')) {
+//         recursivePrint(value.children);
+//     }
+// });
+// }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'EditTable',
@@ -69578,7 +69718,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             ingredients_data: [{ ingredient: '', amount: '', unit: '' }],
             ingredients_unit: [{ value: 'TSP', label: 'TSP' }, { value: 'Tbs', label: 'Tbs' }, { value: 'Cup', label: 'Cup' }, { value: 'Kg', label: 'Kg' }, { value: 'Liter', label: 'Liter' }],
             descriptions_adv: [{ desc_text: '', desc_img: '' }],
-            nutritions: [[{ serial: 0, label: 'Calories', value: '' }, { serial: 1, label: 'Calories from fat', value: '' }, { serial: 2, label: 'Total Fat', value: '' }, { serial: 3, label: 'Saturated Fat', value: '' }, { serial: 4, label: 'Trans Fat', value: '' }, { serial: 5, label: 'Cholesterol', value: '' }, { serial: 6, label: 'Sodium', value: '' }, { serial: 7, label: 'Potassium', value: '' }, { serial: 8, label: 'Total Carbohydrate', value: '' }, { serial: 9, label: 'Dietary Fibre', value: '' }, { serial: 10, label: 'Sugars', value: '' }, { serial: 11, label: 'Protein', value: '' }, { serial: 12, label: '', value: '' }], [{ serial: 13, label: 'Vitamin A', value: '' }, { serial: 14, label: 'Vitamin C', value: '' }, { serial: 15, label: 'Calcium', value: '' }, { serial: 16, label: 'Iron', value: '' }, { serial: 17, label: 'Vitamin D', value: '' }, { serial: 18, label: 'Chloride', value: '' }, { serial: 19, label: 'Vitamin E', value: '' }, { serial: 20, label: 'Vitamin K', value: '' }, { serial: 21, label: 'Vitamin B6', value: '' }, { serial: 22, label: 'Vitamin B12', value: '' }, { serial: 23, label: 'Thiamin', value: '' }, { serial: 24, label: 'Riboflavin', value: '' }, { serial: 25, label: 'Niacin', value: '' }, { serial: 26, label: 'Folate', value: '' }], [{ serial: 27, label: 'Biotin', value: '' }, { serial: 28, label: 'Pantothenic Acid', value: '' }, { serial: 29, label: 'Phosphorus', value: '' }, { serial: 30, label: 'Iodine', value: '' }, { serial: 31, label: 'Magnesium', value: '' }, { serial: 32, label: 'Zinc', value: '' }, { serial: 33, label: 'Selenium', value: '' }, { serial: 34, label: 'Copper', value: '' }, { serial: 35, label: 'Manganese', value: '' }, { serial: 36, label: 'Chromium', value: '' }, { serial: 37, label: 'Molybdenum', value: '' }, { serial: 38, label: '', value: '' }, { serial: 37, label: '', value: '' }]],
+            nutritions: [[{
+                serial: 0, label: 'Total Fat', value: '', children: [{
+                    serial: 1, label: 'Saturated Fat', value: ''
+                }, {
+                    serial: 2, label: 'Trans Fat', value: ''
+                }]
+            }, { serial: 1, label: 'Calories', value: '' }, { serial: 2, label: 'Calories from Fat', value: '' }, { serial: 3, label: 'Cholesterol', value: '' }, { serial: 4, label: 'Sodium', value: '' }, { serial: 5, label: 'Potassium', value: '' }, {
+                serial: 6, label: 'Total Carbohydrate', value: '', children: [{
+                    serial: 1, label: 'Dietary Fibre', value: ''
+                }, {
+                    serial: 2, label: 'Sugars', value: ''
+                }]
+            }, { serial: 7, label: 'Protein', value: '' }, { serial: 8, label: '', value: '' }, { serial: 9, label: '', value: '' }, { serial: 10, label: '', value: '' }, { serial: 11, label: '', value: '' }, { serial: 12, label: '', value: '' }, { serial: 13, label: '', value: '' }], [{ serial: 8, label: 'Vitamin A', value: '' }, { serial: 9, label: 'Vitamin C', value: '' }, { serial: 10, label: 'Calcium', value: '' }, { serial: 11, label: 'Iron', value: '' }, { serial: 12, label: 'Vitamin D', value: '' }, { serial: 13, label: 'Chloride', value: '' }, { serial: 14, label: 'Vitamin E', value: '' }, { serial: 15, label: 'Vitamin K', value: '' }, { serial: 16, label: 'Vitamin B6', value: '' }, { serial: 17, label: 'Vitamin B12', value: '' }, { serial: 18, label: 'Thiamin', value: '' }, { serial: 19, label: 'Riboflavin', value: '' }, { serial: 20, label: 'Niacin', value: '' }, { serial: 21, label: 'Folate', value: '' }], [{ serial: 22, label: 'Biotin', value: '' }, { serial: 23, label: 'Pantothenic Acid', value: '' }, { serial: 24, label: 'Phosphorus', value: '' }, { serial: 25, label: 'Iodine', value: '' }, { serial: 26, label: 'Magnesium', value: '' }, { serial: 26, label: 'Zinc', value: '' }, { serial: 27, label: 'Selenium', value: '' }, { serial: 28, label: 'Copper', value: '' }, { serial: 29, label: 'Manganese', value: '' }, { serial: 30, label: 'Chromium', value: '' }, { serial: 31, label: 'Molybdenum', value: '' }, { serial: 32, label: '', value: '' }, { serial: 33, label: '', value: '' }, { serial: 34, label: '', value: '' }]],
             stretch: true,
             upload_img: '',
             nutrition_text: '',
@@ -70059,7 +70211,7 @@ var render = function() {
                                 return _vm.showNutritionFields
                                   ? _c("app-nutrition", {
                                       key: i,
-                                      attrs: { field: field }
+                                      attrs: { field: field, childIndex: i }
                                     })
                                   : _vm._e()
                               })
@@ -70547,7 +70699,7 @@ var render = function() {
                                 return _vm.showNutritionFields
                                   ? _c("app-nutrition", {
                                       key: i,
-                                      attrs: { field: field }
+                                      attrs: { field: field, childIndex: i }
                                     })
                                   : _vm._e()
                               })
