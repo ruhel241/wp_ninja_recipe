@@ -34,6 +34,4 @@
 
 		<?php include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/nutrition_facts.php');?>
 
-
-
 </div>
