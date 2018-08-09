@@ -19917,105 +19917,17 @@ if (inBrowser && window.Vue) {
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: '/',
     name: 'ninja_recipe_home',
-    component: __webpack_require__(82)
+    component: __webpack_require__(261)
 }, {
     path: '/edit_table/:table_id',
     name: 'edit_table',
-    component: __webpack_require__(97)
+    component: __webpack_require__(266)
 }]);
 
 /***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(83)
-}
-var normalizeComponent = __webpack_require__(5)
-/* script */
-var __vue_script__ = __webpack_require__(86)
-/* template */
-var __vue_template__ = __webpack_require__(96)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src/admin/components/AllTables.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e2fa6334", Component.options)
-  } else {
-    hotAPI.reload("data-v-e2fa6334", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 83 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(84);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(7)("156a0f37", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e2fa6334\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-e2fa6334\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.wp-ninja-recipe .editor-header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.wp-ninja-recipe .editor-header .section-action {\n    padding-top: 6px;\n}\n.wp-ninja-recipe .editor-header .section-action .addTable {\n      margin-left: 0px;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group {\n      padding-top: 0;\n      margin-bottom: 0;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group input {\n        padding: 5px;\n}\n.wp-ninja-recipe .pull-right {\n  float: right;\n}\n.wp-ninja-recipe .table_form_fields .select_recipe_type {\n  float: right;\n  margin-top: -22px;\n  margin-bottom: 5px;\n}\n.wp-ninja-recipe .filtered_area {\n  background: #fff;\n  height: 70px;\n  padding: 10px;\n}\n.wp-ninja-recipe .filtered_area .preference_type {\n    margin-left: 12px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter {\n    width: 1.333%;\n    float: right;\n    margin-top: 15px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter span {\n      color: #b91313;\n      display: inline-block;\n      width: 25px;\n      height: 25px;\n      cursor: pointer;\n}\n.wp-ninja-recipe .el-select .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 640px) {\n.wp-ninja-recipe .filtered_area .el-col-4 {\n    width: 30%;\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 82 */,
+/* 83 */,
+/* 84 */,
 /* 85 */
 /***/ (function(module, exports) {
 
@@ -20049,398 +19961,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 86 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_clipboard__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_clipboard__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'AllTables',
-    components: {
-        'app-delete-table': __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default.a,
-        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default.a
-    },
-    data: function data() {
-        return {
-            search: '',
-            per_page: 10,
-            tableData: [],
-            table_name: '',
-            page_number: 1,
-            tableLoading: false,
-            showFilterSection: false,
-            recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
-            addTableModal: false,
-            selectedRecipe: '',
-            addingTableAjax: false,
-            mealType: '',
-            cusineType: '',
-            preferenceType: '',
-            findMealType: '',
-            findCusineType: '',
-            findPreferenceType: '',
-            meal_types: [{ value: 'Breakfast', label: 'Breakfast' }, { value: 'Lunch', label: 'Lunch' }, { value: 'Dinner', label: 'Dinner' }],
-            cusine_types: [{ value: 'Indian', label: 'Indian' }, { value: 'Chinese', label: 'Chinese' }, { value: 'Thai', label: 'Thai' }],
-            preference_types: [{ value: 'Vegetable', label: 'Vegetable' }, { value: 'Non-vegetable', label: 'Non-vegetable' }],
-            paginate: {
-                total: 0,
-                current_page: 1,
-                last_page: 1,
-                per_page: 10
-            },
-            searchAction: 0
-        };
-    },
-    created: function created() {
-        this.fetchTables(); // fetching the table data when application loads
-        this.clipboardRender();
-    },
-
-    methods: {
-        fetchTables: function fetchTables() {
-            var _this = this;
-
-            this.tableLoading = true;
-
-            var fetchTablesAjaxData = {
-                action: 'ninja_recipe_ajax_actions',
-                route: 'get_tables',
-                per_page: this.paginate.per_page,
-                page_number: this.paginate.current_page,
-                search: this.search,
-                meal_type: this.findMealType,
-                cusine_type: this.findCusineType,
-                preference_type: this.findPreferenceType
-            };
-
-            jQuery.get(ajaxurl, fetchTablesAjaxData).then(function (response) {
-                console.log(response);
-                _this.tableData = response.data.tables;
-                _this.paginate.total = response.data.total;
-            }).fail(function (error) {
-                _this.$notify.error({
-                    title: 'Error',
-                    message: 'This is an error message'
-                });
-            }).always(function () {
-                _this.tableLoading = false;
-            });
-        },
-        addNewTable: function addNewTable() {
-            var _this2 = this;
-
-            this.addingTableAjax = true;
-
-            var addTableAjaxData = {
-                action: 'ninja_recipe_ajax_actions',
-                route: 'add_table',
-                post_title: this.table_name,
-                recipe_type: this.selectedRecipe
-            };
-
-            jQuery.post(ajaxurl, addTableAjaxData).then(function (response) {
-                console.log(response);
-                _this2.$notify.success({
-                    title: 'Success',
-                    message: response.data.message
-                });
-                _this2.$router.push({
-                    name: 'edit_table',
-                    params: {
-                        table_id: response.data.table_id
-                    }
-                });
-            }).fail(function (error) {
-                _this2.$notify.error({
-                    title: 'Error',
-                    message: error.responseJSON.data.message
-                });
-            }).always(function () {
-                _this2.addTableModal = false;
-                _this2.addingTableAjax = false;
-            });
-        },
-        deleteTable: function deleteTable(tableId) {
-            var _this3 = this;
-
-            var deleteAjaxData = {
-                action: 'ninja_recipe_ajax_actions',
-                route: 'delete_table',
-                table_id: tableId
-            };
-
-            jQuery.post(ajaxurl, deleteAjaxData).then(function (response) {
-                _this3.$notify.success({
-                    title: 'Deleted',
-                    message: response.data.message
-                });
-                _this3.total = _this3.total - 1;
-                if (_this3.total == _this3.per_page) {
-                    _this3.page_number = 1;
-                } else if (_this3.total % 2 != 0 && _this3.total % _this3.per_page == 0) {
-                    var res = parseInt(_this3.total / 2);
-                    if (_this3.total - (res * 2 + 1) == 0 && _this3.total != _this3.per_page) {
-                        _this3.page_number = _this3.page_number - 1;
-                    }
-                } else if (_this3.total % 2 == 0 && _this3.total % _this3.per_page == 0) {
-                    var res = parseInt(_this3.total / 2);
-                    if (_this3.total - res * 2 == 0 && _this3.total != _this3.per_page) {
-                        _this3.page_number = _this3.page_number - 1;
-                    }
-                }
-                _this3.fetchTables();
-            });
-        },
-        clipboardRender: function clipboardRender() {
-            var _this4 = this;
-
-            var clipboard = new __WEBPACK_IMPORTED_MODULE_0_clipboard___default.a('.copy');
-            clipboard.on('success', function (e) {
-                _this4.$message({
-                    message: 'Copied to Clipboard!',
-                    type: 'success'
-                });
-            });
-        },
-        goToPage: function goToPage(value) {
-            this.paginate.current_page = value;
-            this.fetchTables();
-        },
-        handleSizeChange: function handleSizeChange(val) {
-            this.paginate.per_page = val;
-            this.fetchTables();
-        }
-    },
-    watch: {
-        search: function search() {
-            this.paginate.current_page = 1;
-            this.fetchTables();
-        },
-        findMealType: function findMealType() {
-            this.fetchTables();
-        },
-        findCusineType: function findCusineType() {
-            this.fetchTables();
-        },
-        findPreferenceType: function findPreferenceType() {
-            this.fetchTables();
-        }
-    }
-});
-
-/***/ }),
+/* 86 */,
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20790,1243 +20311,11 @@ if (false) {
 }
 
 /***/ }),
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "wp-ninja-recipe" },
-    [
-      _c("div", { staticClass: "editor-header" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "section-action" },
-          [
-            _c("label", { staticClass: "form_group" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.search,
-                    expression: "search"
-                  }
-                ],
-                staticClass: "form_control search_action",
-                attrs: { type: "text", placeholder: "Search" },
-                domProps: { value: _vm.search },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.search = $event.target.value
-                  }
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c(
-              "el-button",
-              {
-                attrs: { size: "mini", type: "success" },
-                on: {
-                  click: function($event) {
-                    _vm.showFilterSection = !_vm.showFilterSection
-                  }
-                }
-              },
-              [_vm._v("Filter")]
-            ),
-            _vm._v(" "),
-            _c(
-              "el-button",
-              {
-                staticClass: "addTable",
-                attrs: { size: "mini", type: "primary" },
-                on: {
-                  click: function($event) {
-                    _vm.addTableModal = true
-                  }
-                }
-              },
-              [_vm._v("Add Table")]
-            )
-          ],
-          1
-        )
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _vm.showFilterSection
-        ? _c(
-            "div",
-            { staticClass: "filtered_area" },
-            [
-              _c(
-                "el-row",
-                [
-                  _c(
-                    "el-col",
-                    {
-                      staticStyle: { "margin-right": "10px" },
-                      attrs: { span: 4 }
-                    },
-                    [
-                      _c("app-input-dropdown", {
-                        attrs: {
-                          label: "Meal Type",
-                          pcHolder: "Select Meal Type",
-                          recipeTypes: _vm.meal_types,
-                          clearable: true
-                        },
-                        model: {
-                          value: _vm.findMealType,
-                          callback: function($$v) {
-                            _vm.findMealType = $$v
-                          },
-                          expression: "findMealType"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "el-col",
-                    {
-                      staticStyle: { "margin-right": "10px" },
-                      attrs: { span: 4 }
-                    },
-                    [
-                      _c("app-input-dropdown", {
-                        attrs: {
-                          label: "Cusine Type",
-                          pcHolder: "Select Cusine Type",
-                          recipeTypes: _vm.cusine_types,
-                          clearable: true
-                        },
-                        model: {
-                          value: _vm.findCusineType,
-                          callback: function($$v) {
-                            _vm.findCusineType = $$v
-                          },
-                          expression: "findCusineType"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "el-col",
-                    { attrs: { span: 4 } },
-                    [
-                      _c("app-input-dropdown", {
-                        attrs: {
-                          label: "Preference Type",
-                          pcHolder: "Select Preference Type",
-                          recipeTypes: _vm.preference_types,
-                          clearable: true
-                        },
-                        model: {
-                          value: _vm.findPreferenceType,
-                          callback: function($$v) {
-                            _vm.findPreferenceType = $$v
-                          },
-                          expression: "findPreferenceType"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("el-col", { staticClass: "closeFilter" }, [
-                    _c(
-                      "span",
-                      {
-                        on: {
-                          click: function($event) {
-                            _vm.showFilterSection = false
-                          }
-                        }
-                      },
-                      [_vm._v("X")]
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c(
-        "el-table",
-        {
-          directives: [
-            {
-              name: "loading",
-              rawName: "v-loading",
-              value: _vm.tableLoading,
-              expression: "tableLoading"
-            }
-          ],
-          staticStyle: { width: "100%", "margin-top": "10px" },
-          attrs: { data: _vm.tableData, border: "" }
-        },
-        [
-          _c("el-table-column", {
-            attrs: { label: "Image", width: "90" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
-                    _c(
-                      "router-link",
-                      {
-                        attrs: {
-                          to: {
-                            name: "edit_table",
-                            params: { table_id: scope.row.ID }
-                          }
-                        }
-                      },
-                      [
-                        _c("span", [
-                          scope.row.tableConfig &&
-                          scope.row.tableConfig.featuredImage
-                            ? _c("img", {
-                                staticStyle: { width: "100%" },
-                                attrs: {
-                                  src: scope.row.tableConfig.featuredImage
-                                }
-                              })
-                            : _vm._e()
-                        ]),
-                        _vm._v(" "),
-                        _c("span", [
-                          !scope.row.tableConfig.featuredImage
-                            ? _c("img", {
-                                staticStyle: { width: "100%" },
-                                attrs: { src: scope.row.defaultImage }
-                              })
-                            : _vm._e()
-                        ])
-                      ]
-                    )
-                  ]
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "Name" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
-                    _c(
-                      "router-link",
-                      {
-                        attrs: {
-                          to: {
-                            name: "edit_table",
-                            params: { table_id: scope.row.ID }
-                          }
-                        }
-                      },
-                      [
-                        _c("div", [
-                          _c("span", [_vm._v(_vm._s(scope.row.post_title))])
-                        ])
-                      ]
-                    )
-                  ]
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "Recipe Type" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
-                    scope.row.recipe_type == "normal"
-                      ? _c("span", [
-                          _vm._v(
-                            "\n                    Normal\n                "
-                          )
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    scope.row.recipe_type == "advance"
-                      ? _c("span", [
-                          _vm._v(
-                            "\n                    Advance\n                "
-                          )
-                        ])
-                      : _vm._e()
-                  ]
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "Meal Type" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return scope.row.tableConfig
-                    ? _vm._l(scope.row.tableConfig.mealType, function(
-                        mealType,
-                        mealType_index
-                      ) {
-                        return _c("span", { key: mealType_index }, [
-                          _vm._v("\n                    " + _vm._s(mealType)),
-                          mealType_index <
-                          scope.row.tableConfig.mealType.length - 1
-                            ? _c("span", [_vm._v(", ")])
-                            : _vm._e()
-                        ])
-                      })
-                    : undefined
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "Cusine Type" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return scope.row.tableConfig
-                    ? [
-                        _vm._v(
-                          "\n                " +
-                            _vm._s(scope.row.tableConfig.cusineType) +
-                            "\n            "
-                        )
-                      ]
-                    : undefined
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "Preference" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return scope.row.tableConfig
-                    ? [
-                        _vm._v(
-                          "\n                " +
-                            _vm._s(scope.row.tableConfig.preferenceType) +
-                            "\n            "
-                        )
-                      ]
-                    : undefined
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "ShortCode" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
-                    _c(
-                      "code",
-                      {
-                        staticClass: "copy",
-                        staticStyle: { cursor: "pointer" },
-                        attrs: {
-                          "data-clipboard-text":
-                            '[ninja_recipe id="' + scope.row.ID + '"]'
-                        }
-                      },
-                      [
-                        _vm._v(
-                          '\n                    [ninja_recipe id="' +
-                            _vm._s(scope.row.ID) +
-                            '"]\n                '
-                        )
-                      ]
-                    )
-                  ]
-                }
-              }
-            ])
-          }),
-          _vm._v(" "),
-          _c("el-table-column", {
-            attrs: { label: "Actions", width: "180" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function(scope) {
-                  return [
-                    _c(
-                      "router-link",
-                      {
-                        attrs: {
-                          title: "Edit",
-                          to: {
-                            name: "edit_table",
-                            params: { table_id: scope.row.ID }
-                          }
-                        }
-                      },
-                      [_c("span", [_vm._v("Edit")])]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "el-button el-button--info el-button--mini",
-                        attrs: { href: scope.row.demo_url, target: "_blank" }
-                      },
-                      [_c("i", { staticClass: "el-icon-view" })]
-                    ),
-                    _vm._v(" "),
-                    _c("app-delete-table", {
-                      on: {
-                        delete: function($event) {
-                          _vm.deleteTable(scope.row.ID)
-                        }
-                      }
-                    })
-                  ]
-                }
-              }
-            ])
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "pull-right" },
-        [
-          _c("el-pagination", {
-            attrs: {
-              "current-page": _vm.paginate.current_page,
-              "page-sizes": [10, 20, 50, 100],
-              "page-size": _vm.paginate.per_page,
-              layout: "total, sizes, prev, pager, next, jumper",
-              total: _vm.paginate.total
-            },
-            on: {
-              "size-change": _vm.handleSizeChange,
-              "current-change": _vm.goToPage,
-              "update:currentPage": function($event) {
-                _vm.$set(_vm.paginate, "current_page", $event)
-              }
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "el-dialog",
-        {
-          attrs: {
-            title: "Add New Recipe Table",
-            visible: _vm.addTableModal,
-            width: "60%"
-          },
-          on: {
-            "update:visible": function($event) {
-              _vm.addTableModal = $event
-            }
-          }
-        },
-        [
-          _c("div", { staticClass: "table_form_fields" }, [
-            _c(
-              "div",
-              { staticClass: "recipe_table_name" },
-              [
-                _c("label", { attrs: { for: "new_table_name" } }, [
-                  _vm._v("Table Name")
-                ]),
-                _vm._v(" "),
-                _c("el-input", {
-                  attrs: {
-                    id: "new_table_name",
-                    type: "text",
-                    placeholder: "Your Table Name"
-                  },
-                  model: {
-                    value: _vm.table_name,
-                    callback: function($$v) {
-                      _vm.table_name = $$v
-                    },
-                    expression: "table_name"
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "recipe_categories" },
-              [
-                _c(
-                  "el-row",
-                  [
-                    _c(
-                      "el-col",
-                      { attrs: { span: 12 } },
-                      [
-                        _c("app-input-dropdown", {
-                          attrs: {
-                            pcHolder: "Select Recipe Type",
-                            recipeTypes: _vm.recipe_types,
-                            label: "Recipe Type"
-                          },
-                          model: {
-                            value: _vm.selectedRecipe,
-                            callback: function($$v) {
-                              _vm.selectedRecipe = $$v
-                            },
-                            expression: "selectedRecipe"
-                          }
-                        })
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "span",
-            {
-              staticClass: "dialog-footer",
-              attrs: { slot: "footer" },
-              slot: "footer"
-            },
-            [
-              _c(
-                "el-button",
-                {
-                  on: {
-                    click: function($event) {
-                      _vm.addTableModal = false
-                    }
-                  }
-                },
-                [_vm._v("Cancel")]
-              ),
-              _vm._v(" "),
-              _c(
-                "el-button",
-                {
-                  directives: [
-                    {
-                      name: "loading",
-                      rawName: "v-loading",
-                      value: _vm.addingTableAjax,
-                      expression: "addingTableAjax"
-                    }
-                  ],
-                  attrs: { type: "primary" },
-                  on: { click: _vm.addNewTable }
-                },
-                [_vm._v("Add New")]
-              )
-            ],
-            1
-          )
-        ]
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "section-header" }, [
-      _c("h1", [_vm._v("All Recipe Tables")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-e2fa6334", module.exports)
-  }
-}
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(98)
-}
-var normalizeComponent = __webpack_require__(5)
-/* script */
-var __vue_script__ = __webpack_require__(100)
-/* template */
-var __vue_template__ = __webpack_require__(123)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src/admin/components/EditTable.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3f556838", Component.options)
-  } else {
-    hotAPI.reload("data-v-3f556838", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(99);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(7)("4c86ceba", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f556838\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f556838\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 100 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputText_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vuedraggable__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vuedraggable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_clipboard__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'EditTable',
-    components: {
-        'app-wp-editor': __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default.a,
-        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default.a,
-        'app-input-text': __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue___default.a,
-        'app-input-number': __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue___default.a,
-        'app-nutrition': __WEBPACK_IMPORTED_MODULE_4__NutritionFields_vue___default.a,
-        draggable: __WEBPACK_IMPORTED_MODULE_5_vuedraggable___default.a
-    },
-    data: function data() {
-        return {
-            table_id: this.$route.params.table_id,
-            post_title: '',
-            recipe_type: '',
-            recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
-            meal_types: [{ value: 'Breakfast', label: 'Breakfast' }, { value: 'Lunch', label: 'Lunch' }, { value: 'Dinner', label: 'Dinner' }],
-            cusine_types: [{ value: 'Indian', label: 'Indian' }, { value: 'Thai', label: 'Thai' }, { value: 'Chinese', label: 'Chinese' }],
-            preference_types: [{ value: 'Vegetable', label: 'Vegetable' }, { value: 'Non-vegetable', label: 'Non-vegetable' }],
-            ingredients_data: [{ ingredient: '', amount: '', unit: '' }],
-            ingredients_unit: [{ value: 'TSP', label: 'TSP' }, { value: 'Tbs', label: 'Tbs' }, { value: 'Cup', label: 'Cup' }, { value: 'Kg', label: 'Kg' }, { value: 'Liter', label: 'Liter' }],
-            descriptions_adv: [{ desc_text: '', desc_img: '' }],
-            nutritions: [[{ serial: 0, label: 'Fat', value: '' }, { serial: 1, label: 'Saturated Fat', value: '' }, { serial: 2, label: 'Trans Fat', value: '' }, { serial: 3, label: 'Cholesterol', value: '' }, { serial: 4, label: 'Sodium', value: '' }, { serial: 5, label: 'Carbohydrate', value: '' }, { serial: 6, label: 'Fibre', value: '' }, { serial: 7, label: 'Sugars', value: '' }, { serial: 8, label: 'Protein', value: '' }, { serial: 9, label: 'Vitamin A', value: '' }, { serial: 10, label: 'Vitamin C', value: '' }, { serial: 11, label: 'Calcium', value: '' }, { serial: 12, label: 'Iron', value: '' }], [{ serial: 13, label: 'Chloride', value: '' }, { serial: 14, label: 'Vitamin D', value: '' }, { serial: 15, label: 'Vitamin E', value: '' }, { serial: 16, label: 'Vitamin K', value: '' }, { serial: 17, label: 'Vitamin B6', value: '' }, { serial: 18, label: 'Vitamin B12', value: '' }, { serial: 21, label: 'Thiamin', value: '' }, { serial: 22, label: 'Riboflavin', value: '' }, { serial: 23, label: 'Niacin', value: '' }, { serial: 24, label: 'Folate', value: '' }, { serial: 25, label: 'Biotin', value: '' }, { serial: 26, label: 'Pantothenic Acid', value: '' }, { serial: 27, label: 'Phosphorus', value: '' }], [{ serial: 28, label: 'Iodine', value: '' }, { serial: 29, label: 'Magnesium', value: '' }, { serial: 30, label: 'Zinc', value: '' }, { serial: 31, label: 'Selenium', value: '' }, { serial: 32, label: 'Copper', value: '' }, { serial: 33, label: 'Manganese', value: '' }, { serial: 34, label: 'Chromium', value: '' }, { serial: 35, label: 'Molybdenum', value: '' }, { serial: 36, label: '', value: '' }, { serial: 37, label: '', value: '' }, { serial: 38, label: '', value: '' }, { serial: 39, label: '', value: '' }, { serial: 40, label: '', value: '' }]],
-            stretch: true,
-            upload_img: '',
-            nutrition_text: '',
-            post_ingredient: '',
-            post_description: '',
-            post_introduction: '',
-            post_nutrition: '',
-            post_nutrition_adv: '',
-            selectedMealType: [],
-            selectedCusineType: '',
-            selectedPreferenceType: '',
-            featImage: '',
-            totalPeople: '',
-            makingTime: '',
-            demo_url: '',
-            active_featured_image: ['featured_image'],
-            active_optional_field: ['optional_fields'],
-            showNutritionFields: false,
-            showNutritionText: true
-        };
-    },
-    created: function created() {
-        this.fetchTable();
-        this.clipboardRender();
-    },
-
-    methods: {
-        fetchTable: function fetchTable() {
-            var _this = this;
-
-            var fetchTableAjaxData = {
-                action: 'ninja_recipe_ajax_actions',
-                route: 'get_table',
-                table_id: this.table_id
-            };
-
-            jQuery.get(ajaxurl, fetchTableAjaxData).then(function (response) {
-                console.log(response);
-                _this.post_title = response.data.table.post_title;
-                _this.recipe_type = response.data.table.recipe_type;
-                _this.demo_url = response.data.demo_url;
-                if (response.data.tableConfig) {
-
-                    if (_this.recipe_type == 'normal') {
-
-                        _this.post_introduction = response.data.tableConfig.introduction;
-                        _this.post_description = response.data.tableConfig.description;
-                        _this.nutritions = response.data.tableConfig.nutrition;
-                        _this.post_ingredient = response.data.tableConfig.ingredient;
-                    } else if (_this.recipe_type == 'advance') {
-
-                        _this.post_introduction = response.data.tableConfig.introduction;
-                        _this.descriptions_adv = response.data.tableConfig.description;
-                        _this.nutritions = response.data.tableConfig.nutrition;
-                        _this.ingredients_data = response.data.tableConfig.ingredient;
-                    }
-
-                    _this.selectedMealType = response.data.tableConfig.mealType;
-                    _this.selectedCusineType = response.data.tableConfig.cusineType;
-                    _this.selectedPreferenceType = response.data.tableConfig.preferenceType;
-                    _this.totalPeople = response.data.tableConfig.totalPeople;
-                    _this.featImage = response.data.tableConfig.featuredImage;
-                    _this.nutrition_text = response.data.tableConfig.nutrition.nutrition_text;
-                    _this.nutritions = response.data.tableConfig.nutrition.nutrition_fields;
-                    _this.showNutritionFields = response.data.tableConfig.nutrition.showNutritionFields;
-                    _this.makingTime = response.data.tableConfig.makingTime;
-                }
-            });
-        },
-        updateTableConfig: function updateTableConfig() {
-            var _this2 = this;
-
-            if (this.recipe_type === 'normal') {
-                var introduction = this.post_introduction;
-                var ingredient = this.post_ingredient;
-                var description = this.post_description;
-            } else if (this.recipe_type === 'advance') {
-                var introduction = this.post_introduction;
-                var ingredient = this.ingredients_data;
-                var description = this.descriptions_adv;
-            }
-
-            var featImage = this.featImage;
-
-            var nutrition = {
-                nutrition_text: this.nutrition_text,
-                nutrition_fields: this.nutritions,
-                showNutritionFields: this.showNutritionFields
-            };
-            var tableConfig = {
-                introduction: introduction,
-                ingredient: ingredient,
-                description: description,
-                nutrition: nutrition,
-                mealType: this.selectedMealType,
-                cusineType: this.selectedCusineType,
-                preferenceType: this.selectedPreferenceType,
-                totalPeople: this.totalPeople,
-                featuredImage: featImage,
-                makingTime: this.makingTime
-            };
-
-            console.log(tableConfig);
-
-            var updateTableAjaxData = {
-                action: 'ninja_recipe_ajax_actions',
-                route: 'update_table',
-                table_id: this.table_id,
-                table_config: JSON.stringify(tableConfig),
-                post_title: this.post_title,
-                recipe_type: this.recipe_type
-            };
-
-            jQuery.post(ajaxurl, updateTableAjaxData).then(function (response) {
-                _this2.$notify.success({
-                    title: 'Updated',
-                    message: response.data.message
-                });
-            });
-        },
-        upload_image: function upload_image() {
-            var _this3 = this;
-
-            var button = $(this);
-            var custom_uploader = wp.media({
-
-                title: 'Insert Recipe Image',
-                library: {
-                    type: 'image'
-                },
-                button: {
-                    text: 'Use this image'
-                },
-                multiple: false
-
-            }).on('select', function () {
-                // using the arrow function cause there is a callback(.on) inside function 
-                var attachment = custom_uploader.state().get('selection').first().toJSON();
-                $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
-                _this3.featImage = attachment.url;
-                console.log('Featured Image is: ' + _this3.featImage);
-            }).open();
-        },
-        upload_img_adv_desc: function upload_img_adv_desc(i) {
-            var _this4 = this;
-
-            var button = $(this);
-            var custom_uploader = wp.media({
-
-                title: 'Insert Description Image',
-                library: {
-                    type: 'image'
-                },
-                button: {
-                    text: 'Use this image'
-                },
-                multiple: false
-
-            }).on('select', function () {
-                // using the arrow function cause there is a callback(.on) inside function 
-                var attachment = custom_uploader.state().get('selection').first().toJSON();
-                $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
-                _this4.descriptions_adv[i].desc_img = attachment.url;
-            }).open();
-        },
-        addMoreIngField: function addMoreIngField() {
-            this.ingredients_data.push({
-                ingredient: '',
-                amount: '',
-                unit: ''
-            });
-        },
-        deleteIngField: function deleteIngField(index) {
-            this.ingredients_data.splice(index, 1);
-        },
-        addDescField: function addDescField() {
-            this.descriptions_adv.push({
-                desc_text: '',
-                desc_img: ''
-            });
-        },
-        removeDescAdv: function removeDescAdv(index) {
-            this.descriptions_adv.splice(index, 1);
-        },
-        clipboardRender: function clipboardRender() {
-            var _this5 = this;
-
-            var clipboard = new __WEBPACK_IMPORTED_MODULE_6_clipboard___default.a('.copy');
-            clipboard.on('success', function (e) {
-                _this5.$message({
-                    message: 'Copied to Clipboard!',
-                    type: 'success'
-                });
-            });
-        },
-        handleChange: function handleChange(val) {
-            console.log(val);
-        }
-    },
-    watch: {
-        upload_img: function upload_img() {
-            console.log(this.upload_img);
-        }
-    }
-});
-
-/***/ }),
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22652,620 +20941,11 @@ if (false) {
 }
 
 /***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(117)
-}
-var normalizeComponent = __webpack_require__(5)
-/* script */
-var __vue_script__ = __webpack_require__(119)
-/* template */
-var __vue_template__ = __webpack_require__(120)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src/admin/components/NutritionFields.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-19afcff1", Component.options)
-  } else {
-    hotAPI.reload("data-v-19afcff1", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 117 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(118);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(7)("3ca2b702", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19afcff1\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 118 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  margin-bottom: 20px;\n  margin-top: 20px;\n}\n.nutritions div {\n    width: 23%;\n    padding-right: 14px;\n}\n.nutritions div .nutrition_fields_label {\n      display: inline-block;\n      margin-bottom: 7px;\n}\n.nutritions div .nutrition_fields {\n      width: 100%;\n      padding: 5px;\n      border-radius: 3px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 119 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'NutritionFields',
-    props: ['field'],
-    watch: {
-        field: {
-            handler: function handler(newValue) {
-                this.$emit('input', newValue);
-            },
-
-            deep: true
-        }
-    }
-});
-
-/***/ }),
-/* 120 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "nutritions" }, [
-      _c("br"),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "nutrition_fields_label" }, [
-          _c("strong", [_vm._v(_vm._s(_vm.field[0].label))])
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[0].value,
-              expression: "field[0].value"
-            }
-          ],
-          staticClass: "nutrition_fields",
-          attrs: { type: "number", placeholder: _vm.field[0].label },
-          domProps: { value: _vm.field[0].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[0], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "nutrition_fields_label" }, [
-          _c("strong", [_vm._v(_vm._s(_vm.field[1].label))])
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[1].value,
-              expression: "field[1].value"
-            }
-          ],
-          staticClass: "nutrition_fields",
-          attrs: { type: "number", placeholder: _vm.field[1].label },
-          domProps: { value: _vm.field[1].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[1], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "nutrition_fields_label" }, [
-          _c("strong", [_vm._v(_vm._s(_vm.field[2].label))])
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[2].value,
-              expression: "field[2].value"
-            }
-          ],
-          staticClass: "nutrition_fields",
-          attrs: { type: "number", placeholder: _vm.field[2].label },
-          domProps: { value: _vm.field[2].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[2], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "nutrition_fields_label" }, [
-          _c("strong", [_vm._v(_vm._s(_vm.field[3].label))])
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[3].value,
-              expression: "field[3].value"
-            }
-          ],
-          staticClass: "nutrition_fields",
-          attrs: { type: "number", placeholder: _vm.field[3].label },
-          domProps: { value: _vm.field[3].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[3], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "nutrition_fields_label" }, [
-          _c("strong", [_vm._v(_vm._s(_vm.field[4].label))])
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[4].value,
-              expression: "field[4].value"
-            }
-          ],
-          staticClass: "nutrition_fields",
-          attrs: { type: "number", placeholder: _vm.field[4].label },
-          domProps: { value: _vm.field[4].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[4], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "nutrition_fields_label" }, [
-          _c("strong", [_vm._v(_vm._s(_vm.field[5].label))])
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[5].value,
-              expression: "field[5].value"
-            }
-          ],
-          staticClass: "nutrition_fields",
-          attrs: { type: "number", placeholder: _vm.field[5].label },
-          domProps: { value: _vm.field[5].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[5], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "nutrition_fields_label" }, [
-          _c("strong", [_vm._v(_vm._s(_vm.field[6].label))])
-        ]),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.field[6].value,
-              expression: "field[6].value"
-            }
-          ],
-          staticClass: "nutrition_fields",
-          attrs: { type: "number", placeholder: _vm.field[6].label },
-          domProps: { value: _vm.field[6].value },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.$set(_vm.field[6], "value", $event.target.value)
-            }
-          }
-        }),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[7].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
-              _c("strong", [_vm._v(_vm._s(_vm.field[7].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[7].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[7].value,
-                  expression: "field[7].value"
-                }
-              ],
-              staticClass: "nutrition_fields",
-              attrs: { type: "number", placeholder: _vm.field[7].label },
-              domProps: { value: _vm.field[7].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[7], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[8].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
-              _c("strong", [_vm._v(_vm._s(_vm.field[8].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[8].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[8].value,
-                  expression: "field[8].value"
-                }
-              ],
-              staticClass: "nutrition_fields",
-              attrs: { type: "number", placeholder: _vm.field[8].label },
-              domProps: { value: _vm.field[8].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[8], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[9].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
-              _c("strong", [_vm._v(_vm._s(_vm.field[9].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[9].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[9].value,
-                  expression: "field[9].value"
-                }
-              ],
-              staticClass: "nutrition_fields",
-              attrs: { type: "number", placeholder: _vm.field[9].label },
-              domProps: { value: _vm.field[9].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[9], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[10].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
-              _c("strong", [_vm._v(_vm._s(_vm.field[10].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[10].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[10].value,
-                  expression: "field[10].value"
-                }
-              ],
-              staticClass: "nutrition_fields",
-              attrs: { type: "number", placeholder: _vm.field[10].label },
-              domProps: { value: _vm.field[10].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[10], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[11].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
-              _c("strong", [_vm._v(_vm._s(_vm.field[11].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[11].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[11].value,
-                  expression: "field[11].value"
-                }
-              ],
-              staticClass: "nutrition_fields",
-              attrs: { type: "number", placeholder: _vm.field[11].label },
-              domProps: { value: _vm.field[11].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[11], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _vm.field[12].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
-              _c("strong", [_vm._v(_vm._s(_vm.field[12].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[12].label != ""
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.field[12].value,
-                  expression: "field[12].value"
-                }
-              ],
-              staticClass: "nutrition_fields",
-              attrs: { type: "number", placeholder: _vm.field[12].label },
-              domProps: { value: _vm.field[12].value },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.field[12], "value", $event.target.value)
-                }
-              }
-            })
-          : _vm._e(),
-        _c("br")
-      ])
-    ]),
-    _vm._v(" "),
-    _c("hr")
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-19afcff1", module.exports)
-  }
-}
-
-/***/ }),
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
 /* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25229,1068 +22909,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
 
 
 /***/ }),
-/* 123 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "ninja_recipe_table" },
-    [
-      _c("div", { staticClass: "header" }, [
-        _c(
-          "div",
-          {
-            staticStyle: { display: "flex", "justify-content": "space-between" }
-          },
-          [
-            _c("div", { staticStyle: { flex: "1" } }, [
-              _c("h1", [
-                _vm._v(_vm._s(_vm.post_title) + "\n                    "),
-                _c("span", [
-                  _c(
-                    "code",
-                    {
-                      staticClass: "copy",
-                      staticStyle: { cursor: "pointer" },
-                      attrs: {
-                        "data-clipboard-text":
-                          '[ninja_recipe id="' + _vm.table_id + '"]'
-                      }
-                    },
-                    [
-                      _vm._v(
-                        '\n                            [ninja_recipe id="' +
-                          _vm._s(_vm.table_id) +
-                          '"]\n                        '
-                      )
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "table_action_btn" },
-              [
-                _c(
-                  "el-button",
-                  {
-                    staticClass: "common_btn",
-                    attrs: { type: "success", size: "mini" },
-                    on: { click: _vm.updateTableConfig }
-                  },
-                  [_vm._v("\n                    Update\n                ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticStyle: { color: "#fff", "text-decoration": "none" },
-                    attrs: { href: _vm.demo_url, target: "_blank" }
-                  },
-                  [
-                    _c(
-                      "el-button",
-                      {
-                        staticClass: "common_btn",
-                        attrs: { type: "primary", size: "mini" }
-                      },
-                      [_vm._v("Preview")]
-                    )
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "el-row",
-        [
-          _c(
-            "el-col",
-            { staticClass: "field", attrs: { span: 16 } },
-            [
-              _c("h2", [_vm._v("Recipe Title:")]),
-              _vm._v(" "),
-              _c("el-input", {
-                staticClass: "recipe_title",
-                attrs: { placeholder: "Title" },
-                model: {
-                  value: _vm.post_title,
-                  callback: function($$v) {
-                    _vm.post_title = $$v
-                  },
-                  expression: "post_title"
-                }
-              }),
-              _vm._v(" "),
-              _vm.recipe_type === "normal"
-                ? _c("h2", [_vm._v("Normal Recipe")])
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.recipe_type === "advance"
-                ? _c("h2", [_vm._v("Advance Recipe")])
-                : _vm._e(),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "change_type" },
-                [
-                  _c(
-                    "el-select",
-                    {
-                      attrs: { placeholder: "Recipe Type" },
-                      model: {
-                        value: _vm.recipe_type,
-                        callback: function($$v) {
-                          _vm.recipe_type = $$v
-                        },
-                        expression: "recipe_type"
-                      }
-                    },
-                    _vm._l(_vm.recipe_types, function(type, i) {
-                      return _c("el-option", {
-                        key: i,
-                        attrs: { label: type.label, value: type.value }
-                      })
-                    })
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _vm.recipe_type === "normal"
-                ? _c(
-                    "div",
-                    { staticClass: "all_fields" },
-                    [
-                      _c(
-                        "el-tabs",
-                        {
-                          attrs: { type: "border-card", stretch: _vm.stretch }
-                        },
-                        [
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Introduction" } },
-                            [
-                              _c("app-wp-editor", {
-                                model: {
-                                  value: _vm.post_introduction,
-                                  callback: function($$v) {
-                                    _vm.post_introduction = $$v
-                                  },
-                                  expression: "post_introduction"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Ingredients" } },
-                            [
-                              _c("app-wp-editor", {
-                                model: {
-                                  value: _vm.post_ingredient,
-                                  callback: function($$v) {
-                                    _vm.post_ingredient = $$v
-                                  },
-                                  expression: "post_ingredient"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Description" } },
-                            [
-                              _c("app-wp-editor", {
-                                model: {
-                                  value: _vm.post_description,
-                                  callback: function($$v) {
-                                    _vm.post_description = $$v
-                                  },
-                                  expression: "post_description"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("el-tab-pane", { attrs: { label: "Nutrition" } }, [
-                            _c(
-                              "div",
-                              { staticClass: "nutrition_text_label" },
-                              [
-                                _c("span", [_vm._v("Nutrition(as text):")]),
-                                _c("el-switch", {
-                                  attrs: {
-                                    "inactive-color": "#9098B8",
-                                    "active-color": "green"
-                                  },
-                                  model: {
-                                    value: _vm.showNutritionText,
-                                    callback: function($$v) {
-                                      _vm.showNutritionText = $$v
-                                    },
-                                    expression: "showNutritionText"
-                                  }
-                                }),
-                                _c("br")
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "nutrition_text_editor" },
-                              [
-                                _vm.showNutritionText
-                                  ? _c("app-wp-editor", {
-                                      model: {
-                                        value: _vm.nutrition_text,
-                                        callback: function($$v) {
-                                          _vm.nutrition_text = $$v
-                                        },
-                                        expression: "nutrition_text"
-                                      }
-                                    })
-                                  : _vm._e()
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "nutrition_fields_label" },
-                              [
-                                _c("span", [_vm._v("Nutrition(as fields):")]),
-                                _c("el-switch", {
-                                  attrs: {
-                                    "inactive-color": "#9098B8",
-                                    "active-color": "green"
-                                  },
-                                  model: {
-                                    value: _vm.showNutritionFields,
-                                    callback: function($$v) {
-                                      _vm.showNutritionFields = $$v
-                                    },
-                                    expression: "showNutritionFields"
-                                  }
-                                })
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "nutritions_fields" },
-                              _vm._l(_vm.nutritions, function(field, i) {
-                                return _vm.showNutritionFields
-                                  ? _c("app-nutrition", {
-                                      key: i,
-                                      attrs: { field: field }
-                                    })
-                                  : _vm._e()
-                              })
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.recipe_type === "advance"
-                ? _c(
-                    "div",
-                    { staticClass: "all_fields" },
-                    [
-                      _c(
-                        "el-tabs",
-                        {
-                          attrs: { type: "border-card", stretch: _vm.stretch }
-                        },
-                        [
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Introduction" } },
-                            [
-                              _c("app-wp-editor", {
-                                model: {
-                                  value: _vm.post_introduction,
-                                  callback: function($$v) {
-                                    _vm.post_introduction = $$v
-                                  },
-                                  expression: "post_introduction"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Ingredients" } },
-                            [
-                              _c(
-                                "el-row",
-                                { attrs: { gutter: 10 } },
-                                [
-                                  _c(
-                                    "el-col",
-                                    {
-                                      staticStyle: { "padding-left": "54px" },
-                                      attrs: { span: 8 }
-                                    },
-                                    [_c("label", [_vm._v("Ingredient")])]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("el-col", { attrs: { span: 8 } }, [
-                                    _c("label", [_vm._v("Amount")])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("el-col", { attrs: { span: 8 } }, [
-                                    _c("label", [_vm._v("Unit")])
-                                  ])
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "draggable",
-                                {
-                                  on: {
-                                    start: function($event) {
-                                      _vm.drag = true
-                                    },
-                                    end: function($event) {
-                                      _vm.drag = false
-                                    }
-                                  },
-                                  model: {
-                                    value: _vm.ingredients_data,
-                                    callback: function($$v) {
-                                      _vm.ingredients_data = $$v
-                                    },
-                                    expression: "ingredients_data"
-                                  }
-                                },
-                                _vm._l(_vm.ingredients_data, function(
-                                  ingredient_data,
-                                  i
-                                ) {
-                                  return _c(
-                                    "el-row",
-                                    { key: i, attrs: { gutter: 10 } },
-                                    [
-                                      _c(
-                                        "el-col",
-                                        { attrs: { span: 1 } },
-                                        [
-                                          _c(
-                                            "el-button",
-                                            { attrs: { size: "small" } },
-                                            [_vm._v("D")]
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 7 } }, [
-                                        _c(
-                                          "div",
-                                          [
-                                            _c("el-input", {
-                                              attrs: {
-                                                type: "text",
-                                                placeholder: "Ingredients"
-                                              },
-                                              model: {
-                                                value:
-                                                  ingredient_data.ingredient,
-                                                callback: function($$v) {
-                                                  _vm.$set(
-                                                    ingredient_data,
-                                                    "ingredient",
-                                                    $$v
-                                                  )
-                                                },
-                                                expression:
-                                                  "ingredient_data.ingredient"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 8 } }, [
-                                        _c(
-                                          "div",
-                                          [
-                                            _c("app-input-number", {
-                                              attrs: { pcHolder: "Amount" },
-                                              model: {
-                                                value: ingredient_data.amount,
-                                                callback: function($$v) {
-                                                  _vm.$set(
-                                                    ingredient_data,
-                                                    "amount",
-                                                    $$v
-                                                  )
-                                                },
-                                                expression:
-                                                  "ingredient_data.amount"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 7 } }, [
-                                        _c(
-                                          "div",
-                                          [
-                                            _c(
-                                              "el-select",
-                                              {
-                                                staticStyle: { width: "100%" },
-                                                attrs: { placeholder: "Unit" },
-                                                model: {
-                                                  value: ingredient_data.unit,
-                                                  callback: function($$v) {
-                                                    _vm.$set(
-                                                      ingredient_data,
-                                                      "unit",
-                                                      $$v
-                                                    )
-                                                  },
-                                                  expression:
-                                                    "ingredient_data.unit"
-                                                }
-                                              },
-                                              _vm._l(
-                                                _vm.ingredients_unit,
-                                                function(unit, i) {
-                                                  return _c("el-option", {
-                                                    key: i,
-                                                    attrs: {
-                                                      label: unit.label,
-                                                      value: unit.value
-                                                    }
-                                                  })
-                                                }
-                                              )
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 1 } }, [
-                                        _c(
-                                          "span",
-                                          {
-                                            staticStyle: { cursor: "pointer" },
-                                            on: {
-                                              click: function($event) {
-                                                _vm.deleteIngField(i)
-                                              }
-                                            }
-                                          },
-                                          [_vm._v("X")]
-                                        )
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                })
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "el-button",
-                                {
-                                  staticStyle: { "text-align": "center" },
-                                  attrs: {
-                                    type: "success",
-                                    round: "",
-                                    size: "medium"
-                                  },
-                                  on: { click: _vm.addMoreIngField }
-                                },
-                                [_vm._v("+")]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-tab-pane",
-                            { attrs: { label: "Description" } },
-                            [
-                              _c(
-                                "draggable",
-                                {
-                                  on: {
-                                    start: function($event) {
-                                      _vm.drag = true
-                                    },
-                                    end: function($event) {
-                                      _vm.drag = false
-                                    }
-                                  },
-                                  model: {
-                                    value: _vm.descriptions_adv,
-                                    callback: function($$v) {
-                                      _vm.descriptions_adv = $$v
-                                    },
-                                    expression: "descriptions_adv"
-                                  }
-                                },
-                                _vm._l(_vm.descriptions_adv, function(
-                                  description_adv,
-                                  i
-                                ) {
-                                  return _c(
-                                    "el-row",
-                                    { key: i, attrs: { gutter: 15 } },
-                                    [
-                                      _c(
-                                        "el-col",
-                                        { attrs: { span: 1 } },
-                                        [
-                                          _c(
-                                            "el-button",
-                                            { attrs: { size: "small" } },
-                                            [_vm._v("D")]
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "el-col",
-                                        { attrs: { span: 15 } },
-                                        [
-                                          _c("app-wp-editor", {
-                                            model: {
-                                              value: description_adv.desc_text,
-                                              callback: function($$v) {
-                                                _vm.$set(
-                                                  description_adv,
-                                                  "desc_text",
-                                                  $$v
-                                                )
-                                              },
-                                              expression:
-                                                "description_adv.desc_text"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 6 } }, [
-                                        _c("img", {
-                                          staticStyle: { width: "50%" },
-                                          attrs: {
-                                            src: description_adv.desc_img,
-                                            alt: ""
-                                          }
-                                        }),
-                                        _c("br"),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          [
-                                            !description_adv.desc_img
-                                              ? _c(
-                                                  "el-button",
-                                                  {
-                                                    on: {
-                                                      click: function($event) {
-                                                        _vm.upload_img_adv_desc(
-                                                          i
-                                                        )
-                                                      }
-                                                    }
-                                                  },
-                                                  [_vm._v("Upload Image")]
-                                                )
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            description_adv.desc_img
-                                              ? _c(
-                                                  "el-button",
-                                                  {
-                                                    on: {
-                                                      click: function($event) {
-                                                        _vm.upload_img_adv_desc(
-                                                          i
-                                                        )
-                                                      }
-                                                    }
-                                                  },
-                                                  [_vm._v("Change Image")]
-                                                )
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            description_adv.desc_img
-                                              ? _c(
-                                                  "el-button",
-                                                  {
-                                                    on: {
-                                                      click: function($event) {
-                                                        description_adv.desc_img =
-                                                          ""
-                                                      }
-                                                    }
-                                                  },
-                                                  [_vm._v("Remove")]
-                                                )
-                                              : _vm._e()
-                                          ],
-                                          1
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 1 } }, [
-                                        _c(
-                                          "span",
-                                          {
-                                            staticStyle: {
-                                              cursor: "pointer",
-                                              color: "red"
-                                            },
-                                            on: {
-                                              click: function($event) {
-                                                _vm.removeDescAdv(i)
-                                              }
-                                            }
-                                          },
-                                          [_vm._v("X")]
-                                        )
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                })
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "el-row",
-                                [
-                                  _c(
-                                    "el-col",
-                                    [
-                                      _c(
-                                        "el-button",
-                                        {
-                                          attrs: { type: "success", round: "" },
-                                          on: { click: _vm.addDescField }
-                                        },
-                                        [_vm._v("+")]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("el-tab-pane", { attrs: { label: "Nutrition" } }, [
-                            _c(
-                              "div",
-                              { staticClass: "nutrition_text_label" },
-                              [
-                                _c("span", [_vm._v("Nutrition(as text):")]),
-                                _c("el-switch", {
-                                  attrs: {
-                                    "inactive-color": "#9098B8",
-                                    "active-color": "green"
-                                  },
-                                  model: {
-                                    value: _vm.showNutritionText,
-                                    callback: function($$v) {
-                                      _vm.showNutritionText = $$v
-                                    },
-                                    expression: "showNutritionText"
-                                  }
-                                }),
-                                _c("br")
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "nutrition_text_editor" },
-                              [
-                                _vm.showNutritionText
-                                  ? _c("app-wp-editor", {
-                                      model: {
-                                        value: _vm.nutrition_text,
-                                        callback: function($$v) {
-                                          _vm.nutrition_text = $$v
-                                        },
-                                        expression: "nutrition_text"
-                                      }
-                                    })
-                                  : _vm._e()
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "nutrition_fields_label" },
-                              [
-                                _c("span", [_vm._v("Nutritions(as field):")]),
-                                _c("el-switch", {
-                                  attrs: {
-                                    "inactive-color": "#9098B8",
-                                    "active-color": "green"
-                                  },
-                                  model: {
-                                    value: _vm.showNutritionFields,
-                                    callback: function($$v) {
-                                      _vm.showNutritionFields = $$v
-                                    },
-                                    expression: "showNutritionFields"
-                                  }
-                                })
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "nutritions_fields" },
-                              _vm._l(_vm.nutritions, function(field, i) {
-                                return _vm.showNutritionFields
-                                  ? _c("app-nutrition", {
-                                      key: i,
-                                      attrs: { field: field }
-                                    })
-                                  : _vm._e()
-                              })
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                : _vm._e()
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "el-col",
-            { staticClass: "show_preview", attrs: { span: 8 } },
-            [
-              _c(
-                "el-collapse",
-                {
-                  model: {
-                    value: _vm.active_optional_field,
-                    callback: function($$v) {
-                      _vm.active_optional_field = $$v
-                    },
-                    expression: "active_optional_field"
-                  }
-                },
-                [
-                  _c(
-                    "el-collapse-item",
-                    {
-                      attrs: {
-                        title: "Optional Fields",
-                        name: "optional_fields"
-                      }
-                    },
-                    [
-                      _c(
-                        "el-row",
-                        [
-                          _c(
-                            "el-col",
-                            { attrs: { span: 24 } },
-                            [
-                              _c("label", [_vm._v("Select Meal Type")]),
-                              _vm._v(" "),
-                              _c(
-                                "el-select",
-                                {
-                                  staticStyle: { width: "99%" },
-                                  attrs: {
-                                    multiple: "",
-                                    filterable: "",
-                                    "allow-create": "",
-                                    "default-first-option": "",
-                                    placeholder: "Choose Meal Type"
-                                  },
-                                  model: {
-                                    value: _vm.selectedMealType,
-                                    callback: function($$v) {
-                                      _vm.selectedMealType = $$v
-                                    },
-                                    expression: "selectedMealType"
-                                  }
-                                },
-                                _vm._l(_vm.meal_types, function(item, i) {
-                                  return _c("el-option", {
-                                    key: i,
-                                    attrs: {
-                                      label: item.label,
-                                      value: item.value
-                                    }
-                                  })
-                                })
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-col",
-                            { attrs: { span: 12 } },
-                            [
-                              _c("app-input-dropdown", {
-                                attrs: {
-                                  label: "Select Cusine Type",
-                                  pcHolder: "Select Cusine Type",
-                                  recipeTypes: _vm.cusine_types,
-                                  styleObj: "padding-right: 2px; width: 97%;"
-                                },
-                                model: {
-                                  value: _vm.selectedCusineType,
-                                  callback: function($$v) {
-                                    _vm.selectedCusineType = $$v
-                                  },
-                                  expression: "selectedCusineType"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-col",
-                            { attrs: { span: 12 } },
-                            [
-                              _c("app-input-dropdown", {
-                                attrs: {
-                                  label: "Select Preference Type",
-                                  pcHolder: "Select Preference Type",
-                                  recipeTypes: _vm.preference_types,
-                                  styleObj: "padding-left: 2px; width: 97%;"
-                                },
-                                model: {
-                                  value: _vm.selectedPreferenceType,
-                                  callback: function($$v) {
-                                    _vm.selectedPreferenceType = $$v
-                                  },
-                                  expression: "selectedPreferenceType"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-col",
-                            { attrs: { span: 24 } },
-                            [
-                              _c("app-input-number", {
-                                attrs: {
-                                  pcHolder: "How many people serve?",
-                                  label: "How many people serve?"
-                                },
-                                model: {
-                                  value: _vm.totalPeople,
-                                  callback: function($$v) {
-                                    _vm.totalPeople = $$v
-                                  },
-                                  expression: "totalPeople"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "el-col",
-                            { attrs: { span: 24 } },
-                            [
-                              _c("app-input-text", {
-                                attrs: {
-                                  pcHolder: "Total making time",
-                                  label: "Total making time"
-                                },
-                                model: {
-                                  value: _vm.makingTime,
-                                  callback: function($$v) {
-                                    _vm.makingTime = $$v
-                                  },
-                                  expression: "makingTime"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "el-col",
-            { staticClass: "show_featured_image", attrs: { span: 8 } },
-            [
-              _c(
-                "el-collapse",
-                {
-                  on: { change: _vm.handleChange },
-                  model: {
-                    value: _vm.active_featured_image,
-                    callback: function($$v) {
-                      _vm.active_featured_image = $$v
-                    },
-                    expression: "active_featured_image"
-                  }
-                },
-                [
-                  _c(
-                    "el-collapse-item",
-                    {
-                      attrs: { title: "Featured Image", name: "featured_image" }
-                    },
-                    [
-                      _c("hr"),
-                      _vm._v(" "),
-                      _c(
-                        "el-row",
-                        [
-                          _c("el-col", { attrs: { span: 24 } }, [
-                            _c(
-                              "div",
-                              { staticClass: "featured_image_section" },
-                              [
-                                _c("img", {
-                                  staticClass: "feat_img",
-                                  attrs: { src: _vm.featImage, alt: "" }
-                                }),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "feat_img_btn" }, [
-                                  _c(
-                                    "span",
-                                    { staticClass: "upld_btn" },
-                                    [
-                                      !_vm.featImage
-                                        ? _c(
-                                            "el-button",
-                                            { on: { click: _vm.upload_image } },
-                                            [_vm._v("Upload Image")]
-                                          )
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    { staticClass: "img_custom_btn" },
-                                    [
-                                      _vm.featImage
-                                        ? _c(
-                                            "el-button",
-                                            { on: { click: _vm.upload_image } },
-                                            [_vm._v("Change Image")]
-                                          )
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      _vm.featImage
-                                        ? _c(
-                                            "el-button",
-                                            {
-                                              on: {
-                                                click: function($event) {
-                                                  _vm.featImage = ""
-                                                }
-                                              }
-                                            },
-                                            [_vm._v("Remove")]
-                                          )
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  )
-                                ])
-                              ]
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-3f556838", module.exports)
-  }
-}
-
-/***/ }),
+/* 123 */,
 /* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -70828,6 +67447,3557 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(257)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+var __vue_script__ = __webpack_require__(259)
+/* template */
+var __vue_template__ = __webpack_require__(260)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/admin/components/common/NutritionFields.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2d7aa5bd", Component.options)
+  } else {
+    hotAPI.reload("data-v-2d7aa5bd", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(258);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(7)("78defee2", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2d7aa5bd\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2d7aa5bd\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NutritionFields.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 258 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.nutritions {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  margin-bottom: 20px;\n  margin-top: 20px;\n}\n.nutritions div {\n    width: 23%;\n    padding-right: 14px;\n}\n.nutritions div .nutrition_fields_label {\n      display: inline-block;\n      margin-bottom: 7px;\n}\n.nutritions div .nutrition_fields {\n      width: 100%;\n      padding: 5px;\n      border-radius: 3px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 259 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'NutritionFields',
+    props: ['field', 'childIndex'],
+    watch: {
+        field: {
+            handler: function handler(newValue) {
+                this.$emit('input', newValue);
+            },
+
+            deep: true
+        }
+    },
+    computed: {
+        index: {
+            get: function get() {
+                return this.childIndex;
+            },
+            set: function set(newValue) {}
+        }
+    }
+});
+
+/***/ }),
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "nutritions" }, [
+      _c("br"),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[0].label))])
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[0].value,
+              expression: "field[0].value"
+            }
+          ],
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[0].label },
+          domProps: { value: _vm.field[0].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[0], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _vm.field[0].hasOwnProperty("children")
+        ? _c(
+            "div",
+            _vm._l(_vm.field[0].children, function(ch, j) {
+              return _c("div", { key: j }, [
+                _c("label", { staticClass: "nutrition_fields_label" }, [
+                  _c("strong", [_vm._v(_vm._s(ch.label))])
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: ch.value,
+                      expression: "ch.value"
+                    }
+                  ],
+                  staticClass: "nutrition_fields",
+                  attrs: { type: "number", placeholder: ch.label },
+                  domProps: { value: ch.value },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(ch, "value", $event.target.value)
+                    }
+                  }
+                }),
+                _c("br")
+              ])
+            })
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[1].label))])
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[1].value,
+              expression: "field[1].value"
+            }
+          ],
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[1].label },
+          domProps: { value: _vm.field[1].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[1], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[2].label))])
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[2].value,
+              expression: "field[2].value"
+            }
+          ],
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[2].label },
+          domProps: { value: _vm.field[2].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[2], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[3].label))])
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[3].value,
+              expression: "field[3].value"
+            }
+          ],
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[3].label },
+          domProps: { value: _vm.field[3].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[3], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[4].label))])
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[4].value,
+              expression: "field[4].value"
+            }
+          ],
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[4].label },
+          domProps: { value: _vm.field[4].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[4], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[5].label))])
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[5].value,
+              expression: "field[5].value"
+            }
+          ],
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[5].label },
+          domProps: { value: _vm.field[5].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[5], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "nutrition_fields_label" }, [
+          _c("strong", [_vm._v(_vm._s(_vm.field[6].label))])
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.field[6].value,
+              expression: "field[6].value"
+            }
+          ],
+          staticClass: "nutrition_fields",
+          attrs: { type: "number", placeholder: _vm.field[6].label },
+          domProps: { value: _vm.field[6].value },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.field[6], "value", $event.target.value)
+            }
+          }
+        }),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _vm.field[6].hasOwnProperty("children")
+        ? _c(
+            "span",
+            _vm._l(_vm.field[6].children, function(ch, j) {
+              return _c("div", { key: j }, [
+                _c("label", { staticClass: "nutrition_fields_label" }, [
+                  _c("strong", [_vm._v(_vm._s(ch.label))])
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: ch.value,
+                      expression: "ch.value"
+                    }
+                  ],
+                  staticClass: "nutrition_fields",
+                  attrs: { type: "number", placeholder: ch.label },
+                  domProps: { value: ch.value },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(ch, "value", $event.target.value)
+                    }
+                  }
+                }),
+                _c("br")
+              ])
+            })
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[7].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[7].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[7].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[7].value,
+                  expression: "field[7].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[7].label },
+              domProps: { value: _vm.field[7].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[7], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[8].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[8].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[8].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[8].value,
+                  expression: "field[8].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[8].label },
+              domProps: { value: _vm.field[8].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[8], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[9].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[9].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[9].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[9].value,
+                  expression: "field[9].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[9].label },
+              domProps: { value: _vm.field[9].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[9], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[10].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[10].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[10].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[10].value,
+                  expression: "field[10].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[10].label },
+              domProps: { value: _vm.field[10].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[10], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[11].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[11].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[11].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[11].value,
+                  expression: "field[11].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[11].label },
+              domProps: { value: _vm.field[11].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[11], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[12].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[12].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[12].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[12].value,
+                  expression: "field[12].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[12].label },
+              domProps: { value: _vm.field[12].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[12], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm.field[13].label != ""
+          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+              _c("strong", [_vm._v(_vm._s(_vm.field[13].label))])
+            ])
+          : _vm._e(),
+        _c("br"),
+        _vm._v(" "),
+        _vm.field[13].label != ""
+          ? _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.field[13].value,
+                  expression: "field[13].value"
+                }
+              ],
+              staticClass: "nutrition_fields",
+              attrs: { type: "number", placeholder: _vm.field[13].label },
+              domProps: { value: _vm.field[13].value },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.field[13], "value", $event.target.value)
+                }
+              }
+            })
+          : _vm._e(),
+        _c("br")
+      ])
+    ]),
+    _vm._v(" "),
+    _c("hr")
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2d7aa5bd", module.exports)
+  }
+}
+
+/***/ }),
+/* 261 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(262)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+var __vue_script__ = __webpack_require__(264)
+/* template */
+var __vue_template__ = __webpack_require__(265)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/admin/components/views/AllTables.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-53c34e85", Component.options)
+  } else {
+    hotAPI.reload("data-v-53c34e85", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 262 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(263);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(7)("88840f58", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53c34e85\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-53c34e85\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AllTables.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 263 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.wp-ninja-recipe .editor-header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.wp-ninja-recipe .editor-header .section-action {\n    padding-top: 6px;\n}\n.wp-ninja-recipe .editor-header .section-action .addTable {\n      margin-left: 0px;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group {\n      padding-top: 0;\n      margin-bottom: 0;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group input {\n        padding: 5px;\n}\n.wp-ninja-recipe .pull-right {\n  float: right;\n}\n.wp-ninja-recipe .table_form_fields .select_recipe_type {\n  float: right;\n  margin-top: -22px;\n  margin-bottom: 5px;\n}\n.wp-ninja-recipe .filtered_area {\n  background: #fff;\n  height: 70px;\n  padding: 10px;\n}\n.wp-ninja-recipe .filtered_area .preference_type {\n    margin-left: 12px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter {\n    width: 1.333%;\n    float: right;\n    margin-top: 15px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter span {\n      color: #b91313;\n      display: inline-block;\n      width: 25px;\n      height: 25px;\n      cursor: pointer;\n}\n.wp-ninja-recipe .el-select .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 640px) {\n.wp-ninja-recipe .filtered_area .el-col-4 {\n    width: 30%;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 264 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_clipboard__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_clipboard__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'AllTables',
+    components: {
+        'app-delete-table': __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default.a,
+        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default.a
+    },
+    data: function data() {
+        return {
+            search: '',
+            per_page: 10,
+            tableData: [],
+            table_name: '',
+            page_number: 1,
+            tableLoading: false,
+            showFilterSection: false,
+            recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
+            addTableModal: false,
+            selectedRecipe: '',
+            addingTableAjax: false,
+            mealType: '',
+            cusineType: '',
+            preferenceType: '',
+            findMealType: '',
+            findCusineType: '',
+            findPreferenceType: '',
+            meal_types: [{ value: 'Breakfast', label: 'Breakfast' }, { value: 'Lunch', label: 'Lunch' }, { value: 'Dinner', label: 'Dinner' }],
+            cusine_types: [{ value: 'Indian', label: 'Indian' }, { value: 'Chinese', label: 'Chinese' }, { value: 'Thai', label: 'Thai' }],
+            preference_types: [{ value: 'Vegetable', label: 'Vegetable' }, { value: 'Non-vegetable', label: 'Non-vegetable' }],
+            paginate: {
+                total: 0,
+                current_page: 1,
+                last_page: 1,
+                per_page: 10
+            },
+            searchAction: 0
+        };
+    },
+    created: function created() {
+        this.fetchTables(); // fetching the table data when application loads
+        this.clipboardRender();
+    },
+
+    methods: {
+        fetchTables: function fetchTables() {
+            var _this = this;
+
+            this.tableLoading = true;
+
+            var fetchTablesAjaxData = {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'get_tables',
+                per_page: this.paginate.per_page,
+                page_number: this.paginate.current_page,
+                search: this.search,
+                meal_type: this.findMealType,
+                cusine_type: this.findCusineType,
+                preference_type: this.findPreferenceType
+            };
+
+            jQuery.get(ajaxurl, fetchTablesAjaxData).then(function (response) {
+                console.log(response);
+                _this.tableData = response.data.tables;
+                _this.paginate.total = response.data.total;
+            }).fail(function (error) {
+                _this.$notify.error({
+                    title: 'Error',
+                    message: 'This is an error message'
+                });
+            }).always(function () {
+                _this.tableLoading = false;
+            });
+        },
+        addNewTable: function addNewTable() {
+            var _this2 = this;
+
+            this.addingTableAjax = true;
+
+            var addTableAjaxData = {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'add_table',
+                post_title: this.table_name,
+                recipe_type: this.selectedRecipe
+            };
+
+            jQuery.post(ajaxurl, addTableAjaxData).then(function (response) {
+                console.log(response);
+                _this2.$notify.success({
+                    title: 'Success',
+                    message: response.data.message
+                });
+                _this2.$router.push({
+                    name: 'edit_table',
+                    params: {
+                        table_id: response.data.table_id
+                    }
+                });
+            }).fail(function (error) {
+                _this2.$notify.error({
+                    title: 'Error',
+                    message: error.responseJSON.data.message
+                });
+            }).always(function () {
+                _this2.addTableModal = false;
+                _this2.addingTableAjax = false;
+            });
+        },
+        deleteTable: function deleteTable(tableId) {
+            var _this3 = this;
+
+            var deleteAjaxData = {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'delete_table',
+                table_id: tableId
+            };
+
+            jQuery.post(ajaxurl, deleteAjaxData).then(function (response) {
+                _this3.$notify.success({
+                    title: 'Deleted',
+                    message: response.data.message
+                });
+                _this3.total = _this3.total - 1;
+                if (_this3.total == _this3.per_page) {
+                    _this3.page_number = 1;
+                } else if (_this3.total % 2 != 0 && _this3.total % _this3.per_page == 0) {
+                    var res = parseInt(_this3.total / 2);
+                    if (_this3.total - (res * 2 + 1) == 0 && _this3.total != _this3.per_page) {
+                        _this3.page_number = _this3.page_number - 1;
+                    }
+                } else if (_this3.total % 2 == 0 && _this3.total % _this3.per_page == 0) {
+                    var res = parseInt(_this3.total / 2);
+                    if (_this3.total - res * 2 == 0 && _this3.total != _this3.per_page) {
+                        _this3.page_number = _this3.page_number - 1;
+                    }
+                }
+                _this3.fetchTables();
+            });
+        },
+        clipboardRender: function clipboardRender() {
+            var _this4 = this;
+
+            var clipboard = new __WEBPACK_IMPORTED_MODULE_0_clipboard___default.a('.copy');
+            clipboard.on('success', function (e) {
+                _this4.$message({
+                    message: 'Copied to Clipboard!',
+                    type: 'success'
+                });
+            });
+        },
+        goToPage: function goToPage(value) {
+            this.paginate.current_page = value;
+            this.fetchTables();
+        },
+        handleSizeChange: function handleSizeChange(val) {
+            this.paginate.per_page = val;
+            this.fetchTables();
+        }
+    },
+    watch: {
+        search: function search() {
+            this.paginate.current_page = 1;
+            this.fetchTables();
+        },
+        findMealType: function findMealType() {
+            this.fetchTables();
+        },
+        findCusineType: function findCusineType() {
+            this.fetchTables();
+        },
+        findPreferenceType: function findPreferenceType() {
+            this.fetchTables();
+        }
+    }
+});
+
+/***/ }),
+/* 265 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "wp-ninja-recipe" },
+    [
+      _c("div", { staticClass: "editor-header" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "section-action" },
+          [
+            _c("label", { staticClass: "form_group" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.search,
+                    expression: "search"
+                  }
+                ],
+                staticClass: "form_control search_action",
+                attrs: { type: "text", placeholder: "Search" },
+                domProps: { value: _vm.search },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.search = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c(
+              "el-button",
+              {
+                attrs: { size: "mini", type: "success" },
+                on: {
+                  click: function($event) {
+                    _vm.showFilterSection = !_vm.showFilterSection
+                  }
+                }
+              },
+              [_vm._v("Filter")]
+            ),
+            _vm._v(" "),
+            _c(
+              "el-button",
+              {
+                staticClass: "addTable",
+                attrs: { size: "mini", type: "primary" },
+                on: {
+                  click: function($event) {
+                    _vm.addTableModal = true
+                  }
+                }
+              },
+              [_vm._v("Add Table")]
+            )
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _vm.showFilterSection
+        ? _c(
+            "div",
+            { staticClass: "filtered_area" },
+            [
+              _c(
+                "el-row",
+                [
+                  _c(
+                    "el-col",
+                    {
+                      staticStyle: { "margin-right": "10px" },
+                      attrs: { span: 4 }
+                    },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Meal Type",
+                          pcHolder: "Select Meal Type",
+                          recipeTypes: _vm.meal_types,
+                          clearable: true
+                        },
+                        model: {
+                          value: _vm.findMealType,
+                          callback: function($$v) {
+                            _vm.findMealType = $$v
+                          },
+                          expression: "findMealType"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-col",
+                    {
+                      staticStyle: { "margin-right": "10px" },
+                      attrs: { span: 4 }
+                    },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Cusine Type",
+                          pcHolder: "Select Cusine Type",
+                          recipeTypes: _vm.cusine_types,
+                          clearable: true
+                        },
+                        model: {
+                          value: _vm.findCusineType,
+                          callback: function($$v) {
+                            _vm.findCusineType = $$v
+                          },
+                          expression: "findCusineType"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "el-col",
+                    { attrs: { span: 4 } },
+                    [
+                      _c("app-input-dropdown", {
+                        attrs: {
+                          label: "Preference Type",
+                          pcHolder: "Select Preference Type",
+                          recipeTypes: _vm.preference_types,
+                          clearable: true
+                        },
+                        model: {
+                          value: _vm.findPreferenceType,
+                          callback: function($$v) {
+                            _vm.findPreferenceType = $$v
+                          },
+                          expression: "findPreferenceType"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("el-col", { staticClass: "closeFilter" }, [
+                    _c(
+                      "span",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.showFilterSection = false
+                          }
+                        }
+                      },
+                      [_vm._v("X")]
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "el-table",
+        {
+          directives: [
+            {
+              name: "loading",
+              rawName: "v-loading",
+              value: _vm.tableLoading,
+              expression: "tableLoading"
+            }
+          ],
+          staticStyle: { width: "100%", "margin-top": "10px" },
+          attrs: { data: _vm.tableData, border: "" }
+        },
+        [
+          _c("el-table-column", {
+            attrs: { label: "Image", width: "90" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c(
+                      "router-link",
+                      {
+                        attrs: {
+                          to: {
+                            name: "edit_table",
+                            params: { table_id: scope.row.ID }
+                          }
+                        }
+                      },
+                      [
+                        _c("span", [
+                          scope.row.tableConfig &&
+                          scope.row.tableConfig.featuredImage
+                            ? _c("img", {
+                                staticStyle: { width: "100%" },
+                                attrs: {
+                                  src: scope.row.tableConfig.featuredImage
+                                }
+                              })
+                            : _vm._e()
+                        ]),
+                        _vm._v(" "),
+                        _c("span", [
+                          !scope.row.tableConfig.featuredImage
+                            ? _c("img", {
+                                staticStyle: { width: "100%" },
+                                attrs: { src: scope.row.defaultImage }
+                              })
+                            : _vm._e()
+                        ])
+                      ]
+                    )
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Name" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c(
+                      "router-link",
+                      {
+                        attrs: {
+                          to: {
+                            name: "edit_table",
+                            params: { table_id: scope.row.ID }
+                          }
+                        }
+                      },
+                      [
+                        _c("div", [
+                          _c("span", [_vm._v(_vm._s(scope.row.post_title))])
+                        ])
+                      ]
+                    )
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Recipe Type" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    scope.row.recipe_type == "normal"
+                      ? _c("span", [
+                          _vm._v(
+                            "\n                    Normal\n                "
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    scope.row.recipe_type == "advance"
+                      ? _c("span", [
+                          _vm._v(
+                            "\n                    Advance\n                "
+                          )
+                        ])
+                      : _vm._e()
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Meal Type" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return scope.row.tableConfig
+                    ? _vm._l(scope.row.tableConfig.mealType, function(
+                        mealType,
+                        mealType_index
+                      ) {
+                        return _c("span", { key: mealType_index }, [
+                          _vm._v("\n                    " + _vm._s(mealType)),
+                          mealType_index <
+                          scope.row.tableConfig.mealType.length - 1
+                            ? _c("span", [_vm._v(", ")])
+                            : _vm._e()
+                        ])
+                      })
+                    : undefined
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Cusine Type" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return scope.row.tableConfig
+                    ? [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(scope.row.tableConfig.cusineType) +
+                            "\n            "
+                        )
+                      ]
+                    : undefined
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Preference" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return scope.row.tableConfig
+                    ? [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(scope.row.tableConfig.preferenceType) +
+                            "\n            "
+                        )
+                      ]
+                    : undefined
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "ShortCode" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c(
+                      "code",
+                      {
+                        staticClass: "copy",
+                        staticStyle: { cursor: "pointer" },
+                        attrs: {
+                          "data-clipboard-text":
+                            '[ninja_recipe id="' + scope.row.ID + '"]'
+                        }
+                      },
+                      [
+                        _vm._v(
+                          '\n                    [ninja_recipe id="' +
+                            _vm._s(scope.row.ID) +
+                            '"]\n                '
+                        )
+                      ]
+                    )
+                  ]
+                }
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { label: "Actions", width: "180" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c(
+                      "router-link",
+                      {
+                        attrs: {
+                          title: "Edit",
+                          to: {
+                            name: "edit_table",
+                            params: { table_id: scope.row.ID }
+                          }
+                        }
+                      },
+                      [_c("span", [_vm._v("Edit")])]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "el-button el-button--info el-button--mini",
+                        attrs: { href: scope.row.demo_url, target: "_blank" }
+                      },
+                      [_c("i", { staticClass: "el-icon-view" })]
+                    ),
+                    _vm._v(" "),
+                    _c("app-delete-table", {
+                      on: {
+                        delete: function($event) {
+                          _vm.deleteTable(scope.row.ID)
+                        }
+                      }
+                    })
+                  ]
+                }
+              }
+            ])
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "pull-right" },
+        [
+          _c("el-pagination", {
+            attrs: {
+              "current-page": _vm.paginate.current_page,
+              "page-sizes": [10, 20, 50, 100],
+              "page-size": _vm.paginate.per_page,
+              layout: "total, sizes, prev, pager, next, jumper",
+              total: _vm.paginate.total
+            },
+            on: {
+              "size-change": _vm.handleSizeChange,
+              "current-change": _vm.goToPage,
+              "update:currentPage": function($event) {
+                _vm.$set(_vm.paginate, "current_page", $event)
+              }
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-dialog",
+        {
+          attrs: {
+            title: "Add New Recipe Table",
+            visible: _vm.addTableModal,
+            width: "60%"
+          },
+          on: {
+            "update:visible": function($event) {
+              _vm.addTableModal = $event
+            }
+          }
+        },
+        [
+          _c("div", { staticClass: "table_form_fields" }, [
+            _c(
+              "div",
+              { staticClass: "recipe_table_name" },
+              [
+                _c("label", { attrs: { for: "new_table_name" } }, [
+                  _vm._v("Table Name")
+                ]),
+                _vm._v(" "),
+                _c("el-input", {
+                  attrs: {
+                    id: "new_table_name",
+                    type: "text",
+                    placeholder: "Your Table Name"
+                  },
+                  model: {
+                    value: _vm.table_name,
+                    callback: function($$v) {
+                      _vm.table_name = $$v
+                    },
+                    expression: "table_name"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "recipe_categories" },
+              [
+                _c(
+                  "el-row",
+                  [
+                    _c(
+                      "el-col",
+                      { attrs: { span: 12 } },
+                      [
+                        _c("app-input-dropdown", {
+                          attrs: {
+                            pcHolder: "Select Recipe Type",
+                            recipeTypes: _vm.recipe_types,
+                            label: "Recipe Type"
+                          },
+                          model: {
+                            value: _vm.selectedRecipe,
+                            callback: function($$v) {
+                              _vm.selectedRecipe = $$v
+                            },
+                            expression: "selectedRecipe"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass: "dialog-footer",
+              attrs: { slot: "footer" },
+              slot: "footer"
+            },
+            [
+              _c(
+                "el-button",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.addTableModal = false
+                    }
+                  }
+                },
+                [_vm._v("Cancel")]
+              ),
+              _vm._v(" "),
+              _c(
+                "el-button",
+                {
+                  directives: [
+                    {
+                      name: "loading",
+                      rawName: "v-loading",
+                      value: _vm.addingTableAjax,
+                      expression: "addingTableAjax"
+                    }
+                  ],
+                  attrs: { type: "primary" },
+                  on: { click: _vm.addNewTable }
+                },
+                [_vm._v("Add New")]
+              )
+            ],
+            1
+          )
+        ]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "section-header" }, [
+      _c("h1", [_vm._v("All Recipe Tables")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-53c34e85", module.exports)
+  }
+}
+
+/***/ }),
+/* 266 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(267)
+}
+var normalizeComponent = __webpack_require__(5)
+/* script */
+var __vue_script__ = __webpack_require__(269)
+/* template */
+var __vue_template__ = __webpack_require__(270)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/admin/components/views/EditTable.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-b4d467fa", Component.options)
+  } else {
+    hotAPI.reload("data-v-b4d467fa", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 267 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(268);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(7)("5f17cc1c", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b4d467fa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b4d467fa\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditTable.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 268 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 269 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputText_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_NutritionFields_vue__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_NutritionFields_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__common_NutritionFields_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vuedraggable__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vuedraggable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_clipboard__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+// function recursivePrint(data) {
+//     data.forEach(value => {
+//     if (value.hasOwnProperty('children')) {
+//         recursivePrint(value.children);
+//     }
+// });
+// }
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'EditTable',
+    components: {
+        'app-wp-editor': __WEBPACK_IMPORTED_MODULE_0__common_wp_editor_vue___default.a,
+        'app-input-dropdown': __WEBPACK_IMPORTED_MODULE_1__core_InputDropdown_vue___default.a,
+        'app-input-text': __WEBPACK_IMPORTED_MODULE_2__core_InputText_vue___default.a,
+        'app-input-number': __WEBPACK_IMPORTED_MODULE_3__core_InputNumber_vue___default.a,
+        'app-nutrition': __WEBPACK_IMPORTED_MODULE_4__common_NutritionFields_vue___default.a,
+        draggable: __WEBPACK_IMPORTED_MODULE_5_vuedraggable___default.a
+    },
+    data: function data() {
+        return {
+            table_id: this.$route.params.table_id,
+            post_title: '',
+            recipe_type: '',
+            recipe_types: [{ value: 'normal', label: 'Normal' }, { value: 'advance', label: 'Advance' }],
+            meal_types: [{ value: 'Breakfast', label: 'Breakfast' }, { value: 'Lunch', label: 'Lunch' }, { value: 'Dinner', label: 'Dinner' }],
+            cusine_types: [{ value: 'Indian', label: 'Indian' }, { value: 'Thai', label: 'Thai' }, { value: 'Chinese', label: 'Chinese' }],
+            preference_types: [{ value: 'Vegetable', label: 'Vegetable' }, { value: 'Non-vegetable', label: 'Non-vegetable' }],
+            ingredients_data: [{ ingredient: '', amount: '', unit: '' }],
+            ingredients_unit: [{ value: 'TSP', label: 'TSP' }, { value: 'Tbs', label: 'Tbs' }, { value: 'Cup', label: 'Cup' }, { value: 'Kg', label: 'Kg' }, { value: 'Liter', label: 'Liter' }],
+            descriptions_adv: [{ desc_text: '', desc_img: '' }],
+            nutritions: [[{
+                serial: 0, label: 'Total Fat', value: '', children: [{
+                    serial: 1, label: 'Saturated Fat', value: ''
+                }, {
+                    serial: 2, label: 'Trans Fat', value: ''
+                }]
+            }, { serial: 1, label: 'Calories', value: '' }, { serial: 2, label: 'Calories from Fat', value: '' }, { serial: 3, label: 'Cholesterol', value: '' }, { serial: 4, label: 'Sodium', value: '' }, { serial: 5, label: 'Potassium', value: '' }, {
+                serial: 6, label: 'Total Carbohydrate', value: '', children: [{
+                    serial: 1, label: 'Dietary Fibre', value: ''
+                }, {
+                    serial: 2, label: 'Sugars', value: ''
+                }]
+            }, { serial: 7, label: 'Protein', value: '' }, { serial: 8, label: '', value: '' }, { serial: 9, label: '', value: '' }, { serial: 10, label: '', value: '' }, { serial: 11, label: '', value: '' }, { serial: 12, label: '', value: '' }, { serial: 13, label: '', value: '' }], [{ serial: 8, label: 'Vitamin A', value: '' }, { serial: 9, label: 'Vitamin C', value: '' }, { serial: 10, label: 'Calcium', value: '' }, { serial: 11, label: 'Iron', value: '' }, { serial: 12, label: 'Vitamin D', value: '' }, { serial: 13, label: 'Chloride', value: '' }, { serial: 14, label: 'Vitamin E', value: '' }, { serial: 15, label: 'Vitamin K', value: '' }, { serial: 16, label: 'Vitamin B6', value: '' }, { serial: 17, label: 'Vitamin B12', value: '' }, { serial: 18, label: 'Thiamin', value: '' }, { serial: 19, label: 'Riboflavin', value: '' }, { serial: 20, label: 'Niacin', value: '' }, { serial: 21, label: 'Folate', value: '' }], [{ serial: 22, label: 'Biotin', value: '' }, { serial: 23, label: 'Pantothenic Acid', value: '' }, { serial: 24, label: 'Phosphorus', value: '' }, { serial: 25, label: 'Iodine', value: '' }, { serial: 26, label: 'Magnesium', value: '' }, { serial: 26, label: 'Zinc', value: '' }, { serial: 27, label: 'Selenium', value: '' }, { serial: 28, label: 'Copper', value: '' }, { serial: 29, label: 'Manganese', value: '' }, { serial: 30, label: 'Chromium', value: '' }, { serial: 31, label: 'Molybdenum', value: '' }, { serial: 32, label: '', value: '' }, { serial: 33, label: '', value: '' }, { serial: 34, label: '', value: '' }]],
+            stretch: true,
+            upload_img: '',
+            nutrition_text: '',
+            post_ingredient: '',
+            post_description: '',
+            post_introduction: '',
+            post_nutrition: '',
+            post_nutrition_adv: '',
+            selectedMealType: [],
+            selectedCusineType: '',
+            selectedPreferenceType: '',
+            featImage: '',
+            totalPeople: '',
+            makingTime: '',
+            demo_url: '',
+            active_featured_image: ['featured_image'],
+            active_optional_field: ['optional_fields'],
+            showNutritionFields: false,
+            showNutritionText: true
+        };
+    },
+    created: function created() {
+        this.fetchTable();
+        this.clipboardRender();
+    },
+
+    methods: {
+        fetchTable: function fetchTable() {
+            var _this = this;
+
+            var fetchTableAjaxData = {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'get_table',
+                table_id: this.table_id
+            };
+
+            jQuery.get(ajaxurl, fetchTableAjaxData).then(function (response) {
+                console.log(response);
+                _this.post_title = response.data.table.post_title;
+                _this.recipe_type = response.data.table.recipe_type;
+                _this.demo_url = response.data.demo_url;
+                if (response.data.tableConfig) {
+
+                    if (_this.recipe_type == 'normal') {
+
+                        _this.post_introduction = response.data.tableConfig.introduction;
+                        _this.post_description = response.data.tableConfig.description;
+                        _this.nutritions = response.data.tableConfig.nutrition;
+                        _this.post_ingredient = response.data.tableConfig.ingredient;
+                    } else if (_this.recipe_type == 'advance') {
+
+                        _this.post_introduction = response.data.tableConfig.introduction;
+                        _this.descriptions_adv = response.data.tableConfig.description;
+                        _this.nutritions = response.data.tableConfig.nutrition;
+                        _this.ingredients_data = response.data.tableConfig.ingredient;
+                    }
+
+                    _this.selectedMealType = response.data.tableConfig.mealType;
+                    _this.selectedCusineType = response.data.tableConfig.cusineType;
+                    _this.selectedPreferenceType = response.data.tableConfig.preferenceType;
+                    _this.totalPeople = response.data.tableConfig.totalPeople;
+                    _this.featImage = response.data.tableConfig.featuredImage;
+                    _this.nutrition_text = response.data.tableConfig.nutrition.nutrition_text;
+                    _this.nutritions = response.data.tableConfig.nutrition.nutrition_fields;
+                    _this.showNutritionFields = response.data.tableConfig.nutrition.showNutritionFields;
+                    _this.makingTime = response.data.tableConfig.makingTime;
+                }
+            });
+        },
+        updateTableConfig: function updateTableConfig() {
+            var _this2 = this;
+
+            if (this.recipe_type === 'normal') {
+                var introduction = this.post_introduction;
+                var ingredient = this.post_ingredient;
+                var description = this.post_description;
+            } else if (this.recipe_type === 'advance') {
+                var introduction = this.post_introduction;
+                var ingredient = this.ingredients_data;
+                var description = this.descriptions_adv;
+            }
+
+            var featImage = this.featImage;
+
+            var nutrition = {
+                nutrition_text: this.nutrition_text,
+                nutrition_fields: this.nutritions,
+                showNutritionFields: this.showNutritionFields
+            };
+            var tableConfig = {
+                introduction: introduction,
+                ingredient: ingredient,
+                description: description,
+                nutrition: nutrition,
+                mealType: this.selectedMealType,
+                cusineType: this.selectedCusineType,
+                preferenceType: this.selectedPreferenceType,
+                totalPeople: this.totalPeople,
+                featuredImage: featImage,
+                makingTime: this.makingTime
+            };
+
+            console.log(tableConfig);
+
+            var updateTableAjaxData = {
+                action: 'ninja_recipe_ajax_actions',
+                route: 'update_table',
+                table_id: this.table_id,
+                table_config: JSON.stringify(tableConfig),
+                post_title: this.post_title,
+                recipe_type: this.recipe_type
+            };
+
+            jQuery.post(ajaxurl, updateTableAjaxData).then(function (response) {
+                _this2.$notify.success({
+                    title: 'Updated',
+                    message: response.data.message
+                });
+            });
+        },
+        upload_image: function upload_image() {
+            var _this3 = this;
+
+            var button = $(this);
+            var custom_uploader = wp.media({
+
+                title: 'Insert Recipe Image',
+                library: {
+                    type: 'image'
+                },
+                button: {
+                    text: 'Use this image'
+                },
+                multiple: false
+
+            }).on('select', function () {
+                // using the arrow function cause there is a callback(.on) inside function 
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
+                _this3.featImage = attachment.url;
+                console.log('Featured Image is: ' + _this3.featImage);
+            }).open();
+        },
+        upload_img_adv_desc: function upload_img_adv_desc(i) {
+            var _this4 = this;
+
+            var button = $(this);
+            var custom_uploader = wp.media({
+
+                title: 'Insert Description Image',
+                library: {
+                    type: 'image'
+                },
+                button: {
+                    text: 'Use this image'
+                },
+                multiple: false
+
+            }).on('select', function () {
+                // using the arrow function cause there is a callback(.on) inside function 
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
+                _this4.descriptions_adv[i].desc_img = attachment.url;
+            }).open();
+        },
+        addMoreIngField: function addMoreIngField() {
+            this.ingredients_data.push({
+                ingredient: '',
+                amount: '',
+                unit: ''
+            });
+        },
+        deleteIngField: function deleteIngField(index) {
+            this.ingredients_data.splice(index, 1);
+        },
+        addDescField: function addDescField() {
+            this.descriptions_adv.push({
+                desc_text: '',
+                desc_img: ''
+            });
+        },
+        removeDescAdv: function removeDescAdv(index) {
+            this.descriptions_adv.splice(index, 1);
+        },
+        clipboardRender: function clipboardRender() {
+            var _this5 = this;
+
+            var clipboard = new __WEBPACK_IMPORTED_MODULE_6_clipboard___default.a('.copy');
+            clipboard.on('success', function (e) {
+                _this5.$message({
+                    message: 'Copied to Clipboard!',
+                    type: 'success'
+                });
+            });
+        },
+        handleChange: function handleChange(val) {
+            console.log(val);
+        }
+    },
+    watch: {
+        upload_img: function upload_img() {
+            console.log(this.upload_img);
+        }
+    }
+});
+
+/***/ }),
+/* 270 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "ninja_recipe_table" },
+    [
+      _c("div", { staticClass: "header" }, [
+        _c(
+          "div",
+          {
+            staticStyle: { display: "flex", "justify-content": "space-between" }
+          },
+          [
+            _c("div", { staticStyle: { flex: "1" } }, [
+              _c("h1", [
+                _vm._v(_vm._s(_vm.post_title) + "\n                    "),
+                _c("span", [
+                  _c(
+                    "code",
+                    {
+                      staticClass: "copy",
+                      staticStyle: { cursor: "pointer" },
+                      attrs: {
+                        "data-clipboard-text":
+                          '[ninja_recipe id="' + _vm.table_id + '"]'
+                      }
+                    },
+                    [
+                      _vm._v(
+                        '\n                            [ninja_recipe id="' +
+                          _vm._s(_vm.table_id) +
+                          '"]\n                        '
+                      )
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "table_action_btn" },
+              [
+                _c(
+                  "el-button",
+                  {
+                    staticClass: "common_btn",
+                    attrs: { type: "success", size: "mini" },
+                    on: { click: _vm.updateTableConfig }
+                  },
+                  [_vm._v("\n                    Update\n                ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticStyle: { color: "#fff", "text-decoration": "none" },
+                    attrs: { href: _vm.demo_url, target: "_blank" }
+                  },
+                  [
+                    _c(
+                      "el-button",
+                      {
+                        staticClass: "common_btn",
+                        attrs: { type: "primary", size: "mini" }
+                      },
+                      [_vm._v("Preview")]
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "el-row",
+        [
+          _c(
+            "el-col",
+            { staticClass: "field", attrs: { span: 16 } },
+            [
+              _c("h2", [_vm._v("Recipe Title:")]),
+              _vm._v(" "),
+              _c("el-input", {
+                staticClass: "recipe_title",
+                attrs: { placeholder: "Title" },
+                model: {
+                  value: _vm.post_title,
+                  callback: function($$v) {
+                    _vm.post_title = $$v
+                  },
+                  expression: "post_title"
+                }
+              }),
+              _vm._v(" "),
+              _vm.recipe_type === "normal"
+                ? _c("h2", [_vm._v("Normal Recipe")])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.recipe_type === "advance"
+                ? _c("h2", [_vm._v("Advance Recipe")])
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "change_type" },
+                [
+                  _c(
+                    "el-select",
+                    {
+                      attrs: { placeholder: "Recipe Type" },
+                      model: {
+                        value: _vm.recipe_type,
+                        callback: function($$v) {
+                          _vm.recipe_type = $$v
+                        },
+                        expression: "recipe_type"
+                      }
+                    },
+                    _vm._l(_vm.recipe_types, function(type, i) {
+                      return _c("el-option", {
+                        key: i,
+                        attrs: { label: type.label, value: type.value }
+                      })
+                    })
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm.recipe_type === "normal"
+                ? _c(
+                    "div",
+                    { staticClass: "all_fields" },
+                    [
+                      _c(
+                        "el-tabs",
+                        {
+                          attrs: { type: "border-card", stretch: _vm.stretch }
+                        },
+                        [
+                          _c(
+                            "el-tab-pane",
+                            { attrs: { label: "Introduction" } },
+                            [
+                              _c("app-wp-editor", {
+                                model: {
+                                  value: _vm.post_introduction,
+                                  callback: function($$v) {
+                                    _vm.post_introduction = $$v
+                                  },
+                                  expression: "post_introduction"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-tab-pane",
+                            { attrs: { label: "Ingredients" } },
+                            [
+                              _c("app-wp-editor", {
+                                model: {
+                                  value: _vm.post_ingredient,
+                                  callback: function($$v) {
+                                    _vm.post_ingredient = $$v
+                                  },
+                                  expression: "post_ingredient"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-tab-pane",
+                            { attrs: { label: "Description" } },
+                            [
+                              _c("app-wp-editor", {
+                                model: {
+                                  value: _vm.post_description,
+                                  callback: function($$v) {
+                                    _vm.post_description = $$v
+                                  },
+                                  expression: "post_description"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("el-tab-pane", { attrs: { label: "Nutrition" } }, [
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_label" },
+                              [
+                                _c("span", [_vm._v("Nutrition(as text):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
+                                  },
+                                  model: {
+                                    value: _vm.showNutritionText,
+                                    callback: function($$v) {
+                                      _vm.showNutritionText = $$v
+                                    },
+                                    expression: "showNutritionText"
+                                  }
+                                }),
+                                _c("br")
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_editor" },
+                              [
+                                _vm.showNutritionText
+                                  ? _c("app-wp-editor", {
+                                      model: {
+                                        value: _vm.nutrition_text,
+                                        callback: function($$v) {
+                                          _vm.nutrition_text = $$v
+                                        },
+                                        expression: "nutrition_text"
+                                      }
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_fields_label" },
+                              [
+                                _c("span", [_vm._v("Nutrition(as fields):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
+                                  },
+                                  model: {
+                                    value: _vm.showNutritionFields,
+                                    callback: function($$v) {
+                                      _vm.showNutritionFields = $$v
+                                    },
+                                    expression: "showNutritionFields"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutritions_fields" },
+                              _vm._l(_vm.nutritions, function(field, i) {
+                                return _vm.showNutritionFields
+                                  ? _c("app-nutrition", {
+                                      key: i,
+                                      attrs: { field: field, childIndex: i }
+                                    })
+                                  : _vm._e()
+                              })
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.recipe_type === "advance"
+                ? _c(
+                    "div",
+                    { staticClass: "all_fields" },
+                    [
+                      _c(
+                        "el-tabs",
+                        {
+                          attrs: { type: "border-card", stretch: _vm.stretch }
+                        },
+                        [
+                          _c(
+                            "el-tab-pane",
+                            { attrs: { label: "Introduction" } },
+                            [
+                              _c("app-wp-editor", {
+                                model: {
+                                  value: _vm.post_introduction,
+                                  callback: function($$v) {
+                                    _vm.post_introduction = $$v
+                                  },
+                                  expression: "post_introduction"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-tab-pane",
+                            { attrs: { label: "Ingredients" } },
+                            [
+                              _c(
+                                "el-row",
+                                { attrs: { gutter: 10 } },
+                                [
+                                  _c(
+                                    "el-col",
+                                    {
+                                      staticStyle: { "padding-left": "54px" },
+                                      attrs: { span: 8 }
+                                    },
+                                    [_c("label", [_vm._v("Ingredient")])]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("el-col", { attrs: { span: 8 } }, [
+                                    _c("label", [_vm._v("Amount")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("el-col", { attrs: { span: 8 } }, [
+                                    _c("label", [_vm._v("Unit")])
+                                  ])
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "draggable",
+                                {
+                                  on: {
+                                    start: function($event) {
+                                      _vm.drag = true
+                                    },
+                                    end: function($event) {
+                                      _vm.drag = false
+                                    }
+                                  },
+                                  model: {
+                                    value: _vm.ingredients_data,
+                                    callback: function($$v) {
+                                      _vm.ingredients_data = $$v
+                                    },
+                                    expression: "ingredients_data"
+                                  }
+                                },
+                                _vm._l(_vm.ingredients_data, function(
+                                  ingredient_data,
+                                  i
+                                ) {
+                                  return _c(
+                                    "el-row",
+                                    { key: i, attrs: { gutter: 10 } },
+                                    [
+                                      _c(
+                                        "el-col",
+                                        { attrs: { span: 1 } },
+                                        [
+                                          _c(
+                                            "el-button",
+                                            { attrs: { size: "small" } },
+                                            [_vm._v("D")]
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("el-col", { attrs: { span: 7 } }, [
+                                        _c(
+                                          "div",
+                                          [
+                                            _c("el-input", {
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Ingredients"
+                                              },
+                                              model: {
+                                                value:
+                                                  ingredient_data.ingredient,
+                                                callback: function($$v) {
+                                                  _vm.$set(
+                                                    ingredient_data,
+                                                    "ingredient",
+                                                    $$v
+                                                  )
+                                                },
+                                                expression:
+                                                  "ingredient_data.ingredient"
+                                              }
+                                            })
+                                          ],
+                                          1
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("el-col", { attrs: { span: 8 } }, [
+                                        _c(
+                                          "div",
+                                          [
+                                            _c("app-input-number", {
+                                              attrs: { pcHolder: "Amount" },
+                                              model: {
+                                                value: ingredient_data.amount,
+                                                callback: function($$v) {
+                                                  _vm.$set(
+                                                    ingredient_data,
+                                                    "amount",
+                                                    $$v
+                                                  )
+                                                },
+                                                expression:
+                                                  "ingredient_data.amount"
+                                              }
+                                            })
+                                          ],
+                                          1
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("el-col", { attrs: { span: 7 } }, [
+                                        _c(
+                                          "div",
+                                          [
+                                            _c(
+                                              "el-select",
+                                              {
+                                                staticStyle: { width: "100%" },
+                                                attrs: { placeholder: "Unit" },
+                                                model: {
+                                                  value: ingredient_data.unit,
+                                                  callback: function($$v) {
+                                                    _vm.$set(
+                                                      ingredient_data,
+                                                      "unit",
+                                                      $$v
+                                                    )
+                                                  },
+                                                  expression:
+                                                    "ingredient_data.unit"
+                                                }
+                                              },
+                                              _vm._l(
+                                                _vm.ingredients_unit,
+                                                function(unit, i) {
+                                                  return _c("el-option", {
+                                                    key: i,
+                                                    attrs: {
+                                                      label: unit.label,
+                                                      value: unit.value
+                                                    }
+                                                  })
+                                                }
+                                              )
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("el-col", { attrs: { span: 1 } }, [
+                                        _c(
+                                          "span",
+                                          {
+                                            staticStyle: { cursor: "pointer" },
+                                            on: {
+                                              click: function($event) {
+                                                _vm.deleteIngField(i)
+                                              }
+                                            }
+                                          },
+                                          [_vm._v("X")]
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                })
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "el-button",
+                                {
+                                  staticStyle: { "text-align": "center" },
+                                  attrs: {
+                                    type: "success",
+                                    round: "",
+                                    size: "medium"
+                                  },
+                                  on: { click: _vm.addMoreIngField }
+                                },
+                                [_vm._v("+")]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-tab-pane",
+                            { attrs: { label: "Description" } },
+                            [
+                              _c(
+                                "draggable",
+                                {
+                                  on: {
+                                    start: function($event) {
+                                      _vm.drag = true
+                                    },
+                                    end: function($event) {
+                                      _vm.drag = false
+                                    }
+                                  },
+                                  model: {
+                                    value: _vm.descriptions_adv,
+                                    callback: function($$v) {
+                                      _vm.descriptions_adv = $$v
+                                    },
+                                    expression: "descriptions_adv"
+                                  }
+                                },
+                                _vm._l(_vm.descriptions_adv, function(
+                                  description_adv,
+                                  i
+                                ) {
+                                  return _c(
+                                    "el-row",
+                                    { key: i, attrs: { gutter: 15 } },
+                                    [
+                                      _c(
+                                        "el-col",
+                                        { attrs: { span: 1 } },
+                                        [
+                                          _c(
+                                            "el-button",
+                                            { attrs: { size: "small" } },
+                                            [_vm._v("D")]
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "el-col",
+                                        { attrs: { span: 15 } },
+                                        [
+                                          _c("app-wp-editor", {
+                                            model: {
+                                              value: description_adv.desc_text,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  description_adv,
+                                                  "desc_text",
+                                                  $$v
+                                                )
+                                              },
+                                              expression:
+                                                "description_adv.desc_text"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("el-col", { attrs: { span: 6 } }, [
+                                        _c("img", {
+                                          staticStyle: { width: "50%" },
+                                          attrs: {
+                                            src: description_adv.desc_img,
+                                            alt: ""
+                                          }
+                                        }),
+                                        _c("br"),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          [
+                                            !description_adv.desc_img
+                                              ? _c(
+                                                  "el-button",
+                                                  {
+                                                    on: {
+                                                      click: function($event) {
+                                                        _vm.upload_img_adv_desc(
+                                                          i
+                                                        )
+                                                      }
+                                                    }
+                                                  },
+                                                  [_vm._v("Upload Image")]
+                                                )
+                                              : _vm._e(),
+                                            _vm._v(" "),
+                                            description_adv.desc_img
+                                              ? _c(
+                                                  "el-button",
+                                                  {
+                                                    on: {
+                                                      click: function($event) {
+                                                        _vm.upload_img_adv_desc(
+                                                          i
+                                                        )
+                                                      }
+                                                    }
+                                                  },
+                                                  [_vm._v("Change Image")]
+                                                )
+                                              : _vm._e(),
+                                            _vm._v(" "),
+                                            description_adv.desc_img
+                                              ? _c(
+                                                  "el-button",
+                                                  {
+                                                    on: {
+                                                      click: function($event) {
+                                                        description_adv.desc_img =
+                                                          ""
+                                                      }
+                                                    }
+                                                  },
+                                                  [_vm._v("Remove")]
+                                                )
+                                              : _vm._e()
+                                          ],
+                                          1
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("el-col", { attrs: { span: 1 } }, [
+                                        _c(
+                                          "span",
+                                          {
+                                            staticStyle: {
+                                              cursor: "pointer",
+                                              color: "red"
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                _vm.removeDescAdv(i)
+                                              }
+                                            }
+                                          },
+                                          [_vm._v("X")]
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                })
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "el-row",
+                                [
+                                  _c(
+                                    "el-col",
+                                    [
+                                      _c(
+                                        "el-button",
+                                        {
+                                          attrs: { type: "success", round: "" },
+                                          on: { click: _vm.addDescField }
+                                        },
+                                        [_vm._v("+")]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("el-tab-pane", { attrs: { label: "Nutrition" } }, [
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_label" },
+                              [
+                                _c("span", [_vm._v("Nutrition(as text):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
+                                  },
+                                  model: {
+                                    value: _vm.showNutritionText,
+                                    callback: function($$v) {
+                                      _vm.showNutritionText = $$v
+                                    },
+                                    expression: "showNutritionText"
+                                  }
+                                }),
+                                _c("br")
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_text_editor" },
+                              [
+                                _vm.showNutritionText
+                                  ? _c("app-wp-editor", {
+                                      model: {
+                                        value: _vm.nutrition_text,
+                                        callback: function($$v) {
+                                          _vm.nutrition_text = $$v
+                                        },
+                                        expression: "nutrition_text"
+                                      }
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutrition_fields_label" },
+                              [
+                                _c("span", [_vm._v("Nutritions(as field):")]),
+                                _c("el-switch", {
+                                  attrs: {
+                                    "inactive-color": "#9098B8",
+                                    "active-color": "green"
+                                  },
+                                  model: {
+                                    value: _vm.showNutritionFields,
+                                    callback: function($$v) {
+                                      _vm.showNutritionFields = $$v
+                                    },
+                                    expression: "showNutritionFields"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "nutritions_fields" },
+                              _vm._l(_vm.nutritions, function(field, i) {
+                                return _vm.showNutritionFields
+                                  ? _c("app-nutrition", {
+                                      key: i,
+                                      attrs: { field: field, childIndex: i }
+                                    })
+                                  : _vm._e()
+                              })
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-col",
+            { staticClass: "show_preview", attrs: { span: 8 } },
+            [
+              _c(
+                "el-collapse",
+                {
+                  model: {
+                    value: _vm.active_optional_field,
+                    callback: function($$v) {
+                      _vm.active_optional_field = $$v
+                    },
+                    expression: "active_optional_field"
+                  }
+                },
+                [
+                  _c(
+                    "el-collapse-item",
+                    {
+                      attrs: {
+                        title: "Optional Fields",
+                        name: "optional_fields"
+                      }
+                    },
+                    [
+                      _c(
+                        "el-row",
+                        [
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c("label", [_vm._v("Select Meal Type")]),
+                              _vm._v(" "),
+                              _c(
+                                "el-select",
+                                {
+                                  staticStyle: { width: "99%" },
+                                  attrs: {
+                                    multiple: "",
+                                    filterable: "",
+                                    "allow-create": "",
+                                    "default-first-option": "",
+                                    placeholder: "Choose Meal Type"
+                                  },
+                                  model: {
+                                    value: _vm.selectedMealType,
+                                    callback: function($$v) {
+                                      _vm.selectedMealType = $$v
+                                    },
+                                    expression: "selectedMealType"
+                                  }
+                                },
+                                _vm._l(_vm.meal_types, function(item, i) {
+                                  return _c("el-option", {
+                                    key: i,
+                                    attrs: {
+                                      label: item.label,
+                                      value: item.value
+                                    }
+                                  })
+                                })
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c("app-input-dropdown", {
+                                attrs: {
+                                  label: "Select Cusine Type",
+                                  pcHolder: "Select Cusine Type",
+                                  recipeTypes: _vm.cusine_types,
+                                  styleObj: "padding-right: 2px; width: 97%;"
+                                },
+                                model: {
+                                  value: _vm.selectedCusineType,
+                                  callback: function($$v) {
+                                    _vm.selectedCusineType = $$v
+                                  },
+                                  expression: "selectedCusineType"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 12 } },
+                            [
+                              _c("app-input-dropdown", {
+                                attrs: {
+                                  label: "Select Preference Type",
+                                  pcHolder: "Select Preference Type",
+                                  recipeTypes: _vm.preference_types,
+                                  styleObj: "padding-left: 2px; width: 97%;"
+                                },
+                                model: {
+                                  value: _vm.selectedPreferenceType,
+                                  callback: function($$v) {
+                                    _vm.selectedPreferenceType = $$v
+                                  },
+                                  expression: "selectedPreferenceType"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c("app-input-number", {
+                                attrs: {
+                                  pcHolder: "How many people serve?",
+                                  label: "How many people serve?"
+                                },
+                                model: {
+                                  value: _vm.totalPeople,
+                                  callback: function($$v) {
+                                    _vm.totalPeople = $$v
+                                  },
+                                  expression: "totalPeople"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c("app-input-text", {
+                                attrs: {
+                                  pcHolder: "Total making time",
+                                  label: "Total making time"
+                                },
+                                model: {
+                                  value: _vm.makingTime,
+                                  callback: function($$v) {
+                                    _vm.makingTime = $$v
+                                  },
+                                  expression: "makingTime"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-col",
+            { staticClass: "show_featured_image", attrs: { span: 8 } },
+            [
+              _c(
+                "el-collapse",
+                {
+                  on: { change: _vm.handleChange },
+                  model: {
+                    value: _vm.active_featured_image,
+                    callback: function($$v) {
+                      _vm.active_featured_image = $$v
+                    },
+                    expression: "active_featured_image"
+                  }
+                },
+                [
+                  _c(
+                    "el-collapse-item",
+                    {
+                      attrs: { title: "Featured Image", name: "featured_image" }
+                    },
+                    [
+                      _c("hr"),
+                      _vm._v(" "),
+                      _c(
+                        "el-row",
+                        [
+                          _c("el-col", { attrs: { span: 24 } }, [
+                            _c(
+                              "div",
+                              { staticClass: "featured_image_section" },
+                              [
+                                _c("img", {
+                                  staticClass: "feat_img",
+                                  attrs: { src: _vm.featImage, alt: "" }
+                                }),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "feat_img_btn" }, [
+                                  _c(
+                                    "span",
+                                    { staticClass: "upld_btn" },
+                                    [
+                                      !_vm.featImage
+                                        ? _c(
+                                            "el-button",
+                                            { on: { click: _vm.upload_image } },
+                                            [_vm._v("Upload Image")]
+                                          )
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "img_custom_btn" },
+                                    [
+                                      _vm.featImage
+                                        ? _c(
+                                            "el-button",
+                                            { on: { click: _vm.upload_image } },
+                                            [_vm._v("Change Image")]
+                                          )
+                                        : _vm._e(),
+                                      _vm._v(" "),
+                                      _vm.featImage
+                                        ? _c(
+                                            "el-button",
+                                            {
+                                              on: {
+                                                click: function($event) {
+                                                  _vm.featImage = ""
+                                                }
+                                              }
+                                            },
+                                            [_vm._v("Remove")]
+                                          )
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-b4d467fa", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

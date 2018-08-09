@@ -201,8 +201,8 @@
 
 <script>
 import Clipboard from 'clipboard'
-import DeleteTable from './actions/DeleteTable.vue'
-import InputDropdown from './core/InputDropdown.vue'
+import DeleteTable from '../actions/DeleteTable.vue'
+import InputDropdown from '../core/InputDropdown.vue'
 
 export default {
     name: 'AllTables',
