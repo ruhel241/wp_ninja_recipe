@@ -240,7 +240,7 @@ export default {
             cusine_types: [
                 { value: 'Indian', label: 'Indian' },
                 { value: 'Chinese', label: 'Chinese' }, 
-                { value: 'Maxican', label: 'Maxican' }
+                { value: 'Thai', label: 'Thai' }
             ],
             preference_types: [
                 { value: 'Vegetable', label: 'Vegetable' },

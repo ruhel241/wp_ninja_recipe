@@ -47,16 +47,26 @@
 
 
 
-		<?php foreach ($nutrition_fields as $nutrition_field) : ?>
-				<?php foreach($nutrition_field as $key => $nutrition ):?>
-					<p> <?php echo $key .'=>'. $nutrition['label']; ?></p>
+
+		<?php $calories = array();
+		foreach ($nutrition_fields as $nutrition_field) : ?>
+
+				<?php foreach($nutrition_field as $nutrition ):?>
+					
+					<?php 
+						
+							echo $calories[] =  $nutrition['label'];
+						
+						
+					?> <br>
+
 
 				<?php endforeach; ?>
+
 		<?php endforeach; ?>
 			
 		
-
-
+		
 
 
 
