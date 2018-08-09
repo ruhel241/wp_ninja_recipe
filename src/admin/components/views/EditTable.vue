@@ -280,11 +280,11 @@
 </template>
 
 <script>
-import wp_editor from './common/_wp_editor.vue'
-import InputDropdown from './core/InputDropdown.vue'
-import InputText from './core/InputText.vue'
-import InputNumber from './core/InputNumber.vue'
-import NutritionFields from './NutritionFields.vue'
+import wp_editor from '../common/_wp_editor.vue'
+import InputDropdown from '../core/InputDropdown.vue'
+import InputText from '../core/InputText.vue'
+import InputNumber from '../core/InputNumber.vue'
+import NutritionFields from '../common/NutritionFields.vue'
 import draggable from 'vuedraggable'
 import Clipboard from 'clipboard'
 
@@ -336,49 +336,50 @@ export default {
             ],
             nutritions: [
                 [
-                    { serial: 0, label: 'Fat', value: '' },
-                    { serial: 1, label: 'Saturated Fat', value: '' },
-                    { serial: 2, label: 'Trans Fat', value: '' },
-                    { serial: 3, label: 'Cholesterol', value: '' },
-                    { serial: 4, label: 'Sodium', value: '' },
-                    { serial: 5, label: 'Carbohydrate', value: '' },
-                    { serial: 6, label: 'Fibre', value: '' },
-                    { serial: 7, label: 'Sugars', value: '' },
-                    { serial: 8, label: 'Protein', value: '' },
-                    { serial: 9, label: 'Vitamin A', value: '' },
-                    { serial: 10, label: 'Vitamin C', value: '' },
-                    { serial: 11, label: 'Calcium', value: '' },
-                    { serial: 12, label: 'Iron', value: '' }
+                    { serial: 0, label: 'Calories', value: '' },
+                    { serial: 1, label: 'Calories from fat', value: '' },
+                    { serial: 2, label: 'Total Fat', value: '' },
+                    { serial: 3, label: 'Saturated Fat', value: '' },
+                    { serial: 4, label: 'Trans Fat', value: '' },
+                    { serial: 5, label: 'Cholesterol', value: '' },
+                    { serial: 6, label: 'Sodium', value: '' },
+                    { serial: 7, label: 'Potassium', value: '' },
+                    { serial: 8, label: 'Total Carbohydrate', value: '' },
+                    { serial: 9, label: 'Dietary Fibre', value: '' },
+                    { serial: 10, label: 'Sugars', value: '' },
+                    { serial: 11, label: 'Protein', value: '' },
+                    { serial: 12, label: '', value: '' },
                 ],
                 [
-                    { serial: 13, label: 'Chloride', value: '' },
-                    { serial: 14, label: 'Vitamin D', value: '' },
-                    { serial: 15, label: 'Vitamin E', value: '' },
-                    { serial: 16, label: 'Vitamin K', value: '' },
-                    { serial: 17, label: 'Vitamin B6', value: '' },
-                    { serial: 18, label: 'Vitamin B12', value: '' },
-                    { serial: 21, label: 'Thiamin', value: '' },
-                    { serial: 22, label: 'Riboflavin', value: '' },
-                    { serial: 23, label: 'Niacin', value: '' },
-                    { serial: 24, label: 'Folate', value: '' },
-                    { serial: 25, label: 'Biotin', value: '' },
-                    { serial: 26, label: 'Pantothenic Acid', value: '' },
-                    { serial: 27, label: 'Phosphorus', value: '' }
+                    { serial: 13, label: 'Vitamin A', value: '' },
+                    { serial: 14, label: 'Vitamin C', value: '' },
+                    { serial: 15, label: 'Calcium', value: '' },
+                    { serial: 16, label: 'Iron', value: '' },
+                    { serial: 17, label: 'Vitamin D', value: '' },
+                    { serial: 18, label: 'Chloride', value: '' },
+                    { serial: 19, label: 'Vitamin E', value: '' },
+                    { serial: 20, label: 'Vitamin K', value: '' },
+                    { serial: 21, label: 'Vitamin B6', value: '' },
+                    { serial: 22, label: 'Vitamin B12', value: '' },
+                    { serial: 23, label: 'Thiamin', value: '' },
+                    { serial: 24, label: 'Riboflavin', value: '' },
+                    { serial: 25, label: 'Niacin', value: '' },
+                    { serial: 26, label: 'Folate', value: '' },
                 ],
                 [
-                    { serial: 28, label: 'Iodine', value: '' },
-                    { serial: 29, label: 'Magnesium', value: '' },
-                    { serial: 30, label: 'Zinc', value: '' },
-                    { serial: 31, label: 'Selenium', value: '' },
-                    { serial: 32, label: 'Copper', value: '' },
-                    { serial: 33, label: 'Manganese', value: '' },
-                    { serial: 34, label: 'Chromium', value: '' },
-                    { serial: 35, label: 'Molybdenum', value: '' },
-                    { serial: 36, label: '', value: '' },
-                    { serial: 37, label: '', value: '' },
+                    { serial: 27, label: 'Biotin', value: '' },
+                    { serial: 28, label: 'Pantothenic Acid', value: '' },
+                    { serial: 29, label: 'Phosphorus', value: '' },
+                    { serial: 30, label: 'Iodine', value: '' },
+                    { serial: 31, label: 'Magnesium', value: '' },
+                    { serial: 32, label: 'Zinc', value: '' },
+                    { serial: 33, label: 'Selenium', value: '' },
+                    { serial: 34, label: 'Copper', value: '' },
+                    { serial: 35, label: 'Manganese', value: '' },
+                    { serial: 36, label: 'Chromium', value: '' },
+                    { serial: 37, label: 'Molybdenum', value: '' },
                     { serial: 38, label: '', value: '' },
-                    { serial: 39, label: '', value: '' },
-                    { serial: 40, label: '', value: '' }
+                    { serial: 37, label: '', value: '' },
                 ]
             ],
             stretch: true,
