@@ -725,6 +725,13 @@ export default {
             border: none;
             box-shadow: none;
         }
+        .el-select__input {
+            background-color: transparent;
+        }
+
+        ::placeholder {
+            color: #C2C4CC;
+        }
     }
 
     .show_featured_image {
