@@ -7,17 +7,21 @@
                 <h1>All Recipe Tables</h1>
             </div>
             <div class="section-action">
+
                 <label class="form_group">
                     <input type="text" class="form_control search_action" placeholder="Search" v-model="search">
+                    <i class="el-icon-search"></i>
                 </label>
                 <el-button size="mini" type="success" @click="showFilterSection = !showFilterSection">Filter</el-button>
                 <el-button size="mini" type="primary" @click="addTableModal=true" class="addTable">Add Table</el-button>
+                 
             </div>
         </div>
 
         <hr>
 
         <div class="filtered_area" v-if="showFilterSection">
+
             <el-row>
                 <el-col :span="4" style="margin-right: 10px;">
                     <app-input-dropdown 
@@ -50,6 +54,7 @@
                     <span @click="showFilterSection=false">X</span>
                 </el-col>
             </el-row>
+
         </div>
 
         <!-- Table -->
@@ -136,11 +141,11 @@
 
             </el-table-column> 
 
-            <el-table-column label="Actions" width="180">
+            <el-table-column label="Actions" width="190">
                 
                 <template slot-scope="scope">
-                    <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }">
-                        <span>Edit</span>
+                    <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }" class="el-button el-button--primary el-button--mini">
+                        <i class="el-icon-edit"></i>
                     </router-link>
                     <a :href="scope.row.demo_url"  target="_blank" class="el-button el-button--info el-button--mini">
                         <i class="el-icon-view"></i>
@@ -409,9 +414,7 @@ export default {
 </script>
 
 <style lang="scss">
-
 .wp-ninja-recipe {
-
     .editor-header {
         display: flex;
         justify-content: space-between;
@@ -426,6 +429,12 @@ export default {
                 input {
                     padding: 5px;
                 }
+            }
+            .el-icon-search {
+                position: relative;
+                top: 0;
+                right: 30px;
+                font-size: 16px;
             }
         }
     }
@@ -466,7 +475,10 @@ export default {
     .el-select .el-input__inner {
         background: #fff;
     }
+}
 
+.el-message {
+    z-index: 99999 !important;
 }
 
 @media (max-width: 640px) {
@@ -476,7 +488,16 @@ export default {
                 width: 30%;
             }
         }
+        .editor-header {
+            .section-action {
+                .el-icon-search {
+                    position: absolute;
+                    top: 70px;
+                    right: 177px;
+                    font-size: 16px;
+                }
+            }
+        }
     }
-}
-    
+}   
 </style>

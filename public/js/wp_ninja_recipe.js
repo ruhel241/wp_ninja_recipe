@@ -16686,7 +16686,8 @@ module.exports = "../fonts/vendor/element-ui/lib/theme-chalk/element-icons.ttf?6
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(76);
-module.exports = __webpack_require__(252);
+__webpack_require__(252);
+module.exports = __webpack_require__(253);
 
 
 /***/ }),
@@ -20010,7 +20011,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.wp-ninja-recipe .editor-header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.wp-ninja-recipe .editor-header .section-action {\n    padding-top: 6px;\n}\n.wp-ninja-recipe .editor-header .section-action .addTable {\n      margin-left: 0px;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group {\n      padding-top: 0;\n      margin-bottom: 0;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group input {\n        padding: 5px;\n}\n.wp-ninja-recipe .pull-right {\n  float: right;\n}\n.wp-ninja-recipe .table_form_fields .select_recipe_type {\n  float: right;\n  margin-top: -22px;\n  margin-bottom: 5px;\n}\n.wp-ninja-recipe .filtered_area {\n  background: #fff;\n  height: 70px;\n  padding: 10px;\n}\n.wp-ninja-recipe .filtered_area .preference_type {\n    margin-left: 12px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter {\n    width: 1.333%;\n    float: right;\n    margin-top: 15px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter span {\n      color: #b91313;\n      display: inline-block;\n      width: 25px;\n      height: 25px;\n      cursor: pointer;\n}\n.wp-ninja-recipe .el-select .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 640px) {\n.wp-ninja-recipe .filtered_area .el-col-4 {\n    width: 30%;\n}\n}\n", ""]);
+exports.push([module.i, "\n.wp-ninja-recipe .editor-header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.wp-ninja-recipe .editor-header .section-action {\n    padding-top: 6px;\n}\n.wp-ninja-recipe .editor-header .section-action .addTable {\n      margin-left: 0px;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group {\n      padding-top: 0;\n      margin-bottom: 0;\n}\n.wp-ninja-recipe .editor-header .section-action .form_group input {\n        padding: 5px;\n}\n.wp-ninja-recipe .editor-header .section-action .el-icon-search {\n      position: relative;\n      top: 0;\n      right: 30px;\n      font-size: 16px;\n}\n.wp-ninja-recipe .pull-right {\n  float: right;\n}\n.wp-ninja-recipe .table_form_fields .select_recipe_type {\n  float: right;\n  margin-top: -22px;\n  margin-bottom: 5px;\n}\n.wp-ninja-recipe .filtered_area {\n  background: #fff;\n  height: 70px;\n  padding: 10px;\n}\n.wp-ninja-recipe .filtered_area .preference_type {\n    margin-left: 12px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter {\n    width: 1.333%;\n    float: right;\n    margin-top: 15px;\n}\n.wp-ninja-recipe .filtered_area .closeFilter span {\n      color: #b91313;\n      display: inline-block;\n      width: 25px;\n      height: 25px;\n      cursor: pointer;\n}\n.wp-ninja-recipe .el-select .el-input__inner {\n  background: #fff;\n}\n.el-message {\n  z-index: 99999 !important;\n}\n@media (max-width: 640px) {\n.wp-ninja-recipe .filtered_area .el-col-4 {\n    width: 30%;\n}\n.wp-ninja-recipe .editor-header .section-action .el-icon-search {\n    position: absolute;\n    top: 70px;\n    right: 177px;\n    font-size: 16px;\n}\n}\n", ""]);
 
 // exports
 
@@ -20060,6 +20061,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__actions_DeleteTable_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__core_InputDropdown_vue__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -20829,7 +20835,9 @@ var render = function() {
                     _vm.search = $event.target.value
                   }
                 }
-              })
+              }),
+              _vm._v(" "),
+              _c("i", { staticClass: "el-icon-search" })
             ]),
             _vm._v(" "),
             _c(
@@ -21184,7 +21192,7 @@ var render = function() {
           }),
           _vm._v(" "),
           _c("el-table-column", {
-            attrs: { label: "Actions", width: "180" },
+            attrs: { label: "Actions", width: "190" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -21193,6 +21201,8 @@ var render = function() {
                     _c(
                       "router-link",
                       {
+                        staticClass:
+                          "el-button el-button--primary el-button--mini",
                         attrs: {
                           title: "Edit",
                           to: {
@@ -21201,7 +21211,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_c("span", [_vm._v("Edit")])]
+                      [_c("i", { staticClass: "el-icon-edit" })]
                     ),
                     _vm._v(" "),
                     _c(
@@ -21482,7 +21492,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .ing_drag_btn {\n      padding: 13px;\n}\n.ninja_recipe_table .field .all_fields .ing_drag_btn span .el-icon-rank {\n        color: black;\n}\n.ninja_recipe_table .field .all_fields .ing_delete_btn {\n      padding: 13px;\n}\n.ninja_recipe_table .field .all_fields .ing_delete_btn span .el-icon-rank {\n        color: black;\n}\n.ninja_recipe_table .field .all_fields .desc_drag_btn {\n      padding: 13px;\n}\n.ninja_recipe_table .field .all_fields .desc_drag_btn span .el-icon-rank {\n        color: black;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area {\n      padding-left: 0;\n      padding-right: 0;\n      width: auto;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area .desc_delete_btn {\n        padding: 13px;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area .desc_delete_btn span .el-icon-rank {\n          color: black;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_preview .el-select__input {\n    border: none;\n    -webkit-box-shadow: none;\n            box-shadow: none;\n}\n.ninja_recipe_table .show_preview .el-select__input {\n    background-color: transparent;\n}\n.ninja_recipe_table .show_preview ::-webkit-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview :-ms-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview ::-ms-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview ::placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview :-ms-input-placeholder {\n    /* Internet Explorer 10-11 */\n    color: #C2C4CC;\n}\n.ninja_recipe_table .show_preview ::-ms-input-placeholder {\n    /* Microsoft Edge */\n    color: #C2C4CC;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n.el-message {\n  z-index: 99999 !important;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
 
 // exports
 
@@ -21790,6 +21800,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -21798,14 +21829,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-// function recursivePrint(data) {
-//     data.forEach(value => {
-//     if (value.hasOwnProperty('children')) {
-//         recursivePrint(value.children);
-//     }
-// });
-// }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'EditTable',
@@ -22916,13 +22939,19 @@ var render = function() {
       _vm.field[0].hasOwnProperty("children")
         ? _c(
             "div",
-            { staticStyle: { display: "flex", width: "48%" } },
+            {
+              staticStyle: {
+                display: "flex",
+                width: "48.5%",
+                "padding-right": "0px"
+              }
+            },
             _vm._l(_vm.field[0].children, function(ch, j) {
               return _c(
                 "div",
                 {
                   key: j,
-                  staticStyle: { width: "100%", "padding-right": "5px" }
+                  staticStyle: { width: "100%", "padding-right": "14px" }
                 },
                 [
                   _c("label", { staticClass: "nutrition_fields_label" }, [
@@ -22957,7 +22986,7 @@ var render = function() {
           )
         : _vm._e(),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticStyle: { "padding-right": "14px" } }, [
         _c("label", { staticClass: "nutrition_fields_label" }, [
           _c("strong", [_vm._v(_vm._s(_vm.field[1].label))])
         ]),
@@ -23140,13 +23169,13 @@ var render = function() {
       _vm.field[6].hasOwnProperty("children")
         ? _c(
             "span",
-            { staticStyle: { display: "flex", width: "48%" } },
+            { staticStyle: { display: "flex", width: "48.5%" } },
             _vm._l(_vm.field[6].children, function(ch, j) {
               return _c(
                 "div",
                 {
                   key: j,
-                  staticStyle: { width: "100%", "padding-right": "5px" }
+                  staticStyle: { width: "100%", "padding-right": "14px" }
                 },
                 [
                   _c("label", { staticClass: "nutrition_fields_label" }, [
@@ -23351,16 +23380,14 @@ var render = function() {
         _c("br")
       ]),
       _vm._v(" "),
-      _c("div", [
-        _vm.field[12].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+      _vm.field[12].label != ""
+        ? _c("div", [
+            _c("label", { staticClass: "nutrition_fields_label" }, [
               _c("strong", [_vm._v(_vm._s(_vm.field[12].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[12].label != ""
-          ? _c("input", {
+            ]),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
               directives: [
                 {
                   name: "model",
@@ -23380,21 +23407,19 @@ var render = function() {
                   _vm.$set(_vm.field[12], "value", $event.target.value)
                 }
               }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
+            }),
+            _c("br")
+          ])
+        : _vm._e(),
       _vm._v(" "),
-      _c("div", [
-        _vm.field[13].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+      _vm.field[13].label != ""
+        ? _c("div", [
+            _c("label", { staticClass: "nutrition_fields_label" }, [
               _c("strong", [_vm._v(_vm._s(_vm.field[13].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[13].label != ""
-          ? _c("input", {
+            ]),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
               directives: [
                 {
                   name: "model",
@@ -23414,10 +23439,10 @@ var render = function() {
                   _vm.$set(_vm.field[13], "value", $event.target.value)
                 }
               }
-            })
-          : _vm._e(),
-        _c("br")
-      ])
+            }),
+            _c("br")
+          ])
+        : _vm._e()
     ]),
     _vm._v(" "),
     _c("hr")
@@ -25583,7 +25608,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "el-tab-pane",
-                            { attrs: { label: "Description" } },
+                            { attrs: { label: "Instruction" } },
                             [
                               _c("app-wp-editor", {
                                 model: {
@@ -25773,8 +25798,15 @@ var render = function() {
                                         [
                                           _c(
                                             "el-button",
-                                            { attrs: { size: "small" } },
-                                            [_vm._v("D")]
+                                            {
+                                              staticClass: "ing_drag_btn",
+                                              attrs: { size: "small" }
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "el-icon-rank"
+                                              })
+                                            ]
                                           )
                                         ],
                                         1
@@ -25872,20 +25904,30 @@ var render = function() {
                                         )
                                       ]),
                                       _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 1 } }, [
-                                        _c(
-                                          "span",
-                                          {
-                                            staticStyle: { cursor: "pointer" },
-                                            on: {
-                                              click: function($event) {
-                                                _vm.deleteIngField(i)
+                                      _c(
+                                        "el-col",
+                                        { attrs: { span: 1 } },
+                                        [
+                                          _c(
+                                            "el-button",
+                                            {
+                                              staticClass: "ing_delete_btn",
+                                              attrs: { size: "small" },
+                                              on: {
+                                                click: function($event) {
+                                                  _vm.deleteIngField(i)
+                                                }
                                               }
-                                            }
-                                          },
-                                          [_vm._v("X")]
-                                        )
-                                      ])
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "el-icon-delete"
+                                              })
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
                                     ],
                                     1
                                   )
@@ -25911,7 +25953,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "el-tab-pane",
-                            { attrs: { label: "Description" } },
+                            { attrs: { label: "Instruction" } },
                             [
                               _c(
                                 "draggable",
@@ -25946,8 +25988,15 @@ var render = function() {
                                         [
                                           _c(
                                             "el-button",
-                                            { attrs: { size: "small" } },
-                                            [_vm._v("D")]
+                                            {
+                                              staticClass: "desc_drag_btn",
+                                              attrs: { size: "small" }
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "el-icon-rank"
+                                              })
+                                            ]
                                           )
                                         ],
                                         1
@@ -26039,23 +26088,33 @@ var render = function() {
                                         )
                                       ]),
                                       _vm._v(" "),
-                                      _c("el-col", { attrs: { span: 1 } }, [
-                                        _c(
-                                          "span",
-                                          {
-                                            staticStyle: {
-                                              cursor: "pointer",
-                                              color: "red"
-                                            },
-                                            on: {
-                                              click: function($event) {
-                                                _vm.removeDescAdv(i)
+                                      _c(
+                                        "el-col",
+                                        {
+                                          staticClass: "desc_dtn_btn_area",
+                                          attrs: { span: 1 }
+                                        },
+                                        [
+                                          _c(
+                                            "el-button",
+                                            {
+                                              staticClass: "desc_delete_btn",
+                                              attrs: { size: "small" },
+                                              on: {
+                                                click: function($event) {
+                                                  _vm.removeDescAdv(i)
+                                                }
                                               }
-                                            }
-                                          },
-                                          [_vm._v("X")]
-                                        )
-                                      ])
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "el-icon-delete"
+                                              })
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
                                     ],
                                     1
                                   )
@@ -70993,6 +71052,12 @@ if (false) {
 
 /***/ }),
 /* 252 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 253 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
