@@ -729,7 +729,16 @@ export default {
             background-color: transparent;
         }
 
-        ::placeholder {
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #C2C4CC;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #C2C4CC;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
             color: #C2C4CC;
         }
     }
