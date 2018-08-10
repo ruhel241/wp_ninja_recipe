@@ -87,3 +87,4 @@ add_action('plugins_loaded', function() {
 	(new WPNinjaRecipe)->boot();
 });
 
+

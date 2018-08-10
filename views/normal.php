@@ -14,8 +14,26 @@
 
 		<div class="time_serving"> 
 			<span class="making_time"> Making Time: <?php  echo $recipeMetaData['makingTime']; ?> </span>
-			<span class="serving_people"> Serving People:  <?php  echo $recipeMetaData['totalPeople']; ?> </span>
+			<span class="serving_people"> Serving People:  <?php  echo $servingPeople; ?> </span>
 		</div>
+
+
+		<div class="meal_type"> 
+			<h2> Meal Type: </h2> 
+			<?php echo implode(', ', $recipeMetaData['mealType']); ?>
+			
+		</div>
+
+		<div class="cusine_type"> 
+			<h2> Cusine Type: </h2> 
+			<?php echo $recipeMetaData['cusineType']; ?>
+		</div>
+
+		<div class="preference_type"> 
+			<h2> Preference Type: </h2> 
+				<?php echo $recipeMetaData['preferenceType']; ?>
+		</div>
+
 
 
 		<div class="ingredient">

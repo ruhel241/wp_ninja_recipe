@@ -39,6 +39,7 @@
 		.hr_thick{
 			border:none; 
 			border-bottom: solid 1px #333; 
+			margin: 0;
 		}
 		.green {
 				color: #029E74;
@@ -71,7 +72,7 @@
 		}
 
 		.fact_section_2{
-			border-bottom: solid 1em;
+			// border-bottom: solid 1em;
 			padding-bottom: 11px;
 			 .cooked_label{
 			  font-size: 16px;
@@ -85,21 +86,26 @@
 		}
 
 		.fact_section_3 {
+			clear:both;
 			.cooked_label{
 			  font-size: 15px;
 			  color:black;
 			}
-			.cooked_fact_fifty{
-				display:inline-block; 
-				width: 50%;
+
+			.cooked_parent{
+				display:flex;
+				.cooked_fact_fifty{
+					flex: 1;
+				}
 			}
-			
+	
 		}
 		
 		.fact_section_4 {
 			p {
 				font-size: 14px !important;
    				padding-top: 18px !important;
+   				display:inline-block;
 			}
 		}
 

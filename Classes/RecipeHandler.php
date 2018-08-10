@@ -77,7 +77,8 @@ class RecipeHandler
 		$post 	    = get_post($tableId);
 		$recipeMetaData = get_post_meta($tableId, '_ninija_recipe_table_config', true);
 		
-		$recipeTypeDisplay = $post->post_content; 
+		$recipeTypeDisplay = $post->post_content;
+
 			
   		if( !$attributes || !$tableId || !$post || !$recipeMetaData ){
 
@@ -88,12 +89,13 @@ class RecipeHandler
 			Nutrition items
   		**/
   		$nutrition_text = $recipeMetaData['nutrition']['nutrition_text'];
+		$nutrition_fields = $recipeMetaData['nutrition']['nutrition_fields'];
+  		$servingPeople	 = $recipeMetaData['totalPeople']; 
 
-  		$nutrition_fields = $recipeMetaData['nutrition']['nutrition_fields'];
 
-  		if(isset($nutrition_fields)){
-  			include(NINJA_RECIPE_PLUGIN_DIR_PATH.'Classes/nutrition.php');
-  		}
+  		// if(isset($nutrition_fields)){
+  		// 	include(NINJA_RECIPE_PLUGIN_DIR_PATH.'Classes/nutrition.php');
+  		// }
   		
 		ob_start();
 		
