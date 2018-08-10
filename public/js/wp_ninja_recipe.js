@@ -22916,13 +22916,19 @@ var render = function() {
       _vm.field[0].hasOwnProperty("children")
         ? _c(
             "div",
-            { staticStyle: { display: "flex", width: "48%" } },
+            {
+              staticStyle: {
+                display: "flex",
+                width: "48.5%",
+                "padding-right": "0px"
+              }
+            },
             _vm._l(_vm.field[0].children, function(ch, j) {
               return _c(
                 "div",
                 {
                   key: j,
-                  staticStyle: { width: "100%", "padding-right": "5px" }
+                  staticStyle: { width: "100%", "padding-right": "14px" }
                 },
                 [
                   _c("label", { staticClass: "nutrition_fields_label" }, [
@@ -22957,7 +22963,7 @@ var render = function() {
           )
         : _vm._e(),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticStyle: { "padding-right": "14px" } }, [
         _c("label", { staticClass: "nutrition_fields_label" }, [
           _c("strong", [_vm._v(_vm._s(_vm.field[1].label))])
         ]),
@@ -23140,13 +23146,13 @@ var render = function() {
       _vm.field[6].hasOwnProperty("children")
         ? _c(
             "span",
-            { staticStyle: { display: "flex", width: "48%" } },
+            { staticStyle: { display: "flex", width: "48.5%" } },
             _vm._l(_vm.field[6].children, function(ch, j) {
               return _c(
                 "div",
                 {
                   key: j,
-                  staticStyle: { width: "100%", "padding-right": "5px" }
+                  staticStyle: { width: "100%", "padding-right": "14px" }
                 },
                 [
                   _c("label", { staticClass: "nutrition_fields_label" }, [
@@ -23351,16 +23357,14 @@ var render = function() {
         _c("br")
       ]),
       _vm._v(" "),
-      _c("div", [
-        _vm.field[12].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+      _vm.field[12].label != ""
+        ? _c("div", [
+            _c("label", { staticClass: "nutrition_fields_label" }, [
               _c("strong", [_vm._v(_vm._s(_vm.field[12].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[12].label != ""
-          ? _c("input", {
+            ]),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
               directives: [
                 {
                   name: "model",
@@ -23380,21 +23384,19 @@ var render = function() {
                   _vm.$set(_vm.field[12], "value", $event.target.value)
                 }
               }
-            })
-          : _vm._e(),
-        _c("br")
-      ]),
+            }),
+            _c("br")
+          ])
+        : _vm._e(),
       _vm._v(" "),
-      _c("div", [
-        _vm.field[13].label != ""
-          ? _c("label", { staticClass: "nutrition_fields_label" }, [
+      _vm.field[13].label != ""
+        ? _c("div", [
+            _c("label", { staticClass: "nutrition_fields_label" }, [
               _c("strong", [_vm._v(_vm._s(_vm.field[13].label))])
-            ])
-          : _vm._e(),
-        _c("br"),
-        _vm._v(" "),
-        _vm.field[13].label != ""
-          ? _c("input", {
+            ]),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
               directives: [
                 {
                   name: "model",
@@ -23414,10 +23416,10 @@ var render = function() {
                   _vm.$set(_vm.field[13], "value", $event.target.value)
                 }
               }
-            })
-          : _vm._e(),
-        _c("br")
-      ])
+            }),
+            _c("br")
+          ])
+        : _vm._e()
     ]),
     _vm._v(" "),
     _c("hr")
