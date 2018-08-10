@@ -59,7 +59,6 @@ class WPNinjaRecipe
 
 	public function enqueueScripts()
 	{
-			
 		wp_register_style( 'ninja_recipe_style', NINJA_RECIPE_PUBLIC_DIR_URL.'css/style.css' , '', NINJA_RECIPE_PLUGIN_DIR_VERSION); 
 		wp_enqueue_style( 'ninja_recipe_style' );
 	}
@@ -71,6 +70,8 @@ class WPNinjaRecipe
 			wp_enqueue_editor();
 			wp_enqueue_media();
 		}
+		wp_register_style( 'admin_recipe_style', NINJA_RECIPE_PUBLIC_DIR_URL.'css/admin.css' , '', NINJA_RECIPE_PLUGIN_DIR_VERSION); 
+		wp_enqueue_style( 'admin_recipe_style' );
 	}
 
 

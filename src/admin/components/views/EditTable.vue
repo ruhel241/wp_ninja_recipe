@@ -721,6 +721,10 @@ export default {
         .el-collapse {
             border-top: 0px;
         }
+        .el-select__input {
+            border: none;
+            box-shadow: none;
+        }
     }
 
     .show_featured_image {

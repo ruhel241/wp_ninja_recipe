@@ -16686,7 +16686,8 @@ module.exports = "../fonts/vendor/element-ui/lib/theme-chalk/element-icons.ttf?6
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(76);
-module.exports = __webpack_require__(252);
+__webpack_require__(252);
+module.exports = __webpack_require__(256);
 
 
 /***/ }),
@@ -21184,7 +21185,7 @@ var render = function() {
           }),
           _vm._v(" "),
           _c("el-table-column", {
-            attrs: { label: "Actions", width: "180" },
+            attrs: { label: "Actions", width: "190" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -21193,6 +21194,8 @@ var render = function() {
                     _c(
                       "router-link",
                       {
+                        staticClass:
+                          "el-button el-button--primary el-button--mini",
                         attrs: {
                           title: "Edit",
                           to: {
@@ -21201,7 +21204,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_c("span", [_vm._v("Edit")])]
+                      [_c("i", { staticClass: "el-icon-edit" })]
                     ),
                     _vm._v(" "),
                     _c(
@@ -21482,7 +21485,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-left: 93px;\n    padding-top: 13px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_preview .el-select__input {\n    border: none;\n    -webkit-box-shadow: none;\n            box-shadow: none;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
 
 // exports
 
@@ -70995,6 +70998,15 @@ if (false) {
 
 /***/ }),
 /* 252 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

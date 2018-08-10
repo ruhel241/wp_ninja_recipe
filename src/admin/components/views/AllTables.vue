@@ -136,11 +136,11 @@
 
             </el-table-column> 
 
-            <el-table-column label="Actions" width="180">
+            <el-table-column label="Actions" width="190">
                 
                 <template slot-scope="scope">
-                    <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }">
-                        <span>Edit</span>
+                    <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }" class="el-button el-button--primary el-button--mini">
+                        <i class="el-icon-edit"></i>
                     </router-link>
                     <a :href="scope.row.demo_url"  target="_blank" class="el-button el-button--info el-button--mini">
                         <i class="el-icon-view"></i>
@@ -409,7 +409,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .wp-ninja-recipe {
 
     .editor-header {
