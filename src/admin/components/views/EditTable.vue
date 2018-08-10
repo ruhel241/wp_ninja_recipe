@@ -54,7 +54,7 @@
                             <app-wp-editor v-model="post_ingredient"></app-wp-editor>
                         </el-tab-pane>
 
-                        <el-tab-pane label="Description">
+                        <el-tab-pane label="Instruction">
                             <app-wp-editor v-model="post_description"></app-wp-editor>
                         </el-tab-pane>
 
@@ -108,7 +108,9 @@
                                 <el-row :gutter="10" v-for="(ingredient_data, i) in ingredients_data" :key="i">
 
                                     <el-col :span="1">
-                                        <el-button size="small">D</el-button>
+                                        <el-button size="small" class="ing_drag_btn">
+                                            <i class="el-icon-rank"></i>
+                                        </el-button>
                                     </el-col>
                                     <el-col :span="7">
                                         <div>
@@ -137,7 +139,9 @@
                                     </el-col>
 
                                     <el-col :span="1">
-                                        <span style="cursor: pointer" @click="deleteIngField(i)">X</span>
+                                        <el-button size="small" class="ing_delete_btn" @click="deleteIngField(i)">
+                                            <i class="el-icon-delete"></i>
+                                        </el-button>
                                     </el-col>
 
                                 </el-row>
@@ -145,11 +149,13 @@
                             <el-button type="success" round size="medium" style="text-align: center" @click="addMoreIngField">+</el-button>
                         </el-tab-pane>
 
-                        <el-tab-pane label="Description">
+                        <el-tab-pane label="Instruction">
                             <draggable v-model="descriptions_adv" @start="drag=true" @end="drag=false">
                                 <el-row :gutter="15" v-for="(description_adv, i) in descriptions_adv" :key="i">
                                     <el-col :span="1">
-                                        <el-button size="small">D</el-button>
+                                        <el-button size="small" class="desc_drag_btn">
+                                            <i class="el-icon-rank"></i>
+                                        </el-button>
                                     </el-col>
                                     <el-col :span="15">
                                         <app-wp-editor v-model="description_adv.desc_text"></app-wp-editor>
@@ -162,8 +168,10 @@
                                             <el-button @click="description_adv.desc_img = '';" v-if="description_adv.desc_img">Remove</el-button>
                                         </div>
                                     </el-col>
-                                    <el-col :span="1">
-                                        <span style="cursor: pointer; color: red;" @click="removeDescAdv(i)">X</span>
+                                    <el-col :span="1" class="desc_dtn_btn_area">
+                                        <el-button size="small" class="desc_delete_btn" @click="removeDescAdv(i)">
+                                            <i class="el-icon-delete"></i>
+                                        </el-button>
                                     </el-col>
                                 </el-row>
                             </draggable>
@@ -175,25 +183,34 @@
                         </el-tab-pane>
 
                         <el-tab-pane label="Nutrition">
+
                             <div class="nutrition_text_label">
                                 <span>Nutrition(as text):</span><el-switch v-model="showNutritionText" inactive-color="#9098B8" active-color="green"></el-switch><br />
                             </div>
+
                             <div class="nutrition_text_editor">
-                            <app-wp-editor
-                                v-model="nutrition_text"
-                                v-if="showNutritionText"></app-wp-editor>
+
+                                <app-wp-editor
+                                    v-model="nutrition_text"
+                                    v-if="showNutritionText"></app-wp-editor>
+
                             </div>
                             <div class="nutrition_fields_label">
+
                                 <span>Nutritions(as field):</span><el-switch v-model="showNutritionFields" inactive-color="#9098B8" active-color="green"></el-switch>
+                            
                             </div>
                             <div class="nutritions_fields">
+
                                 <app-nutrition
                                     v-for="(field, i) of nutritions"
                                     :key="i" 
                                     :field="field"
                                     :childIndex="i"
                                     v-if="showNutritionFields"></app-nutrition>
+
                             </div>
+
                         </el-tab-pane>
 
                     </el-tabs>
@@ -202,6 +219,7 @@
             </el-col>
 
             <el-col class="show_preview" :span="8">
+
                 <el-collapse v-model="active_optional_field">
                     <el-collapse-item title="Optional Fields" name="optional_fields">
                         <el-row>
@@ -253,8 +271,10 @@
                         </el-row>
                     </el-collapse-item>
                 </el-collapse>
+
             </el-col>
             <el-col class="show_featured_image" :span="8">
+
                 <el-collapse v-model="active_featured_image" @change="handleChange">
                     <el-collapse-item title="Featured Image" name="featured_image">
                         <hr>
@@ -276,6 +296,7 @@
                         </el-row>
                     </el-collapse-item>
                 </el-collapse>
+
             </el-col>
         </el-row>
     </div>
@@ -289,14 +310,6 @@ import InputNumber from '../core/InputNumber.vue'
 import NutritionFields from '../common/NutritionFields.vue'
 import draggable from 'vuedraggable'
 import Clipboard from 'clipboard'
-
-// function recursivePrint(data) {
-//     data.forEach(value => {
-//     if (value.hasOwnProperty('children')) {
-//         recursivePrint(value.children);
-//     }
-// });
-// }
 
 export default {
     name: 'EditTable',
@@ -436,7 +449,6 @@ export default {
     created() {
         this.fetchTable();
         this.clipboardRender();
-
     },
     methods: {
         fetchTable() {
@@ -483,6 +495,7 @@ export default {
                         this.nutritions = response.data.tableConfig.nutrition.nutrition_fields;
                         this.showNutritionFields = response.data.tableConfig.nutrition.showNutritionFields;
                         this.makingTime = response.data.tableConfig.makingTime;
+
                     }
                 }
             )
@@ -676,6 +689,43 @@ export default {
                 margin-bottom: 7px;
                 margin-top: 10px;
             }
+            .ing_drag_btn {
+                padding: 13px;
+                span {
+                    .el-icon-rank {
+                        color: black;
+                    }
+                }
+            }
+            .ing_delete_btn {
+                padding: 13px;
+                span {
+                    .el-icon-rank {
+                        color: black;
+                    }
+                }
+            }
+            .desc_drag_btn {
+                padding: 13px;
+                span {
+                    .el-icon-rank {
+                        color: black;
+                    }
+                }
+            }
+            .desc_dtn_btn_area {
+                padding-left: 0;
+                padding-right: 0;
+                width: auto;
+                .desc_delete_btn {
+                    padding: 13px;
+                    span {
+                        .el-icon-rank {
+                            color: black;
+                        }
+                    }
+                }
+            }
             .featured_image_section {
                 .feat_img {
                     width: 50%;
@@ -794,6 +844,10 @@ export default {
     .el-input__inner {
         background: #fff;
     }
+}
+
+.el-message {
+    z-index: 99999 !important;
 }
 
 @media (max-width: 600px) {
