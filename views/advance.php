@@ -50,8 +50,12 @@
 			<h3>Instruction: </h3>
 			<ol>
 				<?php foreach($recipeMetaData['description'] as $description):?>
-					<li> <?php  echo $description['desc_text']; ?> </li><br/>
-					<img src="<?php echo $description['desc_img'];?>"> <br/><br/><br/><br/>
+					<li> 
+						<?php  echo $description['desc_text']; ?> <br/><br/>
+						<?php if($description['desc_img']):?>
+								<img src="<?php echo $description['desc_img'];?>"> <br/><br/><br/><br/>
+						<?php endif; ?>
+					</li>
 				<?php endforeach; ?>
 			</ol>
 		</div>
