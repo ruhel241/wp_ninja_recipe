@@ -33,7 +33,9 @@ export default {
 <style scoped>
 .ing_amnt_field {
     width: 99%;
-    padding: 19px;
     border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 14px;
 }
 </style>

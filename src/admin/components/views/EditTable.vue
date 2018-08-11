@@ -27,7 +27,7 @@
         <!-- Body -->
         <el-row>
             
-            <el-col class="field" :span="16">
+            <el-col class="field" :span="17">
                 <h2>Recipe Title:</h2>
                 <el-input placeholder="Title" v-model="post_title" class="recipe_title"></el-input>
                 <h2 v-if="recipe_type==='normal'">Normal Recipe</h2>
@@ -218,7 +218,7 @@
 
             </el-col>
 
-            <el-col class="show_preview" :span="8">
+            <el-col class="show_preview" :span="7">
 
                 <el-collapse v-model="active_optional_field">
                     <el-collapse-item title="Optional Fields" name="optional_fields">
@@ -261,6 +261,8 @@
                                     v-model="totalPeople"
                                     pcHolder="How many people serve?"
                                     label="How many people serve?"></app-input-number>
+                                <!-- <label>How many people serve?</label>
+                                <input type="number" placeholder="How many people serve?" v-model="totalPeople"> -->
                             </el-col>
                             <el-col :span="24">
                                 <app-input-text
@@ -273,7 +275,7 @@
                 </el-collapse>
 
             </el-col>
-            <el-col class="show_featured_image" :span="8">
+            <el-col class="show_featured_image" :span="7">
 
                 <el-collapse v-model="active_featured_image" @change="handleChange">
                     <el-collapse-item title="Featured Image" name="featured_image">
