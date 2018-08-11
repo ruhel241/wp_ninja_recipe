@@ -131,7 +131,7 @@
 
             </el-table-column>
 
-            <el-table-column label="ShortCode">
+            <el-table-column label="ShortCode" width="200">
 
                 <template slot-scope="scope">
                     <code class="copy" :data-clipboard-text='`[ninja_recipe id="${scope.row.ID}"]`' style="cursor: pointer;">
