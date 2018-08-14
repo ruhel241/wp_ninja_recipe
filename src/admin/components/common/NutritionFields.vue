@@ -5,11 +5,9 @@
             <label class="nutrition_fields_label"><strong>{{ field[0].label }}</strong></label><br>
             <input type="number" :placeholder="field[0].label" v-model="field[0].value" class="nutrition_fields"><br>
         </div>
-        <div v-if="field[0].hasOwnProperty('children')" style="display: flex; width: 50%; padding-right: 0px;">
-            <div v-for="(ch, j) in field[0].children" :key="j" style="width: 100%; padding-right: 14px">
-                <label class="nutrition_fields_label"><strong>{{ ch.label }}</strong></label>
-                <input type="number" :placeholder="ch.label" v-model="ch.value" class="nutrition_fields"><br>
-            </div>
+        <div v-if="field[0].hasOwnProperty('children')" v-for="(ch) in field[0].children" :key="ch.label">
+            <label class="nutrition_fields_label"><strong>{{ ch.label }}</strong></label>
+            <input type="number" :placeholder="ch.label" v-model="ch.value" class="nutrition_fields"><br>
         </div>
         <div style="padding-right: 14px"> 
             <label class="nutrition_fields_label"><strong>{{ field[1].label }}</strong></label><br>
@@ -35,12 +33,10 @@
             <label class="nutrition_fields_label"><strong>{{ field[6].label }}</strong></label><br>
             <input type="number" :placeholder="field[6].label" v-model="field[6].value" class="nutrition_fields"><br>
         </div>
-        <span v-if="field[6].hasOwnProperty('children')"  style="display: flex; width: 50%">
-            <div v-for="(ch, j) in field[6].children" :key="j" style="width: 100%; padding-right: 14px">
-                <label class="nutrition_fields_label"><strong>{{ ch.label }}</strong></label>
-                <input type="number" :placeholder="ch.label" v-model="ch.value" class="nutrition_fields"><br>
-            </div>
-        </span>
+        <div v-if="field[6].hasOwnProperty('children')" v-for="(str) in field[6].children" :key="str.label">
+            <label class="nutrition_fields_label"><strong>{{ str.label }}</strong></label>
+            <input type="number" :placeholder="str.label" v-model="str.value" class="nutrition_fields"><br>
+        </div>
         <div>
             <label v-if="field[7].label!='' " class="nutrition_fields_label"><strong>{{ field[7].label }}</strong></label><br>
             <input v-if="field[7].label!='' " type="number" :placeholder="field[7].label" v-model="field[7].value" class="nutrition_fields"><br>

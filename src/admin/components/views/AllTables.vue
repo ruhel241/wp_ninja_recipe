@@ -58,169 +58,48 @@
         </div>
 
         <!-- Table -->
-        <el-table 
-            :data="tableData"
-            style="width: 100%; margin-top: 10px;"
-            v-loading="tableLoading"
-            border>
-
-            <el-table-column label="Image" width="90">
-
-                <template
-                    slot-scope="scope">
-                    <router-link
-                        :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
-                        <span><img v-if="scope.row.tableConfig && scope.row.tableConfig.featuredImage" :src=scope.row.tableConfig.featuredImage style="width: 100%;"></span>
-                        <span><img v-if="!scope.row.tableConfig.featuredImage" :src=scope.row.defaultImage style="width: 100%;"></span>
-                    </router-link>
-                </template>
-
-            </el-table-column>
-
-
-            <el-table-column label="Name">
-
-                <template
-                    slot-scope="scope">
-                    <router-link 
-                        :to="{name: 'edit_table', params: { table_id: scope.row.ID } }">
-                        <div>
-                            <span>{{ scope.row.post_title }}</span>
-                        </div>
-                    </router-link>
-                </template>
-
-            </el-table-column>  
-
-            <el-table-column label="Recipe Type">
-
-                <template slot-scope="scope">
-                    <span v-if="scope.row.recipe_type=='normal'">
-                        Normal
-                    </span>
-                    <span v-if="scope.row.recipe_type=='advance'">
-                        Advance
-                    </span>
-                </template> 
-
-            </el-table-column> 
-
-            <el-table-column label="Meal Type">
-                
-                <template slot-scope="scope" v-if="scope.row.tableConfig">
-                    <span v-for="(mealType, mealType_index) in scope.row.tableConfig.mealType" :key="mealType_index">
-                        {{mealType}}<span v-if="mealType_index < scope.row.tableConfig.mealType.length-1">, </span>
-                    </span>    
-                </template>
-
-            </el-table-column>
-
-            <el-table-column label="Cusine Type">
-                
-                <template slot-scope="scope" v-if="scope.row.tableConfig">
-                    {{ scope.row.tableConfig.cusineType }}
-                </template>
-
-            </el-table-column>
-
-            <el-table-column label="Preference">
-                
-                <template slot-scope="scope" v-if="scope.row.tableConfig">
-                    {{ scope.row.tableConfig.preferenceType }}
-                </template>
-
-            </el-table-column>
-
-            <el-table-column label="ShortCode" width="200">
-
-                <template slot-scope="scope">
-                    <code class="copy" :data-clipboard-text='`[ninja_recipe id="${scope.row.ID}"]`' style="cursor: pointer;">
-                        [ninja_recipe id="{{ scope.row.ID }}"]
-                    </code>
-                </template>
-
-            </el-table-column> 
-
-            <el-table-column label="Actions" width="190">
-                
-                <template slot-scope="scope">
-                    <router-link title="Edit" :to="{ name: 'edit_table', params: { table_id: scope.row.ID} }" class="el-button el-button--primary el-button--mini">
-                        <i class="el-icon-edit"></i>
-                    </router-link>
-                    <a :href="scope.row.demo_url"  target="_blank" class="el-button el-button--info el-button--mini">
-                        <i class="el-icon-view"></i>
-                    </a>
-                    <app-delete-table @delete="deleteTable(scope.row.ID)"></app-delete-table>
-                </template>
-
-            </el-table-column>
-
-        </el-table>
+        <app-table
+            :tableData="tableData"
+            :tableLoading="tableLoading"
+            @removeTable="deleteTable($event)"></app-table>
 
         <!-- Pagination -->
         <div class="pull-right">
-            <el-pagination
-                    @size-change="handleSizeChange"
-                    @current-change="goToPage"
-                    :current-page.sync="paginate.current_page"
-                    :page-sizes="[10, 20, 50, 100]"
-                    :page-size="paginate.per_page"
-                    layout="total, sizes, prev, pager, next, jumper"
-                    :total="paginate.total">
-            </el-pagination>
+            <app-pagination
+                :paginate="paginate"
+                @paginateData="paginateFunc($event)"></app-pagination>
         </div>
 
-         <!-- Dialog for Adding Table -->
-        <el-dialog
-            title="Add New Recipe Table"
-            :visible.sync="addTableModal"
-            width="60%">
-                <div class="table_form_fields">
-
-                    <div class="recipe_table_name">
-                        <label for="new_table_name">Table Name</label>
-                        <el-input id="new_table_name" type="text" placeholder="Your Table Name" v-model="table_name"></el-input>
-                    </div>
-
-                    <div class="recipe_categories">
-                        <el-row>
-                            <el-col :span="12">
-                                <app-input-dropdown 
-                                    pcHolder="Select Recipe Type"
-                                    v-model="selectedRecipe"
-                                    :recipeTypes="recipe_types"
-                                    label="Recipe Type"></app-input-dropdown>
-                            </el-col>
-                        </el-row>
-                    </div>
-                    
-                </div>
-                <span slot="footer" class="dialog-footer">
-                    <el-button @click="addTableModal=false">Cancel</el-button>
-                    <el-button type="primary" @click="addNewTable" v-loading="addingTableAjax">Add New</el-button>
-                </span>
-        </el-dialog>
+        <!-- Dialog for Adding Table -->
+        <app-add-table
+            :addTableModal="addTableModal"
+            :recipe_types="recipe_types"
+            :addingTableAjax="addingTableAjax"
+            @addNewTable="addNewTable($event)"></app-add-table>
 
     </div>
 </template>
 
 <script>
 import Clipboard from 'clipboard'
-import DeleteTable from '../actions/DeleteTable.vue'
 import InputDropdown from '../core/InputDropdown.vue'
+import Pagination from '../core/Pagination.vue'
+import ListAllTable from '../core/_ListAllTable.vue'
+import AddTable from '../core/_AddTable.vue'
 
 export default {
     name: 'AllTables',
     components: {
-        'app-delete-table': DeleteTable,
-        'app-input-dropdown': InputDropdown
+        'app-input-dropdown': InputDropdown,
+        'app-pagination': Pagination,
+        'app-table': ListAllTable,
+        'app-add-table': AddTable
     },
     data() {
         return {
             search: '',
             per_page: 10,
             tableData: [],
-            table_name: '',
             page_number: 1,
             tableLoading: false,
             showFilterSection: false,
@@ -229,7 +108,6 @@ export default {
                 { value: 'advance', label: 'Advance' }
             ],
             addTableModal: false,
-            selectedRecipe: '',
             addingTableAjax: false,
             mealType: '',
             cusineType: '',
@@ -251,13 +129,13 @@ export default {
                 { value: 'Vegetable', label: 'Vegetable' },
                 { value: 'Non-vegetable', label: 'Non-vegetable' }
             ],
+            searchAction: 0,
             paginate: {
                 total: 0, 
                 current_page: 1,
                 last_page: 1,
                 per_page: 10
-            },
-            searchAction: 0
+            }
         }
     },
     created() {
@@ -301,14 +179,14 @@ export default {
                     }
                 )
         },
-        addNewTable() {
+        addNewTable(val) {
             this.addingTableAjax = true
 
             let addTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'add_table',
-                post_title: this.table_name,
-                recipe_type: this.selectedRecipe 
+                post_title: val.tableName,
+                recipe_type: val.selectedRecipe 
             }
 
             jQuery.post(ajaxurl, addTableAjaxData)
@@ -385,14 +263,10 @@ export default {
                 });
             });
         },
-        goToPage(value) {
-            this.paginate.current_page = value;
+        paginateFunc(val) {
+            this.paginate = val;
             this.fetchTables();
-        },
-        handleSizeChange(val) {
-            this.paginate.per_page = val;
-            this.fetchTables();
-        },
+        }
     },
     watch: {
         search() {

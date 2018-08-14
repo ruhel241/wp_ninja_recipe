@@ -103,18 +103,19 @@
                                     <label>Unit</label>
                                 </el-col>
                             </el-row>
-                            <draggable v-model="ingredients_data" @start="drag=true" @end="drag=false">
+                            <draggable v-model="ingredients_data" :options="{handle:'.handle', animation: 150}">
             
                                 <el-row :gutter="10" v-for="(ingredient_data, i) in ingredients_data" :key="i">
 
                                     <el-col :span="1">
-                                        <el-button size="small" class="ing_drag_btn">
+                                        <el-button size="small" class="ing_drag_btn handle">
                                             <i class="el-icon-rank"></i>
                                         </el-button>
                                     </el-col>
                                     <el-col :span="7">
                                         <div>
-                                            <el-input type="text" placeholder="Ingredients" v-model="ingredient_data.ingredient"></el-input>
+                                            <input type="text" placeholder="Ingredients" v-model="ingredient_data.ingredient" style="width: 100%; padding: 4px;">
+                                            <!-- <el-input type="text" placeholder="Ingredients" v-model="ingredient_data.ingredient"></el-input> -->
                                         </div>
                                     </el-col>
 
@@ -128,13 +129,20 @@
                                     
                                     <el-col :span="7">
                                         <div>
-                                            <el-select v-model="ingredient_data.unit" placeholder="Unit" style="width: 100%;">
+                                            <select v-model="ingredient_data.unit" placeholder="Unit" style="width: 100%;">
+                                                <option 
+                                                    v-for="(unit, i) in ingredients_unit"
+                                                    :key="i"
+                                                    :label="unit.label"
+                                                    :value="unit.value"></option>
+                                            </select>
+                                            <!-- <el-select v-model="ingredient_data.unit" placeholder="Unit" style="width: 100%;">
                                                 <el-option 
                                                     v-for="(unit, i) in ingredients_unit"
                                                     :key="i"
                                                     :label="unit.label"
                                                     :value="unit.value"></el-option>
-                                            </el-select>
+                                            </el-select> -->
                                         </div>
                                     </el-col>
 
@@ -150,10 +158,10 @@
                         </el-tab-pane>
 
                         <el-tab-pane label="Instruction">
-                            <draggable v-model="descriptions_adv" @start="drag=true" @end="drag=false">
+                            <draggable v-model="descriptions_adv" :options="{handle:'.handle', animation: 150}">
                                 <el-row :gutter="15" v-for="(description_adv, i) in descriptions_adv" :key="i">
                                     <el-col :span="1">
-                                        <el-button size="small" class="desc_drag_btn">
+                                        <el-button size="small" class="desc_drag_btn handle">
                                             <i class="el-icon-rank"></i>
                                         </el-button>
                                     </el-col>
@@ -277,7 +285,7 @@
             </el-col>
             <el-col class="show_featured_image" :span="7">
 
-                <el-collapse v-model="active_featured_image" @change="handleChange">
+                <el-collapse v-model="active_featured_image">
                     <el-collapse-item title="Featured Image" name="featured_image">
                         <hr>
                         <el-row>
@@ -633,10 +641,6 @@ export default {
                     type: 'success'
                 });
             });
-        },
-
-        handleChange(val) {
-            console.log(val)
         }
     },
     watch: {
@@ -692,7 +696,7 @@ export default {
                 margin-top: 10px;
             }
             .ing_drag_btn {
-                padding: 13px;
+                // padding: 13px;
                 span {
                     .el-icon-rank {
                         color: black;
@@ -700,7 +704,7 @@ export default {
                 }
             }
             .ing_delete_btn {
-                padding: 13px;
+                //padding: 13px;
                 span {
                     .el-icon-rank {
                         color: black;
@@ -708,7 +712,7 @@ export default {
                 }
             }
             .desc_drag_btn {
-                padding: 13px;
+                //
                 span {
                     .el-icon-rank {
                         color: black;
