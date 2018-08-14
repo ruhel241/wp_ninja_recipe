@@ -665,8 +665,8 @@ export default {
 	    padding-left: 24px;
 
         .table_action_btn {
-            padding-left: 93px;
-            padding-top: 13px;
+            padding-top: 11px;
+            padding-right: 19px;
             .el-button--mini, .el-button--mini.is-round {
                 padding: 7px 15px; 
             }

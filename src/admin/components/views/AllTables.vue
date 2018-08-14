@@ -293,6 +293,7 @@ export default {
         display: flex;
         justify-content: space-between;
         .section-action {
+            position: relative;
             padding-top: 6px;
             .addTable {
                 margin-left: 0px;
@@ -305,9 +306,9 @@ export default {
                 }
             }
             .el-icon-search {
-                position: relative;
-                top: 0;
-                right: 30px;
+                position: absolute;
+                top: 14px;
+                right: 161px;
                 font-size: 16px;
             }
         }
