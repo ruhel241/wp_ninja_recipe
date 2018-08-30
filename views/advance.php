@@ -1,68 +1,123 @@
-<div class="ninja_normal_recipe">
+<div class="ninja_advance_recipe">
 	
-	<div class="recipe_feature_img">
-			<img src="<?php  echo $recipeMetaData['featuredImage']; ?>">
-		</div>
-
-		<div class="title"> <h1> <?php echo $post->post_title; ?> </h1> </div>
-
-		<div class="intro_description"> 	
-			<p> <?php  echo $recipeMetaData['introduction']; ?> </p> 
-		</div>
+	
 
 
-
-		<div class="time_serving"> 
-			<span class="making_time"> Making Time: <?php  echo $recipeMetaData['makingTime']; ?> </span>
-			<span class="serving_people"> Serving People:  <?php  echo $servingPeople; ?> </span>
-		</div>
-
-
-		<div class="meal_type"> 
-			<h2> Meal Type: </h2> 
-			<?php echo implode(', ', $recipeMetaData['mealType']); ?>
+	<div class="introduction-section ninjarecipe-row">
 			
+			<div class="ninjarecipe-col-6 ninjarecipe-padding">
+				<div class="title">
+					<h3>Lorem ipsum dolor sit amet.</h3>
+				</div>
+
+				<div class="content">
+					<p> <?php  echo $recipeMetaData['introduction']; ?> </p> 
+				</div>
+			</div>	
+
+			<div class="ninjarecipe-col-6 ninjarecipe-padding">
+				<div class="feature-image">
+					<img src="<?php echo $recipeMetaData['featuredImage']; ?>">
+				</div>
+
+			</div>	
+
+	</div>
+
+
+
+
+	<div class="ingredients-section ninjarecipe-row">
+		
+		<div class="ingredients-header ninjarecipe_hr">
+			<div class="ing">
+				<h3 class="title"> Ingredients</h3>
+			</div>
+			
+			<div class="service-section"> 
+				<span>20 m, 6 services, 191 cals</span>
+			</div>
 		</div>
 
-		<div class="cusine_type"> 
-			<h2> Cusine Type: </h2> 
-			<?php echo $recipeMetaData['cusineType']; ?>
-		</div>
 
-		<div class="preference_type"> 
-			<h2> Preference Type: </h2> 
-				<?php echo $recipeMetaData['preferenceType']; ?>
-		</div>
+		
+		
+			<div class="ingredient">
+
+				<?php $totalIngredints =  count($recipeMetaData['ingredient']) / 10; ?>
 
 
+				<?php  if($totalIngredints <= 1 ): ?>
+					
+					<ul>
+						<?php foreach($recipeMetaData['ingredient'] as $ingredient):?>
+							<li> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
+						<?php endforeach; ?>
+					</ul>
 
-		<div class="ingredient">
-			<h3>Ingredient: </h3>
-			<ul>
-				<?php foreach($recipeMetaData['ingredient'] as $ingredient):?>
-					<li> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
-				<?php endforeach; ?>
-			</ul>
-		</div>
+				<?php elseif($totalIngredints > 1): ?>
 
+					<ul>
+						<?php foreach(array_chunk($recipeMetaData['ingredient'], 6) as $ingredients):?>
+							<div class="ninjarecipe-col-6">
+								<?php foreach($ingredients as $ingredient): ?>
+									<li> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
+								<?php endforeach; ?> <br>
+							</div>
+						<?php endforeach; ?>
+					</ul>
 
-		<div class="Instruction">
-			<h3>Instruction: </h3>
-			<ol>
-				<?php foreach($recipeMetaData['description'] as $description):?>
-					<li> 
-						<?php  echo $description['desc_text']; ?> <br/><br/>
-						<?php if($description['desc_img']):?>
-								<img src="<?php echo $description['desc_img'];?>"> <br/><br/><br/><br/>
-						<?php endif; ?>
-					</li>
-				<?php endforeach; ?>
-			</ol>
-		</div>
+				<?php endif; ?>
+				
+			</div>
+
+	</div>	
 		
 
-		<!-- Nutrition Facts -->
 
-		<?php include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/nutrition_facts.php');?>
+
+	<div class="instruction-section ninjarecipe-row">
+		
+		<div class="instruction-header ninjarecipe_hr">
+			<h3 class="title"> Instruction </h3>
+		</div>
+
+		
+
+		<div class="ninjarecipe-col-8">
+			<div class="instruction">
+				<ol>
+					<?php foreach($recipeMetaData['description'] as $description):?>
+						<li> 
+							<?php  echo $description['desc_text']; ?> <br/><br/>
+							<!-- <?php //if($description['desc_img']):?>
+									<img src="<?php //echo $description['desc_img'];?>"> <br/><br/><br/><br/>
+							<?php //endif; ?> -->
+						</li>
+					<?php endforeach; ?>
+				</ol>
+			</div>
+		
+		</div>	
+
+	</div>
+
+	
+
+	<div class="nutritionFact-section ninjarecipe-row">
+		
+		<div class="nutritionFact-header ninjarecipe_hr">
+			<h3 class="title"> Nutrition Facts </h3>
+		</div>
+
+		<div class="ninjarecipe-col-6">
+			<?php include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/nutrition_facts.php');?>
+		</div>	
+	</div>
+
+
+
+	
+
 
 </div>
