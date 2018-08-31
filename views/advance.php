@@ -35,7 +35,7 @@
 			</div>
 			
 			<div class="service-section"> 
-				<span>20 m, 6 services, 191 cals</span>
+				20 m <span class="nr-clock-o"></span> 6 services, 191 cals
 			</div>
 		</div>
 
@@ -49,23 +49,23 @@
 
 				<?php  if($totalIngredints <= 1 ): ?>
 					
-					<ul>
+					<ol>
 						<?php foreach($recipeMetaData['ingredient'] as $ingredient):?>
 							<li> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
 						<?php endforeach; ?>
-					</ul>
+					</ol>
 
 				<?php elseif($totalIngredints > 1): ?>
 
-					<ul>
+					<ol>
 						<?php foreach(array_chunk($recipeMetaData['ingredient'], 6) as $ingredients):?>
-							<div class="ninjarecipe-col-6">
+							<div class="ninjarecipe-col-3">
 								<?php foreach($ingredients as $ingredient): ?>
-									<li> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
-								<?php endforeach; ?>
+									<li><span class="nr-check"></span> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
+								<?php endforeach; ?><br>
 							</div>
-						<?php endforeach; ?>
-					</ul>
+						<?php endforeach; ?> 
+					</ol>
 
 				<?php endif; ?>
 				
@@ -87,8 +87,8 @@
 				<ol>
 					<?php foreach($recipeMetaData['description'] as $description):?>
 						<li> 
-							<?php  echo wp_kses_post($description['desc_text']); ?> <br/><br/>
-							<!-- <?php //if($description['desc_img']):?>
+							<?php  echo wp_kses_post($description['desc_text']); ?> 
+							<!-- <?php// if($description['desc_img']):?>
 									<img src="<?php //echo $description['desc_img'];?>"> <br/><br/><br/><br/>
 							<?php //endif; ?> -->
 						</li>
@@ -103,20 +103,23 @@
 	
 
 	<div class="nutritionFact-section ninjarecipe-row">
-		
 		<div class="nutritionFact-header ninjarecipe_hr">
 			<h3 class="title"> Nutrition Facts </h3>
 		</div>
-
-		<div class="ninjarecipe-col-6">
+		
+		<div class="ninjarecipe-col-12">
 			<div class="nutrition">
 				<?php if(isset($nutrition_text)):?>
 					<?php  echo wp_kses_post($nutrition_text); ?>
+				<?php endif; ?>
+
+				<?php if($showNutrition_Fields == true ):?>
 					<a style="cursor: pointer" class="full-nutrition"> Full Nutrition</a>
 				<?php endif; ?>
 			</div>
-			<?php include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/nutrition_facts.php');?>
 		</div>	
+
+		<?php include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/nutrition_facts.php');?>
 	
 	</div>
 

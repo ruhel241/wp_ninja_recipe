@@ -59,7 +59,9 @@
 
 							<?php endforeach; ?> 
 
-							<hr style="border-bottom:solid 1em; margin: 0">
+							<?php if(sizeof($nutrition_fields) != 0):?>
+								<hr style="border-bottom:solid 1em; margin: 0; height: 0">
+							<?php endif;?>
 
 						<?php else : ?>
 
@@ -71,12 +73,11 @@
 										</span>
 								<?php endif; ?>
 							<?php endforeach; ?> 
-							<hr style="border-bottom:solid 1em;">
+							
 
 					<?php endif; ?>
 
 			<?php endforeach; ?>
-
 
 	</section>
 

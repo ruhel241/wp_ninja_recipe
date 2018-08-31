@@ -89,6 +89,7 @@ class RecipeHandler
 			Nutrition items
   		**/
   		$nutrition_text = $recipeMetaData['nutrition']['nutrition_text'];
+  		$showNutrition_Fields = $recipeMetaData['nutrition']['showNutritionFields'];
 		$nutrition_fields = $recipeMetaData['nutrition']['nutrition_fields'];
   		$servingPeople	 = $recipeMetaData['totalPeople']; 
 

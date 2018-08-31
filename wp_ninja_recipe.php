@@ -53,7 +53,7 @@ class WPNinjaRecipe
 	public function publicHooks()
 	{
 		add_action('init', array('NinjaRecipe\Classes\ProcessDemoPage','demoPageDisplay') );
-		wp_enqueue_script('nutrition_modal_script', NINJA_RECIPE_PUBLIC_DIR_URL.'js/nutrition_modal.js', array('jquery'), NINJA_RECIPE_PLUGIN_DIR_VERSION, true);	
+		
 	}
 
 
@@ -61,6 +61,7 @@ class WPNinjaRecipe
 	{
 		wp_register_style( 'ninja_recipe_style', NINJA_RECIPE_PUBLIC_DIR_URL.'css/style.css' , '', NINJA_RECIPE_PLUGIN_DIR_VERSION); 
 		wp_enqueue_style( 'ninja_recipe_style' );
+		wp_enqueue_script('nutrition_modal_script', NINJA_RECIPE_PUBLIC_DIR_URL.'js/nutrition_modal.js', array('jquery'), NINJA_RECIPE_PLUGIN_DIR_VERSION, true);	
 		
 	}
 
