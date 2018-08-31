@@ -69,12 +69,41 @@
   color: red;
 }
 
+.ninja_advance_recipe .nutrition_modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.ninja_advance_recipe .nutrition_modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .ninja_advance_recipe .nutritions_factlist_section {
   border: solid 1px #A0A0A0;
   border-radius: 5px;
   padding: 20px;
-  width: 70%;
+  width: 20%;
   margin: 0 auto;
+  background-color: #fff;
 }
 
 .ninja_advance_recipe .nutritions_factlist_section p {

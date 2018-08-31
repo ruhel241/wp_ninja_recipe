@@ -109,6 +109,12 @@
 		</div>
 
 		<div class="ninjarecipe-col-6">
+			<div class="nutrition">
+				<?php if(isset($nutrition_text)):?>
+					<?php  echo wp_kses_post($nutrition_text); ?>
+					<a style="cursor: pointer" class="full-nutrition"> Full Nutrition</a>
+				<?php endif; ?>
+			</div>
 			<?php include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/nutrition_facts.php');?>
 		</div>	
 	

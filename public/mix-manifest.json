@@ -2,5 +2,6 @@
     "/js/wp_ninja_recipe.js": "/js/wp_ninja_recipe.js",
     "/css/style.css": "/css/style.css",
     "/css/admin.css": "/css/admin.css",
+    "/js/nutrition_modal.js": "/js/nutrition_modal.js",
     "/js/ninja_recipe_user_view.js": "/js/ninja_recipe_user_view.js"
 }
