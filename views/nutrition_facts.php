@@ -1,15 +1,11 @@
 <div class="nutrition">
-	
 	<?php if(isset($nutrition_text)):?>
-		<h3>Nutrition: </h3>
-		<p> <?php  echo $nutrition_text; ?> </p> 
+		<?php  echo wp_kses_post($nutrition_text); ?>
+		<a href="#" class="full-nutrition"> Full Nutrition</a>
 	<?php endif; ?>
-   		
 </div>
 
-<p> <b> Nutrition Facts: </b> 
-
-<div class="nutritions_fact">
+<div class="nutritions_factlist_section">
 	<div class="cooked_nutrition">
 		<h2 class="title">Nutrition Facts</h2>
 		<p class="serving_size">Serving Size <span class="green">2</span> cups</p>

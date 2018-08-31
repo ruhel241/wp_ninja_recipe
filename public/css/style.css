@@ -25,14 +25,9 @@
 
 .ninja_advance_recipe .introduction-section {
   margin-bottom: 20px;
-  border: solid 1px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-}
-
-.ninja_advance_recipe .ingredients-section {
-  border: solid 1px;
 }
 
 .ninja_advance_recipe .ingredients-section .ingredients-header {
@@ -68,5 +63,130 @@
 .ninja_advance_recipe .instruction-section .instruction ol {
   margin: 0;
   padding-left: 15px;
+}
+
+.ninja_advance_recipe .nutritionFact-section .nutrition .full-nutrition {
+  color: red;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section {
+  border: solid 1px #A0A0A0;
+  border-radius: 5px;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section p {
+  margin: 0 !important;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .cooked_nutrition .title {
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 700;
+  color: black;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .cooked_nutrition .serving_size {
+  font-size: 16px;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .cooked_nutrition .serving_people {
+  font-size: 16px;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .hr_fat {
+  border: none;
+  border-top: solid 1em #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .hr_thick {
+  border: none;
+  border-bottom: solid 1px #333;
+  margin: 0;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .green {
+  color: #029E74;
+  font-weight: bold;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .cooked_value {
+  font-size: 16px;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .cooked_right {
+  float: right;
+  font-size: 16px;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 {
+  border-bottom: solid 7px;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 .cooked_label {
+  font-size: 16px;
+  color: black;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 .per_serving {
+  font-size: 12px !important;
+  border-bottom: solid 1px;
+  color: black !important;
+  font-weight: bold;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 .caloriesFat {
+  color: black;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_2 {
+  padding-bottom: 11px;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_2 .cooked_label {
+  font-size: 16px;
+  color: black;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_2 .daily_value {
+  font-size: 14px;
+  float: right;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 {
+  clear: both;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 .cooked_label {
+  font-size: 15px;
+  color: black;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 .cooked_parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 .cooked_parent .cooked_fact_fifty {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ninja_advance_recipe .nutritions_factlist_section .fact_section_4 p {
+  font-size: 14px !important;
+  padding-top: 18px !important;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .ninja_normal_recipe .nutritions_fact {
+    width: 100%;
+  }
 }
 

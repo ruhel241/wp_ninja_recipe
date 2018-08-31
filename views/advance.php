@@ -11,7 +11,7 @@
 				</div>
 
 				<div class="content">
-					<p> <?php  echo $recipeMetaData['introduction']; ?> </p> 
+					<?php  echo wp_kses_post($recipeMetaData['introduction']); ?>
 				</div>
 			</div>	
 
@@ -62,7 +62,7 @@
 							<div class="ninjarecipe-col-6">
 								<?php foreach($ingredients as $ingredient): ?>
 									<li> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
-								<?php endforeach; ?> <br>
+								<?php endforeach; ?>
 							</div>
 						<?php endforeach; ?>
 					</ul>
@@ -82,14 +82,12 @@
 			<h3 class="title"> Instruction </h3>
 		</div>
 
-		
-
 		<div class="ninjarecipe-col-8">
 			<div class="instruction">
 				<ol>
 					<?php foreach($recipeMetaData['description'] as $description):?>
 						<li> 
-							<?php  echo $description['desc_text']; ?> <br/><br/>
+							<?php  echo wp_kses_post($description['desc_text']); ?> <br/><br/>
 							<!-- <?php //if($description['desc_img']):?>
 									<img src="<?php //echo $description['desc_img'];?>"> <br/><br/><br/><br/>
 							<?php //endif; ?> -->
@@ -113,6 +111,7 @@
 		<div class="ninjarecipe-col-6">
 			<?php include(NINJA_RECIPE_PLUGIN_DIR_PATH.'views/nutrition_facts.php');?>
 		</div>	
+	
 	</div>
 
 
