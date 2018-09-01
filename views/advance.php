@@ -7,7 +7,7 @@
 			
 			<div class="ninjarecipe-col-6 ninjarecipe-padding">
 				<div class="title">
-					<h3>Lorem ipsum dolor sit amet.</h3>
+					<h3><?php echo $post->post_title; ?></h3>
 				</div>
 
 				<div class="content">
@@ -35,8 +35,8 @@
 			</div>
 			
 			<div class="service-section"> 
-				<span> 20 m <i class="nr-clock-o"></i> </span>
-				<span> 6 services <i class="nr-pie-chart"> </i> </span>
+				<span> <?php echo $makingTime; ?> m <i class="nr-clock-o"></i> </span>
+				<span> <?php echo $servingPeople; ?> services <i class="nr-pie-chart"> </i> </span>
 				<span> 191 cals <i class="nr-graph"></i> </span>
 			</div>
 		</div>

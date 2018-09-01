@@ -153,6 +153,7 @@
   border-radius: 999px;
   border: solid 1px;
   margin-top: 4px;
+  padding-top: 2px;
 }
 
 .ninja_advance_recipe .instruction-section .instruction ol {

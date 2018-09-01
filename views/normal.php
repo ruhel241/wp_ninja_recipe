@@ -1,13 +1,9 @@
 <div class="ninja_normal_recipe">
 	
-	
-
-
 	<div class="introduction-section ninjarecipe-row">
-			
 			<div class="ninjarecipe-col-6 ninjarecipe-padding">
 				<div class="title">
-					<h3>Lorem ipsum dolor sit amet.</h3>
+					<h3><?php echo $post->post_title; ?></h3>
 				</div>
 
 				<div class="content">
@@ -21,7 +17,6 @@
 				</div>
 
 			</div>	
-
 	</div>
 
 
@@ -35,13 +30,12 @@
 			</div>
 			
 			<div class="service-section"> 
-				20 m <span class="nr-clock-o"></span> 6 services, 191 cals
+				<span> <?php echo $makingTime; ?> m <i class="nr-clock-o"></i> </span>
+				<span> <?php echo $servingPeople; ?> services <i class="nr-pie-chart"> </i> </span>
+				<span> 191 cals <i class="nr-graph"></i> </span>
 			</div>
 		</div>
 
-
-		
-		
 		<div class="ingredient">		
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati nostrum error nulla earum quos facere vitae beatae in itaque quo aliquid aspernatur, consectetur at eum. Facere excepturi debitis esse.				
 		</div>
