@@ -35,7 +35,9 @@
 			</div>
 			
 			<div class="service-section"> 
-				20 m <span class="nr-clock-o"></span> 6 services, 191 cals
+				<span> 20 m <i class="nr-clock-o"></i> </span>
+				<span> 6 services <i class="nr-pie-chart"> </i> </span>
+				<span> 191 cals <i class="nr-graph"></i> </span>
 			</div>
 		</div>
 

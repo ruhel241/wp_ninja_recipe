@@ -1,7 +1,7 @@
 @font-face {
   font-family: "recipe";
-  src: url(../fonts/recipe.eot?1c4b732318bbbdfc2077ffa96ed26c8d);
-  src: url(../fonts/recipe.eot?1c4b732318bbbdfc2077ffa96ed26c8d) format("embedded-opentype"), url(../fonts/recipe.woff?9ef40709040e3f5a98cab511982b2495) format("woff"), url(../fonts/recipe.ttf?906184c643528a52b6ac3519c6adcede) format("truetype"), url(../fonts/recipe.svg?eff46698e5f429f3a640d2a2634cd080) format("svg");
+  src: url(../fonts/recipe.eot?912e3f5005208915a4db497bba5d06ea);
+  src: url(../fonts/recipe.eot?912e3f5005208915a4db497bba5d06ea) format("embedded-opentype"), url(../fonts/recipe.woff?bf8d38deecad7d38959ac346b5c6de9a) format("woff"), url(../fonts/recipe.ttf?af66f5c06d595d9529f159174e149fbe) format("truetype"), url(../fonts/recipe.svg?8a6362b1c0d6f9419476ff8828cd024e) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -42,6 +42,18 @@
 
 .nr-clock-o:before {
   content: "c";
+}
+
+.nr-pie-chart:before {
+  content: "d";
+}
+
+.nr-graph:before {
+  content: "e";
+}
+
+.nr-bars:before {
+  content: "f";
 }
 
 .ninja_advance_recipe .ninjarecipe_hr {
@@ -100,7 +112,7 @@
   margin: 0;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredients-header .service-section .nr-clock-o {
+.ninja_advance_recipe .ingredients-section .ingredients-header .service-section i {
   font-size: 18px;
   top: 4px;
   position: relative;
