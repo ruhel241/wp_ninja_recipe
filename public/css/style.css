@@ -324,6 +324,286 @@
   display: inline-block;
 }
 
+.ninja_normal_recipe .ninjarecipe_hr {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.ninja_normal_recipe .ninjarecipe-row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ninja_normal_recipe .ninjarecipe-col-6 {
+  width: 50%;
+  float: left;
+}
+
+.ninja_normal_recipe .ninjarecipe-col-3 {
+  width: 33%;
+  float: left;
+}
+
+.ninja_normal_recipe .ninjarecipe-col-8 {
+  width: 70%;
+}
+
+.ninja_normal_recipe .ninjarecipe-col-12 {
+  width: 100%;
+}
+
+.ninja_normal_recipe .ninjarecipe-padding {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.ninja_normal_recipe .introduction-section {
+  margin-bottom: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.ninja_normal_recipe .ingredients-section .ingredients-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ninja_normal_recipe .ingredients-section .ingredients-header .title {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.ninja_normal_recipe .ingredients-section .ingredients-header .service-section .nr-clock-o {
+  font-size: 18px;
+  top: 4px;
+  position: relative;
+}
+
+.ninja_normal_recipe .ingredients-section .ingredient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ninja_normal_recipe .ingredients-section .ingredient ol {
+  display: block;
+  padding: 0 0 0 26px;
+  list-style: none;
+  overflow: hidden;
+  counter-reset: numList;
+}
+
+.ninja_normal_recipe .ingredients-section .ingredient ol li {
+  position: relative;
+  line-height: 27px;
+  padding-left: 10px;
+}
+
+.ninja_normal_recipe .ingredients-section .ingredient ol li span {
+  counter-increment: numList;
+  float: left;
+  position: absolute;
+  left: -26px;
+  font: bold 12px sans-serif;
+  text-align: center;
+  color: #ddd;
+  line-height: 18px;
+  width: 21px;
+  height: 20px;
+  background: #fff;
+  border-radius: 999px;
+  border: solid 1px;
+  margin-top: 4px;
+}
+
+.ninja_normal_recipe .instruction-section .instruction ol {
+  display: block;
+  padding: 0 0 0 26px;
+  list-style: none;
+  overflow: hidden;
+  counter-reset: numList;
+}
+
+.ninja_normal_recipe .instruction-section .instruction ol li {
+  position: relative;
+  line-height: 27px;
+  padding-left: 10px;
+}
+
+.ninja_normal_recipe .instruction-section .instruction ol li::before {
+  counter-increment: numList;
+  content: counter(numList);
+  float: left;
+  position: absolute;
+  left: -26px;
+  font: bold 12px sans-serif;
+  text-align: center;
+  color: #ddd;
+  line-height: 18px;
+  width: 27px;
+  height: 26px;
+  background: #fff;
+  border-radius: 999px;
+  border: solid 1px;
+  margin-top: 1px;
+  /* top: 10px; */
+  padding: 3px;
+}
+
+.ninja_normal_recipe .nutritionFact-section .nutrition p {
+  display: initial;
+}
+
+.ninja_normal_recipe .nutritionFact-section .nutrition .full-nutrition {
+  color: red;
+  font-weight: bold;
+}
+
+.ninja_normal_recipe .nutrition_modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ninja_normal_recipe .nutrition_modal .close {
+  color: black;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section {
+  border: solid 1px #A0A0A0;
+  border-radius: 5px;
+  padding: 20px;
+  width: 25%;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section p {
+  margin: 0 !important;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .cooked_nutrition .title {
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 700;
+  color: black;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .cooked_nutrition .serving_size {
+  font-size: 16px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .cooked_nutrition .serving_people {
+  font-size: 16px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .hr_fat {
+  border: none;
+  border-top: solid 1em #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .hr_thick {
+  border: none;
+  border-bottom: solid 1px #333;
+  margin: 0;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .green {
+  color: #029E74;
+  font-weight: bold;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .cooked_value {
+  font-size: 16px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .cooked_right {
+  float: right;
+  font-size: 16px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_1 {
+  border-bottom: solid 7px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_1 .cooked_label {
+  font-size: 16px;
+  color: black;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_1 .per_serving {
+  font-size: 12px !important;
+  border-bottom: solid 1px;
+  color: black !important;
+  font-weight: bold;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_1 .caloriesFat {
+  color: black;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_2 {
+  padding-bottom: 11px;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_2 .cooked_label {
+  font-size: 16px;
+  color: black;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_2 .daily_value {
+  font-size: 14px;
+  float: right;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_3 {
+  clear: both;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_3 .cooked_label {
+  font-size: 15px;
+  color: black;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_3 .cooked_parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_3 .cooked_parent .cooked_fact_fifty {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ninja_normal_recipe .nutritions_factlist_section .fact_section_4 p {
+  font-size: 14px !important;
+  padding-top: 18px !important;
+  display: inline-block;
+}
+
 @media (max-width: 600px) {
   .ninja_normal_recipe .nutritions_fact {
     width: 100%;

@@ -286,27 +286,294 @@
 		}
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
+.ninja_normal_recipe{
 
+	.ninjarecipe_hr {
+		border-bottom: solid 1px #ddd;
+		padding-bottom: 10px;
+    	margin-bottom: 10px;
+	}
+
+	.ninjarecipe-row{
+		padding-left:15px;
+		padding-right:15px;
+	}
+
+	.ninjarecipe-col-6{
+		width:50%;
+		float:left;
+	}
+
+	.ninjarecipe-col-3{
+		width:33%;
+		float:left;
+	}
+
+
+
+
+	.ninjarecipe-col-8 {
+		width:70%;
+	}
+
+	.ninjarecipe-col-12 {
+		width:100%;
+
+	}
+
+	.ninjarecipe-padding{
+		padding-right: 10px;
+   		padding-left: 10px;
+	}
+
+	.introduction-section{
+		margin-bottom:20px;
+		// border: solid 1px;
+		display: inline-flex;
+	}
+
+
+	.ingredients-section{
+		// border: solid 1px;
+		.ingredients-header{
+			display: flex;
+			justify-content: space-between;
+			.title{
+				display:inline-block;
+				padding:0;
+				margin:0;
+			}
+			
+			.service-section{
+				.nr-clock-o{
+					font-size: 18px;
+				    top: 4px;
+				    position: relative;
+				}
+			}
+		}
+		.ingredient {
+			display: flex;
+				ol {
+			    
+			    display: block;
+			    padding: 0 0 0 26px;
+			    list-style: none;
+			   	overflow: hidden;
+			    counter-reset: numList;
+
+				li {
+				    
+				    position: relative;
+				    line-height: 27px;
+				    padding-left: 10px;
+					span {
+						counter-increment: numList;
+					    float: left;
+					    position: absolute;
+					    left: -26px;
+					    font: bold 12px sans-serif;
+					    text-align: center;
+					    color: #ddd;
+					    line-height: 18px;
+					    width: 21px;
+					    height: 20px;
+					    background: #fff;
+					    border-radius: 999px;
+					    border: solid 1px;
+					    margin-top: 4px;
+					}
+				} 
+
+			}
+
+		}
+	}
+
+
+	.instruction-section{
+		.instruction ol {
+			display: block;
+		    padding: 0 0 0 26px;
+		    list-style: none;
+		  	overflow: hidden;
+		    counter-reset: numList;
+			li {
+			    position: relative;
+			    line-height: 27px;
+			    padding-left: 10px;
+			 &::before {
+			    counter-increment: numList;
+			    content: counter(numList);
+			    float: left;
+			    position: absolute;
+			    left: -26px;
+			    font: bold 12px sans-serif;
+			    text-align: center;
+			    color: #ddd;
+			    line-height: 18px;
+			    width: 27px;
+			    height: 26px;
+			    background: #fff;
+			    border-radius: 999px;
+			    border: solid 1px;
+			    margin-top: 1px;
+			    /* top: 10px; */
+			    padding: 3px;
+			}
+		}
+	}	
+}
+
+
+	.nutritionFact-section{
+
+		.nutrition{
+			p {
+				display: initial;
+			}
+			.full-nutrition{
+				color:red;
+				font-weight: bold;
+			}
+		}
+
+
+	}  
+
+
+// nutritions_factlist_section
+	.nutrition_modal {
+		display: none; 
+		position: fixed;  
+		z-index: 1; 
+		left: 0;
+		top: 0;
+		width: 100%; 
+		height: 100%; 
+		overflow: auto;
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0,0.4);
+		.close {
+			color: black;
+			float: right;
+			font-size: 35px;
+			font-weight: bold;
+		}
+	}
+	.nutritions_factlist_section {
+		border: solid 1px #A0A0A0; 
+		border-radius:5px;
+	    padding: 20px;
+	    width: 25%;
+		margin: 0 auto;
+		background-color: #fff;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	   	
+	    p{
+	    	margin:0 !important;
+	    }
+		.cooked_nutrition{
+			.title {
+		   		margin:0;
+		   		padding-bottom:10px;
+		   		font-weight: 700;
+   				color: black;
+		   	}
+			.serving_size{
+				font-size:16px;
+			}
+			.serving_people{
+				font-size:16px;
+			}
+		}
+
+		.hr_fat{
+			border:none; 
+			border-top: solid 1em #333; 
+		    margin-top: 10px;
+			margin-bottom: 5px;
+		}
+
+		.hr_thick{
+			border:none; 
+			border-bottom: solid 1px #333; 
+			margin: 0;
+		}
+		.green {
+				color: #029E74;
+				font-weight:bold;
+		}
+
+		.cooked_value{
+			font-size:16px;
+		}
+		.cooked_right {
+			float:right;
+			font-size: 16px;
+		}
+
+		.fact_section_1{
+			border-bottom: solid 7px;
+			 .cooked_label{
+			  font-size: 16px;
+			  color: black;
+			}
+			.per_serving{
+				font-size:12px !important;
+				border-bottom: solid 1px;
+				color: black !important;
+				font-weight:bold; 
+			}
+			.caloriesFat{
+				color:black;
+			}
+		}
+
+		.fact_section_2{
+			// border-bottom: solid 1em;
+			padding-bottom: 11px;
+			 .cooked_label{
+			  font-size: 16px;
+			  color: black;
+			}
+			.daily_value{
+				font-size: 14px;
+			    float: right;
+			}
+			
+		}
+
+		.fact_section_3 {
+			clear:both;
+			.cooked_label{
+			  font-size: 15px;
+			  color:black;
+			}
+
+			.cooked_parent{
+				display:flex;
+				.cooked_fact_fifty{
+					flex: 1;
+				}
+			}
+	
+		}
+		
+		.fact_section_4 {
+			p {
+				font-size: 14px !important;
+   				padding-top: 18px !important;
+   				display:inline-block;
+			}
+		}
+
+	}
+}
 
 
 
