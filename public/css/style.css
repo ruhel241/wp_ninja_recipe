@@ -168,6 +168,16 @@
   position: relative;
   line-height: 27px;
   padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.ninja_advance_recipe .instruction-section .instruction ol li .instruction-des {
+  margin-bottom: 15px;
+}
+
+.ninja_advance_recipe .instruction-section .instruction ol li .instruction-img {
+  margin: 0 auto;
+  width: 50%;
 }
 
 .ninja_advance_recipe .instruction-section .instruction ol li::before {
@@ -393,7 +403,7 @@
   margin: 0;
 }
 
-.ninja_normal_recipe .ingredients-section .ingredients-header .service-section .nr-clock-o {
+.ninja_normal_recipe .ingredients-section .ingredients-header .service-section i {
   font-size: 18px;
   top: 4px;
   position: relative;

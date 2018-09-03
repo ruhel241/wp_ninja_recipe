@@ -84,15 +84,19 @@
 			<h3 class="title"> Instruction </h3>
 		</div>
 
-		<div class="ninjarecipe-col-8">
+		<div class="ninjarecipe-col-12">
 			<div class="instruction">
 				<ol>
 					<?php foreach($recipeMetaData['description'] as $description):?>
 						<li> 
-							<?php  echo wp_kses_post($description['desc_text']); ?> 
-							<!-- <?php// if($description['desc_img']):?>
-									<img src="<?php //echo $description['desc_img'];?>"> <br/><br/><br/><br/>
-							<?php //endif; ?> -->
+							<div class="instruction-des">
+								<?php  echo wp_kses_post($description['desc_text']); ?> 
+							</div>
+							<?php if($description['desc_img']):?>
+								   <div class="instruction-img">
+								   		<img src="<?php echo $description['desc_img'];?>"> 
+								   </div>
+							<?php endif; ?> 
 						</li>
 					<?php endforeach; ?>
 				</ol>

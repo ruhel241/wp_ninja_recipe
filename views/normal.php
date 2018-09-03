@@ -21,7 +21,6 @@
 
 
 
-
 	<div class="ingredients-section ninjarecipe-row">
 		
 		<div class="ingredients-header ninjarecipe_hr">
@@ -37,12 +36,11 @@
 		</div>
 
 		<div class="ingredient">		
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati nostrum error nulla earum quos facere vitae beatae in itaque quo aliquid aspernatur, consectetur at eum. Facere excepturi debitis esse.				
+			<?php echo wp_kses_post($recipeMetaData['ingredient']); ?>			
 		</div>
 
 	</div>	
 		
-
 
 
 	<div class="instruction-section ninjarecipe-row">
@@ -52,7 +50,7 @@
 		</div>
 
 		<div class="instruction">
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, consectetur aperiam dolor sequi rem incidunt. Officiis aut repellendus assumenda minima, neque voluptatibus fugit consectetur maxime deserunt omnis aspernatur molestiae est!</p>
+			<?php echo wp_kses_post($recipeMetaData['description']); ?>
 		</div>
 		
 	</div>
