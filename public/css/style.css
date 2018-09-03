@@ -97,6 +97,15 @@
   display: inline-flex;
 }
 
+.ninja_advance_recipe .introduction-section .title {
+  margin-bottom: 15px;
+}
+
+.ninja_advance_recipe .introduction-section .title h3 {
+  padding: 0;
+  margin: 0;
+}
+
 .ninja_advance_recipe .ingredients-section .ingredients-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,6 +395,15 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.ninja_normal_recipe .introduction-section .title {
+  margin-bottom: 15px;
+}
+
+.ninja_normal_recipe .introduction-section .title h3 {
+  padding: 0;
+  margin: 0;
 }
 
 .ninja_normal_recipe .ingredients-section .ingredients-header {

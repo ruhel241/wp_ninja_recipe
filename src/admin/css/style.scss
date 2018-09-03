@@ -40,15 +40,21 @@
    		padding-left: 10px;
 	}
 
+// Introduction-section
 	.introduction-section{
 		margin-bottom:20px;
-		// border: solid 1px;
 		display: inline-flex;
+		.title{
+			margin-bottom:15px;
+			h3{
+				padding:0;
+				margin:0;
+			}
+		}
 	}
 
-
+// Ingredient Section
 	.ingredients-section{
-		// border: solid 1px;
 		.ingredients-header{
 			display: flex;
 			justify-content: space-between;
@@ -105,7 +111,7 @@
 		}
 	}
 
-
+// Instruction Section
 	.instruction-section{
 		.instruction ol {
 			display: block;
@@ -124,8 +130,8 @@
 			    }
 
 			    .instruction-img{ 
-			    	    margin: 0 auto;
-    width: 50%;
+			    	margin: 0 auto;
+   					width: 50%;
 			    }
 
 
@@ -152,7 +158,7 @@
 	}	
 }
 
-
+// Nutrition Section
 	.nutritionFact-section{
 
 		.nutrition{
@@ -169,7 +175,7 @@
 	}  
 
 
-// nutritions_factlist_section
+// Nutritions_factlist_section
 	.nutrition_modal {
 		display: none; 
 		position: fixed;  
@@ -301,7 +307,7 @@
 
 
 
-// normal recipe....
+// Normal Recipe Page....
 .ninja_normal_recipe{
 
 	.ninjarecipe_hr {
@@ -342,16 +348,22 @@
    		padding-left: 10px;
 	}
 
+// Introduction Section
 	.introduction-section{
 		margin-bottom:20px;
-		// border: solid 1px;
 		display: inline-flex;
+		.title{
+			margin-bottom:15px;
+			h3{
+				padding:0;
+				margin:0;
+			}
+		}
 	}
 
-// ingredients-section
 
+// Ingredients Section
 	.ingredients-section{
-		// border: solid 1px;
 		.ingredients-header{
 			display: flex;
 			justify-content: space-between;
@@ -360,7 +372,6 @@
 				padding:0;
 				margin:0;
 			}
-			
 			.service-section{
 				i {
 					font-size: 18px;
@@ -408,7 +419,7 @@
 		}
 	}
 
-
+// Instruction Section
 	.instruction-section{
 		.instruction ol {
 			display: block;
@@ -443,7 +454,7 @@
 	}	
 }
 
-
+// Nutrition Section
 	.nutritionFact-section{
 
 		.nutrition{
@@ -460,7 +471,7 @@
 	}  
 
 
-// nutritions_factlist_section
+// Nutritions Factlist Section
 	.nutrition_modal {
 		display: none; 
 		position: fixed;  
@@ -594,6 +605,7 @@
 
 // Media Queries
 
+
 @media(max-width:600px){
 	.ninja_normal_recipe {
 		.nutritions_fact {
@@ -601,6 +613,7 @@
 		}
 	}
 }
+
 
 @media(max-width: 991px) {
 	.ninja_advance_recipe {
