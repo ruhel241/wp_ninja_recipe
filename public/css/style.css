@@ -633,3 +633,81 @@
   }
 }
 
+@media (max-width: 991px) {
+  .ninja_advance_recipe .introduction-section {
+    display: flow-root;
+  }
+
+  .ninja_advance_recipe .introduction-section .ninjarecipe-col-6 {
+    width: 100%;
+  }
+
+  .ninja_normal_recipe .introduction-section {
+    display: flow-root;
+  }
+
+  .ninja_normal_recipe .introduction-section .ninjarecipe-col-6 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 455px) {
+  .ninja_advance_recipe .ingredients-section .ingredients-header {
+    display: inherit;
+  }
+
+  .ninja_advance_recipe .ingredients-section .ingredients-header .ing {
+    width: 100%;
+  }
+
+  .ninja_advance_recipe .ingredients-section .ingredients-header .service-section {
+    width: 100%;
+  }
+
+  .ninja_advance_recipe .instruction-section .ninjarecipe-col-12 .instruction ol li .instruction-img {
+    width: 100%;
+  }
+
+  .ninja_normal_recipe .ingredients-section .ingredients-header {
+    display: inherit;
+  }
+
+  .ninja_normal_recipe .ingredients-section .ingredients-header .ing {
+    width: 100%;
+  }
+
+  .ninja_normal_recipe .ingredients-section .ingredients-header .service-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1480px) {
+  .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
+    width: 52%;
+  }
+}
+
+@media (max-width: 600px) {
+  .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
+    width: 70%;
+  }
+}
+
+@media (max-width: 3300px) {
+  .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
+    width: 90%;
+  }
+}
+

@@ -53,7 +53,7 @@
 					
 					<ol>
 						<?php foreach($recipeMetaData['ingredient'] as $ingredient):?>
-							<li> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
+							<li> <span class="nr-check"></span><?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
 						<?php endforeach; ?>
 					</ol>
 
