@@ -356,6 +356,10 @@
   display: inline-block;
 }
 
+.ninja_normal_recipe {
+  display: block;
+}
+
 .ninja_normal_recipe .ninjarecipe_hr {
   border-bottom: solid 1px #ddd;
   padding-bottom: 10px;
@@ -391,6 +395,7 @@
 }
 
 .ninja_normal_recipe .introduction-section {
+  width: 100%;
   margin-bottom: 20px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -712,18 +717,26 @@
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .ninja_advance_recipe .ingredients-section .ingredient .ninjarecipe-col-12 .ninjarecipe-col-3 {
+    width: 49%;
+  }
+
   .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
     width: 52%;
   }
 }
 
 @media (max-width: 600px) {
+  .ninja_advance_recipe .ingredients-section .ingredient .ninjarecipe-col-12 .ninjarecipe-col-3 {
+    width: 100%;
+  }
+
   .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
     width: 70%;
   }
 }
 
-@media (max-width: 3300px) {
+@media (max-width: 330px) {
   .nutritionFact-section .nutrition_modal .nutritions_factlist_section {
     width: 90%;
   }

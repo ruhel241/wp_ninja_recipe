@@ -35,7 +35,7 @@
 			</div>
 			
 			<div class="service-section"> 
-				<span> <?php echo $makingTime; ?> m <i class="nr-clock-o"></i> </span>
+				<span> <?php echo $makingTime; ?> <i class="nr-clock-o"></i> </span>
 				<span> <?php echo $servingPeople; ?> services <i class="nr-pie-chart"> </i> </span>
 				<span> 191 cals <i class="nr-graph"></i> </span>
 			</div>
@@ -59,7 +59,7 @@
 
 				<?php elseif($totalIngredints > 1): ?>
 
-					<ol>
+					<ol class="ninjarecipe-col-12">
 						<?php foreach(array_chunk($recipeMetaData['ingredient'], 6) as $ingredients):?>
 							<div class="ninjarecipe-col-3">
 								<?php foreach($ingredients as $ingredient): ?>

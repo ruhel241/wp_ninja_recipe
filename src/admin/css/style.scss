@@ -310,6 +310,7 @@
 // Normal Recipe Page....
 .ninja_normal_recipe{
 
+	display: block ;
 	.ninjarecipe_hr {
 		border-bottom: solid 1px #ddd;
 		padding-bottom: 10px;
@@ -350,6 +351,7 @@
 
 // Introduction Section
 	.introduction-section{
+		width: 100%;
 		margin-bottom:20px;
 		display: inline-flex;
 		.title{
@@ -699,6 +701,17 @@
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
+	.ninja_advance_recipe {
+		.ingredients-section {
+			.ingredient {
+				.ninjarecipe-col-12 {
+					.ninjarecipe-col-3 {
+						width: 49%;
+					}
+				}
+			}
+		}
+	}
 	.nutritionFact-section {
 		.nutrition_modal {
 			.nutritions_factlist_section {
@@ -709,6 +722,17 @@
 }
 
 @media(max-width: 600px) {
+	.ninja_advance_recipe {
+		.ingredients-section {
+			.ingredient {
+				.ninjarecipe-col-12 {
+					.ninjarecipe-col-3 {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 	.nutritionFact-section {
 		.nutrition_modal {
 			.nutritions_factlist_section {
@@ -718,7 +742,7 @@
 	}
 }
 
-@media(max-width: 3300px) {
+@media(max-width: 330px) {
 	.nutritionFact-section {
 		.nutrition_modal {
 			.nutritions_factlist_section {
