@@ -279,6 +279,28 @@
                                     label="Total making time"></app-input-text>
                             </el-col>
                         </el-row>
+                        <el-row>
+                            <label for="layout">Layout</label>
+                            <el-col :span="24">
+                                <el-col :span="12">
+                                    <img 
+                                        :src=sideBarImg 
+                                        class="layoutImg" 
+                                        alt="" 
+                                        style="width: 100px; margin: 0 auto; cursor: pointer"
+                                        @click="selectedLayoutImg= 'sidebar'">
+                                </el-col>
+                                <el-col :span="12">
+                                    <img 
+                                        :src=fullImg 
+                                        class="layoutImg" 
+                                        alt="" 
+                                        style="width: 100px; margin: 0 auto; cursor: pointer"
+                                        @click="selectedLayoutImg= 'fullImg'">
+                                </el-col>
+                            </el-col>
+
+                        </el-row>
                     </el-collapse-item>
                 </el-collapse>
 
@@ -453,7 +475,10 @@ export default {
             active_featured_image: ['featured_image'],
             active_optional_field: ['optional_fields'],
             showNutritionFields: false,
-            showNutritionText: true
+            showNutritionText: true,
+            fullImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/Full.png',
+            sideBarImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/sidebar.png',
+            selectedLayoutImg: 'sidebar'
         }
     },
     created() {
@@ -542,7 +567,8 @@ export default {
                 preferenceType: this.selectedPreferenceType,
                 totalPeople: this.totalPeople,
                 featuredImage: featImage,
-                makingTime: this.makingTime
+                makingTime: this.makingTime,
+                selectedLayoutImg: this.selectedLayoutImg
             };
 
             console.log(tableConfig)

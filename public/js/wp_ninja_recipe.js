@@ -22309,6 +22309,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -22371,7 +22393,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             active_featured_image: ['featured_image'],
             active_optional_field: ['optional_fields'],
             showNutritionFields: false,
-            showNutritionText: true
+            showNutritionText: true,
+            fullImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/Full.png',
+            sideBarImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/sidebar.png',
+            selectedLayoutImg: 'sidebar'
         };
     },
     created: function created() {
@@ -22452,7 +22477,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 preferenceType: this.selectedPreferenceType,
                 totalPeople: this.totalPeople,
                 featuredImage: featImage,
-                makingTime: this.makingTime
+                makingTime: this.makingTime,
+                selectedLayoutImg: this.selectedLayoutImg
             };
 
             console.log(tableConfig);
@@ -26871,6 +26897,57 @@ var render = function() {
                                   expression: "makingTime"
                                 }
                               })
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "el-row",
+                        [
+                          _c("label", { attrs: { for: "layout" } }, [
+                            _vm._v("Layout")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "el-col",
+                            { attrs: { span: 24 } },
+                            [
+                              _c("el-col", { attrs: { span: 12 } }, [
+                                _c("img", {
+                                  staticClass: "layoutImg",
+                                  staticStyle: {
+                                    width: "100px",
+                                    margin: "0 auto",
+                                    cursor: "pointer"
+                                  },
+                                  attrs: { src: _vm.sideBarImg, alt: "" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.selectedLayoutImg = "sidebar"
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("el-col", { attrs: { span: 12 } }, [
+                                _c("img", {
+                                  staticClass: "layoutImg",
+                                  staticStyle: {
+                                    width: "100px",
+                                    margin: "0 auto",
+                                    cursor: "pointer"
+                                  },
+                                  attrs: { src: _vm.fullImg, alt: "" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.selectedLayoutImg = "fullImg"
+                                    }
+                                  }
+                                })
+                              ])
                             ],
                             1
                           )
