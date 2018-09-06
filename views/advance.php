@@ -1,13 +1,10 @@
-<div class="ninja_advance_recipe">
+<div class="ninja_advance_recipe_<?php echo $layout; ?>">
 	
-	
-
-
 	<div class="introduction-section ninjarecipe-row">
 			
 			<div class="ninjarecipe-col-6 ninjarecipe-padding">
 				<div class="title">
-					<h3><?php echo $post->post_title; ?></h3>
+					<h2><?php echo $post->post_title; ?></h2>
 				</div>
 
 				<div class="content">
