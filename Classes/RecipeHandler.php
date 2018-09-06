@@ -221,15 +221,18 @@ class RecipeHandler
 			'recipe_type'	   => $table->post_content
 		);
 
+		$layout_images = array(
+			'fullImg' => NINJA_RECIPE_PUBLIC_DIR_URL.'img/Full.png',
+			'sidebar' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/sidebar.png'
+		);
+
 		wp_send_json_success(array( 
             'table'        => $formattedTable,
             'tableConfig'  => $tableConfig,
             //'demoRecipeConfig' => static::getRecipeConfig(),
-            'demo_url' => home_url().'?ninja_recipe_preview='.$tableId.'#ninja_recipe_demo',
-			'fullImg' => NINJA_RECIPE_PUBLIC_DIR_URL.'img/Full.png',
-            'sideBarImg' => NINJA_RECIPE_PUBLIC_DIR_URL.'img/sidebar.png'
-
-        ), 200);
+            'demo_url' 		=> home_url().'?ninja_recipe_preview='.$tableId.'#ninja_recipe_demo',
+			'layout_images' => $layout_images
+		), 200);
 	}
 
 

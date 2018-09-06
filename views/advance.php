@@ -32,9 +32,9 @@
 			</div>
 			
 			<div class="service-section"> 
-				<span> <?php echo $makingTime; ?> <i class="nr-clock-o"></i> </span>
-				<span> <?php echo $servingPeople; ?> services <i class="nr-pie-chart"> </i> </span>
-				<span> 191 cals <i class="nr-graph"></i> </span>
+				<span class="making-time"> <?php echo $makingTime; ?> <i class="nr-clock-o"></i> </span>
+				<span class="serving-people"> <?php echo $servingPeople; ?> services <i class="nr-pie-chart"> </i> </span>
+				<span class="cals"> 191 cals <i class="nr-graph"></i> </span>
 			</div>
 		</div>
 

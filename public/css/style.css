@@ -433,7 +433,11 @@
   margin: 0;
 }
 
-.ninja_advance_recipe_sidebar .ingredients-section .ingredients-header .service-section span {
+.ninja_advance_recipe_sidebar .ingredients-section .ingredients-header .service-section .making-time {
+  padding-right: 10px;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredients-header .service-section .serving-people {
   padding-right: 10px;
 }
 
