@@ -21970,7 +21970,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-top: 11px;\n    padding-right: 19px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .ing_drag_btn span .el-icon-rank {\n      color: black;\n}\n.ninja_recipe_table .field .all_fields .ing_delete_btn span .el-icon-rank {\n      color: black;\n}\n.ninja_recipe_table .field .all_fields .desc_drag_btn span .el-icon-rank {\n      color: black;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area {\n      padding-left: 0;\n      padding-right: 0;\n      width: auto;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area .desc_delete_btn {\n        padding: 13px;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area .desc_delete_btn span .el-icon-rank {\n          color: black;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_preview .el-select__input {\n    border: none;\n    -webkit-box-shadow: none;\n            box-shadow: none;\n}\n.ninja_recipe_table .show_preview .el-select__input {\n    background-color: transparent;\n}\n.ninja_recipe_table .show_preview ::-webkit-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview :-ms-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview ::-ms-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview ::placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview :-ms-input-placeholder {\n    /* Internet Explorer 10-11 */\n    color: #C2C4CC;\n}\n.ninja_recipe_table .show_preview ::-ms-input-placeholder {\n    /* Microsoft Edge */\n    color: #C2C4CC;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n.el-message {\n  z-index: 99999 !important;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
+exports.push([module.i, "\n.ninja_recipe_table .header {\n  font-size: 20px;\n  padding-bottom: 10px;\n  background: #fff;\n  margin-top: -20px;\n  padding-top: 22px;\n  margin-right: -20px;\n  margin-left: -20px;\n  padding-left: 24px;\n}\n.ninja_recipe_table .header .table_action_btn {\n    padding-top: 11px;\n    padding-right: 19px;\n}\n.ninja_recipe_table .header .table_action_btn .el-button--mini, .ninja_recipe_table .header .table_action_btn .el-button--mini.is-round {\n      padding: 7px 15px;\n}\n.ninja_recipe_table .table_action_btn {\n  padding-left: 93px;\n}\n.ninja_recipe_table .field {\n  margin-top: 18px;\n  padding-right: 15px;\n}\n.ninja_recipe_table .field h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .field .recipe_title {\n    margin-bottom: 13px;\n}\n.ninja_recipe_table .field .all_fields {\n    margin-top: 30px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_text_label {\n      margin-bottom: 7px;\n}\n.ninja_recipe_table .field .all_fields .nutrition_fields_label {\n      margin-bottom: 7px;\n      margin-top: 10px;\n}\n.ninja_recipe_table .field .all_fields .ing_drag_btn span .el-icon-rank {\n      color: black;\n}\n.ninja_recipe_table .field .all_fields .ing_delete_btn span .el-icon-rank {\n      color: black;\n}\n.ninja_recipe_table .field .all_fields .desc_drag_btn span .el-icon-rank {\n      color: black;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area {\n      padding-left: 0;\n      padding-right: 0;\n      width: auto;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area .desc_delete_btn {\n        padding: 13px;\n}\n.ninja_recipe_table .field .all_fields .desc_dtn_btn_area .desc_delete_btn span .el-icon-rank {\n          color: black;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img {\n      width: 50%;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .upld_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 12%;\n}\n.ninja_recipe_table .field .all_fields .featured_image_section .feat_img_btn .img_custom_btn {\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n      width: 30%;\n}\n.ninja_recipe_table .show_preview {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_preview h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_preview .active {\n    border: 2px solid red;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_preview .el-collapse-item__header {\n    border-bottom: 1px solid #ebeef5 !important;\n}\n.ninja_recipe_table .show_preview .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .show_preview .el-select__input {\n    border: none;\n    -webkit-box-shadow: none;\n            box-shadow: none;\n}\n.ninja_recipe_table .show_preview .el-select__input {\n    background-color: transparent;\n}\n.ninja_recipe_table .show_preview ::-webkit-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview :-ms-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview ::-ms-input-placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview ::placeholder {\n    /* Chrome, Firefox, Opera, Safari 10.1+ */\n    color: #C2C4CC;\n    opacity: 1;\n}\n.ninja_recipe_table .show_preview :-ms-input-placeholder {\n    /* Internet Explorer 10-11 */\n    color: #C2C4CC;\n}\n.ninja_recipe_table .show_preview ::-ms-input-placeholder {\n    /* Microsoft Edge */\n    color: #C2C4CC;\n}\n.ninja_recipe_table .show_featured_image {\n  background: #fff;\n  padding: 20px;\n  margin-top: 19px;\n  float: right;\n  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);\n}\n.ninja_recipe_table .show_featured_image h2 {\n    margin-top: 0;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img {\n    width: 50%;\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .upld_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .featured_image_section .feat_img_btn .img_custom_btn {\n    display: block;\n    text-align: center;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__header {\n    font-size: 17px;\n}\n.ninja_recipe_table .show_featured_image .el-collapse-item__wrap {\n    border-bottom: 0;\n}\n.ninja_recipe_table .show_featured_image .el-collapse {\n    border-top: 0px;\n}\n.ninja_recipe_table .change_type {\n  float: right;\n  margin-top: -36px;\n}\n.ninja_recipe_table .el-message--success {\n  z-index: 999999 !important;\n  top: 5px;\n}\n.ninja_recipe_table .el-input__inner {\n  background: #fff;\n}\n.el-message {\n  z-index: 99999 !important;\n}\n@media (max-width: 600px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 96%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 96%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n.ninja_recipe_table .field {\n    width: 100%;\n}\n.ninja_recipe_table .field .all_fields {\n      width: 100%;\n}\n.ninja_recipe_table .show_preview {\n    width: 98%;\n}\n.ninja_recipe_table .show_featured_image {\n    width: 98%;\n    float: left;\n}\n}\n", ""]);
 
 // exports
 
@@ -21995,16 +21995,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vuedraggable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_clipboard__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -22393,9 +22383,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             active_optional_field: ['optional_fields'],
             showNutritionFields: false,
             showNutritionText: true,
-            fullImg: '',
-            sideBarImg: '',
-            selectedLayoutImg: 'sidebar'
+            selectedLayoutImg: 'sidebar',
+            layout_images: [],
+            activeLiIndex: null,
+            active: null
         };
     },
     created: function created() {
@@ -22417,8 +22408,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.post_title = response.data.table.post_title;
                 _this.recipe_type = response.data.table.recipe_type;
                 _this.demo_url = response.data.demo_url;
-                _this.fullImg = response.data.fullImg;
-                _this.sideBarImg = response.data.sideBarImg;
+                _this.layout_images = response.data.layout_images;
                 if (response.data.tableConfig) {
                     if (_this.recipe_type == 'normal') {
                         _this.post_introduction = response.data.tableConfig.introduction;
@@ -26902,42 +26892,39 @@ var render = function() {
                           _c(
                             "el-col",
                             { attrs: { span: 24 } },
-                            [
-                              _c("el-col", { attrs: { span: 12 } }, [
-                                _c("img", {
-                                  staticClass: "layoutImg",
-                                  staticStyle: {
-                                    width: "100px",
-                                    margin: "0 auto",
-                                    cursor: "pointer"
-                                  },
-                                  attrs: { src: _vm.sideBarImg, alt: "" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.selectedLayoutImg = "sidebar"
+                            _vm._l(_vm.layout_images, function(
+                              layout_image,
+                              index
+                            ) {
+                              return _c(
+                                "el-col",
+                                { key: index, attrs: { span: 8 } },
+                                [
+                                  _c("img", {
+                                    class:
+                                      index === _vm.activeLiIndex
+                                        ? "active"
+                                        : "",
+                                    staticStyle: {
+                                      width: "100px",
+                                      cursor: "pointer"
+                                    },
+                                    attrs: {
+                                      src: layout_image.imgUrl,
+                                      active:
+                                        index === _vm.activeLiIndex ? true : ""
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.activeLiIndex = index
+                                        _vm.selectedLayoutImg =
+                                          layout_image.type
+                                      }
                                     }
-                                  }
-                                })
-                              ]),
-                              _vm._v(" "),
-                              _c("el-col", { attrs: { span: 12 } }, [
-                                _c("img", {
-                                  staticClass: "layoutImg",
-                                  staticStyle: {
-                                    width: "100px",
-                                    margin: "0 auto",
-                                    cursor: "pointer"
-                                  },
-                                  attrs: { src: _vm.fullImg, alt: "" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.selectedLayoutImg = "fullImg"
-                                    }
-                                  }
-                                })
-                              ])
-                            ],
-                            1
+                                  })
+                                ]
+                              )
+                            })
                           )
                         ],
                         1

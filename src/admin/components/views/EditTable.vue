@@ -282,24 +282,14 @@
                         <el-row>
                             <label for="layout">Layout</label>
                             <el-col :span="24">
-                                <el-col :span="12">
-                                    <img 
-                                        :src=sideBarImg 
-                                        class="layoutImg" 
-                                        alt="" 
-                                        style="width: 100px; margin: 0 auto; cursor: pointer"
-                                        @click="selectedLayoutImg= 'sidebar'">
-                                </el-col>
-                                <el-col :span="12">
-                                    <img 
-                                        :src=fullImg 
-                                        class="layoutImg" 
-                                        alt="" 
-                                        style="width: 100px; margin: 0 auto; cursor: pointer"
-                                        @click="selectedLayoutImg= 'fullImg'">
+                                <el-col v-for="(layout_image, index) in layout_images" :key="index" :span="8">
+                                    <img :src="layout_image.imgUrl"
+                                        style="width: 100px; cursor: pointer"
+                                        :active="(index === activeLiIndex) ? true : ''"
+                                        @click="activeLiIndex = index;selectedLayoutImg=layout_image.type "
+                                        :class="(index === activeLiIndex) ? 'active' : ''" >
                                 </el-col>
                             </el-col>
-
                         </el-row>
                     </el-collapse-item>
                 </el-collapse>
@@ -475,9 +465,10 @@ export default {
             active_optional_field: ['optional_fields'],
             showNutritionFields: false,
             showNutritionText: true,
-            fullImg: '',
-            sideBarImg: '',
-            selectedLayoutImg: 'sidebar'
+            selectedLayoutImg: 'sidebar',
+            layout_images: [],
+            activeLiIndex: null,
+            active: null
         }
     },
     created() {
@@ -498,8 +489,7 @@ export default {
                     this.post_title  = response.data.table.post_title;
                     this.recipe_type = response.data.table.recipe_type;
                     this.demo_url    = response.data.demo_url;
-                    this.fullImg     = response.data.fullImg;
-                    this.sideBarImg  = response.data.sideBarImg;
+                    this.layout_images = response.data.layout_images;
                     if( response.data.tableConfig ) {
                         if( this.recipe_type == 'normal' ) {
                             this.post_introduction = response.data.tableConfig.introduction;
@@ -758,6 +748,9 @@ export default {
         box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
         h2 {
             margin-top: 0;
+        }
+        .active {
+            border: 2px solid red;
         }
         .el-collapse-item__header {
             font-size: 17px;
