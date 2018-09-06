@@ -61,7 +61,7 @@
 							<div class="ninjarecipe-col-3">
 								<?php foreach($ingredients as $ingredient): ?>
 									<li><span class="nr-check"></span> <?php  echo $ingredient['ingredient']; ?>  <?php  echo $ingredient['amount']; ?> <?php  echo $ingredient['unit']; ?></li> 
-								<?php endforeach; ?><br>
+								<?php endforeach; ?>
 							</div>
 						<?php endforeach; ?> 
 					</ol>

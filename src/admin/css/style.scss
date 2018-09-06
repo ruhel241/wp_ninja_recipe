@@ -49,7 +49,7 @@
 		display: inline-flex;
 		.title{
 			margin-bottom:15px;
-			h3{
+			h2{
 				padding:0;
 				margin:0;
 			}
@@ -68,6 +68,13 @@
 			}
 			
 			.service-section{
+				.making-time{
+					padding-right: 10px;
+				}
+				.serving-people{
+					padding-right: 10px;
+				}
+
 				i {
 					font-size: 18px;
 				    top: 4px;
@@ -84,11 +91,14 @@
 			    list-style: none;
 			   	overflow: hidden;
 			    counter-reset: numList;
+			    .ninjarecipe-col-3{
+			    	padding-bottom: 25px;
+			    }
 
 				li {
 				    
 				    position: relative;
-				    line-height: 27px;
+				    line-height: 35px;
 				    padding-left: 10px;
 					span {
 						counter-increment: numList;
@@ -104,8 +114,8 @@
 					    background: #fff;
 					    border-radius: 999px;
 					    border: solid 1px;
-					    margin-top: 4px;
-					        padding-top: 2px;
+					    margin-top: 9px;
+					    padding-top: 2px;
 					}
 				} 
 
@@ -129,12 +139,11 @@
 				    margin-bottom: 30px;
 
 				    .instruction-des{
-				    	    margin-bottom: 15px;
+				    	margin-bottom: 15px;
 				    }
 
 				    .instruction-img{ 
-				    	margin: 0 auto;
-	   					width: 50%;
+				    	width: 50%;
 				    }
 
 
@@ -401,7 +410,8 @@
 
 				li {
 				   position: relative;
-				    line-height: 27px;
+				    // line-height: 40px;
+				    line-height: 50px;
 				    padding-left: 10px;
 					span {
 						counter-increment: numList;
@@ -417,8 +427,9 @@
 					    background: #fff;
 					    border-radius: 999px;
 					    border: solid 1px;
-					    margin-top: 4px;
-					        padding-top: 2px;
+					    // margin-top: 11px;
+					    margin-top: 16px;
+					    padding-top: 2px;
 					}
 				} 
 			}
@@ -437,6 +448,12 @@
 
 // Instruction Section
 		.instruction-section{
+			.instruction-header{
+				h3{
+					margin:0;
+				}
+			}
+
 			.instruction ol {
 				display: block;
 			    padding: 0 0 0 26px;
@@ -454,8 +471,7 @@
 				    }
 
 				    .instruction-img{ 
-				    	margin: 0 auto;
-	   					width: 50%;
+				    	width: 70%;
 				    }
 
 
@@ -484,7 +500,12 @@
 
 // Nutrition Section
 	.nutritionFact-section{
-
+		.nutritionFact-header{
+			h3{
+				padding:0;
+				margin:0
+			}
+		}
 		.nutrition{
 			p {
 				display: initial;
@@ -628,8 +649,6 @@
 
 	}
 
-
-
 }
 
 
@@ -717,6 +736,13 @@
 				margin:0;
 			}
 			.service-section{
+				.making-time{
+					padding-right: 10px;
+				}
+				.serving-people{
+					padding-right: 10px;
+				}
+
 				i {
 					font-size: 18px;
 				    top: 4px;
