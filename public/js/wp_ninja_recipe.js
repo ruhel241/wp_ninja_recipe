@@ -22394,8 +22394,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             active_optional_field: ['optional_fields'],
             showNutritionFields: false,
             showNutritionText: true,
-            fullImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/Full.png',
-            sideBarImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/sidebar.png',
+            fullImg: '',
+            sideBarImg: '',
             selectedLayoutImg: 'sidebar'
         };
     },
@@ -22419,6 +22419,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.post_title = response.data.table.post_title;
                 _this.recipe_type = response.data.table.recipe_type;
                 _this.demo_url = response.data.demo_url;
+                _this.fullImg = response.data.fullImg;
+                _this.sideBarImg = response.data.sideBarImg;
                 if (response.data.tableConfig) {
 
                     if (_this.recipe_type == 'normal') {

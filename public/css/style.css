@@ -56,57 +56,61 @@
   content: "f";
 }
 
-.ninja_advance_recipe .ninjarecipe_hr {
+/*****
+ 	Advance Full layout 
+*****/
+
+.ninja_advance_recipe_fullImg .ninjarecipe_hr {
   border-bottom: solid 1px #ddd;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
 
-.ninja_advance_recipe .ninjarecipe-row {
+.ninja_advance_recipe_fullImg .ninjarecipe-row {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.ninja_advance_recipe .ninjarecipe-col-6 {
+.ninja_advance_recipe_fullImg .ninjarecipe-col-6 {
   width: 50%;
   float: left;
 }
 
-.ninja_advance_recipe .ninjarecipe-col-3 {
+.ninja_advance_recipe_fullImg .ninjarecipe-col-3 {
   width: 33%;
   float: left;
 }
 
-.ninja_advance_recipe .ninjarecipe-col-8 {
+.ninja_advance_recipe_fullImg .ninjarecipe-col-8 {
   width: 70%;
 }
 
-.ninja_advance_recipe .ninjarecipe-col-12 {
+.ninja_advance_recipe_fullImg .ninjarecipe-col-12 {
   width: 100%;
 }
 
-.ninja_advance_recipe .ninjarecipe-padding {
+.ninja_advance_recipe_fullImg .ninjarecipe-padding {
   padding-right: 10px;
   padding-left: 10px;
 }
 
-.ninja_advance_recipe .introduction-section {
+.ninja_advance_recipe_fullImg .introduction-section {
   margin-bottom: 20px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.ninja_advance_recipe .introduction-section .title {
+.ninja_advance_recipe_fullImg .introduction-section .title {
   margin-bottom: 15px;
 }
 
-.ninja_advance_recipe .introduction-section .title h3 {
+.ninja_advance_recipe_fullImg .introduction-section .title h3 {
   padding: 0;
   margin: 0;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredients-header {
+.ninja_advance_recipe_fullImg .ingredients-section .ingredients-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,25 +119,25 @@
           justify-content: space-between;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredients-header .title {
+.ninja_advance_recipe_fullImg .ingredients-section .ingredients-header .title {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredients-header .service-section i {
+.ninja_advance_recipe_fullImg .ingredients-section .ingredients-header .service-section i {
   font-size: 18px;
   top: 4px;
   position: relative;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredient {
+.ninja_advance_recipe_fullImg .ingredients-section .ingredient {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredient ol {
+.ninja_advance_recipe_fullImg .ingredients-section .ingredient ol {
   display: block;
   padding: 0 0 0 26px;
   list-style: none;
@@ -141,13 +145,13 @@
   counter-reset: numList;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredient ol li {
+.ninja_advance_recipe_fullImg .ingredients-section .ingredient ol li {
   position: relative;
   line-height: 27px;
   padding-left: 10px;
 }
 
-.ninja_advance_recipe .ingredients-section .ingredient ol li span {
+.ninja_advance_recipe_fullImg .ingredients-section .ingredient ol li span {
   counter-increment: numList;
   float: left;
   position: absolute;
@@ -165,7 +169,7 @@
   padding-top: 2px;
 }
 
-.ninja_advance_recipe .instruction-section .instruction ol {
+.ninja_advance_recipe_fullImg .instruction-section .instruction ol {
   display: block;
   padding: 0 0 0 26px;
   list-style: none;
@@ -173,23 +177,23 @@
   counter-reset: numList;
 }
 
-.ninja_advance_recipe .instruction-section .instruction ol li {
+.ninja_advance_recipe_fullImg .instruction-section .instruction ol li {
   position: relative;
   line-height: 27px;
   padding-left: 10px;
   margin-bottom: 30px;
 }
 
-.ninja_advance_recipe .instruction-section .instruction ol li .instruction-des {
+.ninja_advance_recipe_fullImg .instruction-section .instruction ol li .instruction-des {
   margin-bottom: 15px;
 }
 
-.ninja_advance_recipe .instruction-section .instruction ol li .instruction-img {
+.ninja_advance_recipe_fullImg .instruction-section .instruction ol li .instruction-img {
   margin: 0 auto;
   width: 50%;
 }
 
-.ninja_advance_recipe .instruction-section .instruction ol li::before {
+.ninja_advance_recipe_fullImg .instruction-section .instruction ol li::before {
   counter-increment: numList;
   content: counter(numList);
   float: left;
@@ -209,16 +213,16 @@
   padding: 3px;
 }
 
-.ninja_advance_recipe .nutritionFact-section .nutrition p {
+.ninja_advance_recipe_fullImg .nutritionFact-section .nutrition p {
   display: initial;
 }
 
-.ninja_advance_recipe .nutritionFact-section .nutrition .full-nutrition {
+.ninja_advance_recipe_fullImg .nutritionFact-section .nutrition .full-nutrition {
   color: red;
   font-weight: bold;
 }
 
-.ninja_advance_recipe .nutrition_modal {
+.ninja_advance_recipe_fullImg .nutrition_modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -231,14 +235,14 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.ninja_advance_recipe .nutrition_modal .close {
+.ninja_advance_recipe_fullImg .nutrition_modal .close {
   color: black;
   float: right;
   font-size: 35px;
   font-weight: bold;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section {
   border: solid 1px #A0A0A0;
   border-radius: 5px;
   padding: 20px;
@@ -249,112 +253,432 @@
   margin-bottom: 50px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section p {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section p {
   margin: 0 !important;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .cooked_nutrition .title {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .cooked_nutrition .title {
   margin: 0;
   padding-bottom: 10px;
   font-weight: 700;
   color: black;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .cooked_nutrition .serving_size {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .cooked_nutrition .serving_size {
   font-size: 16px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .cooked_nutrition .serving_people {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .cooked_nutrition .serving_people {
   font-size: 16px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .hr_fat {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .hr_fat {
   border: none;
   border-top: solid 1em #333;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .hr_thick {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .hr_thick {
   border: none;
   border-bottom: solid 1px #333;
   margin: 0;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .green {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .green {
   color: #029E74;
   font-weight: bold;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .cooked_value {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .cooked_value {
   font-size: 16px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .cooked_right {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .cooked_right {
   float: right;
   font-size: 16px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_1 {
   border-bottom: solid 7px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 .cooked_label {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_1 .cooked_label {
   font-size: 16px;
   color: black;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 .per_serving {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_1 .per_serving {
   font-size: 12px !important;
   border-bottom: solid 1px;
   color: black !important;
   font-weight: bold;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_1 .caloriesFat {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_1 .caloriesFat {
   color: black;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_2 {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_2 {
   padding-bottom: 11px;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_2 .cooked_label {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_2 .cooked_label {
   font-size: 16px;
   color: black;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_2 .daily_value {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_2 .daily_value {
   font-size: 14px;
   float: right;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_3 {
   clear: both;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 .cooked_label {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_3 .cooked_label {
   font-size: 15px;
   color: black;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 .cooked_parent {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_3 .cooked_parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_3 .cooked_parent .cooked_fact_fifty {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_3 .cooked_parent .cooked_fact_fifty {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.ninja_advance_recipe .nutritions_factlist_section .fact_section_4 p {
+.ninja_advance_recipe_fullImg .nutritions_factlist_section .fact_section_4 p {
   font-size: 14px !important;
   padding-top: 18px !important;
   display: inline-block;
 }
+
+/*****
+ 	Advance Sidebar layout 
+*****/
+
+.ninja_advance_recipe_sidebar .ninjarecipe_hr {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.ninja_advance_recipe_sidebar .ninjarecipe-row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ninja_advance_recipe_sidebar .ninjarecipe-col-6 {
+  width: 100%;
+  float: left;
+}
+
+.ninja_advance_recipe_sidebar .ninjarecipe-col-3 {
+  width: 33%;
+  float: left;
+}
+
+.ninja_advance_recipe_sidebar .ninjarecipe-col-8 {
+  width: 70%;
+}
+
+.ninja_advance_recipe_sidebar .ninjarecipe-col-12 {
+  width: 100%;
+}
+
+.ninja_advance_recipe_sidebar .ninjarecipe-padding {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.ninja_advance_recipe_sidebar .introduction-section {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.ninja_advance_recipe_sidebar .introduction-section .title {
+  margin-bottom: 15px;
+}
+
+.ninja_advance_recipe_sidebar .introduction-section .title h2 {
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredients-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredients-header .title {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredients-header .service-section span {
+  padding-right: 10px;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredients-header .service-section i {
+  font-size: 18px;
+  top: 4px;
+  position: relative;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredient ol {
+  display: block;
+  padding: 0 0 0 23px;
+  list-style: none;
+  counter-reset: numList;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredient ol li {
+  position: relative;
+  line-height: 27px;
+  padding-left: 10px;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredient ol li span {
+  counter-increment: numList;
+  float: left;
+  position: absolute;
+  left: -26px;
+  font: bold 12px sans-serif;
+  text-align: center;
+  color: #ddd;
+  line-height: 18px;
+  width: 21px;
+  height: 20px;
+  background: #fff;
+  border-radius: 999px;
+  border: solid 1px;
+  margin-top: 4px;
+  padding-top: 2px;
+}
+
+.ninja_advance_recipe_sidebar .ingredients-section .ingredient .ninjarecipe-col-3 {
+  width: 100%;
+  float: left;
+}
+
+.ninja_advance_recipe_sidebar .instruction-section .instruction ol {
+  display: block;
+  padding: 0 0 0 26px;
+  list-style: none;
+  overflow: hidden;
+  counter-reset: numList;
+}
+
+.ninja_advance_recipe_sidebar .instruction-section .instruction ol li {
+  position: relative;
+  line-height: 27px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.ninja_advance_recipe_sidebar .instruction-section .instruction ol li .instruction-des {
+  margin-bottom: 15px;
+}
+
+.ninja_advance_recipe_sidebar .instruction-section .instruction ol li .instruction-img {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.ninja_advance_recipe_sidebar .instruction-section .instruction ol li::before {
+  counter-increment: numList;
+  content: counter(numList);
+  float: left;
+  position: absolute;
+  left: -26px;
+  font: bold 12px sans-serif;
+  text-align: center;
+  color: #ddd;
+  line-height: 18px;
+  width: 27px;
+  height: 26px;
+  background: #fff;
+  border-radius: 999px;
+  border: solid 1px;
+  margin-top: 1px;
+  /* top: 10px; */
+  padding: 3px;
+}
+
+.ninja_advance_recipe_sidebar .nutritionFact-section .nutrition p {
+  display: initial;
+}
+
+.ninja_advance_recipe_sidebar .nutritionFact-section .nutrition .full-nutrition {
+  color: red;
+  font-weight: bold;
+}
+
+.ninja_advance_recipe_sidebar .nutrition_modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ninja_advance_recipe_sidebar .nutrition_modal .close {
+  color: black;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section {
+  border: solid 1px #A0A0A0;
+  border-radius: 5px;
+  padding: 20px;
+  width: 25%;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section p {
+  margin: 0 !important;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .cooked_nutrition .title {
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 700;
+  color: black;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .cooked_nutrition .serving_size {
+  font-size: 16px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .cooked_nutrition .serving_people {
+  font-size: 16px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .hr_fat {
+  border: none;
+  border-top: solid 1em #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .hr_thick {
+  border: none;
+  border-bottom: solid 1px #333;
+  margin: 0;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .green {
+  color: #029E74;
+  font-weight: bold;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .cooked_value {
+  font-size: 16px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .cooked_right {
+  float: right;
+  font-size: 16px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_1 {
+  border-bottom: solid 7px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_1 .cooked_label {
+  font-size: 16px;
+  color: black;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_1 .per_serving {
+  font-size: 12px !important;
+  border-bottom: solid 1px;
+  color: black !important;
+  font-weight: bold;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_1 .caloriesFat {
+  color: black;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_2 {
+  padding-bottom: 11px;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_2 .cooked_label {
+  font-size: 16px;
+  color: black;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_2 .daily_value {
+  font-size: 14px;
+  float: right;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_3 {
+  clear: both;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_3 .cooked_label {
+  font-size: 15px;
+  color: black;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_3 .cooked_parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_3 .cooked_parent .cooked_fact_fifty {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ninja_advance_recipe_sidebar .nutritions_factlist_section .fact_section_4 p {
+  font-size: 14px !important;
+  padding-top: 18px !important;
+  display: inline-block;
+}
+
+/*****
+ 	Normal Full layout 
+*****/
 
 .ninja_normal_recipe {
   display: block;

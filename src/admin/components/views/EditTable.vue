@@ -476,8 +476,8 @@ export default {
             active_optional_field: ['optional_fields'],
             showNutritionFields: false,
             showNutritionText: true,
-            fullImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/Full.png',
-            sideBarImg: 'http://wp.test/wp-content/plugins/wp_ninja_recipe/src/assets/image/sidebar.png',
+            fullImg: '',
+            sideBarImg: '',
             selectedLayoutImg: 'sidebar'
         }
     },
@@ -498,9 +498,11 @@ export default {
             .then(
                 (response) => {
                     console.log(response)
-                    this.post_title = response.data.table.post_title;
+                    this.post_title  = response.data.table.post_title;
                     this.recipe_type = response.data.table.recipe_type;
-                    this.demo_url = response.data.demo_url;
+                    this.demo_url    = response.data.demo_url;
+                    this.fullImg     = response.data.fullImg;
+                    this.sideBarImg  = response.data.sideBarImg;
                     if( response.data.tableConfig ) {
 
                         if( this.recipe_type == 'normal' ) {

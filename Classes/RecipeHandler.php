@@ -88,11 +88,12 @@ class RecipeHandler
   		/**
 			Nutrition items
   		**/
-  		$nutrition_text 		= $recipeMetaData['nutrition']['nutrition_text'];
-  		$showNutrition_Fields   = $recipeMetaData['nutrition']['showNutritionFields'];
-		$nutrition_fields 		= $recipeMetaData['nutrition']['nutrition_fields'];
-  		$makingTime	 		    = $recipeMetaData['makingTime']; 
-  		$servingPeople	 	    = $recipeMetaData['totalPeople']; 
+  		$nutrition_text 	  = $recipeMetaData['nutrition']['nutrition_text'];
+  		$showNutrition_Fields = $recipeMetaData['nutrition']['showNutritionFields'];
+		$nutrition_fields 	  = $recipeMetaData['nutrition']['nutrition_fields'];
+  		$makingTime	 		  = $recipeMetaData['makingTime']; 
+  		$servingPeople	 	  = $recipeMetaData['totalPeople']; 
+  		$layout	 	   		  = $recipeMetaData['selectedLayoutImg']; 
 
 
   		// if(isset($nutrition_fields)){
@@ -219,12 +220,15 @@ class RecipeHandler
 			'post_title' 	   => $table->post_title,
 			'recipe_type'	   => $table->post_content
 		);
-		
-		wp_send_json_success(array(
+
+		wp_send_json_success(array( 
             'table'        => $formattedTable,
             'tableConfig'  => $tableConfig,
             //'demoRecipeConfig' => static::getRecipeConfig(),
-            'demo_url' => home_url().'?ninja_recipe_preview='.$tableId.'#ninja_recipe_demo'
+            'demo_url' => home_url().'?ninja_recipe_preview='.$tableId.'#ninja_recipe_demo',
+			'fullImg' => NINJA_RECIPE_PUBLIC_DIR_URL.'img/Full.png',
+            'sideBarImg' => NINJA_RECIPE_PUBLIC_DIR_URL.'img/sidebar.png'
+
         ), 200);
 	}
 
