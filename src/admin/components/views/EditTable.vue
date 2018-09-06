@@ -282,24 +282,14 @@
                         <el-row>
                             <label for="layout">Layout</label>
                             <el-col :span="24">
-                                <el-col :span="12">
-                                    <img 
-                                        :src=sideBarImg 
-                                        class="layoutImg" 
-                                        alt="" 
-                                        style="width: 100px; margin: 0 auto; cursor: pointer"
-                                        @click="selectedLayoutImg= 'sidebar'">
-                                </el-col>
-                                <el-col :span="12">
-                                    <img 
-                                        :src=fullImg 
-                                        class="layoutImg" 
-                                        alt="" 
-                                        style="width: 100px; margin: 0 auto; cursor: pointer"
-                                        @click="selectedLayoutImg= 'fullImg'">
+                                <el-col v-for="(layout_image, index) in layout_images" :key="index" :span="8">
+                                    <img :src="layout_image.imgUrl"
+                                        style="width: 100px; cursor: pointer"
+                                        :active="(index === activeLiIndex) ? true : ''"
+                                        @click="activeLiIndex = index;selectedLayoutImg=layout_image.type "
+                                        :class="(index === activeLiIndex) ? 'active' : ''" >
                                 </el-col>
                             </el-col>
-
                         </el-row>
                     </el-collapse-item>
                 </el-collapse>
@@ -342,7 +332,6 @@ import InputNumber from '../core/InputNumber.vue'
 import NutritionFields from '../common/NutritionFields.vue'
 import draggable from 'vuedraggable'
 import Clipboard from 'clipboard'
-
 export default {
     name: 'EditTable',
     components: {
@@ -476,9 +465,10 @@ export default {
             active_optional_field: ['optional_fields'],
             showNutritionFields: false,
             showNutritionText: true,
-            fullImg: '',
-            sideBarImg: '',
-            selectedLayoutImg: 'sidebar'
+            selectedLayoutImg: 'sidebar',
+            layout_images: [],
+            activeLiIndex: null,
+            active: null
         }
     },
     created() {
@@ -487,13 +477,11 @@ export default {
     },
     methods: {
         fetchTable() {
-
             let fetchTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'get_table',
                 table_id: this.table_id
             };
-
             jQuery.get(ajaxurl, fetchTableAjaxData)
             .then(
                 (response) => {
@@ -501,26 +489,19 @@ export default {
                     this.post_title  = response.data.table.post_title;
                     this.recipe_type = response.data.table.recipe_type;
                     this.demo_url    = response.data.demo_url;
-                    this.fullImg     = response.data.fullImg;
-                    this.sideBarImg  = response.data.sideBarImg;
+                    this.layout_images = response.data.layout_images;
                     if( response.data.tableConfig ) {
-
                         if( this.recipe_type == 'normal' ) {
-
                             this.post_introduction = response.data.tableConfig.introduction;
                             this.post_description = response.data.tableConfig.description;
                             this.nutritions = response.data.tableConfig.nutrition;
                             this.post_ingredient = response.data.tableConfig.ingredient;
-
                         }
-
                         else if( this.recipe_type == 'advance' ) {
-
                             this.post_introduction = response.data.tableConfig.introduction;
                             this.descriptions_adv = response.data.tableConfig.description;
                             this.nutritions = response.data.tableConfig.nutrition;
                             this.ingredients_data = response.data.tableConfig.ingredient;
-
                         }
                     
                         this.selectedMealType = response.data.tableConfig.mealType;
@@ -532,28 +513,22 @@ export default {
                         this.nutritions = response.data.tableConfig.nutrition.nutrition_fields;
                         this.showNutritionFields = response.data.tableConfig.nutrition.showNutritionFields;
                         this.makingTime = response.data.tableConfig.makingTime;
-
                     }
                 }
             )
-
         },
         updateTableConfig() {
-
             if( this.recipe_type === 'normal' ) {
                 var introduction = this.post_introduction;
                 var ingredient = this.post_ingredient;
                 var description = this.post_description;
             }
-
             else if( this.recipe_type === 'advance' ) {
                 var introduction = this.post_introduction;
                 var ingredient = this.ingredients_data;
                 var description = this.descriptions_adv;
             }
-
             var featImage = this.featImage;
-
             let nutrition = {
                 nutrition_text: this.nutrition_text,
                 nutrition_fields: this.nutritions,
@@ -572,9 +547,7 @@ export default {
                 makingTime: this.makingTime,
                 selectedLayoutImg: this.selectedLayoutImg
             };
-
             console.log(tableConfig)
-
             let updateTableAjaxData = {
                 action: 'ninja_recipe_ajax_actions',
                 route: 'update_table',
@@ -583,7 +556,6 @@ export default {
                 post_title: this.post_title,
                 recipe_type: this.recipe_type
             };
-
             jQuery.post(ajaxurl, updateTableAjaxData)
             .then(
                 (response) => {
@@ -594,11 +566,9 @@ export default {
                 }
             )
         },
-
         upload_image() {
             var button = $(this);
             var custom_uploader = wp.media({
-
                 title: 'Insert Recipe Image',
                 library : {
                     type : 'image'
@@ -607,7 +577,6 @@ export default {
                     text: 'Use this image' 
                 },
                 multiple: false
-
             }).on('select', () => { // using the arrow function cause there is a callback(.on) inside function 
                 var attachment = custom_uploader.state().get('selection').first().toJSON();
                 $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
@@ -616,11 +585,9 @@ export default {
             })
             .open();
         },
-
         upload_img_adv_desc(i) {
             var button = $(this);
             var custom_uploader = wp.media({
-
                 title: 'Insert Description Image',
                 library : {
                     type : 'image'
@@ -629,7 +596,6 @@ export default {
                     text: 'Use this image' 
                 },
                 multiple: false
-
             }).on('select', () => { // using the arrow function cause there is a callback(.on) inside function 
                 var attachment = custom_uploader.state().get('selection').first().toJSON();
                 $(button).removeClass('button').html('<img class="true_pre_image" src="' + attachment.url + '" style="max-width:95%;display:block;" />').next().val(attachment.id).next().show();
@@ -637,7 +603,6 @@ export default {
             })
             .open();
         },
-
         addMoreIngField() {
             this.ingredients_data.push({
                 ingredient: '',
@@ -645,22 +610,18 @@ export default {
                 unit: ''
             })
         },
-
         deleteIngField(index) {
             this.ingredients_data.splice(index, 1);
         },
-
         addDescField() {
             this.descriptions_adv.push({
                 desc_text: '',
                 desc_img: ''
             })
         },
-
         removeDescAdv(index) {
             this.descriptions_adv.splice(index, 1);
         },
-
         clipboardRender() {
             var clipboard = new Clipboard('.copy');
             clipboard.on('success', (e) => {
@@ -681,7 +642,6 @@ export default {
 
 <style lang="scss">
 .ninja_recipe_table {
-
     .header {
         font-size: 20px;
 	    padding-bottom: 10px;
@@ -691,7 +651,6 @@ export default {
 	    margin-right: -20px;
 	    margin-left: -20px;
 	    padding-left: 24px;
-
         .table_action_btn {
             padding-top: 11px;
             padding-right: 19px;
@@ -700,11 +659,9 @@ export default {
             }
         }
     }
-
     .table_action_btn {
         padding-left: 93px;
     }
-
     .field {
         margin-top: 18px;
 		padding-right: 15px; 
@@ -784,7 +741,6 @@ export default {
             }
         }
 	}
-
     .show_preview {
         background: #fff;
 		padding: 20px;
@@ -792,6 +748,9 @@ export default {
         box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
         h2 {
             margin-top: 0;
+        }
+        .active {
+            border: 2px solid red;
         }
         .el-collapse-item__header {
             font-size: 17px;
@@ -812,21 +771,17 @@ export default {
         .el-select__input {
             background-color: transparent;
         }
-
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #C2C4CC;
             opacity: 1;
         }
-
         :-ms-input-placeholder { /* Internet Explorer 10-11 */
             color: #C2C4CC;
         }
-
         ::-ms-input-placeholder { /* Microsoft Edge */
             color: #C2C4CC;
         }
     }
-
     .show_featured_image {
         background: #fff;
 		padding: 20px;
@@ -864,28 +819,22 @@ export default {
             border-top: 0px;
         }
     }
-
     .change_type {
 		float: right;
 	  	margin-top: -36px;
 	}
-
     .el-message--success {
         z-index: 999999!important;
         top: 5px;
     }
-
     .el-input__inner {
         background: #fff;
     }
 }
-
 .el-message {
     z-index: 99999 !important;
 }
-
 @media (max-width: 600px) {
-
         .ninja_recipe_table {
             .field {
                 width: 100%;
@@ -901,9 +850,7 @@ export default {
                 float: left;
             }
         }
-
     }
-
 @media (min-width: 768px) and (max-width: 1024px) {
   
   .ninja_recipe_table {
@@ -923,7 +870,6 @@ export default {
     }
   
 }
-
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
   .ninja_recipe_table {
