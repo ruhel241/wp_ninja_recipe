@@ -222,8 +222,15 @@ class RecipeHandler
 		);
 
 		$layout_images = array(
-			'fullImg' => NINJA_RECIPE_PUBLIC_DIR_URL.'img/Full.png',
-			'sidebar' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/sidebar.png'
+			{
+				'type'   => 'fullImg',
+				'imgUrl' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/Full.png'
+			},
+
+			{
+				'type'   => 'sidebar',
+				'imgUrl' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/sidebar.png'
+			}
 		);
 
 		wp_send_json_success(array( 
