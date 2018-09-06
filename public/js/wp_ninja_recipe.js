@@ -22386,7 +22386,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             selectedLayoutImg: 'sidebar',
             layout_images: [],
             activeLiIndex: null,
-            active: null
+            active: 'sidebar'
         };
     },
     created: function created() {
@@ -22404,11 +22404,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 table_id: this.table_id
             };
             jQuery.get(ajaxurl, fetchTableAjaxData).then(function (response) {
-                console.log(response);
+                console.log(response.data.tableConfig.selectedLayoutImg);
                 _this.post_title = response.data.table.post_title;
                 _this.recipe_type = response.data.table.recipe_type;
                 _this.demo_url = response.data.demo_url;
                 _this.layout_images = response.data.layout_images;
+                _this.active = response.data.tableConfig.selectedLayoutImg;
                 if (response.data.tableConfig) {
                     if (_this.recipe_type == 'normal') {
                         _this.post_introduction = response.data.tableConfig.introduction;
@@ -26886,7 +26887,7 @@ var render = function() {
                         "el-row",
                         [
                           _c("label", { attrs: { for: "layout" } }, [
-                            _vm._v("Layout")
+                            _vm._v("Layout*")
                           ]),
                           _vm._v(" "),
                           _c(
@@ -26902,7 +26903,8 @@ var render = function() {
                                 [
                                   _c("img", {
                                     class:
-                                      index === _vm.activeLiIndex
+                                      index === _vm.activeLiIndex ||
+                                      _vm.active === layout_image.type
                                         ? "active"
                                         : "",
                                     staticStyle: {
@@ -26919,6 +26921,7 @@ var render = function() {
                                         _vm.activeLiIndex = index
                                         _vm.selectedLayoutImg =
                                           layout_image.type
+                                        _vm.active = ""
                                       }
                                     }
                                   })
