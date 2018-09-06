@@ -280,14 +280,14 @@
                             </el-col>
                         </el-row>
                         <el-row>
-                            <label for="layout">Layout</label>
+                            <label for="layout">Layout*</label>
                             <el-col :span="24">
                                 <el-col v-for="(layout_image, index) in layout_images" :key="index" :span="8">
                                     <img :src="layout_image.imgUrl"
                                         style="width: 100px; cursor: pointer"
                                         :active="(index === activeLiIndex) ? true : ''"
-                                        @click="activeLiIndex = index;selectedLayoutImg=layout_image.type "
-                                        :class="(index === activeLiIndex) ? 'active' : ''" >
+                                        @click="activeLiIndex = index;selectedLayoutImg=layout_image.type;active=''"
+                                        :class="(index === activeLiIndex || active===layout_image.type) ? 'active' : ''" >
                                 </el-col>
                             </el-col>
                         </el-row>
@@ -468,7 +468,7 @@ export default {
             selectedLayoutImg: 'sidebar',
             layout_images: [],
             activeLiIndex: null,
-            active: null
+            active: 'sidebar'
         }
     },
     created() {
@@ -485,11 +485,12 @@ export default {
             jQuery.get(ajaxurl, fetchTableAjaxData)
             .then(
                 (response) => {
-                    console.log(response)
+                    console.log(response.data.tableConfig.selectedLayoutImg)
                     this.post_title  = response.data.table.post_title;
                     this.recipe_type = response.data.table.recipe_type;
                     this.demo_url    = response.data.demo_url;
                     this.layout_images = response.data.layout_images;
+                    this.active = response.data.tableConfig.selectedLayoutImg;
                     if( response.data.tableConfig ) {
                         if( this.recipe_type == 'normal' ) {
                             this.post_introduction = response.data.tableConfig.introduction;

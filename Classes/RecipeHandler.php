@@ -223,12 +223,14 @@ class RecipeHandler
 
 		$layout_images = array(
 			array(
-				'type'   => 'fullImg',
-				'imgUrl' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/Full.png'
+				'type'   => 'sidebar',
+				'imgUrl' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/sidebar.png',
+				'default' => true
 			),
 			array(
-				'type'   => 'sidebar',
-				'imgUrl' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/sidebar.png'
+				'type'   => 'fullImg',
+				'imgUrl' =>  NINJA_RECIPE_PUBLIC_DIR_URL.'img/Full.png',
+				'default' => false
 			)
 		);
 
