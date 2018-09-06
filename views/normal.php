@@ -1,9 +1,9 @@
-<div class="ninja_normal_recipe">
+<div class="ninja_normal_recipe_<?php echo $layout; ?>">
 	
 	<div class="introduction-section ninjarecipe-row">
 			<div class="ninjarecipe-col-6 ninjarecipe-padding">
 				<div class="title">
-					<h3><?php echo $post->post_title; ?></h3>
+					<h2><?php echo $post->post_title; ?></h2>
 				</div>
 
 				<div class="content">
@@ -29,9 +29,9 @@
 			</div>
 			
 			<div class="service-section"> 
-				<span> <?php echo $makingTime; ?> <i class="nr-clock-o"></i> </span>
-				<span> <?php echo $servingPeople; ?> services <i class="nr-pie-chart"> </i> </span>
-				<span> 191 cals <i class="nr-graph"></i> </span>
+				<span class="making-time"> <?php echo $makingTime; ?> <i class="nr-clock-o"></i> </span>
+				<span class="serving-people"> <?php echo $servingPeople; ?> services <i class="nr-pie-chart"> </i> </span>
+				<span class="cals"> 191 cals <i class="nr-graph"></i> </span>
 			</div>
 		</div>
 
